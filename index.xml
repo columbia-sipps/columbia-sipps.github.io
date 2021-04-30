@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SIPPS (2021)</title>
+    <link>/</link>
+    <description>Recent content on SIPPS (2021)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding (basic)</title>
+      <link>/workshops/coding_basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/coding_basic/</guid>
+      <description>Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Coding (advanced)</title>
+      <link>/workshops/coding_advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/coding_advanced/</guid>
+      <description>Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Research skills</title>
+      <link>/workshops/research_skills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/research_skills/</guid>
+      <description>Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Development</title>
+      <link>/workshops/development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshops/development/</guid>
+      <description>Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>About the SIPPS Program</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum mi ut velit pharetra rhoncus. Integer pretium congue lectus ac condimentum. Cras sit amet neque porta, convallis lorem nec, mattis elit. Integer eget bibendum metus. Donec nulla diam, sodales in bibendum ut, imperdiet ac odio. Aenean ac mi ipsum. Vivamus at luctus augue. Praesent consequat ex non lacus suscipit lobortis. Cras sem massa, pretium at mauris et, mattis tempor mauris.</description>
+    </item>
+    
+    <item>
+      <title>Meet the SIPPS Team</title>
+      <link>/team/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/team/</guid>
+      <description>SIPPS is a program developed &amp;amp; run primarily by graduate students in Columbia’s psychology department.
+Program Directors  Ana DiGiovanni is a 2nd-year PhD student working in the Couples Lab with Dr. Niall Bolger.  amd2323@columbia.edu   Anna Vannucci is a 2nd-year PhD student working in the Developmental and Affective Neuroscience Lab with Dr. Nim Tottenham.  av2902@columbia.edu    Workshop Instructors  Ben Silver is…
+  Hannah Tarder-Stoll is…</description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/resources/</guid>
+      <description>Coming soon.</description>
+    </item>
+    
+    <item>
+      <title>Schedule</title>
+      <link>/schedule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/schedule/</guid>
+      <description>Prospectives schedule   10:00a - 10:30a   Welcome
+Dr. Kevin Ochsner, Department Chair [Faculty Profile]   Zoom     10:30a - 10:40a   Break       10:40a - 11:20a   Faculty Meeting 1   Zoom (see email)     11:25a - 12:05p   Faculty Meeting 2   Zoom (see email)     12:05p - 1:00p   Break (Lunch)       1:00p - 1:40p   Faculty Meeting 3   Zoom (see email)     1:45p - 2:25p   Faculty Meeting 4   Zoom (see email)     2:25p - 3:00p   Break       3:00p - 3:30p   Information Session</description>
+    </item>
+    
+    <item>
+      <title>SIPPS 2020</title>
+      <link>/sipps2020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sipps2020/</guid>
+      <description> Check out the posters made by the participants of SIPPS 2020!  
+Camille Gasser Advisor: Lila Davachi
+  Anna Vannucci Advisor: Nim Tottenham
+  </description>
+    </item>
+    
+  </channel>
+</rss>
