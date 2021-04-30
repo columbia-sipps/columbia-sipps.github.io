@@ -1,0 +1,14 @@
+---
+title: "Research skills"
+description: TBD
+weight: 3
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Coming soon.

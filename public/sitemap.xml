@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/workshops/coding_basic/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/coding_advanced/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/research_skills/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/development/</loc>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/team/</loc>
+  </url>
+  
+  <url>
+    <loc>/resources/</loc>
+  </url>
+  
+  <url>
+    <loc>/schedule/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/sipps2020/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>/workshops/</loc>
+  </url>
+  
+</urlset>

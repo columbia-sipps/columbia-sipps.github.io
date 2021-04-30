@@ -1,0 +1,25 @@
+---
+title: "SIPPS 2020"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<div align="center">Check out the posters made by the participants of SIPPS 2020!</div>
+<br>
+
+### Camille Gasser
+**Advisor:** Lila Davachi
+
+<iframe src="/uploads/cg_poster.pdf" width="700px" height="550px">
+</iframe>
+
+### Anna Vannucci
+**Advisor:** Nim Tottenham
+
+<iframe src="/uploads/av_poster.pdf" width="700px" height="550px">
+</iframe>

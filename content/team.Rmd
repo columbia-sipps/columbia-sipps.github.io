@@ -1,0 +1,74 @@
+---
+title: "Meet the SIPPS Team"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+SIPPS is a program developed & run primarily by graduate students in Columbia's psychology department.
+
+## Program Directors
+
+<br>
+<div class="row">
+<div class="col-md-2">
+<p style="text-align:center;"><img src="/images/ana.jpg"></p>
+</div>
+<div class="col-md-4">
+<u><b>Ana DiGiovanni</b></u> is a 2nd-year PhD student working in the Couples Lab with Dr. Niall Bolger.
+<p> <img src="/images/email.png" class="icon"> [amd2323@columbia.edu](mailto:amd2323@columbia.edu){target="_blank"}
+</div>
+<div class="col-md-2">
+<p style="text-align:center;"><img src="/images/anna.jpg"></p>
+</div>
+<div class="col-md-4">
+<u><b>Anna Vannucci</b></u> is a 2nd-year PhD student working in the Developmental and Affective Neuroscience Lab with Dr. Nim Tottenham.
+<p> <img src="/images/email.png" class="icon"> [av2902@columbia.edu](mailto:av2902@columbia.edu){target="_blank"}
+</div>
+</div
+
+<hr><hr>
+
+
+## Workshop Instructors
+<br>
+<div class="row">
+<div class="col-md-2">
+<p style="text-align:center;"><img src="/images/ben.jpg"></p>
+</div>
+<div class="col-md-4">
+<u><b>Ben Silver</b></u> is...
+</div>
+<div class="col-md-2">
+<p style="text-align:center;"><img src="/images/hannah.jpg"></p>
+</div>
+<div class="col-md-4">
+<u><b>Hannah Tarder-Stoll</b></u> is...
+</div>
+</div>
+<br><br>
+<div class="row">
+<div class="col-md-2">
+<p style="text-align:center;"><img src="/images/manasi.jpg"></p>
+</div>
+<div class="col-md-4">
+<u><b>Manasi Jayakumar</b></u> is...
+</div>
+<div class="col-md-2">
+<p style="text-align:center;"><img src="/images/john.jpg"></p>
+</div>
+<div class="col-md-4">
+<u><b>John Thorp</b></u> is...
+</div>
+</div>
+<hr>
+
+## Graduate Student Mentors
+
+<hr>
+
+## Faculty Advisors
