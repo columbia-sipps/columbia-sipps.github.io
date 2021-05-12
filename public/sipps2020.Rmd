@@ -12,14 +12,44 @@ knitr::opts_chunk$set(echo = TRUE)
 <div align="center">Check out the posters made by the participants of SIPPS 2020!</div>
 <br>
 
-### Camille Gasser
-**Advisor:** Lila Davachi
+### Impact of Early Caregiving Adversity Timing on Later Life Anxiety Symptoms in Children
+**Ariel Katz**<br>
+<i>Mentor: Anna Vannucci</i>
 
-<iframe src="/uploads/cg_poster.pdf" width="700px" height="550px">
-</iframe>
+<div align="center"><iframe src="/uploads/ak_poster.pdf" width="700px" height="550px">
+</iframe></div><br>
 
-### Anna Vannucci
-**Advisor:** Nim Tottenham
+### Social Support as a Moderator of the Effects of Loneliness on Emotional Eating in Parent-Adolescent Dyads ([interactive poster link](https://srcd21biennial.ipostersessions.com/Default.aspx?s=53-54-B2-88-6D-67-D2-53-1B-FD-C4-D9-8A-00-04-66){target="_blank"})
+**Ayumi Tachida & Jamie Zhang**<br>
+<i>Mentor: Ana DiGiovanni</i>
 
-<iframe src="/uploads/av_poster.pdf" width="700px" height="550px">
-</iframe>
+<div align="center"><iframe src="/uploads/at_poster.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+### The Effect of Instagram Usage on the Loss of Control of Eating: Anxiety and Emotional Reactivity as Moderators ([interactive poster link](https://srcd21biennial.ipostersessions.com/Default.aspx?s=5D-71-7B-91-F7-F2-03-9F-12-65-36-69-27-D2-57-B8){target="_blank"})
+**Barbara Djan**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<div align="center"><iframe src="/uploads/bd_poster.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+### Caregiving Instability and Cognitive Control in Children: Does Timing Matter?
+**Eleanor Hansen**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<div align="center"><iframe src="/uploads/eh_poster.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+### Depression and Anxiety Symptoms in Young Adults Correlate with Greater Affective Sensitivity to Emotional Schema Acquisition
+**Nathan Martin, Ariel Katz, Sapna Patel, & Medina Shah**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<div align="center"><iframe src="/uploads/nm_poster.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+### The Effect of Instagram Usage and Race on the Loss of Control of Eating
+**Cassidy Elkins**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<div align="center"><iframe src="/uploads/ce_poster.pdf" width="700px" height="550px">
+</iframe></div><br>

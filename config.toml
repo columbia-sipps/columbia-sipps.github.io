@@ -12,7 +12,7 @@ googleAnalytics = ""
     accent = "#63AAB5"
     showBorder = true
     backgroundColor = "white"
-    font = "Lato" # should match the name on Google Fonts!
+    font = "Public Sans" # should match the name on Google Fonts!
     highlight = true
     highlightStyle = "default"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
@@ -51,7 +51,12 @@ googleAnalytics = ""
     url = "/sipps2020/"
     name = "SIPPS 2020"
     weight = 7
-
+    
+[[menu.main]]
+    url = "/diversity/"
+    name = "Diversity Statement"
+    weight = 8
+    
 # Social icons to be shown on the right-hand side of the navigation bar.
 # The "name" field should match the name of the icon in Font Awesome.
 # The list of available icons can be found at http://fontawesome.io/icons.
@@ -62,24 +67,9 @@ googleAnalytics = ""
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/username/"
+    url = "https://github.com/columbia-sipps/"
     name = "fab fa-github"
     weight = 2
-
-[[menu.icon]]
-    url = "https://twitter.com/username/"
-    name = "fab fa-twitter"
-    weight = 3
-
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/username/"
-    name = "fab fa-linkedin"
-    weight = 4
-
-[[menu.icon]]
-    url = "https://www.stackoverflow.com/username/"
-    name = "fab fa-stack-overflow"
-    weight = 5
     
 [markup]
   defaultMarkdownHandler = "goldmark"

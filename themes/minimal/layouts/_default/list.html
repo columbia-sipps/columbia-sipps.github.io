@@ -2,10 +2,10 @@
 
 <main>
 
-    <h2>{{ .Title }}</h2>
-    <div align="start" class="content">{{ .Content }}</div>
+    <h1>{{ .Title }}</h1>
     <hr>
-
+    <div align="start" class="content">{{ .Content }}</div>
+    
     {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
 
 </main>

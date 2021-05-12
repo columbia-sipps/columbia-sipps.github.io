@@ -1,6 +1,6 @@
 ---
 title: "Coding (basic)"
-description: TBD
+description: Learn how to use R to clean, analyze, and visualize your data.
 weight: 1
 output:
   blogdown::html_page:

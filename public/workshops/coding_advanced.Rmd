@@ -1,6 +1,6 @@
 ---
 title: "Coding (advanced)"
-description: TBD
+description: Data analysis workshops for those more familiar with coding principles and/or the R language.
 weight: 2
 output:
   blogdown::html_page:
