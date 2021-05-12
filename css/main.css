@@ -27,8 +27,8 @@ img {
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   padding: 5px;
 }
 
@@ -60,14 +60,17 @@ img {
     font-size: 2vmin;
 }
 
-
-
 /* Profile picture */
 
 .profile {
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
+}
+
+.table {
+   margin: auto;
+   width: 70% !important; 
 }
 
 /* Colored links */
