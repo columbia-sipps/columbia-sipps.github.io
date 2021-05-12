@@ -209,7 +209,7 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/anna.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Anna Vannucci</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon">[email](mailto:av2902@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/margaux.jpg" style="border:1px solid #A9A9A9"></p>
