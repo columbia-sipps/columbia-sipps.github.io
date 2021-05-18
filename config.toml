@@ -12,7 +12,7 @@ googleAnalytics = ""
     accent = "#63AAB5"
     showBorder = true
     backgroundColor = "white"
-    font = "Public Sans" # should match the name on Google Fonts!
+    font = "Inter" # should match the name on Google Fonts!
     highlight = true
     highlightStyle = "default"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
@@ -62,14 +62,9 @@ googleAnalytics = ""
 # The list of available icons can be found at http://fontawesome.io/icons.
 
 [[menu.icon]]
-    url = "mailto:me@example.com"
-    name = "fas fa-envelope"
-    weight = 1
-
-[[menu.icon]]
     url = "https://github.com/columbia-sipps/"
     name = "fab fa-github"
-    weight = 2
+    weight = 1
     
 [markup]
   defaultMarkdownHandler = "goldmark"

@@ -9,4 +9,16 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all resources developed for specific workshop sessions will instead be found on the [workshops](/workshops) page.
+
+## Applying to Graduate School
+<br>
 Coming soon.
+<br><br>
+
+### Examples of Personal Statements
+<br>
+<ul>
+<li>[Camille G. (Columbia University)](/uploads/cg_ps.pdf){target="_blank"}
+</ul>
+<br>

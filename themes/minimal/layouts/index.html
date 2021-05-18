@@ -2,8 +2,7 @@
 
 <main>
     <div class="intro">
-        {{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}"> {{ end }}
-        <h1>{{ .Site.Title }}</h1>
+        <img src="/images/logo1.png" width="300">
         <h2>{{ markdownify .Site.Params.Description }}</h2>
         <hr>
         <h3>{{ markdownify .Site.Params.DescriptionSub }}</h3>
