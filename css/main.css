@@ -35,7 +35,7 @@ img {
 /* Homepage */
 
 .intro {
-    transform: translateY(16vh);
+    transform: translateY(10vh);
 }
 
 .intro > h1 {
