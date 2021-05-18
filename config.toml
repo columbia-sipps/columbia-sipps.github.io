@@ -1,6 +1,6 @@
 baseURL = "http://example.com/"
 languageCode = "en-us"
-title = "SIPPS (2021)"
+title = "SIPPS"
 theme = "minimal"
 googleAnalytics = ""
 
@@ -16,6 +16,7 @@ googleAnalytics = ""
     highlight = true
     highlightStyle = "default"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+    favicon = "favicon.png"
 
 [[menu.main]]
     url = "/"
