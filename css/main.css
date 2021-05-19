@@ -27,9 +27,9 @@ img {
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
-  padding: 5px;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
 }
 
 /* Homepage */
@@ -57,7 +57,6 @@ img {
 
 .content {
     padding-top: 20px;
-    font-size: 2vmin;
 }
 
 /* Profile picture */
