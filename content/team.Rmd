@@ -19,7 +19,7 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <p style="text-align:center;"><img src="/images/ana.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>Ana DiGiovanni</b></u> is a 2nd-year PhD student working in the Couples Lab with Dr. Niall Bolger.
+<u><b>Ana DiGiovanni</b></u> is a PhD student in the Couples Lab. She studies social support processes and interpersonal emotion regulation strategies (i.e., co-rumination) that occur in close relationships (e.g., romantic relationships, friendships), especially during times of stress.
 <p> <img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}
 </div>
 <div class="col-sm-2">
@@ -90,8 +90,8 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <p style="text-align:center;"><img src="/images/lisa.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>Lisa Pegram</b></u> is a 2nd-year PhD student working with Dr. Janet Metcalfe in the Metacognition and Memory Lab.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:av2902@columbia.edu){target="_blank"}
+<u><b>Lisa Pegram</b></u> is a 2nd-year PhD student in the Metcalfe Lab, who is interested in the meta-cognitive decisions that influence the incorporation of new information.
+<p> <img src="/images/email.png" class="icon"> [email](mailto:lp2838@columbia.edu){target="_blank"}
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/matt.jpg" style="border:1px solid #A9A9A9"></p>
@@ -131,8 +131,8 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <p style="text-align:center;"><img src="/images/john.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>John Thorp</b></u> is a 2nd-year PhD student working with Dr. Lila Davachi in the Davachi Memory Lab.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:av2902@columbia.edu){target="_blank"}
+<u><b>John Thorp</b></u> is a 2nd-year PhD Student in the Davachi Lab, interested in how affective experience, existing knowledge structures, and neuromodulatory systems influence the quality of our memory.
+<p> <img src="/images/email.png" class="icon"> [email](mailto:jnt2136@columbia.edu){target="_blank"}
 </div>
 </div>
 <br><br>
@@ -161,32 +161,32 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/paul.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Paul Bloom</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:paul.bloom@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:paul.bloom@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/ana.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Ana DiGiovanni</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/halle.png" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Halle Dimsdale-Zucker</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:hdimsdalezucker@gmail.com){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:hdimsdalezucker@gmail.com){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/andrea.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Andrea Fields</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:aff2119@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/matt.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Matt Sachs</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:ms5924@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:ms5924@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/ben.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Ben Silver</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:bms2202@columbia.edu){target="_blank"}</div>
 </div>
 </div>
 <br><br>
@@ -194,32 +194,32 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/monica.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Monica Thieu</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:monica.thieu@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:monica.thieu@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/john.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>John Thorp</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:jnt2136@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/tim.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Tim Valshtein</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:valshteint@nyu.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:valshteint@nyu.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/anna.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Anna Vannucci</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:av2902@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:av2902@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/margaux.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Margaux Wienk</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:margaux.wienk@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:margaux.wienk@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/wangjing.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Wangjing Yu</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:wy2345@columbia.edu){target="_blank"}</div>
 </div></div>
 <br>
 <hr>
@@ -230,32 +230,32 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/nicole.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Nicole Gavrilova</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:gavrilovanicole@gmail.com){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:gavrilovanicole@gmail.com){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/blank.png" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Eleanor Hanson</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/blank.png" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>John Kerwin</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/nate.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Nate Martin</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:natemart64@gmail.com){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:natemart64@gmail.com){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/blank.png" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Anushu Patel</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/anshita.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Anshita Singh</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:as6317@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:as6317@columbia.edu){target="_blank"}</div>
 </div>
 </div>
 <br><br>
@@ -263,12 +263,12 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/blank.png" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Lauren Wilkins</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/blank.png" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Jamie Zhang</b></u>
-<br><img src="/images/email.png" class="icon">[email](mailto:amd2323@columbia.edu){target="_blank"}</div>
+<br><img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}</div>
 </div>
 </div>
 <br>
@@ -282,31 +282,31 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <p style="text-align:center;"><img src="/images/dima.jpg" style="border:1px solid #A9A9A9"><br><br>
 <u><b>Dima Amso, PhD</b></u><br>
 Columbia University<br>
-<img src="/images/email.png" class="icon"> [email](mailto:da2959@columbia.edu){target="_blank"} |
-<img src="/images/link.png" class="icon"> [website](https://dcnlab.psychology.columbia.edu/){target="_blank"}
+<img src="/images/email.png" class="icon"> [email](mailto:da2959@columbia.edu){target="_blank"} <br>
+[website](https://dcnlab.psychology.columbia.edu/){target="_blank"}
 </p>
 </div>
 <div class="col-sm-3">
 <p style="text-align:center;"><img src="/images/caroline.jpg" style="border:1px solid #A9A9A9"><br><br>
 <u><b>Caroline Marvin, PhD</b></u><br>
 Columbia University<br>
-<img src="/images/email.png" class="icon"> [email](mailto:cbm2118@columbia.edu){target="_blank"} |
-<img src="/images/link.png" class="icon"> [website](https://psychology.columbia.edu/content/caroline-marvin){target="_blank"}
+<img src="/images/email.png" class="icon"> [email](mailto:cbm2118@columbia.edu){target="_blank"} <br>
+[website](https://psychology.columbia.edu/content/caroline-marvin){target="_blank"}
 </p>
 </div>
 <div class="col-sm-3">
 <p style="text-align:center;"><img src="/images/valerie.jpg" style="border:1px solid #A9A9A9"><br><br>
 <u><b>Valerie Purdie-Greenaway, PhD</b></u><br>
 Columbia University<br>
-<img src="/images/email.png" class="icon"> [email](mailto:vjp12@columbia.edu){target="_blank"} |
-<img src="/images/link.png" class="icon"> [website](https://lirsm.psychology.columbia.edu/){target="_blank"}
+<img src="/images/email.png" class="icon"> [email](mailto:vjp12@columbia.edu){target="_blank"} <br>
+[website](https://lirsm.psychology.columbia.edu/){target="_blank"}
 </p></div>
 <div class="col-sm-3">
 <p style="text-align:center;"><img src="/images/alfredo.jpg" style="border:1px solid #A9A9A9"><br><br>
 <u><b>Alfredo Spagna, PhD</b></u><br>
 Columbia University<br>
-<img src="/images/email.png" class="icon"> [email](mailto:as5559@columbia.edu){target="_blank"} |
-<img src="/images/link.png" class="icon"> [website](http://www.alfredospagna.com/){target="_blank"}
+<img src="/images/email.png" class="icon"> [email](mailto:as5559@columbia.edu){target="_blank"} <br>
+[website](http://www.alfredospagna.com/){target="_blank"}
 </p></div>
 </div>
 
