@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "SIPPS"
 theme = "minimal"
 googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
     author = "Camille Gasser"
