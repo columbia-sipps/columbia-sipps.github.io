@@ -61,13 +61,22 @@
     </item>
     
     <item>
+      <title>Instructor Materials</title>
+      <link>/instructors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/instructors/</guid>
+      <description>Quick links for graduate students, postdocs, and staff in charge of putting on the SIPPS program. Feel free to disregard if you are a participant in this program. Please contact Manasi if you are unable to access any of the links below.    instructor schedule  SIPPS Drive folder  guidelines for instructors  guidelines for mentors  mentor/mentee contract  office hours zoom link (for instructors/mentors) — held Thursdays 5-6pm</description>
+    </item>
+    
+    <item>
       <title>Meet the SIPPS Team</title>
       <link>/team/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/team/</guid>
       <description>SIPPS is a program developed &amp;amp; run primarily by graduate students, postdocs, and staff in Columbia’s Psychology Department.
-Program Directors  Ana DiGiovanni is a PhD student in the Couples Lab. She studies social support processes and interpersonal emotion regulation strategies (i.e., co-rumination) that occur in close relationships (e.g., romantic relationships, friendships), especially during times of stress.  email   Anna Vannucci studies the role that early experiences and affective learning and memory processes play in shaping children’s neurodevelopment, emotional behaviors, and emergence of psychopathology.</description>
+Program Directors  Ana DiGiovanni is a PhD student in the Couples Lab. She studies social support processes and interpersonal emotion regulation strategies (i.e., co-rumination) that occur in close relationships (e.g., romantic relationships, friendships), especially during times of stress.  email   Anna Vannucci is a 2nd year PhD student working the DAN Lab.</description>
     </item>
     
     <item>
@@ -76,10 +85,7 @@ Program Directors  Ana DiGiovanni is a PhD student in the Couples Lab. She studi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/resources/</guid>
-      <description> On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all resources developed for specific workshop sessions will instead be found on the workshops page.
-Applying to Graduate School 
-Coming soon. Examples of Personal Statements   Camille G. (Columbia University)  
-  </description>
+      <description>On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all materials developed for specific workshop sessions will instead be found on the workshops page. Don’t hesitate to reach out to your mentor(s) and/or your instructors with specific questions about these resources  Programming   Columbia Psychology Scientific Computing   This website developed by graduate students in the psychology department contains a variety of introductory and advanced tutorials relevant for psychological data analysis using both R and python.</description>
     </item>
     
     <item>
@@ -88,7 +94,8 @@ Coming soon. Examples of Personal Statements   Camille G. (Columbia University)
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/schedule/</guid>
-      <description>SIPPS hosts three parallel workshop series running from the week of June 7 through the week of August 9, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the workshops page for materials and video recordings associated with each session. Coding  Tuesdays, 4-5:30pm zoom: basic / adv   Professional Development / Journal Club  Wednesdays, 4-5pm zoom   Research Skills  Thursdays, 4-5pm zoom   In addition to these workshops, students are expected to work in tandem with their mentor(s) to plan and execute their independent research projects.</description>
+      <description>SIPPS hosts three parallel workshop series running from the week of June 7 through the week of August 9, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the workshops page for materials and video recordings associated with each session. Coding  Tuesdays, 4-5:30pm zoom: basic / adv
+pw: sipps2021   Professional Development / Journal Club  Wednesdays, 4-5pm zoom</description>
     </item>
     
     <item>
