@@ -9,15 +9,46 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all resources developed for specific workshop sessions will instead be found on the [workshops](/workshops) page.
+On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all materials developed for specific workshop sessions will instead be found on the [workshops](/workshops) page. Don't hesitate to reach out to your mentor(s) and/or your instructors with specific questions about these resources
+<hr>
+## Programming
+<ul>
+<li>[Columbia Psychology Scientific Computing](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"}
+<ul><li>This website developed by graduate students in the psychology department contains a variety of introductory and advanced tutorials relevant for psychological data analysis using both R and python.</ul></li>
+<li>[R for data science](https://r4ds.had.co.nz/){target="_blank"}
+<li>[Unix tutorial](http://swcarpentry.github.io/shell-novice/){target="_blank"}
+</ul>
+<hr>
+## Statistics
 
+More coming soon.
+<hr>
+## Git
+<ul>
+<li>[What is git?](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git){target="_blank"}
+<li>[Git versus GitHub](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git){target="_blank"} (and alternatives - e.g., [BitBucket](https://bitbucket.org/product){target="_blank"}, [Subversion](https://subversion.apache.org/){target="_blank"}/SVN, [RStudio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN){target="_blank"})
+<li>[GUI options](https://lmgtfy.com/?q=git+gui+options) (e.g., [GitKraken](https://www.gitkraken.com/){target="_blank"})
+<li>[Setting up a SSH key](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2){target="_blank"}
+<li>[Affiliating a SSH key with GitHub](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account){target="_blank"}
+<li>[Basics of git commits](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html){target="_blank"} ([cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf){target="_blank"}) - basic workflow: git pull, git status, git add, git commit, git push
+<li>[Advanced git](https://rogerdudler.github.io/git-guide/){target="_blank"} (e.g., [branching](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging){target="_blank"}, [revert](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert){target="_blank"}, [cherry picking](https://stackoverflow.com/questions/9339429/what-does-cherry-picking-a-commit-with-git-mean){target="_blank"})
+<li>[Some advice on commit messages](https://chris.beams.io/posts/git-commit/){target="_blank"} ([and what not to do](http://www.commitlogsfromlastnight.com/){target="_blank"})
+</ul>
+<hr>
+## Diversity, Equity, and Inclusion
+<ul>
+<li>[Spark society](https://www.sparksociety.org/){target="_blank"}
+</ul>
+<hr>
+## How-Tos of Research
+<ul>
+<li>[How to run online studies](https://static1.squarespace.com/static/550f325ae4b0f7f604ae9822/t/5e6bba7d810aeb77251eb9d4/1584118397102/SHlabOnlineStudyHRB.pdf){target="_blank"}
+<li>[Fundamentals of data visualization](https://clauswilke.com/dataviz/index.html){target="_blank"}
+</ul>
+<hr>
 ## Applying to Graduate School
-<br>
-Coming soon.
-<br><br>
 
-### Examples of Personal Statements
-<br>
+#### Examples of Personal Statements
 <ul>
 <li>[Camille G. (Columbia University)](/uploads/cg_ps.pdf){target="_blank"}
 </ul>

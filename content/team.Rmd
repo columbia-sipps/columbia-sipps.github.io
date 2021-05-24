@@ -26,10 +26,26 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <p style="text-align:center;"><img src="/images/anna.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>Anna Vannucci</b></u> studies the role that early experiences and affective learning and memory processes play in shaping children's neurodevelopment, emotional behaviors, and emergence of psychopathology.
+<u><b>Anna Vannucci</b></u> is a 2nd year PhD student working the DAN Lab. She studies the role that early experiences and affective learning and memory processes play in shaping children's neuro- development, emotional behaviors, and emergence of psychopathology.
 <p> <img src="/images/email.png" class="icon"> [email](mailto:av2902@columbia.edu){target="_blank"}
 </div>
 </div>
+<hr>
+<div class="row align-items-center">
+<div class="col-sm-4">
+<h4 style="text-align:center;color:#63AAB5;">Program Evaluation</h4>
+<div align="center"><b>Paul Bloom</b></div>
+</div>
+<div class="col-sm-4">
+<h4 style="text-align:center;color:#63AAB5;">Program Administration</h4>
+<div align="center"><b>Manasi Jayakumar</b></div>
+</div>
+<div class="col-sm-4">
+<h4 style="text-align:center;color:#63AAB5;">Web Development</h4>
+<div align="center"><b>Camille Gasser</b></div>
+</div>
+</div>
+<br>
 <hr>
 ## Workshop Instructors
 <br>
@@ -161,23 +177,6 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 </div>
 </div>
 <hr>
-<br>
-<div class="row align-items-center">
-<div class="col-sm-4">
-<h4 style="text-align:center;color:#63AAB5;">Program Evaluation</h4>
-<div align="center"><b>Paul Bloom</b></div>
-</div>
-<div class="col-sm-4">
-<h4 style="text-align:center;color:#63AAB5;">Web Development</h4>
-<div align="center"><b>Camille Gasser</b></div>
-</div>
-<div class="col-sm-4">
-<h4 style="text-align:center;color:#63AAB5;">Program Administration</h4>
-<div align="center"><b>Manasi Jayakumar</b></div>
-</div>
-</div>
-<br>
-<hr>
 
 ## Graduate Student & Postdoc Mentors
 <br>
@@ -257,7 +256,7 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <br><img src="/images/email.png" class="icon"> [email](mailto:gavrilovanicole@gmail.com){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/blank.png" style="border:1px solid #A9A9A9"></p>
+<p style="text-align:center;"><img src="/images/eleanor.jpg" style="border:1px solid #A9A9A9"></p>
 <div align="center"><u><b>Eleanor Hanson</b></u>
 <br><img src="/images/email.png" class="icon"> [email](mailto:egh2128@columbia.edu){target="_blank"}</div>
 </div>

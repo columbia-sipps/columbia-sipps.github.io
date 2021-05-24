@@ -59,6 +59,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = "Diversity Statement"
     weight = 8
     
+[[menu.main]]
+    url = "/instructors/"
+    name = "[instructor materials]"
+    weight = 9
+    
 # Social icons to be shown on the right-hand side of the navigation bar.
 # The "name" field should match the name of the icon in Font Awesome.
 # The list of available icons can be found at http://fontawesome.io/icons.
