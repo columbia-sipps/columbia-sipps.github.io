@@ -9,7 +9,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-SIPPS hosts three parallel workshop series running from the week of June 7 through the week of August 9, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the [workshops](/workshops) page for materials and video recordings associated with each session.
+SIPPS hosts three parallel workshop series running from the week of June 7 through the week of August 9, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the [workshops](/workshops) page for materials and video recordings associated with each session. Also see the [About](/about) page to view an introductory video and slide deck about the program.
 <br><br>
 <div class="row align-items-center">
 <div class="col-md-3" style="padding: 15px; background-color: #f8f8f8">
@@ -103,8 +103,7 @@ In addition to these workshops, students are expected to work in tandem with the
 <th scope="col">Session</th>
 </tr>
 </thead>
-<tr><td>June 9</td><td><b>How to make the most of your summer experience</b><br>
-<i>Faculty speaker: Dr. Valerie Purdie-Greenaway</i></td></tr>
+<tr><td>June 9</td><td><b>What is a good research question?</b></td></tr>
 <tr><td>June 16</td><td><b>Careers inside and outside of academia</b><br></td></tr>
 <tr><td>June 23</td><td><b>Journal club</b><br></td></tr>
 <tr><td>June 30</td><td><b>Cultural issues within psychology</b><br></td></tr>
@@ -127,7 +126,8 @@ In addition to these workshops, students are expected to work in tandem with the
 <th scope="col">Session</th>
 </tr>
 </thead>
-<tr><td>June 10</td><td><b>What is a good research question?</b><br></td></tr>
+<tr><td>June 10</td><td><b>How to make the most of your summer experience</b><br>
+<i>Faculty speaker: Dr. Valerie Purdie-Greenaway</i><br></td></tr>
 <tr><td>June 17</td><td><b>Literature search & Zotero</b><br></td></tr>
 <tr><td>June 24</td><td><b>Pre-registration & OSF</b><br></td></tr>
 <tr><td>July 1</td><td><b>Git (version control, script sharing)</b><br></td></tr>

@@ -22,4 +22,13 @@ We hope that after participating in SIPPS, students will:
 <li>Complete a research project by conducting a secondary analysis of existing data with the guidance of their primary mentors and near-peer mentors to help demystify the research process. 
 <li>Learn to communicate their research to the public and academics through reproducible science practices and sessions that focus on science communication. 
 </ul>
+<hr>
+### SIPPS Welcome Session 2021
 
+See the zoom recording and slides below for an additional overview of the program.
+<p>
+<div align="center">
+<a href="https://columbiauniversity.zoom.us/rec/share/WTkTcELc71aCH6IpBTVkSgcLExJJiyF4qYZO4sV_jGnUG__xyMM-07Gu4s0BIQFi.MhKAxgRiulbVfyy7" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSmBIdUhRMJRBUvWa5suRiOqvyDh-84OBKiTO3HSk_5WjgqArrIRKB9X8WVWTz6hb0LgNYTlJsfUWW-/embed?start=false&loop=false&delayms=30000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>

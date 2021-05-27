@@ -315,6 +315,14 @@ Columbia University<br>
 </p>
 </div>
 <div class="col-sm-3">
+<p style="text-align:center;"><img src="/images/lila.jpg" style="border:1px solid #A9A9A9"><br><br>
+<u><b>Lila Davachi, PhD</b></u><br>
+Columbia University<br>
+<img src="/images/email.png" class="icon"> [email](mailto:ld24@columbia.edu){target="_blank"} <br>
+[website](https://davachilab.psychology.columbia.edu/){target="_blank"}
+</p>
+</div>
+<div class="col-sm-3">
 <p style="text-align:center;"><img src="/images/caroline.jpg" style="border:1px solid #A9A9A9"><br><br>
 <u><b>Caroline Marvin, PhD</b></u><br>
 Columbia University<br>
@@ -328,16 +336,19 @@ Columbia University<br>
 Columbia University<br>
 <img src="/images/email.png" class="icon"> [email](mailto:vjp12@columbia.edu){target="_blank"} <br>
 [website](https://lirsm.psychology.columbia.edu/){target="_blank"}
-</p></div>
+</p>
+</div>
+</div>
+<div class="row">
 <div class="col-sm-3">
 <p style="text-align:center;"><img src="/images/alfredo.jpg" style="border:1px solid #A9A9A9"><br><br>
 <u><b>Alfredo Spagna, PhD</b></u><br>
 Columbia University<br>
 <img src="/images/email.png" class="icon"> [email](mailto:as5559@columbia.edu){target="_blank"} <br>
 [website](http://www.alfredospagna.com/){target="_blank"}
-</p></div>
+</p>
 </div>
-
+</div>
 <hr>
 
 ## Participating Labs

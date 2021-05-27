@@ -9,7 +9,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all materials developed for specific workshop sessions will instead be found on the [workshops](/workshops) page. Don't hesitate to reach out to your mentor(s) and/or your instructors with specific questions about these resources
+On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all materials developed for specific workshop sessions will instead be found on the [workshops](/workshops) page. Don't hesitate to reach out to your mentor(s) and/or your instructors with specific questions about these resources.
 <hr>
 ## Programming
 <ul>
