@@ -20,8 +20,9 @@ On this page you will find an assortment of miscellaneous resources that you may
 </ul>
 <hr>
 ## Statistics
-
-More coming soon.
+<ul>
+<li>[StatQuest Youtube Channel](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw){target="_blank"} (breaks down statistics and machine learning concepts)
+<li>[brainstats Youtube Channel](https://www.youtube.com/channel/UCZ7gF0zm35FwrFpDND6DWeA){target="_blank"} (MRI analysis tutorials from Jeanette Mumford)
 <hr>
 ## Git
 <ul>
@@ -38,18 +39,32 @@ More coming soon.
 ## Diversity, Equity, and Inclusion
 <ul>
 <li>[Spark society](https://www.sparksociety.org/){target="_blank"}
+<li>[The untapped genius that could change science forever (TED Talk)](https://www.ted.com/talks/jedidah_isler_the_untapped_genius_that_could_change_science_for_the_better?referrer=playlist-10_great_talks_to_celebrate_bl&language=en){target="_blank"}
+<li>[UC Davis Anti-Racism Syllabus](https://diversity.ucdavis.edu/anti-racism-syllabus){target="_blank"}
+<li>[Project SHORT](https://www.project-short.com/vision.html){target="_blank"}
 </ul>
 <hr>
 ## How-Tos of Research
 <ul>
 <li>[How to run online studies](https://static1.squarespace.com/static/550f325ae4b0f7f604ae9822/t/5e6bba7d810aeb77251eb9d4/1584118397102/SHlabOnlineStudyHRB.pdf){target="_blank"}
 <li>[Fundamentals of data visualization](https://clauswilke.com/dataviz/index.html){target="_blank"}
+<li>[Andy's Brain Book](https://andysbrainbook.readthedocs.io/en/latest/){target="_blank"}
+<li>[ABCD-ReproNim Course](https://www.abcd-repronim.org/){target="_blank"} - training in reproducible analyses of data from the Adolescent Brain Cognitive Development (ABCD) Study
+<li>[Communicating science (TEDx)](https://www.youtube.com/watch?v=rXqLHc5ZbbM){target="_blank"}
+<li>[Talk nerdy to me (TED Global)](https://www.ted.com/talks/melissa_marshall_talk_nerdy_to_me){target="_blank"} - on science communication
 </ul>
 <hr>
 ## Applying to Graduate School
-
+<ul>
+<li>[Let's Talk Grad School: Demystifying the social science PhD hidden curriculum](https://letstalkgradschool.substack.com/p/coming-soon){target="_blank"}
+<li>[How Applying to Graduate School Works](https://www.sokolhessnerlab.com/howapplyingworks){target="_blank"} (from the Sokol-Hessner Lab)
+<li>[Resources from UNC's Diversifying Psychology Weekend](https://clinicalpsych.unc.edu/diversifying-psychology-weekend/){target="_blank"}
+<li>[Resources from Yale Psychology Bootcamp (2020)](https://drive.google.com/drive/u/0/folders/1gafJs-eZb484AgD4lmKe_idgmULlcpfM){target="_blank"}
+</ul>
 #### Examples of Personal Statements
 <ul>
 <li>[Camille G. (Columbia University)](/uploads/cg_ps.pdf){target="_blank"}
+<li>[Anna V. (Columbia University)](https://drive.google.com/file/d/1pDPWRa8bniq2nz3f1ObOiLu9CkRysiTI/view){target="_blank"}
+<li>[Ana D. (Columbia University)](https://docs.google.com/document/d/1GyiKJBmD4Qrnn9oMC8fgu5iQFMS6-kZBV1RIG5U7-wE/edit){target="_blank"}
 </ul>
 <br>
