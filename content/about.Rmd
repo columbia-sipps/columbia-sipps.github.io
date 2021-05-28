@@ -9,18 +9,24 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The <b>Summer Internship Program in Psychological Science (SIPPS)</b> was co-created in the Summer of 2020 by Ana DiGiovanni and Anna Vannucci in response to the COVID-19 pandemic and lost research opportunities for undergraduate and post-baccalaureate students. Despite there being a halt to in-person research, we wanted to give young scientists the chance to gain hands-on research experience, bolster their identity as scientists, and learn practical research skills. We therefore created a 10-week internship where students learned fundamental statistical concepts, coding skills in R, and general research skills (e.g., how to conduct and keep track of a literature review), all while conducting an independent research project that included secondary analysis of pre-collected data. 
+The SIPPS team comprises a group of graduate students, post-docs, undergraduates, and faculty advisors who are committed to diversity and inclusion, in its [broadest sense](https://gsas.columbia.edu/our-intellectual-community/diversity-inclusion/statement-diversity-and-inclusion){target="_blank"}. We are scientists whose day-to-day research seeks to understand how people think, behave, and relate to one other and how differences in our experiences, both positive and adverse, affect our brain, relationships, and behavior. Our work encompasses and embraces the ideas of diversity and support. The success of SIPPS and our research in general depends on including and respecting people with diverse backgrounds, beliefs, and experiences. We have the privilege and responsibility of maintaining a program that promotes the well-being and excellence of all who participate in SIPPS and everyone we encounter. Our aim is to create a space where People of Color and/or from marginalized groups can work together and thrive from mentorship and resources to support students in all of their endeavors, both personally and in the world of research. 
 <br><br>
-We are excited to expand this program with the help of numerous graduate students and postdocs who will serve as instructors of our workshops and mentors to our amazing students. Some of our more advanced students will also serve as near-peer mentors, offering the chance for multiple levels of mentorship and cultivation of leadership skills. We all have a passion for increasing access and opportunities for research to students in a supportive, safe environment and increasing the representation of diverse perspectives in psychological science.
-<br><br>
-The main components of SIPPS include: workshops on coding skills in R (with the option of both a beginner and advanced track -- see the weekly schedule for more details), general research skills, and alternating journal club and professional development sessions. With our virtual platform, these workshops are made available to ALL students and will be recorded and uploaded [to our website](/workshops) for future reference. The last component is an independent research project, where students are matched with a grad-level mentor as well as a near-peer mentor who have similar research interests. This project is meant to be a chance for students to explore their own research interests, and apply all of the skills learned from the workshops to a secondary data analysis project of their choosing. We hold a conference at the end of the 10-week program, where students get the chance to present their work to each other. Past SIPPS members have presented their work at national research conferences (see the [SIPPS 2020](/sipps2020) page for examples of previous students' work). 
-<br><br>
-We hope that after participating in SIPPS, students will:
+
+#### Motivation for the program:
 <ul>
+<li>Increase <b>access</b> to research opportunities for undergraduate and post-baccalaureate students in a safe, supportive environment
+<li>Equip students with <b>practical</b> research skills
+<li>Create student <b>leadership</b> opportunities
+<li>Increase <b>representation</b> of diverse perspectives in psychological science
+</ul>
 <br>
+
+#### We hope that after participating in SIPPS, students will:
+<ul>
 <li>Acquire a toolbox of research skills including knowledge on how to: conduct a literature review, understand research articles, generate research questions/hypotheses, use R for data cleaning, analysis, and visualization, administer surveys on Qualtrics, create behavioral tasks in Psychopy, use online data collection tools, and practice reproducible science.
 <li>Complete a research project by conducting a secondary analysis of existing data with the guidance of their primary mentors and near-peer mentors to help demystify the research process. 
 <li>Learn to communicate their research to the public and academics through reproducible science practices and sessions that focus on science communication. 
+<li>Articulate the issues of diversity and representation in psychology and neuroscience, explain how bias is perpetuated in research practices, and recognize the importance of diverse perspectives in science.
 </ul>
 <hr>
 ### SIPPS Welcome Session 2021
