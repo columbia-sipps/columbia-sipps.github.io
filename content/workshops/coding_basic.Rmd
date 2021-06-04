@@ -11,4 +11,20 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Coming soon.
+On this page, you will find resources associated with each session in the basic-track coding workshop.
+<br><br>
+A few days before each session, please check this page to make sure you've downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.
+<hr>
+
+### Week 1: Setting up your R environment
+<br>
+**Before the workshop:**
+<ul>
+<li>download these files: <a href="/workshop_files/coding-basic-01/shakes.csv" download>data file</a>, <a href="/workshop_files/coding-basic-01/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/coding-basic-01/Coding_Lesson1.Rproj" download>R Project file</a>
+</ul>
+
+**After the workshop:**
+<ul>
+<li><a href="/workshop_files/coding-basic-01/lessonKey.Rmd" download>RMarkdown key</a>
+</ul>
+

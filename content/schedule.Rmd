@@ -79,8 +79,8 @@ In addition to these workshops, students are expected to work in tandem with the
 <th scope="col">Session</th>
 </tr>
 </thead>
-<tr><td>June 8</td><td><b>Refresher of regression and moderator (frequentist)</b><br></td></tr>
-<tr><td>June 15</td><td><b>Refresher of regression and moderator (bayesian)</b><br></td></tr>
+<tr><td>June 8</td><td><b>Refresher of regression and moderation (frequentist)</b><br></td></tr>
+<tr><td>June 15</td><td><b>Refresher of regression and moderation (bayesian)</b><br></td></tr>
 <tr><td>June 22</td><td><b>Cleaning data for multi-level modeling</b><br></td></tr>
 <tr><td>June 29</td><td><b>Timecourse/longitudinal data</b><br></td></tr>
 <tr><td>July 6</td><td><b>Multi-level modeling: experimental data</b><br></td></tr>

@@ -11,4 +11,15 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Coming soon.
+On this page, you will find resources associated with each session in the advanced-track coding workshop.
+<br><br>
+A few days before each session, please check this page to make sure you've downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.
+<hr>
+
+### Week 1: Refresher of regression and moderators (frequentist)
+<br>
+**Before the workshop:**
+<ul>
+<li>Make sure you have both R and RStudio downloaded on your machine. If you don't, check out [this page](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/tutorials/r-core/1-programming/lessonpart0/#working-with-rstudio-1){target="_blank"} for guidance.
+<li>No other downloads necessary!
+</ul>
