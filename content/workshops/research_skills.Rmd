@@ -11,4 +11,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Coming soon.
+On this page, you will find resources associated with the Research Skills workshop series (<a href="https://columbiauniversity.zoom.us/j/96435187274?pwd=bnpTdzN4R0lJaDFheDZzVUtGa2EyUT09" target="_blank">zoom link</a>, pw: sipps2021).
+<br><br>
+After each session in the series, the page will be updated with links to the corresponding zoom recording, as well as any additional materials that were referenced during the workshop.
+<hr>
+
+### Week 1: How to make the most of your summer experience
+
+Materials/recordings will be posted after the session.
