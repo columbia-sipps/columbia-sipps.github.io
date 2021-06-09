@@ -18,8 +18,19 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 1: Refresher of regression and moderation (frequentist)
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/IP1_-EPWLHypgEt_krGjQVl5AvQzMh0YREqO460fACXVAYk-A2-t9ECSxK7eQNMl.PUsxRULkO2eFmvAH" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>make sure you have both R and RStudio downloaded on your machine; if you don't, check out [this page](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/tutorials/r-core/1-programming/lessonpart0/#working-with-rstudio-1){target="_blank"} for guidance
-<li>download the <a href="/workshop_files/coding-adv-01/lm-challenge-empty.Rmd" download>challenge file</a>
 </ul>
+<br>
+**Workshop materials:**
+<ul>
+<li>R packages used today: `tidyverse` (contains `ggplot2`, `dplyr`, and others); `car`
+<li><a href="/workshop_files/coding-adv-01/lm-intro.pdf" download>intro to regression slides</a>
+<li><a href="/workshop_files/coding-adv-01/lm-lesson.Rmd" download>RMarkdown lesson file (with notes)</a>
+<li><a href="/workshop_files/coding-adv-01/lm-challenge-empty.Rmd" download>RMarkdown challenge file</a> / <a href="/workshop_files/coding-adv-01/lm-challenge.Rmd" download>answer key</a>
+</ul>
+<br>
+**Note:** Please let us know if you are experiencing any issues downloading R and/or installing packages! We also welcome any and all conceptual questions about linear regression, using the `lm()` function, etc.

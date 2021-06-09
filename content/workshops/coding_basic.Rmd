@@ -18,6 +18,8 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 1: Setting up your R environment
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/DK-fdd1h5WcTIu-CBu_JHj31M46aZArRZGUejlqo3ssjL8fZ-ezEAjaBta65cHuQ.8CQ4myXSjViniuYN?startTime=1623182507000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>download these files: <a href="/workshop_files/coding-basic-01/shakes.csv" download>data file</a>, <a href="/workshop_files/coding-basic-01/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/coding-basic-01/Coding_Lesson1.Rproj" download>R Project file</a>
