@@ -39,6 +39,9 @@ df$wt.c <- scale(df$wt, center = TRUE, scale = FALSE)
 
 mean(df$wt.c)
 
+# make sure this variable is a vector
+df$wt.c <- as.vector(df$wt.c)
+
 ```
 
 ## 2. Now, let's take a look at the transmission type (`am`) variable. We went over two ways of coding categorical variables: dummy coding & effect coding. Which one does the dataframe use by default?
@@ -57,15 +60,16 @@ head(df)
 
 ```
 
-
 # 3. Now, fit a linear model predicting average miles per gallon as a function of weight, transmission type (dummy coded), and their interaction. Print the model output and describe the intercept, main effects, and interaction terms. 
 
 ```{r}
-#model with the dummy coded variable
-m1<-lm(mpg ~ wt.c*am, data = df)
+
+# model with the dummy coded variable
+m1 <-lm(mpg ~ wt.c*am, data = df)
 summary(m1)
 
 ```
+
 Intercept: For cars of average weight, for cars with automatic transmisison, the mpg is 19.2358. 
 
 Wt.c: As weight increases by one unit, for cars with automatic transmisssion, mpg decreases by 3.78. This is a significant difference. 
@@ -77,12 +81,13 @@ wt.c:am: There is a significant interaction. Weight decreases mpg more for autom
 # 4. Fit the same linear model, but this time use the effect coded version of transmission type. Print the model output and describe the intercept, main effects, and interaction term. 
 
 ```{r}
-#model with the effect coded variable
-df$wt.c<-as.numeric(df$wt.c)
-m2<-lm(mpg ~ wt.c*am.e, data = df)
+
+# model with the effect coded variable
+m2 <- lm(mpg ~ wt.c*am.e, data = df)
 summary(m2)
 
 ```
+
 Intercept: For cars of average weight, for both automatic and manual transmisison, the mpg is 18.52. 
 
 Wt.c: As weight increases by one unit, averaging across cars with automatic and manual transmission transmisssion, mpg decreases by 6.43. This is a significant difference. 
@@ -104,43 +109,40 @@ There is no difference in significance, only the interpretation of the estimates
 #6. Plot the model output. You can plot either the dummy coded or the effect coded model--it's up to you!
 
 ```{r}
-#turn variables into vectors
+
+# turn variables into vectors (again, to be safe)
 df$wt.c <- as.vector(df$wt.c)
 df$am.e <-as.vector(df$am.e)
 
-#create high and low data frames
+# create high and low data frames
 dfhigh <- data.frame(
-wt.c = seq(min(df$wt.c, na.rm = T), max(df$wt.c, na.rm = T), .1),
-am.e = .5) 
+  wt.c = seq(min(df$wt.c, na.rm = T), max(df$wt.c, na.rm = T), .1),
+  am.e = .5) 
 
 dflow <- data.frame(
-wt.c = seq(min(df$wt.c, na.rm = T), max(df$wt.c, na.rm = T), .1),
-am.e = -.5)
+  wt.c = seq(min(df$wt.c, na.rm = T), max(df$wt.c, na.rm = T), .1),
+  am.e = -.5)
 
-#create predicted regression lines
+# create predicted regression lines
 high <- cbind(dfhigh, predict(m2, dfhigh, interval = "confidence"))
-
 low <- cbind(dflow, predict(m2, dflow, interval = "confidence"))
 
 plot <- ggplot(high, aes(wt.c, fit)) +
-  geom_point(data = df, # use original data to plot datapoints 
-             aes(wt.c, mpg, color = as.factor(am.e)),#note, you must use as.factor here
-             #to turn this into a variable with two levels, or else it will try to plot this as continuous
-             #and the code will not run, since it is not a continuous variable
+  geom_point(data = df,
+             aes(wt.c, mpg, color = as.factor(am.e)),
              alpha = .4, size = 1, show.legend = T) +
-  scale_color_manual(values = c("-.5" = "green", ".5" = "orange")) + 
-  labs(x = "Weight",
-       y = "MPG",  title = " ") +
-  geom_ribbon(data = high, aes(ymin=lwr, ymax=upr), 
+  geom_ribbon(data = high, aes(ymin = lwr, ymax = upr), 
               alpha = .3, fill = "orange") +
   geom_line(data = high, aes(wt.c, fit), 
             size = 2, color = "orange", linetype = "dashed") +
-  geom_ribbon(data = low, aes(ymin=lwr, ymax=upr), 
+  geom_ribbon(data = low, aes(ymin = lwr, ymax = upr), 
               alpha = .3, fill = "green") +
   geom_line(data = low, aes(wt.c, fit), 
-            size = 2, color = "green") 
+            size = 2, color = "green") +
+  labs(x = "Weight", y = "MPG",  title = " ") +
+  scale_color_manual(name = "AM", labels = c("Automatic", "Manual"), values = c("green", "orange"))
 
-plot + scale_color_manual(name = "AM", labels=c("Automatic", "Manual"), values = c("green", "orange"))
+plot
 
 ```
 
