@@ -17,5 +17,11 @@ Before each journal club session, check this page for details about which articl
 <hr>
 
 ### Week 1: What is a good research question?
-
-Materials/recordings will be posted after the session.
+<br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/play/gumQ7Qndeg6zzUoXO-vXCXmMQyCaIou-5TxQkZcWdYkObEJra5Asw5qU-SbiVmdQyRHXZAPDE5sSWLlV.BlwvKVmjOxxSK1WW?_x_zm_rhtaid=956&_x_zm_rtaid=m0Fy0B3ORyCzdEtQHq9yTg.1623432286856.181fed33d69d86fd6199bf0824909b53&autoplay=true&continueMode=true&startTime=1623268902000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/prof-dev/RQ.pdf" download>workshop slides</a>
+<li>[link to collaborative brainstorming Google Doc](https://docs.google.com/document/d/1YYvNTHr-aivhlWWP3c5ms12Pkq-bARNTrwpPr_fvQnE/edit#heading=h.b95kkvcec54s){target="_blank"}
+</ul>

@@ -16,6 +16,11 @@ On this page, you will find resources associated with the Research Skills worksh
 After each session in the series, the page will be updated with links to the corresponding zoom recording, as well as any additional materials that were referenced during the workshop.
 <hr>
 
-### Week 1: How to make the most of your summer experience
-
-Materials/recordings will be posted after the session.
+### Week 1: How to make the most of your summer experience (Dr. Valerie Purdie-Greenaway)
+<br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/7skt4Grewof6qv0WAy0IucdAjTF70dqtkSvOPNhoTDep7Z5uHnxdaxCb-QahT5eL.86kl_7PINQcwqkSJ" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/prof-dev/SummerExp-VGP.pdf" download>workshop slides</a>
+</ul>
