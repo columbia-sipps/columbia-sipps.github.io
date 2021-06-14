@@ -30,3 +30,12 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-basic-01/lessonKey.Rmd" download>RMarkdown key</a>
 </ul>
 
+<hr>
+
+### Week 2: Programming fundamentals
+<br>
+**Before the workshop:**
+<ul>
+<li>please create a folder named `02_intro-programming` on your computer
+<li>download these files within that folder: <a href="/workshop_files/coding-basic-02/shakes.csv" download>data file (shakes.csv)</a>, <a href="/workshop_files/coding-basic-02/lesson.Rmd" download>RMarkdown file (lesson.Rmd)</a>, <a href="/workshop_files/coding-basic-02/02_intro-programming.Rproj" download>R Project file (02_intro-programming.Rproj)</a>, <a href="/workshop_files/coding-basic-02/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
+</ul>
