@@ -1,0 +1,94 @@
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+The questions and exercises below all include examples using the `mtcars` dataset from the `car` package. This dataset contains information about various cars, e.g., horsepower, engine type, etc. Alternatively, use another dataset of your choosing with a continuous Y variable and a categorical X variable (with two levels).
+
+In this exercise, you will run models in which a car's average miles per gallon (mpg) is associated with its weight (wt) and/or the type of transmission (am), i.e., automatic vs. manual.
+
+Unlike last time, all the models you'll be running with be Bayesian regression models using `rstanarm`
+
+## 0. Load the needed packages (install if necessary and *ASK AN INSTRUCTOR* if you're getting stuck here), and `mtcars` dataset. Create a new dataframe with the `mtcars` data
+
+Then, view the first 10 rows of the `mtcars` dataset.
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(car)
+library(rstanarm)
+library(tidybayes)
+library(bayesplot)
+
+```
+
+```{r}
+df <- mtcars
+head(df, n = 10)
+
+
+```
+
+## 1. First we need to prep our variables. Start by centering the weight variable (wt).
+
+Bonus: Double check that your code worked by looking at the mean of this new centered variable.
+
+```{r}
+df$wt.c <- scale(df$wt, center = TRUE, scale = FALSE)
+
+mean(df$wt.c)
+
+# make sure this variable is a vector
+df$wt.c <- as.vector(df$wt.c)
+
+```
+
+## 2. Now, let's take a look at the transmission type (`am`) variable. We went over two ways of coding categorical variables: dummy coding & effect coding. Which one does the dataframe use by default?
+
+Hint: You can get more information about the variables in the `mtcars` dataset by running ?mtcars.
+
+Now, make a new column where you recode `am` in a *different* way. 
+
+```{r}
+# dataframe uses dummy coding, where automatic = 0 and manual = 1
+
+df$am.e <- dplyr::recode(df$am, "0" = -0.5, "1" = 0.5)
+
+head(df)
+
+```
+
+
+# 3. Now, fit a Bayesian linear model using `rstanarm` with an outcome of average miles per gallon as a function of weight, transmission type (dummy coded), and their interaction. Print the model output and describe the intercept, main effects, and interaction terms. 
+
+```{r}
+
+
+```
+
+# 4. Fit the same linear model, but this time use the effect coded version of transmission type. Print the model output and describe the intercept, main effects, and interaction term. 
+
+```{r}
+
+
+```
+
+#5. Compare the two models. Which terms are the same and which are different? Why? How does this effect the interpretation of the model? Does the significance change?
+
+#6. Plot the model predictions for each level of transmisison type and weight. You can plot either the dummy coded or the effect coded model--it's up to you!
+
+Hint: you will probably want to use 3 things as in the lesson:
+1. `expand.grid()` to define the levels for weight and transmisison type that you'd like to get mpg estimates for
+2. use the `add_fitted_draws()` function to get the fitted posterior predictions from the Bayesian regression model to a dataframe
+3. use  `tidybayes::stat_lineribbon()` to plot these draws -- you can start with `.width = .95`, but feel free to try different intervals to your heart's content!
+
+```{r}
+```
+
+# Bonus
+
+Try steps 3-6 again, but instead of using weight (`wt`) and transmission type (`am`) as predictors, use *2 categorical predictors* for your model: `am` and `cyl`. Note that `cyl` has 3 levels -- 4, 6, or 8 cylinders. 
+
+How would you set up your variables for this model, interpret your parameters, and plot your model's predicted estimates?
+
