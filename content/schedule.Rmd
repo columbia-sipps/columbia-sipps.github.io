@@ -81,13 +81,13 @@ In addition to these workshops, students are expected to work in tandem with the
 </thead>
 <tr><td>June 8</td><td><b>Refresher of regression and moderation (frequentist)</b><br></td></tr>
 <tr><td>June 15</td><td><b>Refresher of regression and moderation (bayesian)</b><br></td></tr>
-<tr><td>June 22</td><td><b>Cleaning data for multi-level modeling</b><br></td></tr>
-<tr><td>June 29</td><td><b>Timecourse/longitudinal data</b><br></td></tr>
-<tr><td>July 6</td><td><b>Multi-level modeling: experimental data</b><br></td></tr>
-<tr><td>July 13</td><td><b>Multi-level modeling: within-person change</b><br></td></tr>
-<tr><td>July 20</td><td><b>Advanced plotting</b><br></td></tr>
-<tr><td>July 27</td><td><b>Power</b><br></td></tr>
-<tr><td>August 3</td><td><b>Predictive modeling</b><br></td></tr>
+<tr><td>June 22</td><td><b>Review: Data wrangling, regression (continued), Frequentist vs. Bayes</b><br></td></tr>
+<tr><td>June 29</td><td><b>Cleaning data for multi-level modeling</b><br></td></tr>
+<tr><td>July 6</td><td><b>Time-course/longitudinal data</b><br></td></tr>
+<tr><td>July 13</td><td><b>Multilevel modeling: experimental data</b><br></td></tr>
+<tr><td>July 20</td><td><b>Multilevel modeling: within-person change</b><br></td></tr>
+<tr><td>July 27</td><td><b>Advanced plotting</b><br></td></tr>
+<tr><td>August 3</td><td><b>Power</b><br></td></tr>
 <tr><td>August 10</td><td><b>Women in Science**</b><br><i>Faculty speaker: Dr. Dima Amso</i></td></tr>
 </table>
 </div>
