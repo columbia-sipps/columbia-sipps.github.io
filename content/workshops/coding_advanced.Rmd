@@ -42,7 +42,7 @@ A few days before each session, please check this page to make sure you've downl
 **Before the workshop:**
 <ul>
 <li>please download the following packages: `rstanarm`, `tidybayes`, `bayesplot` (plus those we used last week: `tidyverse`, `car`)
-<li>also download the following files: <a href="/workshop_files/coding-adv-02/lm-lesson-bayes2.Rmd" download>RMarkdown lesson file</a>, <a href="/workshop_files/coding-adv-02/lm-lesson-bayes2.html" download>HTML lesson file</a>, <a href="/workshop_files/coding-adv-02/lm-challenge-bayesian.Rmd" download>RMarkdown challenge file</a>
+<li>also download the following files: <a href="/workshop_files/coding-adv-02/lm-lesson-bayes-orig.Rmd" download>RMarkdown lesson file</a>, <a href="/workshop_files/coding-adv-02/lm-lesson-bayes-orig.html" download>HTML lesson file</a>, <a href="/workshop_files/coding-adv-02/lm-challenge-bayesian-orig.Rmd" download>RMarkdown challenge file</a>
 </ul>
 <br>
 
