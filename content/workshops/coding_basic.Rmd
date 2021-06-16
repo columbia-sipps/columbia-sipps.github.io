@@ -34,8 +34,16 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 2: Programming fundamentals
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/gcm3U1Vtyza9W3E3k7ApPW84_FJRsCtWrXK-qsg5UpU2vE53klqpRA0bmHFAaPpA.4vRMDAuVvq9ZxIrW?startTime=1623787255000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>please create a folder named `02_intro-programming` on your computer
 <li>download these files within that folder: <a href="/workshop_files/coding-basic-02/shakes.csv" download>data file (shakes.csv)</a>, <a href="/workshop_files/coding-basic-02/lesson.Rmd" download>RMarkdown file (lesson.Rmd)</a>, <a href="/workshop_files/coding-basic-02/02_intro-programming.Rproj" download>R Project file (02_intro-programming.Rproj)</a>, <a href="/workshop_files/coding-basic-02/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
+</ul>
+<br>
+**After the workshop:**
+<ul>
+<li><a href="/workshop_files/coding-basic-02/lesson_key.Rmd" download>RMarkdown lesson file (with answers)</a>
+<li><a href="/workshop_files/coding-basic-02/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
