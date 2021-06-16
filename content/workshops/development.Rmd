@@ -25,3 +25,16 @@ Before each journal club session, check this page for details about which articl
 <li><a href="/workshop_files/prof-dev/RQ.pdf" download>workshop slides</a>
 <li>[link to collaborative brainstorming Google Doc](https://docs.google.com/document/d/1YYvNTHr-aivhlWWP3c5ms12Pkq-bARNTrwpPr_fvQnE/edit#heading=h.b95kkvcec54s){target="_blank"}
 </ul>
+
+<hr>
+
+### Week 2: Careers inside and outside academia
+<br>
+Recordings/materials will be posted after the workshop.
+
+<hr>
+
+### Week 3: Journal club
+<br>
+This week's reading: [Variety Wins: Soccer-Playing Robots and Infant Walking (Ossmy et al., 2018)](/workshop_files/prof-dev/VarietyWins.pdf){target="_blank"}
+<br>

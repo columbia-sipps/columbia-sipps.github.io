@@ -24,3 +24,9 @@ After each session in the series, the page will be updated with links to the cor
 <ul>
 <li><a href="/workshop_files/prof-dev/SummerExp-VGP.pdf" download>workshop slides</a>
 </ul>
+
+<hr>
+
+### Week 2: Literature search & Zotero
+<br>
+Recordings/materials will be posted after the workshop.
