@@ -1,0 +1,164 @@
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Bayesian Regression Challenge
+
+## Overview
+
+The questions and exercises below all include examples using the `mtcars` dataset from the `car` package. This dataset contains information about various cars, e.g., horsepower, engine type, etc. Alternatively, use another dataset of your choosing with a continuous Y variable and a categorical X variable (with two levels).
+
+In this exercise, you will run models in which a car's average miles per gallon (mpg) is associated with its weight (wt) and/or the type of transmission (am), i.e., automatic vs. manual.
+
+Unlike last time, all the models you'll be running with be Bayesian regression models using `rstanarm`
+
+## 0. Load the needed packages (install if necessary and *ASK AN INSTRUCTOR* if you're getting stuck here), and `mtcars` dataset. Create a new dataframe with the `mtcars` data
+
+Then, view the first 10 rows of the `mtcars` dataset.
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(car)
+library(rstanarm)
+library(tidybayes)
+library(bayesplot)
+
+```
+
+```{r}
+df <- mtcars
+head(df, n = 10)
+
+
+```
+
+## 1. First we need to prep our variables. Start by centering the weight variable (wt).
+
+Bonus: Double check that your code worked by looking at the mean of this new centered variable.
+
+```{r}
+df$wt.c <- scale(df$wt, center = TRUE, scale = FALSE)
+
+mean(df$wt.c)
+
+# make sure this variable is a vector
+df$wt.c <- as.vector(df$wt.c)
+
+```
+
+## 2. Now, let's take a look at the transmission type (`am`) variable. We went over two ways of coding categorical variables: dummy coding & effect coding. Which one does the dataframe use by default?
+
+Hint: You can get more information about the variables in the `mtcars` dataset by running ?mtcars.
+
+Now, make a new column where you recode `am` in a *different* way. 
+
+```{r}
+# dataframe uses dummy coding, where automatic = 0 and manual = 1
+
+df$am.e <- dplyr::recode(df$am, "0" = -0.5, "1" = 0.5)
+
+head(df)
+
+```
+
+
+# 3. Now, fit a Bayesian linear model using `rstanarm` with an outcome of average miles per gallon as a function of weight, transmission type (dummy coded), and their interaction. Print the model output and describe the intercept, main effects, and interaction terms. 
+
+```{r, results='hide'}
+m1 = rstanarm::stan_glm(data = df, mpg ~ am*wt.c)
+```
+
+```{r}
+summary(m1, probs = c(0.025, .975))
+```
+
+> - *(Intercept):* The mean estimate for the intercept is 19.2mpg, which indicates that the model is estimating 19.2mpg when am = 0 (automatic), and at the average weight, 95% PI [17.7, 20.8]
+> - *am:* The estimated mean difference in mpg between a car where am = 1 > am = 0 at the *average weight* (wt.c = 0). So, a average weight car with am = 1 gets an estimated -2.1 mpg relative to am = 0, 95% PI [-5.2, 0.9]. The 95% posterior intveral crosses 0.
+> - *wt.c:* As weight increases by one unit, for cars with automatic transmisssion (am =0), mpg changes by an estimated average of -3.8, 95% PI [-5.3, -2.1]. The 95% poterior interval excludes 0.
+> - *am:wt.c:* Weight and mpg are more negatively associated for manual cars (am=1) than automatic ones (am = 0), with the a 1-unit increase in weight associated with a difference in mpg that is -5.3 (95% PI [-8.2, -2.4]) less (so a stronger negative association). The 95% posterior interval for this interaction excludes 0.
+
+# 4. Fit the same linear model, but this time use the effect coded version of transmission type. Print the model output and describe the intercept, main effects, and interaction term. 
+
+```{r, results='hide'}
+m2 = rstanarm::stan_glm(data = df, mpg ~ am.e*wt.c)
+```
+
+
+```{r}
+summary(m2, probs = c(0.025, .975))
+```
+
+> - *(Intercept):* The mean estimate for the intercept is 18.2mpg, which indicates that the model is estimating 18.2 (95% PI [16.7, 19.6]) mpg when `am.e` and `wt.c` are both 0 -- the 'average' car in terms of both weight and transmission. 
+> - *am.e:* The estimated mean difference in mpg between a car where am = 1 > am = 0 at the *average weight* (wt.c = 0). So, a average weight car with am = 1 gets an estimated -2.1 mpg relative to am = 0, 95% PI [-5.0, 1.0]. The 95% posterior intveral crosses 0. **Note: this actuallly means the same thing as before even though this variable has ben effect coded. It is the intepretation of the other parameters that change**
+> - *wt.c:* As weight increases by one unit, for cars with 'averaage' transmisssion (am.e =0), mpg changes by an estimated average of -6.4, 95% PI [-7.9, -4.9]. The 95% poterior interval excludes 0.
+> - *am.e:wt.c:* Weight and mpg are more negatively associated for manual cars (am=.5) than automatic ones (am = -.5), with the a 1-unit increase in weight associated with a difference in mpg that is -5.3 (95% PI [-8.2, -2.2]) less (so a stronger negative association). The 95% posterior interval for this interaction excludes 0. **Note:: the interpretation of this parameter is the same after effect coding `am` as well**
+
+
+# 5. Compare the two models. Which terms are the same and which are different? Why? How does this effect the interpretation of the model? Does the significance change?
+
+> - The main effects of am and the am:wt.c interaction are the same, while the intercept and the main effect of wt.c are different. 
+
+>- The intercept and effect of wt.c are different because they hold the am variable at 0, and the value of 0 changes depending on whether the am variable has been dummy or effect coded. 
+
+>- The intercept in the effect coded version is interpreted as the value of mpg when the car is average weight, across both automatic and transmission (because the average of -.5 and .5 is 0, so this is the car with the 'average' transmission). In the dummy coded version, the intercept is the value of mpg for a car of average weight and automatic (because atumatic is 0 and manual is 1). Similarly, the wt.c effect in the effect coded version is the unit increase in wt.c on mpg averaging across both transmission types, while in the dummy coded its the unit increase for automatic cars. 
+
+
+# 6. Plot the model predictions for each level of transmisison type and weight. You can plot either the dummy coded or the effect coded model--it's up to you!
+
+Hint: you will probably want to use 3 things as in the lesson:
+1. `expand.grid()` to define the levels for weight and transmisison type that you'd like to get mpg estimates for
+2. use the `add_fitted_draws()` function to get the fitted posterior predictions from the Bayesian regression model to a dataframe
+3. use  `tidybayes::stat_lineribbon()` to plot these draws -- you can start with `.width = .95`, but feel free to try different intervals to your heart's content!
+
+```{r}
+# define grid of values to predict for
+pred_grid = expand.grid(wt.c = seq(from = min(df$wt.c), to = max(df$wt.c), length.out = 20),
+                        am = c(1,0))
+
+
+# make predictions from model 1 (dummy coded)
+model_preds = add_fitted_draws(model = m1, newdata = pred_grid)
+
+# better labels for transmission
+model_preds$`Transmission` = dplyr::recode(model_preds$am, '1'='Manual', '0'='Automatic')
+df$`Transmission` = dplyr::recode(df$am, '1'='Manual', '0'='Automatic')
+
+ggplot(model_preds, mapping = aes(x = wt.c, y = .value, color = `Transmission`, fill = `Transmission`)) +
+  tidybayes::stat_lineribbon(.width = c(.95), alpha = .3) +
+  geom_point(data = df, mapping = aes(x = wt.c, y = mpg, color = `Transmission`)) +
+  theme_bw() +
+  labs(x = 'Weight (Mean-Centered)', y = 'Estimated Miles Per Gallon')
+```
+
+Interestingly, we can see some strange consequences of our interaction model here -- it is estimating that a manual transmission car as heavy as the heaviest automatic cars would have less than 0 miles per gallon. Part of this is because the manual transmission cars here are tending to be much lighter than the automatic ones. How might these considerations change how we interpret our model and interaction?
+
+# Bonus
+
+Try steps 3-6 again, but instead of using weight (`wt`) and transmission type (`am`) as predictors, use *2 categorical predictors* for your model: `am` and `cyl`. Note that `cyl` has 3 levels -- 4, 6, or 8 cylinders. 
+
+How would you set up your variables for this model, interpret your parameters, and plot your model's predicted estimates?
+
+```{r, results='hide'}
+# convert cyl to factor
+df$cyl.f= as.factor(df$cyl)
+
+# run model
+m_bonus = rstanarm::stan_glm(data=df, mpg ~ am*cyl.f)
+```
+```{r}
+# define grid of values to predict for
+bonus_pred_grid = expand.grid(cyl.f = unique(df$cyl.f), am = c(1,0))
+
+# make predictions from model 
+bonus_model_preds = add_fitted_draws(model = m_bonus, newdata = bonus_pred_grid)
+
+# better labels for transmission
+bonus_model_preds$`Transmission` = dplyr::recode(bonus_model_preds$am, '1'='Manual', '0'='Automatic')
+
+ggplot(bonus_model_preds, mapping = aes(x = `Transmission`, y = .value, fill= cyl.f)) +
+  tidybayes::stat_halfeye() +
+  facet_grid(~cyl.f) +
+  theme_bw() +
+  labs(y = 'Miles Per Gallon', title = 'MPG as a function of transmissison and cylinders', fill = '# of cylinders') 
+```
+
