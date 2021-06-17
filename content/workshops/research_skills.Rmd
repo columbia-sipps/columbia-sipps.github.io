@@ -29,4 +29,11 @@ After each session in the series, the page will be updated with links to the cor
 
 ### Week 2: Literature search & Zotero
 <br>
-Recordings/materials will be posted after the workshop.
+Recording will be posted after the workshop.
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/prof-dev/LitSearch-AV" download>workshop slides</a>
+</ul>
+
+<hr>
