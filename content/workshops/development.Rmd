@@ -30,7 +30,12 @@ Before each journal club session, check this page for details about which articl
 
 ### Week 2: Careers inside and outside academia
 <br>
-Recordings/materials will be posted after the workshop.
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/3iaeCmjRkUBHITaSp-m0883h47dGeEszlHykuSo6R0T54oWjdj_ib1XUiYHMq_aL.JSKrRLVVlPVyCZ_I" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/prof-dev/Ac_and_non-ac_careers.pdf" download>workshop slides</a>
+</ul>
 
 <hr>
 
