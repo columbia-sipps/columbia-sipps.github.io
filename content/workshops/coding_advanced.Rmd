@@ -49,7 +49,7 @@ A few days before each session, please check this page to make sure you've downl
 <br>
 **After the workshop:**
 <ul>
-Final materials post-workshop:
+Final workshop materials:
 <li><a href="static/workshop_files/coding-adv-02/lm-lesson-bayes.Rmd" download>RMarkdown lesson file</a> 
 <li><a href="static/workshop_files/coding-adv-02/lm-lesson-bayes.html" download>HTML lesson file</a>
 <li><a href="static/workshop_files/coding-adv-02/lm-challenge-bayesian.Rmd" download>RMarkdown challenge file</a>
