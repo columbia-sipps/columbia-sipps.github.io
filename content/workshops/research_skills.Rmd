@@ -29,7 +29,7 @@ After each session in the series, the page will be updated with links to the cor
 
 ### Week 2: Literature search & Zotero
 <br>
-Recording will be posted after the workshop.
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/aTzEDzUtrgNRZxjCqkQrGeyrxN8XL1JeqgqpPCPNoEOkcawLyylfdljhI_pZrC-s.P4IjrQT7qkY_4odZ" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Workshop materials:**
 <ul>
