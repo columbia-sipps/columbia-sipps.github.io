@@ -33,7 +33,7 @@ Recording will be posted after the workshop.
 <br>
 **Workshop materials:**
 <ul>
-<li><a href="/workshop_files/prof-dev/LitSearch-AV" download>workshop slides</a>
+<li><a href="/workshop_files/prof-dev/LitSearch-AV.pdf" download>workshop slides</a>
 </ul>
 
 <hr>

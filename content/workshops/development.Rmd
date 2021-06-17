@@ -34,7 +34,7 @@ Before each journal club session, check this page for details about which articl
 <br>
 **Workshop materials:**
 <ul>
-<li><a href="/workshop_files/prof-dev/Ac_and_non-ac_careers.pdf" download>workshop slides</a>
+<li><a href="/workshop_files/prof-dev/Ac_and_non-ac_careers.pptx" download>workshop slides</a>
 </ul>
 
 <hr>
