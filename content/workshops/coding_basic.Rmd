@@ -48,6 +48,8 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-basic-02/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
 
+<hr>
+
 ### Week 3: Data Cleaning - Part 1
 <br>
 Recording will be posted after the workshop. 
