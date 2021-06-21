@@ -47,3 +47,22 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-basic-02/lesson_key.Rmd" download>RMarkdown lesson file (with answers)</a>
 <li><a href="/workshop_files/coding-basic-02/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
+
+### Week 3: Data Cleaning - Part 1
+<br>
+Recording will be posted after the workshop. 
+<br>
+**Before the workshop:**
+<ul>
+<li>please create a folder named `03_data-cleaning` on your computer
+<li>download these files within that folder: 
+<a href="/workshop_files/coding-basic-03/Study1.csv" download>data file 1 (Study1.csv)</a>, 
+<a href="/workshop_files/coding-basic-03/Study1.rda" download>data file 2 (Study1.rda)</a>,
+<a href="/workshop_files/coding-basic-03/Study2_Subjects.csv" download>data file 3 (Study2_Subjects.csv)</a>,
+<a href="/workshop_files/coding-basic-03/README_Study2.txt" download>Readme file (README_Study2.txt)</a>,
+<a href="/workshop_files/coding-basic-03/lesson.Rmd" download>RMarkdown file (lesson.Rmd)</a>, 
+<a href="/workshop_files/coding-basic-03/03_data-cleaning.Rproj" download>R Project file (03_data-cleaning.Rproj)</a>, 
+<a href="/workshop_files/coding-basic-02/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
+</ul>
+<br>
+
