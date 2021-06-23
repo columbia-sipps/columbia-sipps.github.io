@@ -1,0 +1,107 @@
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+The questions and exercises below all include examples using a dataset put together in the Tottenham Lab of many Billboard Hot 100 songs from 1946-1983. Today in this challenge you'll want to work to answer several questions:
+
+1. Did pop and rock songs on the Billboard charts tend to get *louder* on averaage from 1946-1983?
+2. From the 1946-1983 Billboard charts, *which were louder on average -- pop or rock songs?*
+3. Did changes in average loudness from 1946-1983 differ for pop and rock songs?
+
+
+* To answer these questions, please use a combination of Bayesian regression models with `rstanarm::stan_glm()`, and plotting with `ggplot()`
+* If anything is confusing or you get stuck, please use the previous lesson plans and challenge answer keys as a reference, or reach out to an instructor!
+* Remember, **we do not expect you to memorize syntax, nor is this a crucial part of coding or stats**. Use google, stack overflow, documentation, previous lessons and challenges, colleagues, and instructors as a reference -- this is what 'real-life' coding is like!
+
+## 0. Setup 
+
+**You don't have to write code in this section, but it will be helpful to read through to understand the data a little better.** 
+
+Load the needed packages (install if necessary and *ASK AN INSTRUCTOR* if you're getting stuck here
+
+```{r, warning=FALSE, results='hide', message=FALSE}
+library(tidyverse)
+library(car)
+library(rstanarm)
+library(tidybayes)
+library(bayesplot)
+```
+
+Now, we can load in the data from Github using `read_csv()`
+
+```{r}
+music = read_csv('https://raw.githubusercontent.com/pab2163/danl_code_workshop/main/data/familiar_music_database.csv')
+names(music)
+```
+We have a lot of columns here we could look at, but for today's challenge just focus on genre, loudnesss, and year. We'll also only look at the `Pop` and `Rock` genres for today
+
+```{r}
+# select just the relevant columns
+music = dplyr::select(music, title, artist, year, genre, loudness) %>%
+  # filter the data to only include Pop/Rock genre
+  dplyr::filter(genre %in% c('Pop', 'Rock')) %>%
+  # scale/center loudness
+  dplyr::mutate(loudness = as.vector(scale(loudness, center = TRUE, scale = TRUE)))
+```
+
+```{r}
+head(music)
+```
+
+
+## 1. Did pop and rock songs on the Billboard charts tend to get *louder* on averaage from 1946-1983?
+
+* Build a Bayesian regression model using `rstanarm::stan_glm()` with 1 continuous predictor to understand relationships between`year` and `loudness` in the music dataset!
+* Interpret your model parameters: *what can you conclude about average changes in loudness between 1946-1983? how strong is your evidence?*
+* Graph your model predictions using `tidybayes` and `ggplot()`
+  * Bonus: graph model predictions and the raw data on the same plot!
+
+
+```{r}
+# here's 1 open code chunk for this question, but feel free to make more!
+
+```
+
+
+
+
+## 2. From the 1946-1983 Billboard charts, *which were louder on average -- pop or rock songs?*
+
+* Build a Bayesian regression model using `rstanarm::stan_glm()` with 1 categorical predictor to understand relationships between `genre` and `loudness` in the music dataset!
+* Interpret your model parameters: *what can you conclude about average difference in loudness between rock versus pop songs? how strong is your evidence?*
+* Graph your model predictions using `tidybayes` and `ggplot()`
+  * Bonus: graph model predictions and the raw data on the same plot!
+  
+
+```{r}
+# here's 1 open code chunk for this question, but feel free to make more!
+
+```
+  
+## 3. Did changes in average loudness from 1946-1983 differ for pop and rock songs?
+
+* Build a Bayesian regression model using `rstanarm::stan_glm()` with 1 categorical predictor, 1 continuous predictor, and an interaction term between them, to understand `loudness` as a function of `genre`, `year`, and their interaction.
+* Interpret your model parameters: *how do changes in loudness over time from 1946-1983 differ for pop versus rock songs? how strong is your evidence?*
+  * And -- how do the results you are seeing here add more nuance to your interpretations from parts 1 & 2. 
+* Graph your model predictions using `tidybayes` and `ggplot()`
+  * Bonus: graph model predictions and the raw data on the same plot!
+  
+  
+```{r}
+# here's 1 open code chunk for this question, but feel free to make more!
+
+```
+
+
+
+## 4. Wrap-up
+
+Congrats! You've finished the challenge! 
+
+* Before you move on, we recommend that you take 5 minutes to go back and comment your code -- as a gift to yourself when you come back later to run similar analyses! Commenting and documenting right away is almost always going to ultimately save you time and energy.
+* For any concepts or pieces of code that don't make sense yet, write down your questions! Be sure to either ask a friend or an instructor right away, or ask in slack so you can learn.
+
+
+  
