@@ -98,7 +98,7 @@ This is **so important to do before you write a single line of code.**
 
 Before you try to write any code, you should talk through what you want to do in plain English before you actually try to code it. This is how you will actually figure out what you need your code to do, and then what functions you need to do the things you want.
 
-As an example, let's look into the Study1 data again. 
+As an example, let's look into the Study1 dataframe  
 
 First, let's take a look at it's data again. 
 ```{r}
@@ -123,7 +123,7 @@ Now put this into action in the code chunk below.
 ```{r}
 # put the above psuedocode into action for finding the mean number of words written in Shakespear's plays
 
-
+mean(study_data$Age)
 ```
 This is a very simple case of using pseudocode, but as we move into data cleaning and analysis, you will see how this can be really helpful. It can break complex analysis into simple steps where you just have to do one function at a time.
 
@@ -138,14 +138,16 @@ For e.g. let's say you want to check that the function `mean()` is returning the
 You can test the function by giving some fake data
 ```{r}
 #create fake_data with all 1s, and find the mean of that
-
+fake_data <- c(1,1,1,1)
+mean(fake_data)
 ```
 You know the mean of the fake_data should be 1 and you see that it does give you 1. 
 
 Similarly, let's test with another fake_data
 ```{r}
 #create fake_data_2 with all 0s and find the mean of that
-
+fake_data_2 <- c(0,0,0,0)
+mean(fake_data_2)
 ```
 There are many more ways of testing code, but this is the minimum you should do **at every step**.
 
@@ -191,11 +193,11 @@ HINT: If you did not open it from the .Rproj file, then you can get your working
 ## For .txt, .csv and tab-deliminated files
 ## read.table()
 
-
+mydata <- read.table(file = "Study1.csv")
 
 # Add arguments to help R figure out how your data is organized
 
-
+mydata <- read.table(file = "Study1.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 
 # header = TRUE means that there is a header.
 # stringsAsFactors = FALSE means that any column; almost always a good idea to read data in with stringsAsFactors = FALSE.
@@ -204,8 +206,10 @@ HINT: If you did not open it from the .Rproj file, then you can get your working
 ```{r}
 # For .csv files
 # read.csv, just like read.table but with better defaults for .csv
-
-
+mydata <- read.csv(file = "Study1.csv", header = TRUE, stringsAsFactors = FALSE)
+#OR even these below will work:
+#mydata <- read.csv("Study1.csv")
+#mydata <- read_csv("Study1.csv")
 
 # Note that this is different from the read_csv function we used last week. read_csv is a part of the tidyverse library, which we haven't loaded yet. read.csv is a part of core R, so you don't need any additional packags to use it. But read_csv works better than read.csv in a lot of cases, so I would personally recommend that.
 ```
@@ -215,7 +219,7 @@ HINT: If you did not open it from the .Rproj file, then you can get your working
 # read.delim, for when you have a separator that's not standard
 
 ## For getting data that's already in R-format
-
+load("Study1.rda")
 
 #.rda stands for R data. Nice thing about rda data is that you can store multiple different variables (incl. different dataframes in one file)
 ```
@@ -255,28 +259,30 @@ Before you start inspecting and cleaning your data, load in the package `tidyver
 
 ```{r}
 # load in package tidyverse
-
+library(tidyverse)
 ```
 Next, let's look at the number of columns and the number of rows in our dataset. In a psychology dataset for example, each row would be a participant, and so, the number of subjects in our dataset is equal to the number of rows.
 
 ```{r}
 # Number of rows and number of columns
 # Gives us the number of rows and columbia
+numberSubjects <- nrow(mydata)
 
+ncol(mydata)
 ```
 
 Let's take at the names of the columns now. 
 
 ```{r}
 # Names of columns
-
+names(mydata)
 ```
 
 And now, let's look at the data itself in these different columns. 
 
 ```{r}
 # look at the first few rows
-
+head(mydata, 10)
 #Second argument sounds for how many rows you want; 10 is for 10 rows of data
 
 ```
@@ -310,7 +316,10 @@ Without piping you would do the following:
 
 But with piping:
 ```{r}
+mydata <- mydata %>% 
+  dplyr::rename(Neuroticism = Personality)
 
+head(mydata)
 ```
 
 It might seem like the first version is simpler, but it won't be once you start stacking functions together. For example, let's rearrange our variables (using `select()`) while also renaming the variables called T1, T2, T3, and T4. Note that we keep adding `%>%` between each function.
@@ -321,6 +330,9 @@ It might seem like the first version is simpler, but it won't be once you start 
 
 ```{r}
 
+mydata <- mydata %>% 
+  dplyr::rename(Day1 = T1, Day2 = T2, Day3 = T3, Day4 = T4) %>% 
+  dplyr::select(., ID, Condition, Age, contains("Day"), everything())
 
 #Pipe into rename function and rename a bunch of different columns.
   
@@ -334,7 +346,8 @@ It might seem like the first version is simpler, but it won't be once you start 
 
 Other select() examples - starts_with(), ends_with(), and removing variables with -
 ```{r}
-
+mydata2 <- mydata %>% 
+  dplyr::select(., ID, Condition, Age, starts_with("Day"), -ends_with("4"))
 ```
 
 ## Filter some of the observations that meet a certain criteria
@@ -342,12 +355,14 @@ Other select() examples - starts_with(), ends_with(), and removing variables wit
 Maybe, we want to just take a look at those who are in condition 1 only
 
 ```{r}
-
+mydata_cond1 <- mydata2 %>%
+  filter(Condition == 1) # remember the relational operators? we are seeing them in action here!
 ```
 
 You can also separately get those in condition 2 
 ```{r}
-
+mydata_cond2 <- mydata2 %>%
+  filter(Condition == 0) # remember the relational operators? we are seeing them in action here!
 ```
 
 `dplyr::filter()` will be covered in more detail in data cleaning part 2!
@@ -358,12 +373,13 @@ One problem you may have is missing data. Sometimes this is something you alread
 
 ```{r}
 # This command asks for rows that are not complete. 
-
+mydata %>% 
+  filter(!complete.cases(.))
 ```
 
 ```{r}
-
-
+is.na(mydata$Age)# returns TRUE if x is missing and returns FALSE is x is present
+is.na(mydata$Condition)
 ```
 
 In this case, the missing value is the Age value in row 39. You know you have this info somewhere on a paper form, so you go dig it up and want to replace it.
@@ -371,7 +387,7 @@ In this case, the missing value is the Age value in row 39. You know you have th
 ```{r}
 
 # Directly replace one missing value
-
+mydata$Age[mydata$ID==39] <- 30 
 
 # mydata$Age - this is the specific column
 # Bracket indexing to select the specific ID value; look at the data where ID is only equal to 39.
@@ -389,15 +405,15 @@ You can always save data frames as a .csv for easy sharing and viewing outside o
 
 ```{r, eval = FALSE}
 # Write data to a .csv
-
-# this is kind of the opposite to the read_csv function!
+write_csv(mydata2, "Study1_Clean.csv") # this is kind of the opposite to the read_csv function!
 ```
 
 However, you can also save in an R format that lets you save multiple variables/objects in the same file. For example, you might want to have a long and wide format, or one dataframe with all the data and one with just subject information. Saving as a .rda file allows you to save multiple objects at once for easy loading into R. You can also save the outputs of statistical models in these, along with their data.
 
 ```{r, eval = FALSE}
 # Save a .rda. You can add as many objects as you want, separated by commas
-
+save(mydata2, mydata_cond1, mydata_cond2, file = "Study1_clean.rda") 
+# the `file=` argument is very important here! 
 # you can then load in all of these objects by just saying load("Study1_clean.rda")
 ```
 

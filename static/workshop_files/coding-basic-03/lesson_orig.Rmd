@@ -53,7 +53,7 @@ You can find out more about a function by typing ?function_name() in the console
 
 ```{r}
 # try getting help on a function called sum() 
-?sum()
+
 ```
 
 You can also write your own function, but for the sake of time we won't go into it in today's tutorial. [Here](https://swcarpentry.github.io/r-novice-inflammation/02-func-R/){target="_blank"} is a link if you'd like to know more about how to write your own functions. 
@@ -98,30 +98,28 @@ This is **so important to do before you write a single line of code.**
 
 Before you try to write any code, you should talk through what you want to do in plain English before you actually try to code it. This is how you will actually figure out what you need your code to do, and then what functions you need to do the things you want.
 
-As an example, let's look into the Study1 data again. 
+As an example, let's look into the shakes dataframe again. 
 
 First, let's take a look at it's data again. 
 ```{r}
-library(tidyverse)
-study_data <- read_csv("Study1.csv")
-study_data
+shakes
 ```
 
-Let's say we are interested in the mean age of participants in our dataset. So, we want to find the mean of the age column. Here are the steps we'd have to take to do this:
+Let's say we are interested in the mean number of words written by Shakespeare in his plays. So, we want to find the mean of the n.words column. Here are the steps we'd have to take to do this:
 
-1. First call the column Age from the dataframe
+1. First call the column n.words from the dataframe
 2. then find the mean for that column
 3. Show that on the console
 
 The next step in the pseudocode is to write the actual functions I'd be using. For example: 
 
-1. Get the column by typing `study_data$Age` to get the Age column
-2. To find mean, use mean() function on the `study_data$Age`
+1. Get the column by typing `shakes$n.words` to get the n.words column
+2. To find mean, use mean() function on the `shakes$n.words`
 3. Print to the console without saving it in a variable
 
 Now put this into action in the code chunk below.
 ```{r}
-# put the above psuedocode into action for finding the mean number of words written in Shakespear's plays
+# put the above psuedocode into action for finding the mean number of words written in Shakespeare's plays
 
 
 ```
@@ -149,11 +147,6 @@ Similarly, let's test with another fake_data
 ```
 There are many more ways of testing code, but this is the minimum you should do **at every step**.
 
-```{r}
-rm(fake_data, fake_data_2, study_data) # removing everything that we've created so far, so we can start fresh for data cleaning
-```
-
-
 # Data Cleaning
 ## Install Packages
 
@@ -167,11 +160,7 @@ In some cases, you may want to enter data directly into R. This is easy with a s
 
 ```{r}
 # Direct Data Entry
-dataframe <- tibble(name = c("Manasi", "Ben", "John", "Anna"),
-                    score = c(16, 25, 35, 30),
-                    year = c(3, 2, 2, 2))
 
-rm(dataframe)
 ```
 
 However, it's easy to introduce errors this way, and with a lot of data it would get tedious.
@@ -204,7 +193,6 @@ HINT: If you did not open it from the .Rproj file, then you can get your working
 ```{r}
 # For .csv files
 # read.csv, just like read.table but with better defaults for .csv
-
 
 
 # Note that this is different from the read_csv function we used last week. read_csv is a part of the tidyverse library, which we haven't loaded yet. read.csv is a part of core R, so you don't need any additional packags to use it. But read_csv works better than read.csv in a lot of cases, so I would personally recommend that.
@@ -322,6 +310,7 @@ It might seem like the first version is simpler, but it won't be once you start 
 ```{r}
 
 
+
 #Pipe into rename function and rename a bunch of different columns.
   
 # using everything() within select() means you don't have to type all the variables out.
@@ -362,14 +351,13 @@ One problem you may have is missing data. Sometimes this is something you alread
 ```
 
 ```{r}
-
+# is.na(x) returns TRUE where x is missing and returns FALSE where x is present
 
 ```
 
 In this case, the missing value is the Age value in row 39. You know you have this info somewhere on a paper form, so you go dig it up and want to replace it.
 
 ```{r}
-
 # Directly replace one missing value
 
 
@@ -378,6 +366,32 @@ In this case, the missing value is the Age value in row 39. You know you have th
 # Look for pieces of data in the age column where the ID is equal to 39. Then we save 30 into that cell.
 
 ```
+
+### Other ways to address missing data:
+
+#### Recoding Values to Missing. 
+
+If you are getting a dataset that was entered in SPSS, chances are good that missing values will be coded as -99 or 999 or another implausible value. Therefore, to conduct analyses in R, you'd need to change these values to NA.
+```{r}
+# recode 99 to missing for variable Age
+# select rows where v1 is 99 and recode column v1
+
+```
+
+#### Exclude missing values from analyses:
+
+The function na.omit() returns the object with listwise deletion of missing values.
+```{r}
+# create new dataset without missing data
+
+```
+
+Arithmetic functions on missing values yield missing values, unless you include na.rm = TRUE
+```{r}
+
+```
+
+Advanced Handling of Missing Data: Most modeling functions in R offer options for dealing with missing values. You can go beyond pairwise of listwise deletion of missing values through methods such as multiple imputation. Good implementations that can be accessed through R include Amelia II, Mice, and mitools.
 
 ## Saving your progress
 
@@ -389,7 +403,7 @@ You can always save data frames as a .csv for easy sharing and viewing outside o
 
 ```{r, eval = FALSE}
 # Write data to a .csv
-
+ 
 # this is kind of the opposite to the read_csv function!
 ```
 

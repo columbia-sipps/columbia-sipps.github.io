@@ -50,10 +50,25 @@ A few days before each session, please check this page to make sure you've downl
 **After the workshop:**
 <ul>
 Final workshop materials:
-<li><a href="static/workshop_files/coding-adv-02/lm-lesson-bayes.Rmd" download>RMarkdown lesson file</a> 
-<li><a href="static/workshop_files/coding-adv-02/lm-lesson-bayes.html" download>HTML lesson file</a>
-<li><a href="static/workshop_files/coding-adv-02/lm-challenge-bayesian.Rmd" download>RMarkdown challenge file</a>
-<li><a href="static/workshop_files/coding-adv-02/lm-challenge-answers-bayesian.Rmd" download>RMarkdown challenge file (with answers)</a>
-<li><a href="static/workshop_files/coding-adv-02/bayesian_regression_slides.pdf" download>Slides from the workshop</a>
+<li><a href="workshop_files/coding-adv-02/lm-lesson-bayes.Rmd" download>RMarkdown lesson file</a> 
+<li><a href="workshop_files/coding-adv-02/lm-lesson-bayes.html" download>HTML lesson file</a>
+<li><a href="workshop_files/coding-adv-02/lm-challenge-bayesian.Rmd" download>RMarkdown challenge file</a>
+<li><a href="workshop_files/coding-adv-02/lm-challenge-answers-bayesian.Rmd" download>RMarkdown challenge file (with answers)</a>
+<li><a href="workshop_files/coding-adv-02/bayesian_regression_slides.pdf" download>Slides from the workshop</a>
 </ul>
 <hr>
+
+### Week 3: Review of regression and moderation (bayesian)
+<br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/3e7KARJzQx8ODrypHmhehBdoK1vMzQNTNpWSMLXbN-Ewe_E0QkeJtgEoIRwrbOlp.HmgUI3uBZ8KhRtT6" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
+
+**After the workshop:**
+<ul>
+Final workshop materials:
+<li><a href="workshop_files/coding-adv-03/bayes-challenge-2.Rmd" download>RMarkdown challenge file</a> 
+<li><a href="workshop_files/coding-adv-03/bayes-challenge-2.html" download>HTML challenge  file</a>
+<li><a href="workshop_files/coding-adv-03/bayes_review.pptx" download>Slides from the workshop</a>
+</ul>
+<hr>
+
