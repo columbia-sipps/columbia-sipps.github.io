@@ -41,5 +41,11 @@ Before each journal club session, check this page for details about which articl
 
 ### Week 3: Journal club
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/E1vzn-jAW0MHMMYBQIqt_h_UiFheSbbCT2nW0wh7kM3IpoqcQIdOsDtpu0KBJB4_.tmNBBDa__XkpYtDs" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
+**Workshop materials:**
+<br>
 This week's reading: [Variety Wins: Soccer-Playing Robots and Infant Walking (Ossmy et al., 2018)](/workshop_files/prof-dev/VarietyWins.pdf){target="_blank"}
 <br>
+
+<hr>
