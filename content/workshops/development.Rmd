@@ -45,7 +45,9 @@ Before each journal club session, check this page for details about which articl
 <br>
 **Workshop materials:**
 <br>
-This week's reading: [Variety Wins: Soccer-Playing Robots and Infant Walking (Ossmy et al., 2018)](/workshop_files/prof-dev/VarietyWins.pdf){target="_blank"}
-<br>
+<ul>
+<li>This week's reading: [Variety Wins: Soccer-Playing Robots and Infant Walking (Ossmy et al., 2018)](/workshop_files/prof-dev/VarietyWins.pdf){target="_blank"}
+<li><a href="/workshop_files/prof-dev/Journal_Club_Jun_23.key" download>journal club keynote slides</a>
+</ul>
 
 <hr>
