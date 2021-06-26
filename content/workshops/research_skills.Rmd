@@ -52,3 +52,15 @@ After each session in the series, the page will be updated with links to the cor
 
 <hr>
 
+### Week 4: Git (Version control & script sharing)
+<br>
+Recording and workshop materials will be posted after the workshop.
+<br>
+
+**Before the workshop:**
+<ul>
+<li> Please download a href="/workshop_files/research-skills/Git_installation_instructions.docx" download>this file (Git installation instructions)</a>, and follow the instructions to install git
+</ul>
+<br>
+
+<hr>

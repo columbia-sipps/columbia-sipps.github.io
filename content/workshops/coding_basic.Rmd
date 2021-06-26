@@ -52,7 +52,7 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 3: Data Cleaning - Part 1
 <br>
-Recording will be posted soon. 
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/ql2sYMcvOnH5GkrTue5ZNkBCaVoIZfBTVchjovMJHXwMzWmEhvEt0rSQfNBzChy-.S7V-MYQpFWVegtnL" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
