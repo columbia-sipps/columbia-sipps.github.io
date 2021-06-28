@@ -74,3 +74,20 @@ Final workshop materials:
 <br>
 <hr>
 
+### Week 4: Cleaning data for multi-level modeling
+
+<br>
+Recording will be posted after the workshop.
+<br>
+
+**Before the workshop:**
+<ul>
+Please download the following workshop materials into one folder:
+<li><a href="/workshop_files/coding-adv-04/mlm-cleaning-lesson.Rmd" download>RMarkdown lesson file</a> 
+<li><a href="/workshop_files/coding-adv-04/mlm-cleaning-lesson.html" download>RMarkdown lesson html</a>
+<li><a href="/workshop_files/coding-adv-04/mlm-cleaning-challenge.Rmd" download>RMarkdown challenge file</a>
+<li><a href="/workshop_files/coding-adv-04/mlm-data-cleaning.csv" download>data file (mlm-data-cleaning.csv)</a>
+</ul>
+<br>
+
+<hr>
