@@ -1,0 +1,135 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+We will be using data from the same study as from the lesson to practice cleaning multilevel data, transforming it into long format, and visualizing these data. As a reminder, we are not focusing on running models yet. These data include a variable for ID and gender, and then assess self-worth (SPPA_SWORTH), communication quality with mothers (MPACS), and generalized anxiety (SCARED_GAD). Self-worth, communication and GAD were assessed every 6-months at 6 different timepoints. The csv file is the same as the lesson mlm_datacleaning.csv and can be found here: https://columbia-sipps.github.io/workshops/coding_advanced/
+
+## Load in packages and data
+
+```{r}
+library(tidyverse)
+
+#Note that this will be different depending on where you saved the data
+d <- read.csv("/Users/anadigiovanni/Desktop/Mentoring:Teaching/SIPPS 2021/mlm-data-cleaning.csv")
+```
+
+## Filter data based on gender and include those with values of 4 or 5. 
+
+Teens who identified as boys at T1 but then identified as girls or another gender at later timepoints were coded as 4, and teens who identified as girls at T1 byt then identified as boys or another gender at a later timepoints were coded as 5. There will be a lot less adolescents we will be plotting here. 
+
+```{r}
+d <- d %>% 
+  filter(GENDER_ACROSSTIME_T1T2T3T4 == 4 | GENDER_ACROSSTIME_T1T2T3T4 == 5)
+```
+
+## Select only the variables we will be plotting
+
+Being: id, gender, and all of the communication with mothers scores
+```{r}
+d <- d %>% 
+  select(ID, GENDER_ACROSSTIME_T1T2T3T4, contains("MPACS"))
+```
+
+## Recode gender 
+
+(either dummy code it or effect code it) 
+```{r}
+#effect coded
+d$GENDER_ACROSSTIME_T1T2T3T4 <- ifelse(d$GENDER_ACROSSTIME_T1T2T3T4 == 4, -.5, .5)
+```
+
+
+## Rename your variables 
+
+Rename them so that they are easier to understand 
+```{r}
+d <- d %>% 
+# rename vectors
+  rename(
+    id = 1,                   
+    gender = 2,           
+    mom_comm_1 = 3,   
+    mom_comm_2 = 4,   
+    mom_comm_3 = 5,   
+    mom_comm_4 = 6,   
+    mom_comm_5 = 7,   
+    mom_comm_6 = 8
+    )
+```
+
+## Rescale communication
+
+Right now it is on a scale of 20 to 100. Put it on a scale of 0 to 10
+```{r}
+d$mom_comm_1 <- 1/8 * (d$mom_comm_1 - 100) + 10
+d$mom_comm_2 <- 1/8 * (d$mom_comm_2 - 100) + 10
+d$mom_comm_3 <- 1/8 * (d$mom_comm_3 - 100) + 10
+d$mom_comm_4 <- 1/8 * (d$mom_comm_4 - 100) + 10
+d$mom_comm_5 <- 1/8 * (d$mom_comm_5 - 100) + 10
+d$mom_comm_6 <- 1/8 * (d$mom_comm_6 - 100) + 10
+```
+
+## Transform our data from wide format to long format
+
+Hint: use the pivot longer function. Note, we want there to be one column for time, and another column for communication scores. There should be one row of data for each individual's communication score at each timepoint (e.g., 6 rows per person if no missing data)
+```{r}
+d_long <- d %>% 
+  tidyr :: pivot_longer(., cols = contains("mom_comm"), names_to = "time", values_to = "communication")
+```
+
+## Clean your data in the long format 
+
+Drop the rows with NA values (the observations where there is no communication score). Then recode time into a factor and rename the variables so that they are only numeric values that range from time 0 to time 5 instead of time 1 to time 6. 
+```{r}
+d_long <- d_long %>%
+  filter(!is.na(communication)) %>%
+  #renaming the time variables to be numbers and making T1 be 0 and not 1         
+   dplyr::mutate(., time = recode_factor(time, "mom_comm_1" = "0", "mom_comm_2" = "1",
+                                         "mom_comm_3" = "2", "mom_comm_4" = "3", 
+                                         "mom_comm_5" = "4", "mom_comm_6" = "5")) %>%
+  dplyr::mutate_if(is.numeric, round, digits = 2)
+```
+
+## Filtering out people who have less than 4 time-points
+
+Create a variable that indexes the amount of timepoints each teen has, then filter to keep people who have 4+ tps
+```{r}
+d_long <- d_long %>%
+  group_by(id) %>%
+  dplyr::mutate(id_count = n()) %>%
+  filter(id_count >= 4)
+```
+
+## Plot the data 
+
+First create two panels next to one another, where one panel represents the raw data points of communication of all of the teens who transitioned from male to other gender and the other panel represents the raw data points of communication of all of the teens who transitioned from female to other gender. There should be a line per adolescent. 
+```{r}
+ggplot(data = d_long, aes(x = time, y = communication)) +
+  geom_line(aes(group = id, color = as.factor(gender)), alpha = .5, size = .8) +
+  facet_wrap("gender") + # gender variable gives text labels to panels
+  labs(x = "Time",
+       y = "Communication Quality with Mothers",
+       title = "")
+```
+
+## Create indiviudal panel plots 
+
+Plot all the individuals
+```{r}
+ggplot(data = d_long, aes(x = time, y = communication)) +
+  geom_line(aes(group = id), color = "green") + geom_point(aes(group = id), size = .4) +
+  facet_wrap("id") + # Group variable gives text labels to panels
+  labs(x = "Time",
+       y = "Communication Quality with Mothers",
+       title = "")
+```
+
+
+
+
+
+
+
