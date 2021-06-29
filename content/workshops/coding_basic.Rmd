@@ -64,14 +64,14 @@ A few days before each session, please check this page to make sure you've downl
 <a href="/workshop_files/coding-basic-03/README_Study2.txt" download>Readme file (README_Study2.txt)</a>,
 <a href="/workshop_files/coding-basic-03/lesson_orig.Rmd" download>RMarkdown file (lesson_orig.Rmd)</a>, 
 <a href="/workshop_files/coding-basic-03/03_data-cleaning.Rproj" download>R Project file (03_data-cleaning.Rproj)</a>, 
-<a href="/workshop_files/coding-basic-02/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
+<a href="/workshop_files/coding-basic-03/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
 </ul>
 
 **After the workshop:**
 <ul>
 <li>updated version of the lesson file (based on changes made during the workshop): <a href="/workshop_files/coding-basic-03/lesson.Rmd" download>Lesson RMarkdown file (lesson.Rmd)</a>
 <li> <a href="/workshop_files/coding-basic-03/lesson_key.Rmd" download>Lesson RMarkdown file (with answers) (lesson_key.Rmd)</a>
-<li> <a href="/workshop_files/coding-basic-02/challenge_key.Rmd" download>RMarkdown challenge file (with answers (challenge_key.Rmd)</a>
+<li> <a href="/workshop_files/coding-basic-03/challenge_key.Rmd" download>RMarkdown challenge file (with answers (challenge_key.Rmd)</a>
 </ul>
 
 <hr>
