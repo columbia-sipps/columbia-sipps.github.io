@@ -78,6 +78,8 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 4: Data Cleaning - Part 2 (i.e., Data Manipulation)
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/kCsqybb90-Owiotr9M3W5hO1ay2kcOZvL7F6sGon9EGUi0DzcWe3QAva3D7jxOvS.USkUisXXabanWC8x?startTime=1624996597000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>please create a folder named `04_data-manipulation` on your computer

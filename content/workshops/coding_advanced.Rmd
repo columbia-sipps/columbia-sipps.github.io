@@ -77,7 +77,7 @@ Final workshop materials:
 ### Week 4: Cleaning data for multi-level modeling
 
 <br>
-Recording will be posted after the workshop.
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/i2WtugWz4-PY0ohg6eg_cDQ6SkbPczOgjtqEW74nEv_CnosQHTYPFHCv1Y-vvpTC.8vhrEYP3OhV7Nbcd" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 
 **Before the workshop:**
