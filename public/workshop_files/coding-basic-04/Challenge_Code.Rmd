@@ -34,7 +34,7 @@ getwd()
 
 list.files()
 
-subjects <- read_csv("Study2_Subjects.csv", header=TRUE, stringsAsFactors=FALSE)
+subjects <- read.csv("Study2_Subjects.csv", header=TRUE, stringsAsFactors=FALSE)
 
 # View the first 5 rows of the data frame
 
@@ -91,14 +91,14 @@ subjects <- subjects %>%
 
 # You see there's another .csv file for Study 2, this one's called Study2_Trials.csv. Open it and take a look. This frame has the same 10 subjects, but now it has reaction time data from a task with 30 trials. Create a new data frame that combines this with your subject level information. 
 
-trials <- read_csv("Study2_Trials.csv", header=TRUE, stringsAsFactors=FALSE)
+trials <- read.csv("Study2_Trials.csv", header=TRUE, stringsAsFactors=FALSE)
 
 data <- merge(subjects, trials, by="ID")
 
 # Now that you have one frame with all the data, put it into long format. Each subject should have one row for each trial.
 
 data_Long <- data %>% 
-  pivot_longer(cols = startsWith("RT"),
+  pivot_longer(cols = starts_with("RT"),
                names_to = "Trial",
                values_to = "RT",
                names_prefix = "RT_")
