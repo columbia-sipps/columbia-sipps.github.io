@@ -54,7 +54,7 @@ After each session in the series, the page will be updated with links to the cor
 
 ### Week 4: Git (Version control & script sharing)
 <br>
-Recording and workshop materials will be posted after the workshop.
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/play/ZsMlSXLV6-lGTA9fDx47ISVO8RYBSk_mRod_PCqP9-_aqLy7_ZOXPUTVjeKvqEYelsQWqrUkMzpmNAo.8tFYcKxGzZQoqCrD?_x_zm_rhtaid=599&_x_zm_rtaid=7YEOD9OySHa-fbj5JYIM0A.1625492249119.21bbfa79b54e8b2fcc59869b1cb49e19&autoplay=true&continueMode=true&startTime=1625170245000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 
 **Before the workshop:**
@@ -64,4 +64,3 @@ Recording and workshop materials will be posted after the workshop.
 </ul>
 <br>
 
-<hr>

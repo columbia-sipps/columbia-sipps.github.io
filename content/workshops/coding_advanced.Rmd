@@ -101,3 +101,16 @@ A few days before each session, please check this page to make sure you've downl
 <br>
 
 <hr>
+
+### Week 5: Time-course/longitudinal data
+<br>
+**Before the workshop:**
+<ul>
+<li>Please download the following workshop materials into one folder:
+<ul>
+<li><a href="/workshop_files/coding-adv-05/mlm-lesson-longitudinal.Rmd" download>RMarkdown lesson file</a> 
+<li><a href="/workshop_files/coding-adv-05/mlm-lesson-longitudinal.html" download>RMarkdown lesson html</a>
+<li><a href="/workshop_files/coding-adv-05/mlm-longitudinal-challenge.Rmd" download>RMarkdown challenge file</a>
+<li><a href="/workshop_files/coding-adv-05/mlm-longitudinal.pdf" download>workshop slides</a>
+</ul>
+</ul>
