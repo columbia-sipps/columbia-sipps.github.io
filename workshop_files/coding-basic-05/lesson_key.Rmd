@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Welcome to the Programming Fundamentals workshop - the 5th workshop in the Basic coding track! 
+Welcome to the Correlations and basic visuals workshop - the 5th workshop in the Basic coding track! 
 
 # Links to Files and Video Recording
 
@@ -62,7 +62,7 @@ ncol(tooth)
 
 If you looked at the help using the `?` workshop, you'll find out that the `supp` column stands for supplement type - whether the guinea pig recieved orange juice (OJ) or ascorbic acid (VS). You will also see that dose could be one of three doses of OJ or VS - 0.5, 1 or 2 mg/day. 
 
-You can also see this in full detail using the `View` function which will open your dataframe in a new pop-up.
+You can also see this in full detail using the `View()` function which will open your dataframe in a new pop-up.
 
 ```{r}
 View(tooth)
@@ -78,7 +78,7 @@ Ok, what do you notice looking at this plot?
 
 We can see that it ranges from 0 to approx 35 (we don't know if the max is 35, because that is just a bin from 30-35). We can see that it doesn't look perfectly normal.
 
-We can also confirm the exact range of these values using the `range` function.
+We can also confirm the exact range of these values using the `range()` function.
 
 ```{r}
 range(tooth$len)
@@ -106,7 +106,7 @@ One thing you might have noticed here is that each time we wanted to change one 
 
 # Enter the `ggplot2` package of `tidyverse`
 
-The first few code chunks will return results that look exactly like the scatterplots above, but with ggplot, you can do A LOT more visually. This is what I ALWAYS use. Base R can be good when you are trying to get a quick and dirty visual of your data, but if you are looking to actually use any visuals in say a presentation or a paper, you want to use ggplot.
+The first few code chunks will return results that look exactly like the plots above, but with ggplot, you can do A LOT more visually. This is what I ALWAYS use. Base R can be good when you are trying to get a quick and dirty visual of your data, but if you are looking to actually use any visuals in say a presentation or a paper, you want to use ggplot.
 
 - you'll use the `ggplot()` command to start building your plot
 
@@ -155,7 +155,7 @@ ggplot(data = tooth, aes(x = len)) +
   geom_histogram(fill = "blue", color = "red")
 ```
 
-You can also add titles and axis labels just like we did above (but in a manner that's easier to read). You can use the function `labs` to give the plot a title, label your axes, and more. 
+You can also add titles and axis labels just like we did above (but in a manner that's easier to read). You can use the function `labs()` to give the plot a title, label your axes, and more. 
 
 ```{r}
 ggplot(data = tooth, aes(x = len)) + 

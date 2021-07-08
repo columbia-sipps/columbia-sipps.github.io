@@ -49,7 +49,7 @@ ggplot(data = mydata, aes(x = Sepal.Length)) +
 # petal length
 ggplot(data = mydata, aes(x = Petal.Length)) +
   geom_histogram() +
-  labs(x = 'petal length (cm)', title = 'histogram of iris sepal lengths')
+  labs(x = 'petal length (cm)', title = 'histogram of iris petal lengths')
 ```
 
 4. **Choose 1** of the histograms you made above, and play around with the number of bins to create a visualization you think best represents the data. (There's no right answer to this!)
