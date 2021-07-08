@@ -68,3 +68,9 @@ After each session in the series, the page will be updated with links to the cor
 <li><a href="/workshop_files/research-skills/git.pptx" download>Workshop slides</a>
 </ul>
 <br>
+
+<hr>
+
+### Week 5: Research project progress update
+<br>
+No materials necessary.

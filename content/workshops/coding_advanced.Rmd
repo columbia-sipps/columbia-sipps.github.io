@@ -104,6 +104,8 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 5: Time-course/longitudinal data
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/khyYO6B3RXEx1IhrHvDouMLgNa8RTtUxpS5GfolWM0X1o86rcsYWmsd-dpPTGOAJ._8yXEfwM8EmBJfgg" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>Please download the following workshop materials into one folder:
