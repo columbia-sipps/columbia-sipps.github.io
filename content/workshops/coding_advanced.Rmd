@@ -116,3 +116,9 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-05/mlm-longitudinal.pdf" download>workshop slides</a>
 </ul>
 </ul>
+<br>
+**After the workshop:**
+<ul>
+<li><a href="/workshop_files/coding-adv-05/mlm-longitudinal-challenge_answers.Rmd" download>RMarkdown challenge file (with answers)</a> 
+</ul>
+<br>
