@@ -1,0 +1,157 @@
+---
+title: "Multilevel Model With Experimental Data"
+author: "Paul Bloom"
+date: "7/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# An experimental dataset
+
+Here, we'll look at some pilot data from an experiment! In this experiment, the researchers manipulated the type of music that participants were exposed to -- either a *familiar* condition where songs were by artists that participants had previously indicated they knew well, an *unfamiliar* condition where songs were by artists that participants had reported not knowing, and a *control* condition where the clips were not songs at all but instead weather and traffic clips. For today's purposes, we'll just focus on the *familiar* and *unfamiliar* conditions. 
+
+
+In particular, we'll use multilevel models here because the data are *nested*! This is a *within-participants* study where each participant completed multiple listening trials in each condition. Because of this, a multilevel model will help us take into account that each person might respond differently to the manipulation (while still estimating the group-wide response)!
+
+# Our question
+
+Here we'll ask the question: *did participants actually rate the clips in the 'familiar' condition as more familiar?* 
+
+Participants rated their familiarity with each audio clip on a likert-type scale from 1-5
+
+```{r, warning=FALSE, results='hide', message=FALSE}
+library(tidyverse)
+library(rstanarm)
+library(tidybayes)
+```
+
+
+```{r}
+df = read_csv('https://raw.githubusercontent.com/pab2163/amfm_public/master/pilot_data/pilot_responses.csv') %>%
+  dplyr::filter(condition != 'C', is.na(Skipped)) %>%
+  dplyr::select(Year, Title, Artist, Genre, condition, musicValence, familiarityRating, participantID) %>%
+  dplyr::mutate(condition = dplyr::recode(condition, 'F' = 'Familiar', 'U' = 'Unfamiliar'))
+
+
+head(df, 3)
+```
+
+There were only 6 participants here -- not a big group. However, each participant listened to 15 clips in each condition, so there is a larger amount of *nested* data. Let's take a look:
+
+```{r}
+df %>%
+  dplyr::group_by(condition, participantID) %>%
+  count()
+```
+
+Some participants have fewer than 15 trials because they skipped trials, but we can see the nesting structure here. 
+
+# Now, let's make a model of participants' self-reported familiarity as a function of condition
+
+Since we *manipulated* condition here, we can actually determine the **causal effect** of our condition manipulation, unlike some of the other analyses we've done before with non-experimental data.
+
+Here, we'll give random "slopes" for condition for each participant
+
+```{r, warning=FALSE, results='hide', message=FALSE}
+fm = rstanarm::stan_glmer(data = df, familiarityRating ~ condition + (condition | participantID))
+```
+
+
+```{r}
+m_summary = summary(fm, probs = c(.025, .975))
+m_summary[1:5,]
+```
+
+# Use `spread_draws()` to get the full posterior distribution for the effect of unfamiliar > familiar condition on self-reported music familiarity 
+
+We can actually say the word `effect` here because we manipulated music!
+
+```{r}
+condition_posterior = fm %>% spread_draws(conditionUnfamiliar)
+
+
+ggplot(condition_posterior, aes(x = conditionUnfamiliar)) +
+  stat_halfeye() +
+  labs(x = 'Estimated Difference in Familiarity\nUnfamiliar - Familiar Condition') +
+  theme_bw()
+```
+
+
+# Plot the predictions
+```{r}
+pred_frame = data.frame(condition = c('Unfamiliar', 'Familiar')) 
+pred_frame_participants = expand.grid(condition = c('Unfamiliar', 'Familiar'), participantID = unique(df$participantID), stringsAsFactors = FALSE)
+
+fm_predictions = tidybayes::add_fitted_draws(newdata = pred_frame, model = fm, re_formula = NA)
+fm_predictions_participant = tidybayes::add_fitted_draws(model = fm, newdata = pred_frame_participants) %>%
+  median_qi()
+
+
+ggplot(fm_predictions, aes(x = condition, y = .value)) +
+  stat_halfeye() +
+  geom_point(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, color = participantID), 
+                     position = position_dodge(.3)) +
+   geom_errorbar(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, ymin = .lower, ymax = .upper, color = participantID), 
+                     position = position_dodge(.3),
+                     width = 0) +
+  labs(y = 'Self-Reported Clip Familiarity', x = 'Condition')
+
+
+```
+
+# What about the random 'slopes'
+
+```{r}
+ggplot(fm_predictions, aes(x = condition, y = .value)) +
+  stat_halfeye() +
+  geom_point(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, color = participantID), 
+                     position = position_dodge(.3)) +
+   geom_line(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, color = participantID, group = participantID), 
+                     position = position_dodge(.3)) +
+   geom_errorbar(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, ymin = .lower, ymax = .upper, color = participantID), 
+                     position = position_dodge(.3),
+                     width = 0) +
+  labs(y = 'Self-Reported Clip Familiarity', x = 'Condition')
+```
+
+# Comparing the model predictions to the raw data
+
+```{r}
+ggplot(data = df, aes(x = condition, y = familiarityRating)) +
+  geom_point() +
+  stat_summary(fun.data = mean_se) +
+  geom_point(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, color = participantID), 
+                     position = position_dodge(.3)) +
+  facet_grid(~participantID) +
+  labs(color = 'Model Predictions') +
+  theme_bw() 
+
+```
+
+
+# Posterior predictive check
+
+One thing that is usually a good idea is to run the `pp_check()` function (I know...) to do a graphical *posterior predictive check*. What is this for? 
+
+Basicallly, this means we are checking whether the distribution of the model's predictions for the outcome variable (familiarity ratings here) matches the actual distribution of the outcome variable
+
+```{r}
+pp_check(fm)
+```
+
+Hmm, unfortunately this model doesn't seem to me making some great assumptions! Just something to think about ... do we care that our model is making impossible predictions with our dataset? 
+
+```{r}
+pp_check(fm, plotfun = 'ppc_hist', nreps = 1)
+```
+
