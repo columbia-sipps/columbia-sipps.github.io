@@ -69,3 +69,12 @@ Before each journal club session, check this page for details about which articl
 <li>Journal club reading: [People use both heterogeneity and minority representation to evaluate diversity (Abascal et al., 2021)](/workshop_files/prof-dev/HeterogeneityMinorityRepDiversity.pdf){target="_blank"}
 </ul>
 
+<hr>
+
+### Week 6: CVs & Resumes
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/prof-dev/CVsResumes_210409.key" download>workshop slides</a>
+</ul>
+

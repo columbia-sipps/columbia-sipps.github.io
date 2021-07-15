@@ -52,10 +52,12 @@ On this page you will find an assortment of miscellaneous resources that you may
 <li>[ABCD-ReproNim Course](https://www.abcd-repronim.org/){target="_blank"} - training in reproducible analyses of data from the Adolescent Brain Cognitive Development (ABCD) Study
 <li>[Communicating science (TEDx)](https://www.youtube.com/watch?v=rXqLHc5ZbbM){target="_blank"}
 <li>[Talk nerdy to me (TED Global)](https://www.ted.com/talks/melissa_marshall_talk_nerdy_to_me){target="_blank"} - on science communication
+<li>[Poster presentation templates](https://www.makesigns.com/SciPosters_Templates.aspx){target="_blank"}
 </ul>
 <hr>
 ## Applying to Graduate School
 <ul>
+<li>[Columbia Psychology PhD Podcast](https://psychology.columbia.edu/podcast){target="_blank"}
 <li>[Let's Talk Grad School: Demystifying the social science PhD hidden curriculum](https://letstalkgradschool.substack.com/p/coming-soon){target="_blank"}
 <li>[How Applying to Graduate School Works](https://www.sokolhessnerlab.com/howapplyingworks){target="_blank"} (from the Sokol-Hessner Lab)
 <li>[Resources from UNC's Diversifying Psychology Weekend](https://clinicalpsych.unc.edu/diversifying-psychology-weekend/){target="_blank"}

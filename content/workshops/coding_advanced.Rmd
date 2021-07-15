@@ -127,6 +127,8 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 6: Multilevel modeling: experimental data
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/D3bG3g8LlhgkCSsWhKATCEuAZpZL3gVjbxWKaaf8v9gCZZ8KpSf53gzm_OOWuV4C.5mqGh6tlAPvIeRwM" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>Please download the following workshop materials into one folder:

@@ -27,6 +27,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, echo = F}
 
 # load some packages
+library(tidyverse)
+library(car)
 
 ```
 
@@ -39,15 +41,18 @@ In order to easily use the `lm()` package — and to more easily interpret your 
 # first, let's load in some data
 # we're going to use a dataset from within the `car` package called Prestige
 # this contains information about various types of jobs (e.g., average income, education, etc.)
+df <- Prestige
 
 
 # take a peek at the dataframe
-
+head(df)
 
 # for simplicity, we just want to look at blue collar and white collar jobs
-
+df <- df %>%
+  filter(type != "prof")
 
 # check that the filtering worked
+head(df)
 
 
 ```
@@ -68,14 +73,16 @@ Typically, **continuous Xs will be mean-centered** (which means we subtract the 
 # there are two ways we can quickly accomplish this
 
 # option 1: doing the math
-
+df$prestige.c <- df$prestige - mean(df$prestige)
 
 # option 2: using the scale function
 # (note: if you set scale = TRUE, you will effectively be z-scoring your variable)
 # if you go with option 2, make sure you confirm the variable is numeric afterward
+df$prestige.c <- scale(df$prestige, center = TRUE, scale = FALSE)
+df$prestige.c <- as.numeric(df$prestige.c)
 
 # now the mean of this variable should be (very very close to) zero
-
+mean(df$prestige.c)
 
 ```
 
@@ -91,13 +98,14 @@ For simplicity, we will work with examples of categorical Xs involving two level
 
 #### Dummy coding
 
-In dummy coding (with two variables), you simply need to set one level of X as 0, and the other as 1. In this case, 0 will correspond to a specific level/category of X. 
+In dummy coding (with two levels), you simply need to set one level of X as 0, and the other as 1. In this case, 0 will correspond to a specific level/category of X. 
 
 ```{r}
 
 # let's dummy code the job `type` variable
 # blue collar (bc) = 0, and white collar (wc) = 1
-
+df$type.d <- dplyr::recode(df$type, "bc" = 0, "wc" = 1)
+head(df)
 
 ```
 
@@ -111,12 +119,13 @@ In a case where your categorical variable has two levels, a common choice is to 
 
 # let's also effect code the job `type` variable
 # blue collar (bc) = -0.5, and white collar (wc) = 0.5
-
+df$type.e <- dplyr::recode(df$type, "bc" = -0.5, "wc" = 0.5)
 
 # note: the 'dplyr::' tells R which package to look in for the recode function
 # while this isn't always necessary to do before calling a function, it's good practice
 # it IS necessary to do, however, when multiple packages you've loaded have a function with the same name
 
+head(df)
 
 ```
 
@@ -124,7 +133,7 @@ In a case where your categorical variable has two levels, a common choice is to 
 > - Say we're interested in how prestige and job type affect income
 > - First, we'll look at prestige and job type separately
 > - `lm()` code is equation based
-> - Follows the basic equation IV ~ DV(s)
+> - Follows the basic equation DV ~ IV(s)
 
 ## One Continuous Variable
 
@@ -200,8 +209,8 @@ For example, let's say we're primarily interested in the effect of prestige on i
 You'll see now that because we're accounting for both X variables in the same model, our results change to some degree. Here we find that **both prestige and job type significantly influence income**.
 
 >- The intercept tells us that for jobs with **average prestige**, averaging across **both job types**, we can expect an income of ~5072.
->- The prestige slope tells us that with each additional unit of prestige — averaging across both job types — we expect income to increase by ~135.
-> - The type slope tells us that as we move from blue collar to white collar jobs — of average prestige — we can expect income to decrease by ~1225.
+>- The prestige slope tells us that with each additional unit of prestige we expect income to increase by ~135.
+>- The type slope tells us that as we move from blue collar to white collar jobs we can expect income to decrease by ~1225.
 
 We'll talk more about running and interpreting models with multiple predictors — including how to model interactions — in the next few weeks!
 

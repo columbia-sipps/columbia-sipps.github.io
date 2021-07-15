@@ -78,6 +78,7 @@ df$prestige.c <- df$prestige - mean(df$prestige)
 df$prestige.c <- scale(df$prestige, center = TRUE, scale = FALSE)
 
 # if you go with option 2, make sure you confirm the variable is numeric afterward
+df$prestige.c <- scale(df$prestige, center = TRUE, scale = FALSE)
 df$prestige.c <- as.numeric(df$prestige.c)
 
 # now the mean of this variable should be (very very close to) zero
@@ -137,7 +138,7 @@ head(df)
 > - Say we're interested in how prestige and job type affect income
 > - First, we'll look at prestige and job type separately
 > - `lm()` code is equation based
-> - Follows the basic equation IV ~ DV(s)
+> - Follows the basic equation DV ~ IV(s)
 
 ## One Continuous Variable
 
@@ -199,7 +200,7 @@ summary(m2) # compare with previous model
 > - Using effect coding, the intercept will refer to the average Y for the group coded as 0 (in this case, the average income for all job types).
 > - For the estimate (beta) for type.e, the difference between values is 1 (because we coded the variable as -.5 and .5), so the beta will still be the difference between the two levels.
 
-In other words: Our intercept tells us that **for the average job (across both blue & white collar)**, we predict that the income will be ~5374. Our type.d slope tells us that as we move from a blue collar job to a white collar job, we can expect income to decrease by ~322. (Though again, this effect isn't significant.)
+In other words: Our intercept tells us that **for the average job (across both blue & white collar)**, we predict that the income will be ~5213. Our type.d slope tells us that as we move from a blue collar job to a white collar job, we can expect income to decrease by ~322. (Though again, this effect isn't significant.)
 
 # Models with multiple predictors
 
@@ -221,8 +222,8 @@ summary(m4)
 You'll see now that because we're accounting for both X variables in the same model, our results change to some degree. Here we find that **both prestige and job type significantly influence income**.
 
 >- The intercept tells us that for jobs with **average prestige**, averaging across **both job types**, we can expect an income of ~5072.
->- The prestige slope tells us that with each additional unit of prestige — averaging across both job types — we expect income to increase by ~135.
-> - The type slope tells us that as we move from blue collar to white collar jobs — of average prestige — we can expect income to decrease by ~1225.
+>- The prestige slope tells us that with each additional unit of prestige we expect income to increase by ~135.
+>- The type slope tells us that as we move from blue collar to white collar jobs we can expect income to decrease by ~1225.
 
 We'll talk more about running and interpreting models with multiple predictors — including how to model interactions — in the next few weeks!
 
