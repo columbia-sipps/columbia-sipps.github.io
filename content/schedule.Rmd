@@ -60,9 +60,9 @@ In addition to these workshops, students are expected to work in tandem with the
 <tr><td>June 22</td><td><b>Data cleaning, part 1</b><br></td></tr>
 <tr><td>June 29</td><td><b>Data cleaning, part 2</b><br></td></tr>
 <tr><td>July 6</td><td><b>Correlations & basic plotting</b><br></td></tr>
-<tr><td>July 13</td><td><b>Intro to regression</b><br></td></tr>
-<tr><td>July 20</td><td><b>Categorical moderators with regression</b><br></td></tr>
-<tr><td>July 27</td><td><b>Continuous moderators with regression</b><br></td></tr>
+<tr><td>July 13</td><td><b>Intro to regression (linear models)</b><br></td></tr>
+<tr><td>July 20</td><td><b>Interactions in linear models</b><br></td></tr>
+<tr><td>July 27</td><td><b>Visualizing effects in linear models</b><br></td></tr>
 <tr><td>August 3</td><td><b>Advanced plotting</b><br></td></tr>
 <tr><td>August 10</td><td><b>Women in Science**</b><br><i>Faculty speaker: Dr. Dima Amso</i></td></tr>
 </table>
