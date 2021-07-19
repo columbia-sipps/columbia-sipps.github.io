@@ -1,0 +1,226 @@
+---
+title: "Multilevel Model With Experimental Data"
+author: "Paul Bloom"
+date: "7/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# An experimental dataset
+
+Here, we'll look at some pilot data from an experiment! 
+
+>- In this experiment, the researchers manipulated the type of music that participants were exposed to -- either a *familiar* condition where songs were by artists that participants had previously indicated they knew well, an *unfamiliar* condition where songs were by artists that participants had reported not knowing, and a *control* condition where the clips were not songs at all but instead weather and traffic clips. 
+>- For today's purposes, we'll just focus on the *familiar* and *unfamiliar* conditions. 
+
+
+## Why use multilevel models for experimental data?
+
+>- In particular, we'll use multilevel models here because the data are *nested*! 
+>- This is a *within-participants* study where each participant completed multiple music listening trials in each condition. Because of this, a multilevel model will help us take into account that **1)** each person might respond differently to the manipulation (while still estimating the group-wide response) **2)** that individual trials are not independent observations -- they are grouped (or nested) within participants
+>- Most generally, multilevel modeling can be a good idea for **repeated-measures** studies where there are multiple observations of the same measure per participant
+
+# Our question
+
+Here we'll ask the question: *did participants actually rate the clips in the 'familiar' condition as more familiar?* 
+
+>- After listening, participants rated their familiarity with each audio clip on a likert-type scale from 1-5. 
+>- So, this is a **manipulation check** to ask whether our familiarity manipulation (playing clips from songs by known versus unknwon artists) is a sucessfull manipulation of familiarity
+
+We'll load our packages first...
+```{r, warning=FALSE, results='hide', message=FALSE}
+library(tidyverse)
+library(rstanarm)
+library(tidybayes)
+```
+
+This isnt a focus of this lesson, but we'll clean the data here to do several things:
+
+* Only analyze data from the familiar and unfamiliar music conditions, we eliminate trials from the 'control' condition with traffic/weather clips for now
+* We select only the relevant columns for analysis today
+* We recode the `condition` variable to have more interpretable levels, `Familiar` and `Unfamiliar`
+
+```{r}
+df = read_csv('https://raw.githubusercontent.com/pab2163/amfm_public/master/pilot_data/pilot_responses.csv') %>%
+  dplyr::filter(condition != 'C', is.na(Skipped)) %>%
+  dplyr::select(Year, Title, Artist, Genre, condition, musicValence, familiarityRating, participantID) %>%
+  dplyr::mutate(condition = dplyr::recode(condition, 'F' = 'Familiar', 'U' = 'Unfamiliar'))
+
+
+# check out the first few rows
+head(df, 3)
+```
+
+
+## A note on the nesting: 
+
+>- There were only 6 participants here -- not a big group. However, each participant listened to 15 clips in each condition, so there is a larger amount of *nested* data. 
+>- Some participants have fewer than 15 trials because they skipped trials, but we can see the nesting structure here. 
+
+Let's take a look:
+
+```{r}
+df %>%
+  dplyr::group_by(condition, participantID) %>%
+  count()
+```
+
+
+# Now, let's make a model of participants' self-reported familiarity as a function of condition
+
+>- Since we *manipulated* condition here, we can actually determine the **causal effect** of our condition manipulation, unlike some of the other analyses we've done before with non-experimental data. Now, we can actually use our *causal language* words that we've been careful not to use before innappropriately, such as *influence*, *impact*, *effect*, *cause*...
+
+>- Here, we'll give random "slopes" for condition for each participant. In this context, a 'slope' means that each participant can have a different impact of `condition` on `familiarityRating`
+
+
+```{r, warning=FALSE, results='hide', message=FALSE}
+fm = rstanarm::stan_glmer(data = df, familiarityRating ~ condition + (condition | participantID))
+```
+
+
+## Summarize the model
+
+>- Here, we look at the "fixed effects" for the Intercept and `conditionUnfamiliar` term first. These describe a 'group' effect, or the 'average' participant.
+>- We have a term for `conditionUnfamiliar` here because the default level of `condition` is *familiar*. So this term describes, on average, *how participants rated clips in the unfamiliar condition, compared to the familiar condition*. The term is negative, with the 95% posterior interval excluding 0, so we can conclude that participants on average did tend to rate the clips in the unfamiliar condition less familiar. So, on average, the manipulation worked!
+>- Below the "fixed effects", we can also see some of the estimates for the "random effects" - or differences in intercepts/slopes for different participants (the paramters that have markings for `participantID:` in them) relative to the 'fixed effects'
+
+```{r}
+m_summary = summary(fm, probs = c(.025, .975))
+m_summary[1:5,]
+```
+
+# Show the full posterior distribution & posterior intervals for the effect of `condition` on self-reported familiarity
+
+>- Here, we'll use the `spread_draws()` function to get all of the posterior draws for the `conditionUnfamiliar` term, then plot them to show the distribution and posterior intervals for the effect of condition
+>- We'll use `tidybayes::stat_halfeye()` as a nice tool for visualizing the distribution and posterior intervals, with the `.width()` parameter controlling intervals. We'll use `.width = c(.8, .9)` to get 80% (thick) and 90% (thin) posterior interval error bars
+
+```{r}
+condition_posterior = fm %>% spread_draws(conditionUnfamiliar)
+
+ggplot(condition_posterior, aes(x = conditionUnfamiliar)) +
+  stat_halfeye(.width = c(.8, .9)) +
+  labs(x = 'Estimated Difference in Self-Reported Music Familiarity\nUnfamiliar - Familiar Condition',
+       y= 'Relative Posterior Density') +
+  theme_bw()
+```
+For interpretation, we could also flip this around to show the effect for Familiar > Unfamiliar condition on self-reported familiarity instead. Now we get a 'positive' effect, showing that participants found clips in the familiar condition more familiar than in the unfamiliar condition (versus finding clips in the unfamiliar condition less familiar than the familiar condition)
+```{r}
+condition_posterior = fm %>% spread_draws(conditionUnfamiliar)
+
+#we multiply the posterior draws by -1
+ggplot(condition_posterior, aes(x = -1*conditionUnfamiliar)) +
+  tidybayes::stat_halfeye(.width = c(.8, .9)) +
+  labs(x = 'Estimated Difference in Self-Reported Music Familiarity\nFamiliar - Unfamiliar Condition',
+       y = 'Relative Posterior Density') +
+  theme_bw()
+```
+
+
+# Now, plot the predictions for familiarity in each condition
+
+>- We'll plot the predictions both for the 'fixed effect' (or the 'average participant'), then overlay predictions for individual participants
+>-As before, we start out by creating data frames of levels of the predictors to generate predictions for (here, `condition`, and for participant-level predictions, `participantID`)
+```{r}
+pred_frame = data.frame(condition = c('Unfamiliar', 'Familiar')) 
+
+# we use expand.grid() here to generate all combinations of condition and participantID
+pred_frame_participants = expand.grid(condition = c('Unfamiliar', 'Familiar'), participantID = unique(df$participantID), stringsAsFactors = FALSE)
+```
+
+
+>- Then, we use `tidybayes::add_fitted_draws()` to get both predictions for the group-level effect (`fm_predictions`) and specific participants (`fm_predictions_participant`). 
+>- This will give us 4000 posterior predictions for each row in our dataframes from the previous chunk. Note that when we make predictions for the group level, using just the 'fixed effects', we add the `re_formula=NA` argument to indicate that we're making predictions for the group fixed effects only, not for any specific participant (i.e. we are not predicting using the random effects)
+>- For participant-level predictions we'll use `median_qi()` to get a summary of the posterior predictive distributions -- here the `.value` column is the median predicion, `.lower` is the lower bound of the 95% PI, and `.upper` is the upper bound of the 95% PI
+
+```{r}
+fm_predictions = tidybayes::add_fitted_draws(newdata = pred_frame, model = fm, re_formula = NA)
+
+fm_predictions_participant = tidybayes::add_fitted_draws(model = fm, newdata = pred_frame_participants) %>%
+  median_qi(.width = .95)
+```
+
+
+Now, we plot our predictions!
+
+* We'll use `tidybayes::stat_halfeye()` again for group-level predictions, but `geom_point()` and `geom_errorbar()` for summaries of the medians and 95% PI for each participant
+
+
+```{r}
+ggplot(fm_predictions, aes(x = condition, y = .value)) +
+  tidybayes::stat_halfeye() +
+  geom_point(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, color = participantID), 
+                     position = position_dodge(.3)) +
+  geom_errorbar(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, ymin = .lower, ymax = .upper, color = participantID), 
+                     position = position_dodge(.3),
+                     width = 0) +
+  labs(y = 'Self-Reported Clip Familiarity', x = 'Condition') +
+  theme_bw()
+
+```
+
+## What about the random 'slopes'
+
+>- We can 'connect the dots' for each participant's posterior predictions to visualize the 'slope' between conditions. This way, we can ask whether most of the slopes go in the same direction, or whether there is a lot of variability between participants
+
+```{r}
+ggplot(fm_predictions, aes(x = condition, y = .value)) +
+  stat_halfeye() +
+  geom_point(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, color = participantID), 
+                     position = position_dodge(.3)) +
+   geom_line(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, color = participantID, group = participantID), 
+                     position = position_dodge(.3)) +
+   geom_errorbar(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, ymin = .lower, ymax = .upper, color = participantID), 
+                     position = position_dodge(.3),
+                     width = 0) +
+  labs(y = 'Self-Reported Clip Familiarity', x = 'Condition') +
+  theme_bw()
+```
+
+# Comparing the model predictions to the raw data
+
+>- As a check of our model's fit, we can also plot the model predictions against the mean and standard error for each participant in each condition. If our model is good, these model predictions shouldn't be SO far from the means and standard errors from the raw data, although multilevel models tend to 'pool' the different participants somewhat to make them look a little bit more like one another. 
+
+```{r}
+ggplot(data = df, aes(x = condition, y = familiarityRating)) +
+  # summarize raw data
+  stat_summary(fun.data = mean_se) +
+  # plot model predictions
+  geom_point(data = fm_predictions_participant, 
+                     aes(x = condition, y = .value, color = participantID), 
+                     position = position_dodge(.3)) +
+  facet_grid(~participantID) +
+  labs(color = 'Model Predictions') +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+```
+
+
+# Posterior predictive check
+
+>- One thing that is usually a good idea is to run the `pp_check()` function (I know...) to do a graphical *posterior predictive check*. What is this for? 
+>- Basicallly, this means we are checking whether the distribution of the model's predictions for the outcome variable (familiarity ratings here) matches the actual distribution of the outcome variable
+>- With `pp_check()`, we get a plot of the distribution of `y` (the actual outcome variable from the model in the raw data), and `y_rep` (the *predicted* outcome from the model). For a good model, we want the distribution of `y_rep` to be as similar as possible to that of `y`
+
+```{r}
+pp_check(fm)
+```
+
+
+>- We can also tell this function `plotfun = 'ppc_hist'` to get histograms, which might be more helpful here.
+
+```{r}
+pp_check(fm, plotfun = 'ppc_hist', nreps = 1)
+```
+
+
+Hmm, unfortunately this model doesn't seem to me making some great assumptions! In fact, our raw data shows peaks at 1 and 5 where the predicted data do not. Also, our model is making some predictions above 5, below 1, and with non-integer values -- which are impossible on our likert-type scale. Just something to think about ... do we care that our model is making impossible predictions with our dataset? We can pick up on questions like this next time!
