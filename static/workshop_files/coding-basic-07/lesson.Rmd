@@ -1,0 +1,287 @@
+---
+title: "SIPPS Coding Workshops (basic track)"
+subtitle: "Interactions in Linear Models"
+author: "Camille Gasser & Manasi Jayakumar"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Setting up your R environment
+
+```{r, echo = F}
+
+# load some packages
+
+```
+
+# Review of last week
+
+Let's start by revisiting the last model we went over last week. Here, we wanted to model the effects of both prestige and job type on income.
+
+```{r}
+
+# first load the Prestige dataset again
+
+# filter out prof job types
+
+# recode our variables again
+
+# let's predict income based on prestige, while also accounting for job type
+# note that we're using the effect-coded version of type
+
+```
+
+As a reminder:
+>- The intercept tells us that for jobs with **average prestige**, averaging across **both job types**, we can expect an income of ~5072.
+>- The prestige slope tells us that with each additional unit of prestige we expect income to increase by ~135.
+>- The type slope tells us that as we move from blue collar to white collar jobs we can expect income to decrease by ~1225.
+
+# Continuous X categorical interactions
+
+Interactions in linear models refer to situations in which **the effect of one variable( (X1) on your outcome variable (Y) depends on the value of another variable (X2)**.
+
+A silly but (hopefully) intuitive real-world example of this kind of interaction might occur if you're running a model where you predict your household pet's happiness as a function of the type of animal it is (dog or cat) and the amount of attention you give it. One could imagine that for dogs, more attention will result in greater happiness. But for (relatively aloof) cats, enjoyment may not increase as much with affection, or might even decrease, if your cat prefers to be left alone. In this case, the relationship between affection and happiness **depends** on the type of animal under consideration.
+
+Let's turn back to our Prestige dataset, and now run the same model as above but **adding an interaction**. This is done easily by using the * symbol in between Xs instead of the + operator in your model equation, e.g., `Y ~ X1 * Y2`
+
+```{r}
+
+# note that when you write the equation this way, R automatically assumes you want to model the main effects
+# of each variable AND the interaction
+
+# this does the same thing
+
+```
+
+Let's go by our model output line-by-line.
+
+>- The intercept tells us that for jobs with **average prestige**, averaging across **both job types**, we can expect an income of ~5228
+>- The prestige slope tells us that with each additional unit of prestige (averaging across both job types) we expect income to increase by ~119.
+>- The type slope tells us that as we move from blue collar to white collar jobs we can expect income to decrease by ~1034.
+>- The interaction term tells us that as we move from blue collar to white collar jobs, the slope of prestige on income (i.e., the degree to which income increases with prestige) becomes ~84 units **lower**. In other words, prestige **has a weaker positive effect** on income for white collar vs. blue collar jobs.
+
+## Variable coding & interactions
+
+One of the tricky things about including interactions in a model is that **your choice of variable coding can impact the magnitude/significance of your main effects**. This is because when you're modeling this type of continuous by categorical interaction, you're considering the possibility that there are multiple different slopes associated with your continuous variable — one for each level of your categorical variable. Which one of these slopes is shown in the output of your model will depend on how you've coded your categorical variable.
+
+Let's see this in practice by using the dummy-coded version of `type` (`type.d`) rather than the effect-coded one.
+
+```{r}
+
+
+# compare with m2
+
+```
+
+>- The intercept tells us that for **blue collar jobs** of **average prestige**, we can expect an income of ~5745.
+>- The prestige slope tells us that with each additional unit of prestige **in blue collar jobs**, we expect income to increase by ~161.
+>- The type slope tells us that as we move from blue collar to white collar jobs we can expect income to decrease by ~1034.
+>- The interaction term tells us that as we move from blue collar to white collar jobs, the slope of prestige on income (i.e., the degree to which income increases with prestige) is ~84 units **lower**. In other words, prestige **has a weaker effect** on income for white collar vs. blue collar jobs.
+
+Notice that the main effect of `prestige.c` is different! This is because in this model, a value of 0 for job type refers to blue collar jobs, NOT the average of both job types. So whereas the prestige slope in the first model showed us the effect of prestige on income for both job types, this version of the slope is **only** for blue collar jobs.
+
+We'll go over how to visualize all of these effects next week, but here's some pre-written code to do so now. Visualization is **really helpful** for interpreting interactions — especially when you get into more complex cases like 3-way interactions.
+
+```{r}
+
+# YOU DON'T NEED TO UNDERSTAND THIS CODE YET!
+# we'll walk through each step next week!
+
+m3.bc <- data.frame(prestige.c = seq(min(df$prestige.c), max(df$prestige.c), 0.1), type.d = 0)
+m3.wc <- data.frame(prestige.c = seq(min(df$prestige.c), max(df$prestige.c), 0.1), type.d = 1)
+
+m3.bc.pred <- cbind(m3.bc, predict(m3, m3.bc, interval = 'confidence'))
+m3.wc.pred <- cbind(m3.wc, predict(m3, m3.wc, interval = 'confidence'))
+
+ggplot(m3.bc, aes(prestige.c, fit)) +
+  geom_point(data = df, aes(prestige.c, income, color = as.factor(type.d)),
+             alpha = 0.8,  size = 2.5) +
+  geom_line(data = m3.bc.pred, aes(prestige.c, fit), size = 1.5, color = "steelblue2") +
+  geom_line(data = m3.wc.pred, aes(prestige.c, fit), size = 1.5, color = "wheat3") +
+  geom_ribbon(data = m3.bc.pred, aes(ymin = lwr, ymax = upr), alpha = 0.25, fill = "steelblue2") + 
+  geom_ribbon(data = m3.wc.pred, aes(ymin = lwr, ymax = upr), alpha = 0.25, fill = "wheat3") +
+  scale_color_manual(values=c("1" = "wheat3", "0" = "steelblue2"), 
+                     name = "Occupation Type",
+                     labels = c("1" = "white collar","0" ="blue collar")) +
+  labs(x = "prestige (mean-centered)", y = "income", title = " ") +
+  theme(text = element_text(size = 14))
+  
+
+```
+
+# Continuous x continuous interactions
+
+Now, let's look at how to examine interactions between two continuous variables. In the previous examples, we looked at how one continuous variable changes as a function of the different levels of a categorical variable. But what happens, when both our variables are continuous?
+
+Let's say we want to look at how the percentage of women in a occupation interacts with the prestige of that occupation in predicting the income of a occupation.
+
+First, let's mean center the column `women`. (Remember: all continuous variables should be mean centered.)
+
+```{r}
+
+```
+
+Next, let's run a model `m4` predicting `income` from mean centered `prestige` and `women`. 
+
+```{r}
+
+```
+Let's interpret the summary!
+
+>- The intercept tells us that for jobs with an **average percentage of women** of **average prestige**, we can expect an income of ~5258.
+>- The prestige slope tells us that with each additional unit of prestige **for occupations with an average percentage of women in them**, we expect income to increase by ~120.
+>- The women slope tells us that as with each additional unit of increase in percentage of women, **for occupations with average prestige**, we expect income to decrease by ~37.
+>- The interaction term tells us that as we move from lower to higher percentage of women in the occupation, the slope of prestige on income (i.e., the degree to which income increases with prestige) is ~1.4 units **lower**. In other words, prestige **has a weaker effect** on income as the percentage of women in the occupation increases!
+
+It's also important to note that all of these effects are significant (as denoted by the *** or the p-value). The concept of p-values is beyond the scope of today's topic, but you can basically interpret these effects to be 
+**statistically significant**.
+
+```{r}
+
+# YOU DON'T NEED TO UNDERSTAND THIS CODE YET!
+# we'll walk through each step next week!
+
+dfhigh <- data.frame(
+  prestige.c = seq(min(df$prestige.c), max(df$prestige.c), .1), 
+  women.c = sd(df$women.c))
+dflow<- data.frame(
+  prestige.c = seq(min(df$prestige.c), max(df$prestige.c), .1), 
+  women.c = -1*sd(df$women.c))
+womenhigh <- cbind(dfhigh, 
+                     predict(m4, dfhigh, 
+                        interval = "confidence"))
+womenlow <- cbind(dflow, 
+                    predict(m4, dflow, 
+                        interval = "confidence"))
+
+ggplot(womenlow, aes(prestige.c, fit)) +
+  geom_point(data = df, # use original data to plot datapoints 
+             aes(prestige.c, income, 
+                 color = women.c), 
+             alpha = .4, size = 3, show.legend = T) +
+  labs(x = "Prestige",
+       y = "Income", title = " ")  + 
+  geom_ribbon(data = womenlow, aes(ymin=lwr, ymax=upr), 
+              alpha = .4, fill = "dodgerblue4") +
+  geom_line(data = womenlow, aes(prestige.c, fit), 
+            size = 3, color = "dodgerblue4", linetype = "dashed") +
+  geom_ribbon(data = womenhigh, aes(ymin=lwr, ymax=upr), 
+              alpha = .4, fill = "dodgerblue2") +
+  geom_line(data = womenhigh, aes(prestige.c, fit), 
+            size = 3, color = "dodgerblue2") 
+
+```
+
+Note that in the plot above, we're showing the slope of prestige on income for two discrete "levels" of the women.c variable. More specifically, we're showing the slope of prestige on income for jobs that have a percentage of women 1 SD above the mean (light blue), and 1 SD below the mean (dark blue). However, because the women.c variable is continuous, there are actually many, many different prestige slopes we could consider. Although this is beyond the scope of the current lesson, note that there are follow-up analyses one can run in order to evaluate the significance of one variable's slope at a specific level of your second variable (often called "simple slopes" analysis). 
+
+Now, let's try one more continuous by continuous interaction. Here let's see if the average education of those in an occupation interacts with the prestige of an occupation in predicting income.
+
+So let's first mean center the `education` variable.
+
+```{r}
+
+```
+
+
+Let's now run model `m5` predicting income from mean centered prestige and education.
+
+```{r}
+
+```
+
+Interpreting the model summary:
+>- The intercept tells us that for jobs with **average education (in yrs)** of **average prestige**, we can expect an income of ~5453.
+>- The prestige slope tells us that with each additional unit of prestige **for jobs with workers of average education**, we expect income to increase by ~150.
+>- The education slope tells us that as with each additional unit of increase in education (in yrs), **for occupations with average prestige**, we expect income to decrease by ~281.
+>- The interaction term tells us that with each unit increase in education, the slope of prestige on income (i.e., the degree to which income increases with prestige) is ~19 units **lower**. In other words, prestige **has a weaker effect** on income as the amount of education its workers have increases!
+
+Again, note that the intercept, and the slopes for prestige and education and statistically significant with p < 0.05. The interaction between education and prestige is not statistically significant (p = 0.065)
+
+# Categorical X categorical interactions
+
+What happens if we have two categorical variables - that is, when each of the variables have 2 (or more) discrete levels? We'll take a look at such an interaction now. 
+
+Let's load in the `ToothGrowth` dataset for this example. You can get help on any dataset by running the command `?dataset` (e.g. ?ToothGrowth). This dataset consists of the length in tooth growth for guinea pigs when they are given two types of vitamin C supplements (orange juice vs. ascorbic acid), at three different doses.
+
+```{r}
+
+```
+
+For the purpose of today's tutorial, let's only look at doses 1 and 2 mg/day.
+
+```{r}
+
+```
+
+First effect code and dummy code both supp and dose. You typically would do only one of the two, but for the sake of the tutorial, let's do both. 
+
+```{r}
+# effect coding supp as -0.5 and 0.5, dummy coding supp as 0 and 1
+
+# effect coding dose as -0.5 and 0.5, dummy coding dose as 0 and 1
+
+```
+
+Let's run model `m6` with dummy coded `supp` and dummy coded `dose`. This is the model I would run if we were only running one version of this. 
+
+```{r}
+
+```
+
+Interpreting this output:
+
+>- The intercept tells us that for **OJ as the supplement** of **1.0mg/day dose**, we can expect a tooth length of ~22.7.
+>- The supp slope tells us that with **a change from OJ to VC in type of supplement** at **1.0 mg/day dosage*, we expect tooth length growth to decrease by ~5.9. So, a 1.0mg/day dose of OJ has a bigger effect on tooth growth than a 1.0mg/day VC dose.
+>- The dose slope tells us that as we move from **1.0 mg/day to 2.0 mg/day dosage** of **OJ**, we can expect tooth length growth to increase by ~3.4. So OJ at 2.0mg/day is better than OJ at 1.0mg/day for tooth length.
+>- The interaction term tells us that as we move from **1 to 2 mg/day of dosage**, the slope of *supplement type* on tooth length is ~6 units **higher** for **VC vs. OJ**. In other words, increasing the dosage from 1.0 to 2.0 mg/day **has a stronger effect** on tooth length when using VC vs. OJ.
+
+```{r}
+
+# YOU DON'T NEED TO UNDERSTAND THIS CODE YET!
+# we'll walk through each step next week!
+
+# define weights/values from which to generate predictions
+newTooth <- data.frame(
+  supp.d = c(0, 1, 0, 1),
+  dose.d = c(0, 0, 1, 1))
+
+# use predicts to compute cell means and CIs
+predTooth <- cbind(newTooth, 
+                   predict(m6, newTooth, 
+                           interval = "confidence"))
+
+# plot using ggplot
+dodge <- position_dodge(width=0.5)
+ggplot(predTooth, 
+       aes(dose.d, fit, 
+           color = as.factor(supp.d))) + 
+  geom_point(size = 5,  position = dodge) +
+  geom_errorbar(aes(ymin = lwr, ymax = upr),
+                position = dodge, width = .2, size = 1) +
+  geom_point(data = tooth, aes(dose.d, len, 
+                               color = as.factor(supp.d)),
+             position = dodge, alpha = .5, size = 2) +
+  xlab("Dose (dummy-coded)") + ylab("Tooth Length") +
+  scale_color_discrete(name = "Supplement",
+                       labels = c("0" = "OJ", "1" = "VC"))
+
+```
+
+Side note: Running linear models with categorical X categorical interactions is conceptually (and mathematically) very similar to running a standard ANOVA. To be more precise, an ANOVA is a special/specific case of linear model, which adds additional assumptions about/constraints on the structure of your data.
+
+Just for practice, let's run model `m7` with effect coded `supp` and effect coded `dose`
+
+```{r}
+
+```
+
+>- The intercept tells us that when we average **across both supplement types** and **across both dosage levels**, we can expect a tooth length of ~22.9.
+>- The supp slope tells us that with **a change from OJ to VC in type of supplement**, averaged across both dosages, we expect tooth length growth to decrease by ~1.5. In other words, across both dosages, OJ is associated with greater increases in tooth length than VC.  
+>- The dose slope tells us that as we move from **1.0 mg/day to 2.0 mg/day dosage**, averaging **across both supplement types**, we can expect tooth length growth to increase by ~3.2.
+>- The interaction term tells us that as we move from **1 to 2 mg/day of dosage**, the slope of *supplement type* on tooth length is ~6 units **higher** for **VC vs. OJ**. In other words, increasing the dosage from 1.0 to 2.0 mg/day **has a stronger effect** on tooth length when using VC vs. OJ.

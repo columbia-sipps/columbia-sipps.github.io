@@ -50,7 +50,7 @@ A few days before each session, please check this page to make sure you've downl
 
 <hr>
 
-### Week 3: Data Cleaning - Part 1
+### Week 3: Data cleaning - Part 1
 <br>
 <div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/ql2sYMcvOnH5GkrTue5ZNkBCaVoIZfBTVchjovMJHXwMzWmEhvEt0rSQfNBzChy-.S7V-MYQpFWVegtnL" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
@@ -76,7 +76,7 @@ A few days before each session, please check this page to make sure you've downl
 
 <hr>
 
-### Week 4: Data Cleaning - Part 2 (i.e., Data Manipulation)
+### Week 4: Data cleaning - Part 2 (i.e., Data Manipulation)
 <br>
 <div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/kCsqybb90-Owiotr9M3W5hO1ay2kcOZvL7F6sGon9EGUi0DzcWe3QAva3D7jxOvS.USkUisXXabanWC8x?startTime=1624996597000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
@@ -123,7 +123,7 @@ A few days before each session, please check this page to make sure you've downl
 
 <hr>
 
-### Week 6: Intro to Regression/Linear Models
+### Week 6: Intro to regression/linear models
 <br>
 <div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/WiszYKG2W8ryz9XakckFSXhU4o7KhebDo6ZNH2FUPEDHPqU5YUfF_o3Zyf-LVnTg.8usAG8BERltQ2oIq?startTime=1626206131000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
@@ -142,3 +142,15 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-basic-06/lm-challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
 
+<hr>
+
+### Week 7: Interactions in linear models
+<br>
+**Before the workshop:**
+<ul>
+<li>please create a folder named `07_reg-interactions` on your computer
+<li>download these files within that folder: 
+<a href="/workshop_files/coding-basic-07/lesson.Rmd" download>RMarkdown file</a>, 
+<a href="/workshop_files/coding-basic-07/07_reg-interactions.Rproj" download>R Project file</a>, 
+<a href="/workshop_files/coding-basic-07/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>

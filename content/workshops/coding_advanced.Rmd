@@ -133,9 +133,15 @@ A few days before each session, please check this page to make sure you've downl
 <ul>
 <li>Please download the following workshop materials into one folder:
 <ul>
-<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data.Rmd" download>RMarkdown lesson file</a> 
-<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data.html" download>RMarkdown lesson html</a>
+<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_updated.Rmd" download>RMarkdown lesson file</a> 
+<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_updated.html" download>RMarkdown lesson html</a>
 <li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
 </ul>
 <br>
+
+<hr>
+
+### Week 7: Multilevel modeling: within-person change
+<br>
+Materials will be posted soon.
