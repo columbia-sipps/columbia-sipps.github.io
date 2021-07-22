@@ -135,17 +135,21 @@ A few days before each session, please check this page to make sure you've downl
 <ul>
 <li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_updated.Rmd" download>RMarkdown lesson file</a> 
 <li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_updated.html" download>RMarkdown lesson html</a>
-<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_challenge.Rmd" download>RMarkdown challenge file</a>
+<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_challenge_updated.Rmd" download>RMarkdown challenge file</a>
+<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_challenge_updated.html" download>html challenge file</a>
 </ul>
 </ul>
 **After the workshop:**
 <ul>
-<li>Answer keys will be posted shortly.
+<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_challenge_answers.Rmd" download>RMarkdown challenge file (with answers)</a>
+<li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_challenge_answers.html" download>html challenge file (with answers)</a>
 </ul>
 <br>
 <hr>
 
 ### Week 7: Multilevel modeling: within-person change
+<br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/eWF6ZpbuDcdQUkfxxduSnf-45ApmxoJ_oTUKSegKRqfwnokmNhb_YDPKsekaUxtu.Kr8CefbLVSE7uKs4" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
@@ -155,5 +159,11 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-07/mlm_withinperson.html" download>RMarkdown lesson html</a>
 <li><a href="/workshop_files/coding-adv-07/mlm_withinperson_challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
+</ul>
+<br>
+**After the workshop:**
+<ul>
+<li><a href="/workshop_files/coding-adv-07/mlm_withinperson_challenge_answerkey.Rmd" download>RMarkdown challenge file (with answers)</a> 
+<li><a href="/workshop_files/coding-adv-07/mlm_withinperson_challenge_answerkey.html" download>html challenge file (with answers)</a>
 </ul>
 <br>

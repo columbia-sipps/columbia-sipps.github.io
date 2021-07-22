@@ -146,6 +146,8 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 7: Interactions in linear models
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/vNqeMFol0ovn7SKy-fOs1uXkm_Xb-PRmx3y-rCG808TubNsVBYZ8E0l8qFdnW6Rw.buyn80VkLAAwcdxP" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>please create a folder named `07_reg-interactions` on your computer
@@ -153,4 +155,10 @@ A few days before each session, please check this page to make sure you've downl
 <a href="/workshop_files/coding-basic-07/lesson.Rmd" download>RMarkdown file</a>, 
 <a href="/workshop_files/coding-basic-07/07_reg-interactions.Rproj" download>R Project file</a>, 
 <a href="/workshop_files/coding-basic-07/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+**After the workshop:**
+<ul>
+<li><a href="/workshop_files/coding-basic-07/lm-intro-interactions.pdf" download>Workshop slides</a>
+<li><a href="/workshop_files/coding-basic-07/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/coding-basic-07/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
