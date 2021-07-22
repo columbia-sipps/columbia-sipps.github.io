@@ -127,7 +127,7 @@ d_long <- isolate(d_long, by = "id", value = "communication", which = "both")
 # Run a bayesian model with random intercept and random slope 
 
 Self-worth should be predicted by time and within-subject communication quality. There should be a random intercept, as well as a random slope for within0subject communication quality. 
-```{r}
+```{r, warning=FALSE, results='hide', message=FALSE}
 m1 <- brm(self_worth ~ time + communication_cw + (1 + communication_cw | id), data = d_long)
 
 summary(m1)

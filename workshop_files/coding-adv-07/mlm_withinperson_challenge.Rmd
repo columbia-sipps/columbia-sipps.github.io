@@ -69,8 +69,6 @@ You will then need to merge the two dataframes using full_join by both id and ti
 Here, we want you to do 4 times 
 >- filter out the NA responses for self_worth (use !is.na)
 >- filter out the NA responses for communication 
->- z-score the self-worth variable (use mutate and the scale functions)
->- z-score the communication variable (use mutate and the scale functions)
 
 ```{r}
 
@@ -83,6 +81,15 @@ Make it so that timepoint 1 is recoded tp be 0, so that time ranges from 0 to 5.
 
 ```
 
+# Put communication and self-worth on a 0 to 10 scale 
+
+Self worth was previously on a 1 to 4 scale 
+Communication was on a 20 to 100 scale 
+
+There are numerous ways to do this, but one way is to implement this equation: (max new - min new)/(max old - min old) * (variable - max old) + max new 
+```{r}
+
+```
 
 # Parse within-subject communication from between-subject communication 
 
