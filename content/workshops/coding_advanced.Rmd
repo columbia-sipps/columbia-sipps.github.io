@@ -169,7 +169,7 @@ A few days before each session, please check this page to make sure you've downl
 <br>
 <hr>
 
-### Week 7: Multilevel modeling: within-person change
+### Week 8: Advanced plotting
 <br>
 **Before the workshop:**
 <ul>
