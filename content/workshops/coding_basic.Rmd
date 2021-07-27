@@ -162,3 +162,17 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-basic-07/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
 <li><a href="/workshop_files/coding-basic-07/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
+
+<hr>
+
+### Week 8: Visualizing effects in linear models
+<br>
+**Before the workshop:**
+<ul>
+<li>please create a folder named `08_reg-plotting` on your computer
+<li>download these files within that folder: 
+<a href="/workshop_files/coding-basic-08/lesson.Rmd" download>RMarkdown file</a>, 
+<a href="/workshop_files/coding-basic-08/08_reg-plotting.Rproj" download>R Project file</a>, 
+<a href="/workshop_files/coding-basic-08/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+
