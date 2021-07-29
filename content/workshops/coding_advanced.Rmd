@@ -46,7 +46,6 @@ A few days before each session, please check this page to make sure you've downl
 <li>please download the following packages: `rstanarm`, `tidybayes`, `bayesplot` (plus those we used last week: `tidyverse`, `car`)
 <li>also download the following files: <a href="/workshop_files/coding-adv-02/lm-lesson-bayes-orig.Rmd" download>RMarkdown lesson file</a>, <a href="/workshop_files/coding-adv-02/lm-lesson-bayes-orig.html" download>HTML lesson file</a>, <a href="/workshop_files/coding-adv-02/lm-challenge-bayesian-orig.Rmd" download>RMarkdown challenge file</a>
 </ul>
-<br>
 **After the workshop:**
 <ul>
 <li>Final workshop materials:
@@ -60,7 +59,7 @@ A few days before each session, please check this page to make sure you've downl
 <br>
 <hr>
 
-### Week 3: Review of regression and moderation (bayesian)
+### Week 3: Review: Data wrangling, regression (continued), Frequentist vs. Bayes
 <br>
 <div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/3e7KARJzQx8ODrypHmhehBdoK1vMzQNTNpWSMLXbN-Ewe_E0QkeJtgEoIRwrbOlp.HmgUI3uBZ8KhRtT6" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
@@ -70,7 +69,9 @@ A few days before each session, please check this page to make sure you've downl
 <li>Final workshop materials:
 <ul>
 <li><a href="/workshop_files/coding-adv-03/bayes-challenge-2.Rmd" download>RMarkdown challenge file</a> 
-<li><a href="/workshop_files/coding-adv-03/bayes-challenge-2.html" download>HTML challenge  file</a>
+<li><a href="/workshop_files/coding-adv-03/bayes-challenge-2.html" download>HTML challenge file</a>
+<li><a href="/workshop_files/coding-adv-03/bayes-challenge-2_answers.Rmd" download>RMarkdown challenge file (with answers)</a> 
+<li><a href="/workshop_files/coding-adv-03/bayes-challenge-2_answers.html" download>HTML challenge file (with answers)</a>
 <li><a href="/workshop_files/coding-adv-03/bayes_review.pptx" download>Slides from the workshop</a>
 </ul></ul>
 <br>
@@ -92,7 +93,6 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-04/mlm-data-cleaning.csv" download>data file (mlm-data-cleaning.csv)</a>
 </ul>
 </ul>
-<br>
 **After the workshop:**
 <ul>
 <li><a href="/workshop_files/coding-adv-04/mlm-why-how.pptx" download>Slides from the workshop</a> 
@@ -116,7 +116,6 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-05/mlm-longitudinal.pdf" download>workshop slides</a>
 </ul>
 </ul>
-<br>
 **After the workshop:**
 <ul>
 <li><a href="/workshop_files/coding-adv-05/mlm-longitudinal-challenge_answers.Rmd" download>RMarkdown challenge file (with answers)</a> 
@@ -160,7 +159,6 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-07/mlm_withinperson_challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
 </ul>
-<br>
 **After the workshop:**
 <ul>
 <li><a href="/workshop_files/coding-adv-07/mlm_withinperson_challenge_answerkey.Rmd" download>RMarkdown challenge file (with answers)</a> 
@@ -171,8 +169,14 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 8: Advanced plotting
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/l6QXC-xsFqGCmiNUbap7sbaUz9zYmN2LUn28SUveDLE8gxEGZI-KOtAXDjf8b6Pw.LAq7ooHlR4SEm56X" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>No downloads necessary. Use [this link](https://monicathieu.shinyapps.io/cu-sipps-ggplot-aes/){target="_blank"} to complete the workshop. (Note that if you would like to save your progress, please enable cookies on your web browser.)
+</ul>
+**After the workshop:**
+<ul>
+<li>No additional materials.
 </ul>
 <br>

@@ -26,6 +26,8 @@ library(psych)
 # install.packages("sjPlot")
 library(sjPlot)
 
+# note: if R asks you to restart after installing the new package, make sure you load ALL libraries again
+
 ```
 
 # Loading in your data
@@ -40,6 +42,11 @@ Let's start by loading in the data and filtering it so we only keep these two mo
 
 # load in the dataset
 df <- affect
+
+# if the above line doesn't work, download the "affect.csv" file from the SIPPS website
+# make sure you save this file in the same directory/folder as your R project file (+ this script)!
+# then run this next line:
+# df <- read.csv("affect.csv")
 
 # filter to keep only cases where participants watched either a documentary or a comedy
 df <- df %>%
@@ -276,6 +283,5 @@ ggplot(data = df, aes(x = traitanx.c, y = NA2, color = as.factor(Film.e), fill =
   # these next two lines make the plot legend more readable
   scale_fill_discrete(name = "film type", labels = c("documentary", "comedy")) +
   guides(color = FALSE) 
-
 
 ```

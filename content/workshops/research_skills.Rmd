@@ -92,3 +92,9 @@ Prior to this week's workshop, please review the following materials:
 <li>[The Development of a Community-Based Family Asthma Management Intervention for Puerto Rican Children (reading)](/workshop_files/research-skills/CommunityBasedAsthmaInterv.pdf){target="_blank"}
 <li>[Community-Based Participatory Research: AMOS Health and Hope (video)](https://youtu.be/vPzz-E-61xc){target="_blank"}
 </ul>
+
+<hr>
+
+### Week 8: PsychoPy
+<br>
+Workshop materials will be posted shortly.

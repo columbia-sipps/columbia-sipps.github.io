@@ -99,8 +99,11 @@ Before each journal club session, check this page for details about which articl
 
 ### Week 8: Science communication
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/Lm9JQWJ4hQ6Q-OaLRqjPTrH-a5Jhb98IdmRisTWLBdh1hpLT3pOgO6oCn44yYXyP._lU1BJDX6UcOKcOb" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Workshop materials:**
 <br>
 <ul>
 <li>[This week's reading](/workshop_files/prof-dev/Sarnecka_WritingWorkshop.pdf){target="_blank"}
+<li><a href="/workshop_files/prof-dev/slides_scicomm.pdf" download>Workshop slides</a>
 </ul>
