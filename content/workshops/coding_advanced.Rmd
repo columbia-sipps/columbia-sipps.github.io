@@ -56,7 +56,6 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-02/lm-challenge-answers-bayesian.Rmd" download>RMarkdown challenge file (with answers)</a>
 <li><a href="/workshop_files/coding-adv-02/bayesian_regression_slides.pdf" download>Slides from the workshop</a>
 </ul></ul>
-<br>
 <hr>
 
 ### Week 3: Review: Data wrangling, regression (continued), Frequentist vs. Bayes
@@ -73,8 +72,8 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-03/bayes-challenge-2_answers.Rmd" download>RMarkdown challenge file (with answers)</a> 
 <li><a href="/workshop_files/coding-adv-03/bayes-challenge-2_answers.html" download>HTML challenge file (with answers)</a>
 <li><a href="/workshop_files/coding-adv-03/bayes_review.pptx" download>Slides from the workshop</a>
-</ul></ul>
-<br>
+</ul>
+</ul>
 <hr>
 
 ### Week 4: Cleaning data for multi-level modeling
@@ -98,7 +97,6 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-04/mlm-why-how.pptx" download>Slides from the workshop</a> 
 <li><a href="/workshop_files/coding-adv-04/mlm-cleaning-challenge-answers.Rmd" download>RMarkdown challenge file (with answers)</a> 
 </ul>
-<br>
 
 <hr>
 
@@ -120,7 +118,6 @@ A few days before each session, please check this page to make sure you've downl
 <ul>
 <li><a href="/workshop_files/coding-adv-05/mlm-longitudinal-challenge_answers.Rmd" download>RMarkdown challenge file (with answers)</a> 
 </ul>
-<br>
 
 <hr>
 
@@ -143,7 +140,6 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_challenge_answers.Rmd" download>RMarkdown challenge file (with answers)</a>
 <li><a href="/workshop_files/coding-adv-06/mlm_experimental_data_challenge_answers.html" download>html challenge file (with answers)</a>
 </ul>
-<br>
 <hr>
 
 ### Week 7: Multilevel modeling: within-person change
@@ -164,7 +160,6 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/coding-adv-07/mlm_withinperson_challenge_answerkey.Rmd" download>RMarkdown challenge file (with answers)</a> 
 <li><a href="/workshop_files/coding-adv-07/mlm_withinperson_challenge_answerkey.html" download>html challenge file (with answers)</a>
 </ul>
-<br>
 <hr>
 
 ### Week 8: Advanced plotting
@@ -179,4 +174,9 @@ A few days before each session, please check this page to make sure you've downl
 <ul>
 <li>No additional materials.
 </ul>
+
+<hr>
+
+### Week 9: Power
 <br>
+Workshop materials will be posted shortly.
