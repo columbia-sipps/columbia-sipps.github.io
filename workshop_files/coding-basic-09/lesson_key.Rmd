@@ -1,0 +1,385 @@
+---
+title: "SIPPS Coding Workshops (basic track)"
+subtitle: "Advanced Plotting"
+author: "Monica Thieu, Ben Silver, Camille Gasser"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+```
+
+## Intro
+
+This tutorial will walk you through some of the many aesthetic adjustments you can make to a `ggplot2` graph for readability and pizzazz.
+
+After completing this worksheet, learners will be able to:
+
+- Describe many aesthetics that can be modified in `ggplot2` plots
+- Modify those plot aesthetics using `ggplot2` code
+
+This tutorial does not demonstrate *every* possible ggplot aesthetic modification (and you really can adjust nearly every feature of a plot with `ggplot2`!). The tutorial walks through common aesthetic changes I find myself using in my own plots, that I hope will apply to your plotting needs as well.
+
+Finally, remember that because of `ggplot2`'s modular, layered structure, almost all of the aesthetic changes demonstrated in this worksheet can be mixed and matched with each other in a single plot to customize as much as you would like. These exercises mostly show the adjustments one at a time for simplicity, but you can (and should) combine them in your own plots!
+
+## Inspecting data and basic plots
+
+Let's begin by getting to know the data we will be using in this tutorial. Instead of loading in data from a .csv file, we're going to use a dataset that R comes with called `iris`. `iris` was collected by botanist Edgar Anderson (1935), and it measures the flower dimensions of several exemplars of 3 iris species.
+
+```{r}
+iris
+```
+
+Let's make a scatter plot comparing petal length and petal width. Remember that we made scatter plots in our basic plotting tutorial.
+
+```{r}
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
+  geom_jitter()
+```
+
+We can also color the dots according to the flower species.
+
+```{r}
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width,
+                 color = Species)) +
+  geom_jitter()
+```
+
+We can also change a number of aspects of the dots, including their size and shape.
+
+```{r}
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width,
+                 color = Species)) +
+  geom_jitter(size = 4, shape = 'triangle')
+```
+
+
+As a reminder, there are SO many different types of plots that ggplot is capable of. You can find a list of them [here](https://ggplot2.tidyverse.org/reference/index.html), under the Geoms section.
+
+Let's make another type of graph, a box plot. We're first going to save it to a variable, and then print the variable.
+
+```{r, echo = TRUE}
+plot_iris <- ggplot(iris, aes(x = Species, y = Petal.Length, fill = Species)) + geom_boxplot()
+plot_iris
+```
+
+## Modifying titles of plot elements
+
+The default axis/legend title in `ggplot2` is the name of the variable displayed on that axis/legend. While you yourself will know what these variable names mean in your data, in any graph that you will ever show to another person, you will want to re-label axes/legends and add a title to make your plot more readable. `ggplot2` comes with an all-purpose function, `labs()`, that will allow you to edit the titles of pretty much any plot element (and figure captions).
+
+```{r}
+plot_iris_labeled <- plot_iris +
+  labs(x = "Iris species",
+       y = "Petal length (cm)",
+       fill = "species",
+       title = "Iris petal length by species",
+       subtitle = "Three species")
+plot_iris_labeled
+```
+
+Notice that you only need to call `labs()` once to set all of these labels.
+
+## Modifying axis labels of discrete variables
+
+Sometimes, in addition to editing axis titles, you will also want to edit the level labels of a discrete variable to improve readability. For example, if you have a binary gender variable coded as "F" and "M" plotted on one axis, you may want to have the plot say "Female" and "Male" instead.
+
+```{r}
+plot_iris_labeled +
+  scale_x_discrete(labels = c("setosa" = "Bristle-pointed iris",
+                              "virginica" = "Virginia iris",
+                              "versicolor" = "Blue flag iris"))
+```
+
+
+## Modifying axis label appearance for readability
+
+When plotting a discrete variable along one axis (in these examples, the x-axis), it often makes sense to change the order of variable levels along that axis so that the order of variables along the axis adds meaning to the plot.
+
+To illustrate this more clearly, let's look at a different dataset now: the area (in square miles) of the 50 US states. This dataset helps illustrate the benefits of the next few techniques, in particular because it has a *lot* of levels (50!) of a discrete variable.
+
+```{r}
+us_states <- tibble(state = datasets::state.name,
+                    abbrev = datasets::state.abb,
+                    area = datasets::state.area,
+                    region = datasets::state.region,
+                    division = datasets::state.division)
+```
+
+Let's make a bar graph showing states by area. Previously, we should you how to do this using the function `geom_bar()`. However, when you want the heights of the bars to represent values in the data (as opposed to, for example, representing group means), you can use `geom_col()` instead.
+
+```{r}
+plot_state_areas <- ggplot(us_states,
+                           aes(x = state, y = area)) +
+  geom_col()
+plot_state_areas
+```
+
+The state names along the x-axis are unreadable because they are written on top of each other! We can solve this issue by making the state names appear at an angle.
+
+```{r}
+plot_state_areas_neat <- plot_state_areas +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+plot_state_areas_neat
+```
+
+## Reordering levels of a discrete variable
+
+From our current plot, we can get information about smaller and larger states, but the order is not very sensible. To see the very largest states, a graph reader can go to the tallest bars and then look down to the axis label, but they have to jump around because the states are ordered alphabetically along the x-axis, not by area.
+
+In the exercise below, we're going to use a function from the `forcats` package (which is part of `tidyverse`) to reorder the states along the x-axis by area from smallest to largest.
+
+```{r}
+plot_state_areas_reorder <- ggplot(us_states,
+                                   aes(x = fct_reorder(state, area), y = area)) + 
+  geom_col() +
+scale_x_discrete(guide = guide_axis(angle = 45)) +
+  labs(x = "US state",
+       y = "area (sq mi)")
+plot_state_areas_reorder
+```
+
+## Adjusting continuous axis limits
+
+Since the last few exercises demonstrated aesthetic adjustments you might make to discrete variables, next we'll look at some adjustments you might make on continuous variables.
+
+Right now, we'll pivot back to the iris flower size plot from the beginning of the worksheet. We'll now turn to adjusting aesthetics along the y-axis, representing the continuous variable of iris petal length in centimeters.
+
+### Expanding axis limits to include a certain value
+
+`ggplot2`, like most plotting software, automatically sets the axis limits of a graph based on the range of the data. However, careful plotters know that axis limits must be selected carefully as to faithfully represent the effect sizes present in the data!
+
+One common axis limit change you might make is to expand limits to include 0. If you have a variable for which 0 carries meaning, it can be helpful to see where 0 is relative to your data.
+
+```{r}
+plot_iris_labeled +
+  expand_limits(y = 0)
+```
+
+One big benefit of `expand_limits()` is that you don't need to know anything about the actual range of your data. You just have to tell the function what value you want to include on the axis, and your ggplot will show that number as well as the rest of your data.
+
+### Changing axis limits to preset bounds
+
+Sometimes, you may want to change your axes to "zoom" your plot to a specific range of values. You may want to zoom in (to stop showing outliers), or to zoom out to meaningful start and end bounds.
+
+```{r}
+# zoom out
+plot_iris_labeled +
+  coord_cartesian(ylim = c(0, 8))
+
+# zoom in
+plot_iris_labeled +
+  coord_cartesian(ylim = c(0, 2))
+```
+
+## Manipulating breaks
+
+Sometimes we want to change the values that are labeled on the y axis. For example, in our current plot, we are seeing the labels in scientific notation, which is slightly confusing. We can change this with the `scales` package (also part of `tidyverse`):
+
+```{r}
+plot_state_areas_reorder + 
+  scale_y_continuous(labels = scales::comma)
+```
+
+What if we want to show more labels? We can do this with the `seq` function.
+
+```{r breaks-manual-solution}
+plot_state_areas_reorder <- plot_state_areas_reorder +
+  scale_y_continuous(labels = scales::comma,
+                     breaks = seq(0, 600000, by = 100000))
+plot_state_areas_reorder
+```
+
+## Changing colors of data elements
+
+In this section, we'll practice modifying the color schemes used to plot data information by color. While the default R data color schemes do the job decently well for quick exploratory graphs, changing the color scheme allows you to personalize your plots almost instantly.
+
+### Applying pre-made color schemes
+
+R comes with some built-in alternative color scheme functions for you to apply pre-made color schemes carefully designed to help viewers spot patterns in data.
+
+For discrete (ordered or non-ordered) data, R has palettes from [ColorBrewer](https://colorbrewer2.org/){target="_blank"}, a palette set designed for plotting discrete colors onto maps.
+
+In the exercise below, let's modify the base plotting call so that bar color varies with the discrete variable `region` in the data, and set the color scheme to use ColorBrewer with palette "Dark2". To do this, we'll use the function `scale_fill_brewer`.
+
+```{r}
+ggplot(us_states,
+       aes(x = fct_reorder(state, area), 
+           y = area, 
+           fill = region)) + 
+  geom_col() +
+  scale_fill_brewer(palette = "Dark2") +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  labs(x = "US state",
+       y = "area (sq mi)")
+```
+
+### Applying custom color schemes
+
+If you want to fully customize your plot colors, you may choose to select your own color scheme. You can do this too! Bear in mind that colors you select may not have the same perceptual properties as pre-made color schemes, but if your colors have some significance (matching the colors of your institution, for example) they should still look nice.
+
+`ggplot2` understands a series of pre-specified named colors, shown [here](http://sape.inf.usi.ch/quick-reference/ggplot2/colour){target="_blank"}, or hex color codes.
+
+First, you can wholesale change the color of data elements, even when color isn't mapped to a variable. The default color of lines and points on a graph is black, but can be set to any single color you please.
+
+```{r}
+
+ggplot(us_states,
+       aes(x = fct_reorder(state, area), 
+           y = area)) + 
+  geom_col(color = "forestgreen", fill = "#825324") +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  labs(x = "US state",
+       y = "area (sq mi)")
+
+```
+
+You can also use manual functions (like `scale_fill_manual`) to manually map colors.
+
+```{r}
+
+ggplot(us_states,
+       aes(x = fct_reorder(state, area), 
+           y = area,
+           fill = region)) + 
+  geom_col() +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  labs(x = "US state",
+       y = "area (sq mi)") +
+  scale_fill_manual(values = c("Northeast" = "firebrick",
+                               "South" = "navyblue",
+                               "North Central" = "lightpink",
+                               "West" = "skyblue"))
+```
+
+## Annotating plots
+
+In this brief section, we'll practice placing annotations on plots. If you want to label a specific feature of your data, or otherwise manually add clarifying information on your plot, here are some techniques.
+
+### Drawing reference lines
+
+Often, it's useful to compare data on a plot to a particular reference value. This value can be 0, if it's not obvious on the plot, or some other meaningful number. Drawing a reference line at values of interest allows readers to make quicker visual comparisons.
+
+For example, we might like to compare the area of US states to the area of a specific other country. (The US is so big that many individual states are larger than other sovereign nations in the world.)
+
+In this exercise, use `geom_hline()` to place a dashed horizontal reference line across the graph at **57,321 sq mi,** the area of Bangladesh. Set the color of this line to **"springgreen4".**
+
+```{r hline-solution}
+plot_state_areas_reorder +
+  geom_hline(yintercept = 57321, linetype = "dashed", color = "springgreen4")
+```
+
+Notice how the reference line is drawn on top of the bars? This is a direct result of the order in which the plot was constructed. The layer for the bars was set before the reference line was added, so they are plotted below the reference line. By changing the order in which the layers are added on the plot, we can draw the reference line first, so that the bars are drawn on top.
+
+### Adding text labels
+
+It can also be useful to add text annotations in particular locations on top of plots. These can be used to label data points and/or particular regions of a plot.
+
+Text labels can be added in several ways. One simple way is to add one-off annotations by manually specifying what you want the label to say and where you want it to appear on the plot. We will use the function `annotate()` for one-off annotations. Instead of drawing x and y locations from the base plot, `annotate()` expects manual x-y pairs.
+
+Take the plot we made before with the reference line demarcating the area of Bangladesh. We can add a single text annotation next to the reference line labeling what it refers to.
+
+In the exercise below, we'll use `annotate()` to add a `geom_text`-type annotation saying "Area of Bangladesh" with an x-coordinate of **1** (putting it on the far left of the plot) and a y-coordinate of **57,321** (the area of Bangladesh, putting it at the same height as the reference line).
+
+```{r}
+plot_state_areas_reorder +
+  geom_hline(yintercept = 57321, linetype = "dashed", color = "springgreen4") +
+  annotate("text",
+           x = 1,
+           y = 57321,
+           label = "Area of Bangladesh")
+```
+
+The annotation appears on the plot, but it looks like the center of the text is justified to (1, 57321), causing the line to go through the text, and half of the text to spill off the plot.
+
+We can fix this without changing the x and y-coordinates by changing the horizontal and vertical justification of the annotation relative to its coordinates.
+
+```{r}
+plot_state_areas_reorder +
+  geom_hline(yintercept = 57321, linetype = "dashed", color = "springgreen4") +
+  annotate(geom = "text",
+           x = 1,
+           y = 57321,
+           hjust = "left",
+           vjust = "bottom",
+           label = "Area of Bangladesh")
+```
+
+
+## Changing overarching theme
+
+In this last set of exercises, we'll practice modifying theme elements, or all the "background" non-data pieces, of plots. This allows you to customize the overall look of your plots.
+
+First, we'll apply some pre-made plot themes. `ggplot2`'s default white-on-gray theme looks classic, but if you prefer different background-grid-axis designs, you may choose to apply an alternate theme. (Or you might just want to choose a non-default theme for the sake of it. That's fine too!)
+
+```{r}
+plot_iris_labeled +
+  theme_bw()
+
+plot_iris_labeled +
+  theme_classic()
+```
+
+## Modifying text aesthetics
+
+`ggplot2` provides a series of **element functions** that allow you to customize the appearance of theme elements. There are three families of theme elements: for _text, line, and rectangle._ Each element function takes a series of arguments specific to that type of element. For example, only `element_text()` takes an argument for font family, while only `element_rect()` takes an argument for fill color.
+
+In this group of exercises, we will practice customizing text elements using `element_text()`.
+
+### Changing text color
+
+In the exercise below, let's change the color of _all_ text elements on the plot to **"chartreuse4".**
+
+```{r}
+plot_iris_labeled +
+  theme(text = element_text(color = "chartreuse4"))
+```
+
+### Changing fonts
+
+In the exercise below, let's change all the text on the plot to use the font **Courier New.**
+
+WARNING: If this technique fails to change the font in a plot on your own machine, that's okay! You can either try the name of another font you know exists on your computer, or if that still doesn't work, don't worry about it. While I've tried to show the lightest-weight method here, R plot fonts can get very dicey, and rely on a lot of specific computer settings to work sometimes.
+
+```{r}
+plot_iris_labeled +
+  theme(text = element_text(family = "Courier New"))
+```
+
+### Changing text size
+
+In the exercise below, use `rel()` to make the axis tick labels (on both axes) appear **2x** as big as its usual "parent" size. 
+
+```{r}
+plot_iris_labeled +
+  theme(axis.text = element_text(size = rel(2)))
+```
+
+Note: Text annotations on a plot (as demonstrated earlier in the worksheet) are not included in text theme elements, so if you have text annotations on a plot and want them to appear the same as title and axis text, you will need to set their appearance arguments separately.
+
+
+## Modifying legend aesthetics
+
+In this final set of exercises, we will modify plot legend aesthetics. Legends have some special `theme()` arguments allowing them to be moved around the plot.
+
+### Moving the legend
+
+In the exercise below, we'll move the legend to the bottom of the plot.
+
+```{r}
+plot_iris_labeled +
+  theme(legend.position = "bottom")
+```
+
+What if we want to remove the legend entirely?
+
+```{r}
+plot_iris_labeled +
+  theme(legend.position = "none")
+```
+
+Hopefully, you've been able to see that the possibilities when manipulating a ggplot are essentially endless. Don't be afraid to read documentation, and to mix and match what we've done today. Onward to the challenge!
