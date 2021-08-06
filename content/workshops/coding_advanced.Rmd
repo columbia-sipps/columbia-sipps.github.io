@@ -179,6 +179,8 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 9: Power
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/E_C_qLdxsxconehCTSn0vMHrhJP8RNqJPhOT97DfWVnKrREnIU5p6DLsrHwH_a2B.bGpE0d02x3zGzI0U" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>No downloads necessary. Use [this link](https://pbloom.shinyapps.io/power_demo/#section-overview){target="_blank"} to complete the workshop. (Note that if you would like to save your progress, please enable cookies on your web browser.)

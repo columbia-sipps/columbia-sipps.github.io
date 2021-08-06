@@ -188,6 +188,8 @@ A few days before each session, please check this page to make sure you've downl
 
 ### Week 9: Advanced plotting
 <br>
+<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/g9NPzGiAO8x6t4GtzEv1Y9Dzu2exhy5uSIRW0g0fs_i8Hj85T_zBcxjk8U2Vq9FS.CJ3GQ66fHP_39R88?startTime=1628020645000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
+<br>
 **Before the workshop:**
 <ul>
 <li>please create a folder named `09_adv-viz` on your computer
@@ -196,4 +198,8 @@ A few days before each session, please check this page to make sure you've downl
 <a href="/workshop_files/coding-basic-09/09_adv-viz.Rproj" download>R Project file</a>, 
 <a href="/workshop_files/coding-basic-09/challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
-
+**After the workshop:**
+<ul>
+<li><a href="/workshop_files/coding-basic-09/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/coding-basic-09/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
+</ul>
