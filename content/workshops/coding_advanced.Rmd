@@ -185,3 +185,9 @@ A few days before each session, please check this page to make sure you've downl
 <ul>
 <li>No downloads necessary. Use [this link](https://pbloom.shinyapps.io/power_demo/#section-overview){target="_blank"} to complete the workshop. (Note that if you would like to save your progress, please enable cookies on your web browser.)
 </ul>
+
+<hr>
+
+### Week 10: Women in Science (Faculty speaker: Dr. Dima Amso)
+<br>
+No recording will be posted for this session.

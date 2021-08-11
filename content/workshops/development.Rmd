@@ -115,3 +115,9 @@ Before each journal club session, check this page for details about which articl
 <div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/Xzp-ZRIU_aDwnUC5WVV2_BDGetRmfURC7kDUBgVV5u_mWqwFFrqrs3cNh47biF04.KkpNmo_y6MVlpzxR" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 Workshop materials will be posted shortly.
+
+<hr>
+
+### Week 10: SIPPS mini-conference (day 1)
+<br>
+During this session, SIPPS mentees who have completed independent research projects throughout the summer will present their work via posters and data blitzes. No recording will be posted.

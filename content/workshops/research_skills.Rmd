@@ -99,10 +99,21 @@ Prior to this week's workshop, please review the following materials:
 
 ### Week 8: PsychoPy
 <br>
-Workshop materials will be posted shortly.
+Recording will be posted shortly.
+
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/research-skills/Prereg_OSF/PsychoPyPresentation.pdf" download>Workshop slides</a>
+</ul>
 
 <hr>
 
 ### Week 9: Practice presentations
 <br>
 This week's session included practice presentations from SIPPS participants and their research projects. No materials or recordings will be posted.
+
+<hr>
+
+### Week 10: SIPPS mini-conference (day 2)
+<br>
+During this session, SIPPS mentees who have completed independent research projects throughout the summer will present their work via posters and data blitzes. No recording will be posted.
