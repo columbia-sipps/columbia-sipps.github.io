@@ -111,7 +111,7 @@ In addition to these workshops, students are expected to work in tandem with the
 <tr><td>July 14</td><td><b>CVs & resumes</b><br></td></tr>
 <tr><td>July 21</td><td><b>Journal club</b><br></td></tr>
 <tr><td>July 28</td><td><b>Science communication</b><br></td></tr>
-<tr><td>August 4</td><td><b>Outreach</b><br></td></tr>
+<tr><td>August 4</td><td><b>Research ethics</b><br></td></tr>
 <tr><td>August 11</td><td><b><i><font color="#D6494A">SIPPS mini-conference (part 1)</font></i></b><br></td></tr>
 </table>
 </div>

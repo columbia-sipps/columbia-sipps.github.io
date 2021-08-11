@@ -103,7 +103,7 @@ Recording will be posted shortly.
 
 **Workshop materials:**
 <ul>
-<li><a href="/workshop_files/research-skills/Prereg_OSF/PsychoPyPresentation.pdf" download>Workshop slides</a>
+<li><a href="/workshop_files/research-skills/PsychoPyPresentation.pdf" download>Workshop slides</a>
 </ul>
 
 <hr>

@@ -110,12 +110,15 @@ Before each journal club session, check this page for details about which articl
 
 <hr>
 
-### Week 9: Outreach
+### Week 9: Research ethics
 <br>
 <div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/Xzp-ZRIU_aDwnUC5WVV2_BDGetRmfURC7kDUBgVV5u_mWqwFFrqrs3cNh47biF04.KkpNmo_y6MVlpzxR" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
-Workshop materials will be posted shortly.
-
+**Workshop materials:**
+<br>
+<ul>
+<li><a href="/workshop_files/prof-dev/SIPPSEthics.pdf" download>Workshop slides</a>
+</ul>
 <hr>
 
 ### Week 10: SIPPS mini-conference (day 1)
