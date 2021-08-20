@@ -209,3 +209,11 @@ A few days before each session, please check this page to make sure you've downl
 ### Week 10: Women in Science (Faculty speaker: Dr. Dima Amso)
 <br>
 No recording will be posted for this session.
+<br><br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/WiS/WiSTEM.pdf" download>Workshop slides</a>
+<li><a href="/workshop_files/WiS/FemaleScientists_Atlantic.pdf" download>The Atlantic: "For female scientists, there's no good time to have children"</a>
+<li><a href="/workshop_files/WiS/changingcareertrajectories.pdf" download>PNAS: "The changing career trajectories of new parents
+in STEM"</a>
+</ul>
