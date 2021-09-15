@@ -1,0 +1,144 @@
+---
+title: "SIPPS 2021"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<div align="center">Check out the presentations made by the participants of SIPPS 2021!
+<br>
+<hr>
+
+## Poster presentations
+<br>
+
+#### The relationship between trait anxiety and hypnotic suggestibility
+**Charlotte Cassidy**<br>
+<i>Mentor: Ben Silver</i>
+
+<div align="center"><iframe src="/posters-2021/poster_CharlotteCassidy.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Co-rumination, closeness, and the use of we-language
+**Margot Deregnaucourt**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<div align="center"><iframe src="/posters-2021/poster_MargotDeregnaucourt.pdf" width="700px" height="450px">
+</iframe></div><br>
+
+#### Are age-related changes in hippocampal granularity in older adults associated with verbal episodic memory?
+**Elena Gadekar**<br>
+<i>Mentor: John Thorp</i>
+
+<div align="center"><iframe src="/posters-2021/poster_ElenaGadekar.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Benefits of long distance relationships in COVID-19
+**Annie Harris**<br>
+<i>Mentors: Ana DiGiovanni & Timothy Valshtein</i>
+
+<div align="center"><iframe src="/posters-2021/poster_AnnieHarris.pdf" width="700px" height="450px">
+</iframe></div><br>
+
+#### Autobiographical memory and music-evoked emotion
+**Magill Lamarre**<br>
+<i>Mentor: Paul Bloom</i>
+
+<div align="center"><iframe src="/posters-2021/poster_MagillLamarre.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### General self-worth and drug use: 1995 German youth in sports
+**Emmanuella Rozenfeld**<br>
+<i>Mentor: Margaux Wienk</i>
+
+<div align="center"><iframe src="/posters-2021/poster_ElenaGadekar.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Does memory differ across a novel stimulus set?
+**Zion Walker**<br>
+<i>Mentor: Halle Dimsdale-Zucker</i>
+
+<div align="center"><iframe src="/posters-2021/poster_ZionWalker.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Examining the effect of category structure on retroactive changes in memory
+**Catalina Yang**<br>
+<i>Mentor: John Thorp</i>
+
+<div align="center"><iframe src="/posters-2021/poster_CatalinaYang.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+<hr>
+
+## Data blitz presentations
+<br>
+
+#### Co-rumination: the emotional cost of friendship
+**Tessa Fagle**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<div align="center"><iframe src="/posters-2021/pres_TessaFagle.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Attachment anxiety, relationship quality, and co-rumination in romantic couples
+**Zoe Gupta**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<div align="center"><iframe src="/posters-2021/pres_ZoeGupta.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Big Five meta-traits differentially predict affect
+**Oliver Harris**<br>
+<i>Mentor: Margaux Wienk</i>
+
+<div align="center"><iframe src="/posters-2021/pres_OliverHarris.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### How the amplitude of sound affects memory in a virtual escape room
+**Anish Nanjappa**<br>
+<i>Mentors: Ben Silver & Wangjing Yu</i>
+
+<div align="center"><iframe src="/posters-2021/pres_AnishNanjappa.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Mentorship and the developing mind: links to anxious behaviors in children with early caregiving adversities
+**Erica Niemiec**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<div align="center"><iframe src="/posters-2021/pres_EricaNiemiec.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### If love is the treasure, laughter is the key: shared laughter, attachment, and closeness
+**Anshu Patel & Jamie Zhang**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<div align="center"><iframe src="/posters-2021/pres_AnshuPatel_JamieZhang.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Architectural arcs in episodic details in recalled memory narration
+**Anshita Singh**<br>
+<i>Mentor: Paul Bloom</i>
+
+<div align="center"><iframe src="/posters-2021/pres_AnshitaSingh.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Caregiving-related early adversity and anxious behaviors in school-age children
+**Camila Vicioso**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<div align="center"><iframe src="/posters-2021/pres_CamilaVicioso.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+#### Mentorship and the developing mind: links to anxious behaviors in children with early caregiving adversities
+**Lauren Wilkins**<br>
+<i>Mentor: Monica Thieu</i>
+
+<div align="center"><iframe src="/posters-2021/pres_LaurenWilkins.pdf" width="700px" height="550px">
+</iframe></div><br>
+
+
+</div>

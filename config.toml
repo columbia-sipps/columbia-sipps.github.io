@@ -50,14 +50,19 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 6
 
 [[menu.main]]
+    url = "/sipps2021/"
+    name = "SIPPS 2021"
+    weight = 8
+
+[[menu.main]]
     url = "/sipps2020/"
     name = "SIPPS 2020"
-    weight = 7
+    weight = 8
     
 [[menu.main]]
     url = "/instructors/"
     name = "[instructor materials]"
-    weight = 8
+    weight = 9
     
 # Social icons to be shown on the right-hand side of the navigation bar.
 # The "name" field should match the name of the icon in Font Awesome.
