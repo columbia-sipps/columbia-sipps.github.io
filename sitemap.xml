@@ -3,67 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/workshops/coding_basic/</loc>
+    <loc>http://example.com/workshops/coding_basic/</loc>
   </url>
   
   <url>
-    <loc>/workshops/coding_advanced/</loc>
+    <loc>http://example.com/workshops/coding_advanced/</loc>
   </url>
   
   <url>
-    <loc>/workshops/development/</loc>
+    <loc>http://example.com/workshops/development/</loc>
   </url>
   
   <url>
-    <loc>/workshops/research_skills/</loc>
+    <loc>http://example.com/workshops/research_skills/</loc>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>http://example.com/about/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>http://example.com/categories/</loc>
   </url>
   
   <url>
-    <loc>/diversity/</loc>
+    <loc>http://example.com/diversity/</loc>
   </url>
   
   <url>
-    <loc>/instructors/</loc>
+    <loc>http://example.com/instructors/</loc>
   </url>
   
   <url>
-    <loc>/team/</loc>
+    <loc>http://example.com/team/</loc>
   </url>
   
   <url>
-    <loc>/resources/</loc>
+    <loc>http://example.com/resources/</loc>
   </url>
   
   <url>
-    <loc>/schedule/</loc>
+    <loc>http://example.com/schedule/</loc>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>http://example.com/</loc>
   </url>
   
   <url>
-    <loc>/sipps2020/</loc>
+    <loc>http://example.com/sipps2020/</loc>
   </url>
   
   <url>
-    <loc>/sipps2021/</loc>
+    <loc>http://example.com/sipps2021/</loc>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>http://example.com/tags/</loc>
   </url>
   
   <url>
-    <loc>/workshops/</loc>
+    <loc>http://example.com/workshops/</loc>
   </url>
   
 </urlset>

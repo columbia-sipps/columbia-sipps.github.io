@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Workshops on SIPPS</title>
-    <link>/workshops/</link>
+    <link>http://example.com/workshops/</link>
     <description>Recent content in Workshops on SIPPS</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/workshops/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://example.com/workshops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding (basic)</title>
-      <link>/workshops/coding_basic/</link>
+      <link>http://example.com/workshops/coding_basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/workshops/coding_basic/</guid>
+      <guid>http://example.com/workshops/coding_basic/</guid>
       <description>On this page, you will find resources associated with each session in the basic-track coding workshop (zoom link, pw: sipps2021). A few days before each session, please check this page to make sure you’ve downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.</description>
     </item>
     
     <item>
       <title>Coding (advanced)</title>
-      <link>/workshops/coding_advanced/</link>
+      <link>http://example.com/workshops/coding_advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/workshops/coding_advanced/</guid>
+      <guid>http://example.com/workshops/coding_advanced/</guid>
       <description>On this page, you will find resources associated with each session in the advanced-track coding workshop (zoom link, pw: sipps2021). A few days before each session, please check this page to make sure you’ve downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.</description>
     </item>
     
     <item>
       <title>Professional Development / Journal Club</title>
-      <link>/workshops/development/</link>
+      <link>http://example.com/workshops/development/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/workshops/development/</guid>
+      <guid>http://example.com/workshops/development/</guid>
       <description>On this page, you will find resources associated with the Professional Development/Journal Club workshop series (zoom link, pw: sipps2021). Before each journal club session, check this page for details about which article that will be discussed. After each session in the series, the page will be updated with links to the corresponding zoom recording, as well as any additional materials that were referenced during the workshop.  Week 1: What is a good research question?</description>
     </item>
     
     <item>
       <title>Research Skills</title>
-      <link>/workshops/research_skills/</link>
+      <link>http://example.com/workshops/research_skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/workshops/research_skills/</guid>
+      <guid>http://example.com/workshops/research_skills/</guid>
       <description>On this page, you will find resources associated with the Research Skills workshop series (zoom link, pw: sipps2021). After each session in the series, the page will be updated with links to the corresponding zoom recording, as well as any additional materials that were referenced during the workshop.  Week 1: How to make the most of your summer experience (Dr. Valerie Purdie-Greenaway)  View Recording  Workshop materials:   workshop slides    Week 2: Literature search &amp;amp; Zotero  View Recording  Workshop materials:   workshop slides    Week 3: Pre-registration &amp;amp; OSF  View Recording  Workshop materials:   Workshop slides  Activity Readme  Datafile  OSF Pre-registration template    Week 4: Git (Version control &amp;amp; script sharing)  View Recording</description>
     </item>
     
