@@ -2,108 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SIPPS</title>
-    <link>http://example.com/</link>
+    <link>https://columbia-sipps.github.io/</link>
     <description>Recent content on SIPPS</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://columbia-sipps.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding (basic)</title>
-      <link>http://example.com/workshops/coding_basic/</link>
+      <link>https://columbia-sipps.github.io/workshops/coding_basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/workshops/coding_basic/</guid>
+      <guid>https://columbia-sipps.github.io/workshops/coding_basic/</guid>
       <description>On this page, you will find resources associated with each session in the basic-track coding workshop (zoom link, pw: sipps2021). A few days before each session, please check this page to make sure you’ve downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.</description>
     </item>
     
     <item>
       <title>Coding (advanced)</title>
-      <link>http://example.com/workshops/coding_advanced/</link>
+      <link>https://columbia-sipps.github.io/workshops/coding_advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/workshops/coding_advanced/</guid>
+      <guid>https://columbia-sipps.github.io/workshops/coding_advanced/</guid>
       <description>On this page, you will find resources associated with each session in the advanced-track coding workshop (zoom link, pw: sipps2021). A few days before each session, please check this page to make sure you’ve downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.</description>
     </item>
     
     <item>
       <title>Professional Development / Journal Club</title>
-      <link>http://example.com/workshops/development/</link>
+      <link>https://columbia-sipps.github.io/workshops/development/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/workshops/development/</guid>
+      <guid>https://columbia-sipps.github.io/workshops/development/</guid>
       <description>On this page, you will find resources associated with the Professional Development/Journal Club workshop series (zoom link, pw: sipps2021). Before each journal club session, check this page for details about which article that will be discussed. After each session in the series, the page will be updated with links to the corresponding zoom recording, as well as any additional materials that were referenced during the workshop.  Week 1: What is a good research question?</description>
     </item>
     
     <item>
       <title>Research Skills</title>
-      <link>http://example.com/workshops/research_skills/</link>
+      <link>https://columbia-sipps.github.io/workshops/research_skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/workshops/research_skills/</guid>
+      <guid>https://columbia-sipps.github.io/workshops/research_skills/</guid>
       <description>On this page, you will find resources associated with the Research Skills workshop series (zoom link, pw: sipps2021). After each session in the series, the page will be updated with links to the corresponding zoom recording, as well as any additional materials that were referenced during the workshop.  Week 1: How to make the most of your summer experience (Dr. Valerie Purdie-Greenaway)  View Recording  Workshop materials:   workshop slides    Week 2: Literature search &amp;amp; Zotero  View Recording  Workshop materials:   workshop slides    Week 3: Pre-registration &amp;amp; OSF  View Recording  Workshop materials:   Workshop slides  Activity Readme  Datafile  OSF Pre-registration template    Week 4: Git (Version control &amp;amp; script sharing)  View Recording</description>
     </item>
     
     <item>
       <title>About the SIPPS Program</title>
-      <link>http://example.com/about/</link>
+      <link>https://columbia-sipps.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/about/</guid>
+      <guid>https://columbia-sipps.github.io/about/</guid>
       <description>The SIPPS team comprises a group of graduate students, post-docs, undergraduates, and faculty advisors who are committed to diversity and inclusion, in its broadest sense. We are scientists whose day-to-day research seeks to understand how people think, behave, and relate to one other and how differences in our experiences, both positive and adverse, affect our brain, relationships, and behavior. Our work encompasses and embraces the ideas of diversity and support.</description>
     </item>
     
     <item>
       <title>Diversity Statement</title>
-      <link>http://example.com/diversity/</link>
+      <link>https://columbia-sipps.github.io/diversity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/diversity/</guid>
+      <guid>https://columbia-sipps.github.io/diversity/</guid>
       <description>The SIPPS team comprises a group of graduate students, post-docs, undergraduates, and faculty advisors who are committed to diversity and inclusion, in its broadest sense. We are scientists whose day-to-day research seeks to understand how people think, behave, and relate to one other and how differences in our experiences, both positive and adverse, affect our brain, relationships, and behavior. Our work encompasses and embraces the ideas of diversity and support.</description>
     </item>
     
     <item>
       <title>Instructor Materials</title>
-      <link>http://example.com/instructors/</link>
+      <link>https://columbia-sipps.github.io/instructors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/instructors/</guid>
+      <guid>https://columbia-sipps.github.io/instructors/</guid>
       <description>Quick links for graduate students, postdocs, and staff in charge of putting on the SIPPS program. Feel free to disregard if you are a participant in this program. Please contact Manasi if you are unable to access any of the links below.    instructor schedule  SIPPS Drive folder  guidelines for instructors  guidelines for mentors  mentor/mentee contract  office hours zoom link (pw: sipps 2021) (for instructors/mentors) — held Thursdays 5-6pm EST  office hours zoom link (pw: sipps 2021) (for near-peer mentors) — held Thursdays 5-6pm EST</description>
     </item>
     
     <item>
       <title>Meet the SIPPS Team</title>
-      <link>http://example.com/team/</link>
+      <link>https://columbia-sipps.github.io/team/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/team/</guid>
+      <guid>https://columbia-sipps.github.io/team/</guid>
       <description>SIPPS is a program developed &amp;amp; run primarily by graduate students, postdocs, and staff in Columbia’s Psychology Department.
 Program Directors  Ana DiGiovanni is a PhD student in the Couples Lab. She studies social support processes and interpersonal emotion regulation strategies (i.e., co-rumination) that occur in close relationships (e.g., romantic relationships, friendships), especially during times of stress.  email   Anna Vannucci is a 2nd year PhD student working the DAN Lab.</description>
     </item>
     
     <item>
       <title>Resources</title>
-      <link>http://example.com/resources/</link>
+      <link>https://columbia-sipps.github.io/resources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/resources/</guid>
+      <guid>https://columbia-sipps.github.io/resources/</guid>
       <description>On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all materials developed for specific workshop sessions will instead be found on the workshops page. Don’t hesitate to reach out to your mentor(s) and/or your instructors with specific questions about these resources.  Programming   Columbia Psychology Scientific Computing   This website developed by graduate students in the psychology department contains a variety of introductory and advanced tutorials relevant for psychological data analysis using both R and python.</description>
     </item>
     
     <item>
       <title>Schedule</title>
-      <link>http://example.com/schedule/</link>
+      <link>https://columbia-sipps.github.io/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/schedule/</guid>
+      <guid>https://columbia-sipps.github.io/schedule/</guid>
       <description>Dates on this page reflect workshop times for SIPPS 2021. This year’s information will be posted as soon as possible.
 SIPPS hosts three parallel workshop series running from the week of June 7 through the week of August 9, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the workshops page for materials and video recordings associated with each session.</description>
     </item>
     
     <item>
       <title>SIPPS 2020</title>
-      <link>http://example.com/sipps2020/</link>
+      <link>https://columbia-sipps.github.io/sipps2020/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/sipps2020/</guid>
+      <guid>https://columbia-sipps.github.io/sipps2020/</guid>
       <description>Check out the posters made by the participants of SIPPS 2020!  
 Impact of Early Caregiving Adversity Timing on Later Life Anxiety Symptoms in Children Ariel Katz
 Mentor: Anna Vannucci
@@ -116,10 +116,10 @@ Mentor: Ana DiGiovanni
     
     <item>
       <title>SIPPS 2021</title>
-      <link>http://example.com/sipps2021/</link>
+      <link>https://columbia-sipps.github.io/sipps2021/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/sipps2021/</guid>
+      <guid>https://columbia-sipps.github.io/sipps2021/</guid>
       <description>Check out the presentations made by the participants of SIPPS 2021!  Poster presentations 
 The relationship between trait anxiety and hypnotic suggestibility Charlotte Cassidy
 Mentor: Ben Silver
