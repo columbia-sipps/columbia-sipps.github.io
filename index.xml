@@ -52,6 +52,17 @@
     </item>
     
     <item>
+      <title>Apply</title>
+      <link>https://columbia-sipps.github.io/apply/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://columbia-sipps.github.io/apply/</guid>
+      <description>  We are excited to announce that SIPPS will be running again in the summer of 2022! Applications will open in mid-late February. Please stay tuned for more information.  
+If you have any questions in the meantime, you can reach out now to sippscupsych@gmail.com.
+ </description>
+    </item>
+    
+    <item>
       <title>Diversity Statement</title>
       <link>https://columbia-sipps.github.io/diversity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -85,7 +96,7 @@ Program Directors  Ana DiGiovanni is a PhD student in the Couples Lab. She studi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/resources/</guid>
-      <description>On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all materials developed for specific workshop sessions will instead be found on the workshops page. Don’t hesitate to reach out to your mentor(s) and/or your instructors with specific questions about these resources.  Programming   Columbia Psychology Scientific Computing   This website developed by graduate students in the psychology department contains a variety of introductory and advanced tutorials relevant for psychological data analysis using both R and python.</description>
+      <description>On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all materials developed for specific workshop sessions will instead be found on the workshops page. Don’t hesitate to reach out to your mentor(s) and/or your instructors with specific questions about these resources.  Summer Research Funding   Information coming soon!    Programming   Columbia Psychology Scientific Computing   This website developed by graduate students in the psychology department contains a variety of introductory and advanced tutorials relevant for psychological data analysis using both R and python.</description>
     </item>
     
     <item>
@@ -94,39 +105,22 @@ Program Directors  Ana DiGiovanni is a PhD student in the Couples Lab. She studi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/schedule/</guid>
-      <description>Dates on this page reflect workshop times for SIPPS 2021. This year’s information will be posted as soon as possible.
+      <description>Dates on this page reflect workshop times for SIPPS 2021. This year’s information will be posted as soon as possible.  
 SIPPS hosts three parallel workshop series running from the week of June 7 through the week of August 9, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the workshops page for materials and video recordings associated with each session.</description>
     </item>
     
     <item>
-      <title>SIPPS 2020</title>
-      <link>https://columbia-sipps.github.io/sipps2020/</link>
+      <title>SIPPS Mini-Conference</title>
+      <link>https://columbia-sipps.github.io/pastsipps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://columbia-sipps.github.io/sipps2020/</guid>
-      <description>Check out the posters made by the participants of SIPPS 2020!  
-Impact of Early Caregiving Adversity Timing on Later Life Anxiety Symptoms in Children Ariel Katz
-Mentor: Anna Vannucci
-  
- Social Support as a Moderator of the Effects of Loneliness on Emotional Eating in Parent-Adolescent Dyads (interactive poster link) Ayumi Tachida &amp;amp; Jamie Zhang
-Mentor: Ana DiGiovanni
-  
- The Effect of Instagram Usage on the Loss of Control of Eating: Anxiety and Emotional Reactivity as Moderators (interactive poster link) Barbara Djan</description>
-    </item>
-    
-    <item>
-      <title>SIPPS 2021</title>
-      <link>https://columbia-sipps.github.io/sipps2021/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://columbia-sipps.github.io/sipps2021/</guid>
-      <description>Check out the presentations made by the participants of SIPPS 2021!  Poster presentations 
-The relationship between trait anxiety and hypnotic suggestibility Charlotte Cassidy
+      <guid>https://columbia-sipps.github.io/pastsipps/</guid>
+      <description>Check out the presentations made by previous SIPPS participants during our end-of-summer conference!    SIPPS 2021   Poster presentations  The relationship between trait anxiety and hypnotic suggestibility Charlotte Cassidy
 Mentor: Ben Silver
-  
+
  Co-rumination, closeness, and the use of we-language Margot Deregnaucourt
 Mentor: Ana DiGiovanni
-  
+
  Are age-related changes in hippocampal granularity in older adults associated with verbal episodic memory? Elena Gadekar
 Mentor: John Thorp</description>
     </item>
