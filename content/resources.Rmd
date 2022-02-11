@@ -11,6 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 On this page you will find an assortment of miscellaneous resources that you may find useful as a student interested in psychological research. Please note that all materials developed for specific workshop sessions will instead be found on the [workshops](/workshops) page. Don't hesitate to reach out to your mentor(s) and/or your instructors with specific questions about these resources.
 <hr>
+## Summer Research Funding
+<ul>
+<li>Information coming soon!
+</ul>
+<hr>
 ## Programming
 <ul>
 <li>[Columbia Psychology Scientific Computing](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"}
@@ -65,7 +70,7 @@ On this page you will find an assortment of miscellaneous resources that you may
 </ul>
 #### Examples of Personal Statements
 <ul>
-<li>[Camille G. (Columbia University)](/uploads/cg_ps.pdf){target="_blank"}
+<li>[Camille G. (Columbia University)](/resources/cg_ps.pdf){target="_blank"}
 <li>[Anna V. (Columbia University)](https://drive.google.com/file/d/1pDPWRa8bniq2nz3f1ObOiLu9CkRysiTI/view){target="_blank"}
 <li>[Ana D. (Columbia University)](https://docs.google.com/document/d/1GyiKJBmD4Qrnn9oMC8fgu5iQFMS6-kZBV1RIG5U7-wE/edit){target="_blank"}
 </ul>

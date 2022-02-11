@@ -28,35 +28,35 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "/about/"
     name = "About"
     weight = 2
+    
+[[menu.main]]
+    url = "/apply/"
+    name = "Apply"
+    weight = 3
 
 [[menu.main]]
     url = "/schedule/"
     name = "Schedule"
-    weight = 3
+    weight = 4
 
 [[menu.main]]
     url = "/workshops/"
     name = "Workshops"
-    weight = 4
+    weight = 5
 
 [[menu.main]]
     url = "/team/"
     name = "Meet the Team"
-    weight = 5
+    weight = 6
     
 [[menu.main]]
     url = "/resources/"
     name = "Resources"
-    weight = 6
+    weight = 7
 
 [[menu.main]]
-    url = "/sipps2021/"
-    name = "SIPPS 2021"
-    weight = 8
-
-[[menu.main]]
-    url = "/sipps2020/"
-    name = "SIPPS 2020"
+    url = "/pastsipps/"
+    name = "SIPPS Mini-Conference"
     weight = 8
     
 [[menu.main]]

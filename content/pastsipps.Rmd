@@ -1,0 +1,164 @@
+---
+title: "SIPPS Mini-Conference"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<div align="center">Check out the presentations made by previous SIPPS participants during our end-of-summer conference!</div>
+<br>
+<hr>
+
+<h2><div align="center">SIPPS 2021</div></h2>
+
+### Poster presentations
+
+<hr>
+
+#### [The relationship between trait anxiety and hypnotic suggestibility](/presentations/sipps2021/poster_CharlotteCassidy.pdf){target="_blank"}
+**Charlotte Cassidy**<br>
+<i>Mentor: Ben Silver</i>
+
+<br>
+
+#### [Co-rumination, closeness, and the use of we-language](/presentations/sipps2021/poster_MargotDeregnaucourt.pdf){target="_blank"}
+**Margot Deregnaucourt**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<br>
+
+#### [Are age-related changes in hippocampal granularity in older adults associated with verbal episodic memory?](/presentations/sipps2021/poster_ElenaGadekar.pdf){target="_blank"}
+**Elena Gadekar**<br>
+<i>Mentor: John Thorp</i>
+
+<br>
+
+#### [Benefits of long distance relationships in COVID-19](/presentations/sipps2021/poster_AnnieHarris.pdf){target="_blank"}
+**Annie Harris**<br>
+<i>Mentors: Ana DiGiovanni & Timothy Valshtein</i>
+
+<br>
+
+#### [Autobiographical memory and music-evoked emotion](/presentations/sipps2021/poster_MagillLamarre.pdf){target="_blank"}
+**Magill Lamarre**<br>
+<i>Mentor: Paul Bloom</i>
+
+<br>
+
+#### [General self-worth and drug use: 1995 German youth in sports](/presentations/sipps2021/poster_ElenaGadekar.pdf){target="_blank"}
+**Emmanuella Rozenfeld**<br>
+<i>Mentor: Margaux Wienk</i>
+
+<br>
+
+#### [Does memory differ across a novel stimulus set?](/presentations/sipps2021/poster_ZionWalker.pdf){target="_blank"}
+**Zion Walker**<br>
+<i>Mentor: Halle Dimsdale-Zucker</i>
+
+<br>
+
+#### [Examining the effect of category structure on retroactive changes in memory](/presentations/sipps2021/poster_CatalinaYang.pdf){target="_blank"}
+**Catalina Yang**<br>
+<i>Mentor: John Thorp</i>
+
+<br>
+
+### Data blitz presentations
+
+<hr>
+
+#### [Co-rumination: the emotional cost of friendship](/presentations/sipps2021/pres_TessaFagle.pdf){target="_blank"}
+**Tessa Fagle**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<br>
+
+#### [Attachment anxiety, relationship quality, and co-rumination in romantic couples](/presentations/sipps2021/pres_ZoeGupta.pdf){target="_blank"}
+**Zoe Gupta**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<br>
+
+#### [Big Five meta-traits differentially predict affect](/presentations/sipps2021/pres_OliverHarris.pdf){target="_blank"}
+**Oliver Harris**<br>
+<i>Mentor: Margaux Wienk</i>
+
+<br>
+
+#### [How the amplitude of sound affects memory in a virtual escape room](/presentations/sipps2021/pres_AnishNanjappa.pdf){target="_blank"}
+**Anish Nanjappa**<br>
+<i>Mentors: Ben Silver & Wangjing Yu</i>
+
+<br>
+
+#### [Mentorship and the developing mind: links to anxious behaviors in children with early caregiving adversities](/presentations/sipps2021/pres_EricaNiemiec.pdf){target="_blank"}
+**Erica Niemiec**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<br>
+
+#### [If love is the treasure, laughter is the key: shared laughter, attachment, and closeness](/presentations/sipps2021/pres_AnshuPatel_JamieZhang.pdf){target="_blank"}
+**Anshu Patel & Jamie Zhang**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<br>
+
+#### [Architectural arcs in episodic details in recalled memory narration](/presentations/sipps2021/pres_AnshitaSingh.pdf){target="_blank"}
+**Anshita Singh**<br>
+<i>Mentor: Paul Bloom</i>
+
+<br>
+
+#### [Caregiving-related early adversity and anxious behaviors in school-age children](/presentations/sipps2021/pres_CamilaVicioso.pdf){target="_blank"}
+**Camila Vicioso**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<br>
+
+#### [Mentorship and the developing mind: links to anxious behaviors in children with early caregiving adversities](/presentations/sipps2021/pres_LaurenWilkins.pdf){target="_blank"}
+**Lauren Wilkins**<br>
+<i>Mentor: Monica Thieu</i>
+
+<hr>
+
+<h2><div align="center">SIPPS 2020</div></h2>
+
+<br>
+
+#### [Impact of Early Caregiving Adversity Timing on Later Life Anxiety Symptoms in Children](/presentations/sipps2020/ak_poster.pdf){target="_blank"}
+**Ariel Katz**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<br>
+
+#### [Social Support as a Moderator of the Effects of Loneliness on Emotional Eating in Parent-Adolescent Dyads](/presentations/sipps2020/at_poster.pdf){target="_blank"} ([interactive poster link](https://srcd21biennial.ipostersessions.com/Default.aspx?s=53-54-B2-88-6D-67-D2-53-1B-FD-C4-D9-8A-00-04-66){target="_blank"})
+**Ayumi Tachida & Jamie Zhang**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<br>
+
+#### [The Effect of Instagram Usage on the Loss of Control of Eating: Anxiety and Emotional Reactivity as Moderators](/presentations/sipps2020/bd_poster.pdf){target="_blank"} ([interactive poster link](https://srcd21biennial.ipostersessions.com/Default.aspx?s=5D-71-7B-91-F7-F2-03-9F-12-65-36-69-27-D2-57-B8){target="_blank"})
+**Barbara Djan**<br>
+<i>Mentor: Ana DiGiovanni</i>
+
+<br>
+
+#### [Caregiving Instability and Cognitive Control in Children: Does Timing Matter?](/presentations/sipps2020/eh_poster.pdf){target="_blank"}
+**Eleanor Hansen**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<br>
+
+#### [Depression and Anxiety Symptoms in Young Adults Correlate with Greater Affective Sensitivity to Emotional Schema Acquisition](/presentations/sipps2020/nm_poster.pdf){target="_blank"}
+**Nathan Martin, Ariel Katz, Sapna Patel, & Medina Shah**<br>
+<i>Mentor: Anna Vannucci</i>
+
+<br>
+
+#### [The Effect of Instagram Usage and Race on the Loss of Control of Eating](/presentations/sipps2020/ce_poster.pdf){target="_blank"}
+**Cassidy Elkins**<br>
+<i>Mentor: Ana DiGiovanni</i>

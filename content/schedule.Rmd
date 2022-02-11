@@ -9,7 +9,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<font color="#D6494A">**Dates on this page reflect workshop times for SIPPS 2021. This year's information will be posted as soon as possible.**</font>
+<h4><font color="#D6494A">**Dates on this page reflect workshop times for SIPPS 2021. This year's information will be posted as soon as possible.**</font></h4>
+
+<br>
 
 SIPPS hosts three parallel workshop series running from the week of June 7 through the week of August 9, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the [workshops](/workshops) page for materials and video recordings associated with each session. Also see the [About](/about) page to view an introductory video and slide deck about the program.
 <br><br>
