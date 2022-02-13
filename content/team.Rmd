@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 SIPPS is a program developed & run primarily by graduate students, postdocs, and staff in Columbia's Psychology Department.
 
-## Program Directors
+## Program Founders
 
 <br>
 <div class="row">
@@ -31,32 +31,11 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 </div>
 </div>
 <hr>
-<div class="row align-items-center">
-<div class="col-sm-4">
-<h4 style="text-align:center;color:#63AAB5;">Program Evaluation</h4>
-<div align="center"><b>Paul Bloom</b></div>
-</div>
-<div class="col-sm-4">
-<h4 style="text-align:center;color:#63AAB5;">Program Administration</h4>
-<div align="center"><b>Manasi Jayakumar</b></div>
-</div>
-<div class="col-sm-4">
-<h4 style="text-align:center;color:#63AAB5;">Web Development</h4>
-<div align="center"><b>Camille Gasser</b></div>
-</div>
-</div>
-<br>
-<hr>
-## Workshop Instructors
+
+## Core Team
+
 <br>
 <div class="row">
-<div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/cat.png" style="border:1px solid #A9A9A9"></p>
-</div>
-<div class="col-sm-4">
-<u><b>Catherine Bianco</b></u> is a lab manager of the Developmental Cognitive Neuroscience Lab, working with Dr. Dima Amso.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:clb2220@columbia.edu){target="_blank"}
-</div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/paul.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
@@ -64,56 +43,46 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <u><b>Paul Alexander Bloom</b></u> is a 4th-year PhD student in the Tottenham Lab, interested in how early environments impact cognitive and affective development across the lifespan.
 <p> <img src="/images/email.png" class="icon"> [email](mailto:paul.bloom@columbia.edu){target="_blank"}
 </div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/amaesha.png" style="border:1px solid #A9A9A9"></p>
+</div>
+<div class="col-sm-4">
+<u><b>Amaesha Durazi</b></u> is a lab manager in the DAN Lab, interested in the socio-emotional development of children and the effects of environmental factors on brain development and behavior.
+<p> <img src="/images/email.png" class="icon"> [email](mailto:ad3730@columbia.edu){target="_blank"}
+</div>
 </div>
 <br><br>
 <div class="row">
 <div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/halle.png" style="border:1px solid #A9A9A9"></p>
+<p style="text-align:center;"><img src="/images/claudia.png" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>Halle Dimsdale-Zucker</b></u> is a postdoctoral scientist working with Prfs. Mariam Aly and Chris Baldassano. She is interested in how context and structured regularities are represented in the brain and how they shape what we remember.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:hdimsdalezucker@gmail.com){target="_blank"}
+<u><b>Claudia Espinoza-Heredia</b></u> is a PhD student working with Dima Amso in the DCN Lab, interested in the role of environmental factors and experience on early brain maturation.
+<p> <img src="/images/email.png" class="icon"> [email](mailto:ce2435@columbia.edu){target="_blank"}
 </div>
-<div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/loretta.jpg" style="border:1px solid #A9A9A9"></p>
-</div>
-<div class="col-sm-4">
-<u><b>Loretta Eboigbe</b></u> is a lab manager and the community outreach liasion in the Developmental Cognitive Neuroscience Lab, working with Dr. Dima Amso.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:lie2106@columbia.edu){target="_blank"}
-</div>
-</div>
-<br><br>
-<div class="row">
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/camille.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>Camille Gasser</b></u> is a 2nd-year PhD student in the Davachi Lab, interested in how our prior knowledge about the world shapes our ability to learn and remember new information.
+<u><b>Camille Gasser</b></u> is a PhD student in the Davachi Lab, interested in how our prior knowledge about the world shapes our ability to learn and remember new information.
 <p> <img src="/images/email.png" class="icon"> [email](mailto:cg3083@columbia.edu){target="_blank"}
-</div>
-<div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/manasi.jpg" style="border:1px solid #A9A9A9"></p>
-</div>
-<div class="col-sm-4">
-<u><b>Manasi Jayakumar</b></u> (she/her) is a 3rd-year PhD student in the Aly Lab, interested in interactions between attention and memory, and the neural mechanisms underlying these interactions.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:mj2873@columbia.edu){target="_blank"}
 </div>
 </div>
 <br><br>
 <div class="row">
 <div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/lisa.jpg" style="border:1px solid #A9A9A9"></p>
+<p style="text-align:center;"><img src="/images/manasi.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>Lisa Pegram</b></u> is a 2nd-year PhD student in the Metcalfe Lab, who is interested in the meta-cognitive decisions that influence the incorporation of new information.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:lp2838@columbia.edu){target="_blank"}
+<u><b>Manasi Jayakumar</b></u> (she/her) is a PhD student in the Aly Lab, interested in interactions between attention and memory, and the neural mechanisms underlying these interactions.
+<p> <img src="/images/email.png" class="icon"> [email](mailto:mj2873@columbia.edu){target="_blank"}
 </div>
 <div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/matt.jpg" style="border:1px solid #A9A9A9"></p>
+<p style="text-align:center;"><img src="/images/arlene.png" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>Matt Sachs</b></u> is a postdoctoral fellow in the Presidential Scholar in Society in Neuroscience program, working with Kevin Ochsner and Chris Baldassano on the neural dynamics of affective experience. 
-<p> <img src="/images/email.png" class="icon"> [email](mailto:ms5924@columbia.edu){target="_blank"}
+<u><b>Arlene Lormestoire</b></u> is a PhD student in the Davachi Lab, interested in how we leverage commonalities across distinct episodic experiences in support of new learning.
+<p> <img src="/images/email.png" class="icon"> [email](mailto:al4201@columbia.edu){target="_blank"}
 </div>
 </div>
 <br><br>
@@ -122,63 +91,102 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <p style="text-align:center;"><img src="/images/ben.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
 <div class="col-sm-4">
-<u><b>Ben Silver</b></u> is a 2nd year PhD student in the SCAN Lab. He's interested in how we learn and update our knowledge of the self and others, and how emotion motivates cognition.
+<u><b>Ben Silver</b></u> is a PhD student in the SCAN Lab. He's interested in how we learn and update our knowledge of the self and others, and how emotion motivates cognition.
 <p> <img src="/images/email.png" class="icon"> [email](mailto:bms2202@columbia.edu){target="_blank"}
 </div>
-<div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/hannah.jpg" style="border:1px solid #A9A9A9"></p>
 </div>
-<div class="col-sm-4">
-<u><b>Hannah Tarder-Stoll</b></u> is a 3rd-year PhD student working with Dr. Mariam Aly in the Aly Lab and Dr. Chris Baldassano in the Dynamic Perception and Memory Lab.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:hrt2116@columbia.edu){target="_blank"}
+
+<br>
+<hr>
+## Workshop Instructors (2021)
+<br>
+<div class="row">
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/cat.png" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Catherine Bianco</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:clb2220@columbia.edu){target="_blank"}</div>
+</div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/paul.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Paul Bloom</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:paul.bloom@columbia.edu){target="_blank"}</div>
+</div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/halle.png" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Halle Dimsdale-Zucker</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:hdimsdalezucker@gmail.com){target="_blank"}</div>
+</div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/loretta.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Loretta Eboigbe</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:lie2106@columbia.edu){target="_blank"}</div>
+</div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/camille.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Camille Gasser</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:cg3083@columbia.edu){target="_blank"}</div>
+</div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/manasi.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Manasi Jayakumar</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:mj2873@columbia.edu){target="_blank"}</div>
 </div>
 </div>
 <br><br>
 <div class="row">
 <div class="col-sm-2">
-<p style="text-align:center;"><img src="/images/monica.jpg" style="border:1px solid #A9A9A9"></p>
+<p style="text-align:center;"><img src="/images/lisa.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Lisa Pegram</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:lp2838@columbia.edu){target="_blank"}</div>
 </div>
-<div class="col-sm-4">
-<u><b>Monica Thieu</b></u> is a rising 5th year PhD student in the SCAN Lab using methods inspired by perception research to study how we judge social and emotional stimuli.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:monica.thieu@columbia.edu){target="_blank"}
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/matt.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Matt Sachs</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:ms5924@columbia.edu){target="_blank"}</div>
+</div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/ben.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Ben Silver</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:bms2202@columbia.edu){target="_blank"}</div>
+</div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/hannah.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Hannah Tarder-Stoll</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:hrt2116@columbia.edu){target="_blank"}</div>
+</div>
+<div class="col-sm-2">
+<p style="text-align:center;"><img src="/images/monica.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Monica Thieu</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:monica.thieu@columbia.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/john.jpg" style="border:1px solid #A9A9A9"></p>
-</div>
-<div class="col-sm-4">
-<u><b>John Thorp</b></u> is a 2nd-year PhD Student in the Davachi Lab, interested in how affective experience, existing knowledge structures, and neuromodulatory systems influence the quality of our memory.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:jnt2136@columbia.edu){target="_blank"}
+<div align="center"><u><b>John Throp</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:jnt2136@columbia.edu){target="_blank"}</div>
 </div>
 </div>
 <br><br>
 <div class="row">
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/tim.jpg" style="border:1px solid #A9A9A9"></p>
-</div>
-<div class="col-sm-4">
-<u><b>Timothy Valshtein</b></u> is an incoming Harvard College Fellow and a recent graduate of NYU's psychology doctoral program. He is interested in motivation and the role of persistence in romantic relationship pursuit processes.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:valshteint@nyu.edu){target="_blank"}
+<div align="center"><u><b>Tim Valshtein</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:valshteint@nyu.edu){target="_blank"}</div>
 </div>
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/margaux.jpg" style="border:1px solid #A9A9A9"></p>
+<div align="center"><u><b>Margaux Wienk</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:margaux.wienk@columbia.edu){target="_blank"}</div>
 </div>
-<div class="col-sm-4">
-<u><b>Margaux Wienk</b></u> is a rising third year PhD student in the Higgins Lab and studies how people's broader environments influence thoughts, feelings, and behaviors, with a particular focus on topics as inequality, economic mobility, (social) justice, and diversity.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:margaux.wienk@columbia.edu){target="_blank"}
-</div>
-</div>
-<div class="row">
 <div class="col-sm-2">
 <p style="text-align:center;"><img src="/images/ana.jpg" style="border:1px solid #A9A9A9"></p>
-</div>
-<div class="col-sm-4">
-<u><b>Ana DiGiovanni</b></u> is a PhD student in the Couples Lab. She studies social support processes and interpersonal emotion regulation strategies (i.e., co-rumination) that occur in close relationships (e.g., romantic relationships, friendships), especially during times of stress.
-<p> <img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}
+<div align="center"><u><b>Ana DiGiovanni</b></u>
+<br><img src="/images/email.png" class="icon"> [email](mailto:amd2323@columbia.edu){target="_blank"}</div>
 </div>
 </div>
+
 <hr>
 
-## Graduate Student & Postdoc Mentors
+## Graduate Student & Postdoc Mentors (2021)
 <br>
 <div class="row">
 <div class="col-sm-2">
@@ -247,7 +255,7 @@ SIPPS is a program developed & run primarily by graduate students, postdocs, and
 <br>
 <hr>
 
-## Near-Peer Mentors
+## Near-Peer Mentors (2021)
 <br>
 <div class="row">
 <div class="col-sm-2">
@@ -356,7 +364,7 @@ Columbia University<br>
 <br>
 <div class="row align-items-center">
 <div class="col-sm-4">
-<h4 style="text-align:center">**[Developmental and Affective Neuroscience Lab](https://danlab.psychology.columbia.edu/){target="_blank"}**</h4>
+<h4 style="text-align:center">**[Developmental and Affective Neuroscience (DAN) Lab](https://danlab.psychology.columbia.edu/){target="_blank"}**</h4>
 <div align="center">PI: Dr. Nim Tottenham</div>
 </div>
 <div class="col-sm-4">

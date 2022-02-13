@@ -13,6 +13,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-If you have any questions in the meantime, you can reach out now to [sippscupsych@gmail.com](mailto:sippscupsych@gmail.com){target="_blank"}.
+If you have any questions in the meantime, you can reach out now to [sippscupsych@gmail.com](mailto:sippscupsych@gmail.com){target="_blank"}. We also encourage you to check out [this spreadsheet](https://docs.google.com/spreadsheets/d/1hhrtStgv-xZqr5BESyo7HhnHAZMz_AHsxwwVO4fEd9o/edit?usp=sharing){target="_blank"} for a list of summer funding resources.
 
 </div>
