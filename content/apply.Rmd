@@ -9,10 +9,37 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<div align="center"><h4>We are excited to announce that SIPPS *will* be running again in the summer of 2022! Applications will open in mid-late February. Please stay tuned for more information.</h4>
+<div align="center"><h3>Applications for SIPPS 2022 are now open!</h3>
+<h4><font color="#D6494A">Apply now at [this link](https://forms.gle/79gRB3GutMFgbNwg9){target="_blank"}.</font></h4>
+<br>
+</div>
+
+<p style="font-size:1.2em">
+
+SIPPS 2022 will run from the week of <u>June 6 through August 12</u>. 
+
+Please note that this program is specifically designed for students with little to no prior research experience, and for students from marginalized and underrepresented communities. <u>There are no coursework, minimum GPA, or prior experience requirements.</u>
+
+At this time, SIPPS is not able to offer funding for trainees. However, we highly encourage you to check out [this spreadsheet](https://docs.google.com/spreadsheets/d/1hhrtStgv-xZqr5BESyo7HhnHAZMz_AHsxwwVO4fEd9o/edit?usp=sharing){target="_blank"} for a list of summer funding resources. 
+
+<u>The deadline for all applications is April 1st, 2022 at 11:59pm.</u>
+
+<br>
+<hr>
+<br>
+
+<h4>Have any questions about the application process?</h4>
+<ul>
+<li>Beginning on March 4, we will be hosting <u>open Q&A sessions on Fridays from 10-11am (ET)</u> via Zoom at [this link](https://columbiauniversity.zoom.us/j/98869971213?pwd=M0w5Qzd6aGhMLytMS0hFVU5WbE44QT09){target="_blank"}. Feel free to stop by with any questions or concerns, no matter how small!
+<li>You can also reach out [sippscupsych@gmail.com](mailto:sippscupsych@gmail.com){target="_blank"}. 
+</ul>
 
 <br>
 
-If you have any questions in the meantime, you can reach out now to [sippscupsych@gmail.com](mailto:sippscupsych@gmail.com){target="_blank"}. We also encourage you to check out [this spreadsheet](https://docs.google.com/spreadsheets/d/1hhrtStgv-xZqr5BESyo7HhnHAZMz_AHsxwwVO4fEd9o/edit?usp=sharing){target="_blank"} for a list of summer funding resources.
+<h4>Want to get involved as a SIPPS mentor?</h4>
+<ul>
+<li>Please fill out [this link](https://columbiauniversity.zoom.us/j/98869971213?pwd=M0w5Qzd6aGhMLytMS0hFVU5WbE44QT09){target="_blank"}.
+<li>We welcome graduate student, postdoc, and research scientist mentors from all areas of psychology and neuroscience! 
+</ul>
 
-</div>
+</p>

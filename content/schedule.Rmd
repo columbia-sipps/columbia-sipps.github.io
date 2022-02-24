@@ -9,11 +9,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<h4><font color="#D6494A">**Dates on this page reflect workshop times for SIPPS 2021. This year's information will be posted as soon as possible.**</font></h4>
+<h4><font color="#D6494A">**SIPPS 2022 will run from Monday, June 6 through Friday, August 12. Exact workshop times and days are subject to change from the schedule below.**</font></h4>
 
 <br>
 
-SIPPS hosts three parallel workshop series running from the week of June 7 through the week of August 9, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the [workshops](/workshops) page for materials and video recordings associated with each session. Also see the [About](/about) page to view an introductory video and slide deck about the program.
+SIPPS hosts three parallel workshop series, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the [workshops](/workshops) page for materials and video recordings associated with each session (from 2021). Also see the [About](/about) page to view an introductory video and slide deck about the program.
 <br><br>
 <div class="row align-items-center">
 <div class="col-md-3" style="padding: 15px; background-color: #f8f8f8">
@@ -59,16 +59,16 @@ In addition to these workshops, students are expected to work in tandem with the
 <th scope="col">Session</th>
 </tr>
 </thead>
-<tr><td>June 8</td><td><b>Setting up your environment</b><br></td></tr>
-<tr><td>June 15</td><td><b>Programming fundamentals</b><br></td></tr>
-<tr><td>June 22</td><td><b>Data cleaning, part 1</b><br></td></tr>
-<tr><td>June 29</td><td><b>Data cleaning, part 2</b><br></td></tr>
-<tr><td>July 6</td><td><b>Correlations & basic plotting</b><br></td></tr>
-<tr><td>July 13</td><td><b>Intro to regression (linear models)</b><br></td></tr>
-<tr><td>July 20</td><td><b>Interactions in linear models</b><br></td></tr>
-<tr><td>July 27</td><td><b>Visualizing effects in linear models</b><br></td></tr>
-<tr><td>August 3</td><td><b>Advanced plotting</b><br></td></tr>
-<tr><td>August 10</td><td><b>Women in Science**</b><br><i>Faculty speaker: Dr. Dima Amso</i></td></tr>
+<tr><td>June 7</td><td><b>Setting up your environment</b><br></td></tr>
+<tr><td>June 14</td><td><b>Programming fundamentals</b><br></td></tr>
+<tr><td>June 21</td><td><b>Data cleaning, part 1</b><br></td></tr>
+<tr><td>June 28</td><td><b>Data cleaning, part 2</b><br></td></tr>
+<tr><td>July 5</td><td><b>Correlations & basic plotting</b><br></td></tr>
+<tr><td>July 12</td><td><b>Intro to regression (linear models)</b><br></td></tr>
+<tr><td>July 19</td><td><b>Interactions in linear models</b><br></td></tr>
+<tr><td>July 26</td><td><b>Visualizing effects in linear models</b><br></td></tr>
+<tr><td>August 2</td><td><b>Advanced plotting</b><br></td></tr>
+<tr><td>August 9</td><td><b>Women in Science**</b><br><i>Faculty speaker: Dr. Dima Amso</i></td></tr>
 </table>
 </div>
 ** <b>IMPORTANT:</b> Students from both coding tracks will attend the same session, using the <a href="https://columbiauniversity.zoom.us/j/93930272696?pwd=Y2s1U2VWY0pDR0ZQYTlxWC9mNzVmZz09" target="_blank">basic track zoom link</a>.
@@ -83,16 +83,16 @@ In addition to these workshops, students are expected to work in tandem with the
 <th scope="col">Session</th>
 </tr>
 </thead>
-<tr><td>June 8</td><td><b>Refresher of regression and moderation (frequentist)</b><br></td></tr>
-<tr><td>June 15</td><td><b>Refresher of regression and moderation (bayesian)</b><br></td></tr>
-<tr><td>June 22</td><td><b>Review: Data wrangling, regression (continued), Frequentist vs. Bayes</b><br></td></tr>
-<tr><td>June 29</td><td><b>Cleaning data for multi-level modeling</b><br></td></tr>
-<tr><td>July 6</td><td><b>Time-course/longitudinal data</b><br></td></tr>
-<tr><td>July 13</td><td><b>Multilevel modeling: experimental data</b><br></td></tr>
-<tr><td>July 20</td><td><b>Multilevel modeling: within-person change</b><br></td></tr>
-<tr><td>July 27</td><td><b>Advanced plotting</b><br></td></tr>
-<tr><td>August 3</td><td><b>Power</b><br></td></tr>
-<tr><td>August 10</td><td><b>Women in Science**</b><br><i>Faculty speaker: Dr. Dima Amso</i></td></tr>
+<tr><td>June 7</td><td><b>Refresher of regression and moderation (frequentist)</b><br></td></tr>
+<tr><td>June 14</td><td><b>Refresher of regression and moderation (bayesian)</b><br></td></tr>
+<tr><td>June 21</td><td><b>Review: Data wrangling, regression (continued), Frequentist vs. Bayes</b><br></td></tr>
+<tr><td>June 28</td><td><b>Cleaning data for multi-level modeling</b><br></td></tr>
+<tr><td>July 5</td><td><b>Time-course/longitudinal data</b><br></td></tr>
+<tr><td>July 12</td><td><b>Multilevel modeling: experimental data</b><br></td></tr>
+<tr><td>July 19</td><td><b>Multilevel modeling: within-person change</b><br></td></tr>
+<tr><td>July 26</td><td><b>Advanced plotting</b><br></td></tr>
+<tr><td>August 2</td><td><b>Power</b><br></td></tr>
+<tr><td>August 9</td><td><b>Women in Science**</b><br><i>Faculty speaker: Dr. Dima Amso</i></td></tr>
 </table>
 </div>
 ** <b>IMPORTANT:</b> Students from both coding tracks will attend the same session, using the <a href="https://columbiauniversity.zoom.us/j/93930272696?pwd=Y2s1U2VWY0pDR0ZQYTlxWC9mNzVmZz09" target="_blank">basic track zoom link</a>.
@@ -107,16 +107,16 @@ In addition to these workshops, students are expected to work in tandem with the
 <th scope="col">Session</th>
 </tr>
 </thead>
-<tr><td>June 9</td><td><b>What is a good research question?</b></td></tr>
-<tr><td>June 16</td><td><b>Careers inside and outside of academia</b><br></td></tr>
-<tr><td>June 23</td><td><b>Journal club</b><br></td></tr>
-<tr><td>June 30</td><td><b>Cultural issues within psychology</b><br></td></tr>
-<tr><td>July 7</td><td><b>Journal club</b><br></td></tr>
-<tr><td>July 14</td><td><b>CVs & resumes</b><br></td></tr>
-<tr><td>July 21</td><td><b>Journal club</b><br></td></tr>
-<tr><td>July 28</td><td><b>Science communication</b><br></td></tr>
-<tr><td>August 4</td><td><b>Research ethics</b><br></td></tr>
-<tr><td>August 11</td><td><b><i><font color="#D6494A">SIPPS mini-conference (part 1)</font></i></b><br></td></tr>
+<tr><td>June 8</td><td><b>What is a good research question?</b></td></tr>
+<tr><td>June 15</td><td><b>Careers inside and outside of academia</b><br></td></tr>
+<tr><td>June 22</td><td><b>Journal club</b><br></td></tr>
+<tr><td>June 29</td><td><b>Cultural issues within psychology</b><br></td></tr>
+<tr><td>July 6</td><td><b>Journal club</b><br></td></tr>
+<tr><td>July 13</td><td><b>CVs & resumes</b><br></td></tr>
+<tr><td>July 20</td><td><b>Journal club</b><br></td></tr>
+<tr><td>July 27</td><td><b>Science communication</b><br></td></tr>
+<tr><td>August 3</td><td><b>Research ethics</b><br></td></tr>
+<tr><td>August 10</td><td><b><i><font color="#D6494A">SIPPS mini-conference (part 1)</font></i></b><br></td></tr>
 </table>
 </div>
 <hr>
@@ -130,16 +130,16 @@ In addition to these workshops, students are expected to work in tandem with the
 <th scope="col">Session</th>
 </tr>
 </thead>
-<tr><td>June 10</td><td><b>How to make the most of your summer experience</b><br>
+<tr><td>June 9</td><td><b>How to make the most of your summer experience</b><br>
 <i>Faculty speaker: Dr. Valerie Purdie-Greenaway</i><br></td></tr>
-<tr><td>June 17</td><td><b>Literature search & Zotero</b><br></td></tr>
-<tr><td>June 24</td><td><b>Pre-registration & OSF</b><br></td></tr>
-<tr><td>July 1</td><td><b>Git (version control, script sharing)</b><br></td></tr>
-<tr><td>July 8</td><td><b><i><font color="#D6494A">Research project progress update</font></i></b><br></td></tr>
-<tr><td>July 15</td><td><b>Qualtrics</b><br></td></tr>
-<tr><td>July 22</td><td><b>Community-engaged research</b><br></td></tr>
-<tr><td>July 29</td><td><b>PsychoPy</b><br></td></tr>
-<tr><td>August 5</td><td><b><i><font color="#D6494A">Practice presentations</font></i></b><br></td></tr>
-<tr><td>August 12</td><td><b><i><font color="#D6494A">SIPPS mini-conference (part 2)</font></i></b><br></td></tr>
+<tr><td>June 16</td><td><b>Literature search & Zotero</b><br></td></tr>
+<tr><td>June 23</td><td><b>Pre-registration & OSF</b><br></td></tr>
+<tr><td>June 30</td><td><b>Git (version control, script sharing)</b><br></td></tr>
+<tr><td>July 7</td><td><b><i><font color="#D6494A">Research project progress update</font></i></b><br></td></tr>
+<tr><td>July 14</td><td><b>Qualtrics</b><br></td></tr>
+<tr><td>July 21</td><td><b>Community-engaged research</b><br></td></tr>
+<tr><td>July 28</td><td><b>PsychoPy</b><br></td></tr>
+<tr><td>August 4</td><td><b><i><font color="#D6494A">Practice presentations</font></i></b><br></td></tr>
+<tr><td>August 11</td><td><b><i><font color="#D6494A">SIPPS mini-conference (part 2)</font></i></b><br></td></tr>
 </table>
 </div>

@@ -22,20 +22,40 @@ The SIPPS team comprises a group of graduate students, post-docs, undergraduates
 </ul>
 <br>
 
-#### We hope that after participating in SIPPS, students will:
-<ul>
-<li>Acquire a toolbox of research skills including knowledge on how to: conduct a literature review, understand research articles, generate research questions/hypotheses, use R for data cleaning, analysis, and visualization, administer surveys on Qualtrics, create behavioral tasks in Psychopy, use online data collection tools, and practice reproducible science.
-<li>Complete a research project by conducting a secondary analysis of existing data with the guidance of their primary mentors and near-peer mentors to help demystify the research process. 
-<li>Learn to communicate their research to the public and academics through reproducible science practices and sessions that focus on science communication. 
-<li>Articulate the issues of diversity and representation in psychology and neuroscience, explain how bias is perpetuated in research practices, and recognize the importance of diverse perspectives in science.
-</ul>
 <hr>
-### SIPPS Welcome Session 2021
+### SIPPS Testimonials (2021)
+<br>
+<blockquote>
+<p style="font-size:1.1em">"Participating in SIPPS was a super insightful experience! I got to experience lab culture and methods in research. Spending my summer attending SIPPS workshops, pursuing independent project, and experiencing mentoring solidified my will to pursue academia. I learnt a lot about doing research and sticking through the entire process. <b>SIPPS has played a huge role in helping me narrow my interests down for graduate school.</b>"</p>
+</blockquote>
 
-See the zoom recording and slides below for an additional overview of the program.
-<p>
-<div align="center">
-<a href="https://columbiauniversity.zoom.us/rec/share/WTkTcELc71aCH6IpBTVkSgcLExJJiyF4qYZO4sV_jGnUG__xyMM-07Gu4s0BIQFi.MhKAxgRiulbVfyy7" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a>
+<br>
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSmBIdUhRMJRBUvWa5suRiOqvyDh-84OBKiTO3HSk_5WjgqArrIRKB9X8WVWTz6hb0LgNYTlJsfUWW-/embed?start=false&loop=false&delayms=30000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</div>
+<blockquote>
+<p style="font-size:1.1em">"Best summer! SIPPS was genuinely so amazing. Though I live half way across the world, I never missed a single session! All the teachers were so amazing and helpful. I think this is a really great learning opportunity for international students. <b>The program introduced me to so many new skills and has also sparked a flare for scientific research!</b>"</p>
+</blockquote>
+
+<br>
+
+<blockquote>
+<p style="font-size:1.1em">"Not only did SIPPS equip me with the necessary skills to accomplish high quality research in psychological sciences, from literature reviews, open science practices, study administration and statistical coding, they gifted me with <b>opportunities to collaborate, make new friends, and jumpstart my academic career as a young researcher</b>. While SIPPS only lasted 10 weeks, I’ll be reaping the benefits for years to come. Thank you, SIPPS!"</p>
+</blockquote>
+
+<br>
+
+<blockquote>
+<p style="font-size:1.1em">"After completing SIPPS, <b>I consider myself not only a student, but a researcher.</b> While I'm still a beginner, this program introduced me to several research tools, built my skills in all components of the research cycle, and increased my self-confidence."</p>
+</blockquote>
+
+<br>
+
+<blockquote>
+<p style="font-size:1.1em">"<b>I really valued the close mentorship that I got through the SIPPS program.</b> My mentor met with me multiple times weekly and was extremely supportive in helping to guide me through my research project. She always pushed me to think deeper and taught me so much."</p>
+</blockquote>
+
+<br>
+
+<blockquote>
+<p style="font-size:1.1em">"This has been such an amazing program that has prepared me to be a great asset when working in a laboratory. The time that everyone dedicated to teach us about future careers, research skills, and strategies on how to perform better is time that I am so so thankful for! <b>This is a great program that everyone interested in psychology should take.</b>"</p>
+</blockquote>
+
