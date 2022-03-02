@@ -38,7 +38,7 @@ At this time, SIPPS is not able to offer funding for trainees. However, we highl
 
 <h4>Want to get involved as a SIPPS mentor?</h4>
 <ul>
-<li>Please fill out [this link](https://columbiauniversity.zoom.us/j/98869971213?pwd=M0w5Qzd6aGhMLytMS0hFVU5WbE44QT09){target="_blank"}.
+<li>Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSexvZaU6lk9FhJyx4Hv_yLFPB7p5LNfG2g1jzSt-xSLikSdJA/viewform){target="_blank"}.
 <li>We welcome graduate student, postdoc, and research scientist mentors from all areas of psychology and neuroscience! 
 </ul>
 
