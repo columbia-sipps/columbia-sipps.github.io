@@ -9,6 +9,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+(Note: This page contains links from SIPPS 2021. Materials for 2022 will be added shortly.)
+
 Quick links for graduate students, postdocs, and staff in charge of putting on the SIPPS program. Feel free to disregard if you are a participant in this program. Please contact [Manasi](mailto:mj2873@columbia.edu){target="_blank"} if you are unable to access any of the links below.
 <p>
 <ul>

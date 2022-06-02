@@ -1,5 +1,5 @@
 ---
-title: "Coding (basic)"
+title: "Coding (basic) - 2021"
 description: Learn how to use R to clean, analyze, and visualize your data.
 weight: 1
 output:
@@ -11,9 +11,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-On this page, you will find resources associated with each session in the basic-track coding workshop (<a href="https://columbiauniversity.zoom.us/j/93930272696?pwd=Y2s1U2VWY0pDR0ZQYTlxWC9mNzVmZz09" target="_blank">zoom link</a>, pw: sipps2021).
-<br><br>
-A few days before each session, please check this page to make sure you've downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.
+See below for resources associated with the basic-track coding workshops from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021).
+
 <hr>
 
 ### Week 1: Setting up your R environment

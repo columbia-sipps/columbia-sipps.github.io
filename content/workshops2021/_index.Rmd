@@ -1,0 +1,12 @@
+---
+title: "Workshops (2021)"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here you can access video recordings and resources associated with workshops held during <font color="#D6494A">SIPPS 2021</font>. (For resources associated with SIPPS 2022 workshops, please go [here](/workshops)).

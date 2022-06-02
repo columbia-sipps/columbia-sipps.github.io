@@ -7,21 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://columbia-sipps.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Coding (basic)</title>
-      <link>https://columbia-sipps.github.io/workshops/coding_basic/</link>
+      <title>Coding</title>
+      <link>https://columbia-sipps.github.io/workshops/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://columbia-sipps.github.io/workshops/coding_basic/</guid>
-      <description>On this page, you will find resources associated with each session in the basic-track coding workshop (zoom link, pw: sipps2021). A few days before each session, please check this page to make sure you’ve downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.</description>
+      <guid>https://columbia-sipps.github.io/workshops/coding/</guid>
+      <description>On this page, you will find resources associated with each session in the coding workshop series. A few days before each session, please check this page to make sure you’ve downloaded any necessary files in advance (if needed). After each session, the page will be updated with links any additional materials/answer keys/etc. that were referenced during the workshop.</description>
     </item>
     
     <item>
-      <title>Coding (advanced)</title>
-      <link>https://columbia-sipps.github.io/workshops/coding_advanced/</link>
+      <title>Coding (basic) - 2021</title>
+      <link>https://columbia-sipps.github.io/workshops2021/coding_basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://columbia-sipps.github.io/workshops/coding_advanced/</guid>
-      <description>On this page, you will find resources associated with each session in the advanced-track coding workshop (zoom link, pw: sipps2021). A few days before each session, please check this page to make sure you’ve downloaded any necessary files in advance (if needed). After each session, the page will be updated with links to the corresponding zoom recording, as well as any additional materials/answer keys/etc. that were referenced during the workshop.</description>
+      <guid>https://columbia-sipps.github.io/workshops2021/coding_basic/</guid>
+      <description>See below for resources associated with the basic-track coding workshops from SIPPS 2021. For other workshops from 2021, follow this link.
+ Week 1: Setting up your R environment  View Recording  Before the workshop:   download these files: data file, RMarkdown file, R Project file  After the workshop:   RMarkdown key    Week 2: Programming fundamentals  View Recording  Before the workshop:   please create a folder named 02_intro-programming on your computer  download these files within that folder: data file (shakes.</description>
+    </item>
+    
+    <item>
+      <title>Coding (advanced) - 2021</title>
+      <link>https://columbia-sipps.github.io/workshops2021/coding_advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://columbia-sipps.github.io/workshops2021/coding_advanced/</guid>
+      <description>See below for resources associated with the advanced-track coding workshops from SIPPS 2021. For other workshops from 2021, follow this link.
+ Week 1: Refresher of regression and moderation (frequentist)  View Recording  Before the workshop:   make sure you have both R and RStudio downloaded on your machine; if you don’t, check out this page for guidance  Workshop materials:   R packages used today: tidyverse (contains ggplot2, dplyr, and others); car  intro to regression slides  RMarkdown lesson file (with notes)  RMarkdown challenge file / answer key</description>
     </item>
     
     <item>
@@ -30,7 +41,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/workshops/development/</guid>
-      <description>On this page, you will find resources associated with the Professional Development/Journal Club workshop series (zoom link, pw: sipps2021). Before each journal club session, check this page for details about which article that will be discussed. After each session in the series, the page will be updated with links to the corresponding zoom recording, as well as any additional materials that were referenced during the workshop.  Week 1: What is a good research question?</description>
+      <description>On this page, you will find resources associated with the Professional Development/Journal Club workshop series. Before each journal club session, check this page for details about which article that will be discussed. After each session in the series, the page will be updated with any additional materials that were referenced during the workshop.</description>
+    </item>
+    
+    <item>
+      <title>Professional Development / Journal Club - 2021</title>
+      <link>https://columbia-sipps.github.io/workshops2021/development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://columbia-sipps.github.io/workshops2021/development/</guid>
+      <description>See below for resources associated with the professional development/journal club workshop track from SIPPS 2021. For other workshops from 2021, follow this link.  Week 1: What is a good research question?  View Recording  Workshop materials:   workshop slides  link to collaborative brainstorming Google Doc    Week 2: Careers inside and outside academia  View Recording  Workshop materials:   workshop slides    Week 3: Journal club  View Recording  Workshop materials:   This week’s reading: Variety Wins: Soccer-Playing Robots and Infant Walking (Ossmy et al.</description>
     </item>
     
     <item>
@@ -39,7 +59,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/workshops/research_skills/</guid>
-      <description>On this page, you will find resources associated with the Research Skills workshop series (zoom link, pw: sipps2021). After each session in the series, the page will be updated with links to the corresponding zoom recording, as well as any additional materials that were referenced during the workshop.  Week 1: How to make the most of your summer experience (Dr. Valerie Purdie-Greenaway)  View Recording  Workshop materials:   workshop slides    Week 2: Literature search &amp;amp; Zotero  View Recording  Workshop materials:   workshop slides    Week 3: Pre-registration &amp;amp; OSF  View Recording  Workshop materials:   Workshop slides  Activity Readme  Datafile  OSF Pre-registration template    Week 4: Git (Version control &amp;amp; script sharing)  View Recording</description>
+      <description>On this page, you will find resources associated with the Research Skills workshop series. Before each session, check this page for any resources you should download prior to the workshop. After each session in the series, the page will be updated with any additional materials that were referenced during the workshop.</description>
+    </item>
+    
+    <item>
+      <title>Research Skills - 2021</title>
+      <link>https://columbia-sipps.github.io/workshops2021/research_skills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://columbia-sipps.github.io/workshops2021/research_skills/</guid>
+      <description>See below for resources associated with the research skills workshop series from SIPPS 2021. For other workshops from 2021, follow this link.
+ Week 1: How to make the most of your summer experience (Dr. Valerie Purdie-Greenaway)  View Recording  Workshop materials:   workshop slides    Week 2: Literature search &amp;amp; Zotero  View Recording  Workshop materials:   workshop slides    Week 3: Pre-registration &amp;amp; OSF  View Recording  Workshop materials:   Workshop slides  Activity Readme  Datafile  OSF Pre-registration template    Week 4: Git (Version control &amp;amp; script sharing)  View Recording</description>
     </item>
     
     <item>
@@ -57,10 +87,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/apply/</guid>
-      <description>Applications for SIPPS 2022 are now open!   Apply now at this link.  
- SIPPS 2022 will run from the week of June 6 through August 12.
-Please note that this program is specifically designed for students with little to no prior research experience, and for students from marginalized and underrepresented communities. There are no coursework, minimum GPA, or prior experience requirements.
-At this time, SIPPS is not able to offer funding for trainees.</description>
+      <description>  Applications for SIPPS 2022 are now closed.   
+ Have any questions about next year’s program?    Our plans for SIPPS 2023 might not be finalized until next year, but please feel free to reach out to sippscupsych@gmail.com with any questions.  </description>
     </item>
     
     <item>
@@ -78,7 +106,8 @@ At this time, SIPPS is not able to offer funding for trainees.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/instructors/</guid>
-      <description>Quick links for graduate students, postdocs, and staff in charge of putting on the SIPPS program. Feel free to disregard if you are a participant in this program. Please contact Manasi if you are unable to access any of the links below.    instructor schedule  SIPPS Drive folder  guidelines for instructors  guidelines for mentors  mentor/mentee contract  office hours zoom link (pw: sipps 2021) (for instructors/mentors) — held Thursdays 5-6pm EST  office hours zoom link (pw: sipps 2021) (for near-peer mentors) — held Thursdays 5-6pm EST</description>
+      <description>(Note: This page contains links from SIPPS 2021. Materials for 2022 will be added shortly.)
+Quick links for graduate students, postdocs, and staff in charge of putting on the SIPPS program. Feel free to disregard if you are a participant in this program. Please contact Manasi if you are unable to access any of the links below.    instructor schedule  SIPPS Drive folder  guidelines for instructors  guidelines for mentors  mentor/mentee contract  office hours zoom link (pw: sipps 2021) (for instructors/mentors) — held Thursdays 5-6pm EST  office hours zoom link (pw: sipps 2021) (for near-peer mentors) — held Thursdays 5-6pm EST</description>
     </item>
     
     <item>
@@ -88,7 +117,7 @@ At this time, SIPPS is not able to offer funding for trainees.</description>
       
       <guid>https://columbia-sipps.github.io/team/</guid>
       <description>SIPPS is a program developed &amp;amp; run primarily by graduate students, postdocs, and staff in Columbia’s Psychology Department.
-Program Founders  Ana DiGiovanni is a PhD student in the Couples Lab. She studies social support processes and interpersonal emotion regulation strategies (i.e., co-rumination) that occur in close relationships (e.g., romantic relationships, friendships), especially during times of stress.  email   Anna Vannucci is a 2nd year PhD student working the DAN Lab.</description>
+Core Team  Ana DiGiovanni is a PhD student in the Couples Lab. She studies social support processes and interpersonal emotion regulation strategies (i.e., co-rumination) that occur in close relationships, especially during times of stress.  email   Claudia Espinoza-Heredia is a PhD student working with Dima Amso in the DCN Lab, interested in the role of environmental factors and experience on early brain maturation.</description>
     </item>
     
     <item>
@@ -106,8 +135,10 @@ Program Founders  Ana DiGiovanni is a PhD student in the Couples Lab. She studie
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/schedule/</guid>
-      <description>SIPPS 2022 will run from Monday, June 6 through Friday, August 12. Exact workshop times and days are subject to change from the schedule below.  
-SIPPS hosts three parallel workshop series, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the workshops page for materials and video recordings associated with each session (from 2021). Also see the About page to view an introductory video and slide deck about the program.</description>
+      <description>SIPPS 2022 workshops will take place in-person on Columbia University’s Morningside campus. The exact location will be shared via email with those admitted to the SIPPS program.
+
+SIPPS hosts three parallel workshop series, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the workshops page for materials associated with each session.
+If you miss a workshop and need to access the recording, please reach out to the SIPPS team at please sippscupsych@gmail.</description>
     </item>
     
     <item>
