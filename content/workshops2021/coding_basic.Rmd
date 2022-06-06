@@ -21,12 +21,12 @@ See below for resources associated with the basic-track coding workshops from SI
 <br>
 **Before the workshop:**
 <ul>
-<li>download these files: <a href="/workshop_files/coding-basic-01/shakes.csv" download>data file</a>, <a href="/workshop_files/coding-basic-01/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/coding-basic-01/Coding_Lesson1.Rproj" download>R Project file</a>
+<li>download these files: <a href="/workshop_files/2021/coding-basic-01/shakes.csv" download>data file</a>, <a href="/workshop_files/2021/coding-basic-01/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2021/coding-basic-01/Coding_Lesson1.Rproj" download>R Project file</a>
 </ul>
 
 **After the workshop:**
 <ul>
-<li><a href="/workshop_files/coding-basic-01/lessonKey.Rmd" download>RMarkdown key</a>
+<li><a href="/workshop_files/2021/coding-basic-01/lessonKey.Rmd" download>RMarkdown key</a>
 </ul>
 
 <hr>
@@ -38,13 +38,13 @@ See below for resources associated with the basic-track coding workshops from SI
 **Before the workshop:**
 <ul>
 <li>please create a folder named `02_intro-programming` on your computer
-<li>download these files within that folder: <a href="/workshop_files/coding-basic-02/shakes.csv" download>data file (shakes.csv)</a>, <a href="/workshop_files/coding-basic-02/lesson.Rmd" download>RMarkdown file (lesson.Rmd)</a>, <a href="/workshop_files/coding-basic-02/02_intro-programming.Rproj" download>R Project file (02_intro-programming.Rproj)</a>, <a href="/workshop_files/coding-basic-02/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
+<li>download these files within that folder: <a href="/workshop_files/2021/coding-basic-02/shakes.csv" download>data file (shakes.csv)</a>, <a href="/workshop_files/2021/coding-basic-02/lesson.Rmd" download>RMarkdown file (lesson.Rmd)</a>, <a href="/workshop_files/2021/coding-basic-02/02_intro-programming.Rproj" download>R Project file (02_intro-programming.Rproj)</a>, <a href="/workshop_files/2021/coding-basic-02/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
 </ul>
 
 **After the workshop:**
 <ul>
-<li><a href="/workshop_files/coding-basic-02/lesson_key.Rmd" download>RMarkdown lesson file (with answers)</a>
-<li><a href="/workshop_files/coding-basic-02/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-02/lesson_key.Rmd" download>RMarkdown lesson file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-02/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
 
 <hr>
@@ -57,20 +57,20 @@ See below for resources associated with the basic-track coding workshops from SI
 <ul>
 <li>please create a folder named `03_data-cleaning` on your computer
 <li>download these files within that folder: 
-<a href="/workshop_files/coding-basic-03/Study1.csv" download>data file 1 (Study1.csv)</a>, 
-<a href="/workshop_files/coding-basic-03/Study1.rda" download>data file 2 (Study1.rda)</a>,
-<a href="/workshop_files/coding-basic-03/Study2_Subjects.csv" download>data file 3 (Study2_Subjects.csv)</a>,
-<a href="/workshop_files/coding-basic-03/README_Study2.txt" download>Readme file (README_Study2.txt)</a>,
-<a href="/workshop_files/coding-basic-03/lesson_orig.Rmd" download>RMarkdown file (lesson_orig.Rmd)</a>, 
-<a href="/workshop_files/coding-basic-03/03_data-cleaning.Rproj" download>R Project file (03_data-cleaning.Rproj)</a>, 
-<a href="/workshop_files/coding-basic-03/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
+<a href="/workshop_files/2021/coding-basic-03/Study1.csv" download>data file 1 (Study1.csv)</a>, 
+<a href="/workshop_files/2021/coding-basic-03/Study1.rda" download>data file 2 (Study1.rda)</a>,
+<a href="/workshop_files/2021/coding-basic-03/Study2_Subjects.csv" download>data file 3 (Study2_Subjects.csv)</a>,
+<a href="/workshop_files/2021/coding-basic-03/README_Study2.txt" download>Readme file (README_Study2.txt)</a>,
+<a href="/workshop_files/2021/coding-basic-03/lesson_orig.Rmd" download>RMarkdown file (lesson_orig.Rmd)</a>, 
+<a href="/workshop_files/2021/coding-basic-03/03_data-cleaning.Rproj" download>R Project file (03_data-cleaning.Rproj)</a>, 
+<a href="/workshop_files/2021/coding-basic-03/challenge.Rmd" download>RMarkdown challenge file (challenge.Rmd)</a>
 </ul>
 
 **After the workshop:**
 <ul>
-<li>updated version of the lesson file (based on changes made during the workshop): <a href="/workshop_files/coding-basic-03/lesson.Rmd" download>Lesson RMarkdown file (lesson.Rmd)</a>
-<li> <a href="/workshop_files/coding-basic-03/lesson_key.Rmd" download>Lesson RMarkdown file (with answers) (lesson_key.Rmd)</a>
-<li> <a href="/workshop_files/coding-basic-03/challenge_key.Rmd" download>RMarkdown challenge file (with answers (challenge_key.Rmd)</a>
+<li>updated version of the lesson file (based on changes made during the workshop): <a href="/workshop_files/2021/coding-basic-03/lesson.Rmd" download>Lesson RMarkdown file (lesson.Rmd)</a>
+<li> <a href="/workshop_files/2021/coding-basic-03/lesson_key.Rmd" download>Lesson RMarkdown file (with answers) (lesson_key.Rmd)</a>
+<li> <a href="/workshop_files/2021/coding-basic-03/challenge_key.Rmd" download>RMarkdown challenge file (with answers (challenge_key.Rmd)</a>
 </ul>
 
 <hr>
@@ -83,20 +83,20 @@ See below for resources associated with the basic-track coding workshops from SI
 <ul>
 <li>please create a folder named `04_data-manipulation` on your computer
 <li>download these files within that folder: 
-<a href="/workshop_files/coding-basic-04/Study1.csv" download>data file 1 (Study1.csv)</a>, 
-<a href="/workshop_files/coding-basic-04/Study1_Followup.csv" download>data file 2 (Study1_Followup.csv)</a>,
-<a href="/workshop_files/coding-basic-04/Study2_Subjects.csv" download>data file 3 (Study2_Subjects.csv)</a>,
-<a href="/workshop_files/coding-basic-04/Study2_Trials.csv" download>data file 4 (Study2_Trials.csv)</a>,
-<a href="/workshop_files/coding-basic-04/README_Study2.txt" download>Readme file (README_Study2.txt)</a>,
-<a href="/workshop_files/coding-basic-04/lesson.Rmd" download>RMarkdown file (lesson.Rmd)</a>, 
-<a href="/workshop_files/coding-basic-04/04_data-manipulation.Rproj" download>R Project file (04_data-manipulation.Rproj)</a>, 
-<a href="/workshop_files/coding-basic-04/Challenge.Rmd" download>RMarkdown challenge file (Challenge.Rmd)</a>
+<a href="/workshop_files/2021/coding-basic-04/Study1.csv" download>data file 1 (Study1.csv)</a>, 
+<a href="/workshop_files/2021/coding-basic-04/Study1_Followup.csv" download>data file 2 (Study1_Followup.csv)</a>,
+<a href="/workshop_files/2021/coding-basic-04/Study2_Subjects.csv" download>data file 3 (Study2_Subjects.csv)</a>,
+<a href="/workshop_files/2021/coding-basic-04/Study2_Trials.csv" download>data file 4 (Study2_Trials.csv)</a>,
+<a href="/workshop_files/2021/coding-basic-04/README_Study2.txt" download>Readme file (README_Study2.txt)</a>,
+<a href="/workshop_files/2021/coding-basic-04/lesson.Rmd" download>RMarkdown file (lesson.Rmd)</a>, 
+<a href="/workshop_files/2021/coding-basic-04/04_data-manipulation.Rproj" download>R Project file (04_data-manipulation.Rproj)</a>, 
+<a href="/workshop_files/2021/coding-basic-04/Challenge.Rmd" download>RMarkdown challenge file (Challenge.Rmd)</a>
 </ul>
 
 **After the workshop:**
 <ul>
-<li> <a href="/workshop_files/coding-basic-04/lesson_key.Rmd" download>Lesson RMarkdown file (with answers) (lesson_key.Rmd)</a>
-<li> <a href="/workshop_files/coding-basic-04/Challenge_Code.Rmd" download>RMarkdown challenge file (with answers; Challenge_Code.Rmd)</a>
+<li> <a href="/workshop_files/2021/coding-basic-04/lesson_key.Rmd" download>Lesson RMarkdown file (with answers) (lesson_key.Rmd)</a>
+<li> <a href="/workshop_files/2021/coding-basic-04/Challenge_Code.Rmd" download>RMarkdown challenge file (with answers; Challenge_Code.Rmd)</a>
 </ul>
 
 <hr>
@@ -109,15 +109,15 @@ See below for resources associated with the basic-track coding workshops from SI
 <ul>
 <li>please create a folder named `05_corr-viz` on your computer
 <li>download these files within that folder: 
-<a href="/workshop_files/coding-basic-05/lesson.Rmd" download>RMarkdown file</a>, 
-<a href="/workshop_files/coding-basic-05/05_corr-viz.Rproj" download>R Project file</a>, 
-<a href="/workshop_files/coding-basic-05/challenge.Rmd" download>RMarkdown challenge file</a>
+<a href="/workshop_files/2021/coding-basic-05/lesson.Rmd" download>RMarkdown file</a>, 
+<a href="/workshop_files/2021/coding-basic-05/05_corr-viz.Rproj" download>R Project file</a>, 
+<a href="/workshop_files/2021/coding-basic-05/challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
 
 **After the workshop:**
 <ul>
-<li><a href="/workshop_files/coding-basic-05/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
-<li><a href="/workshop_files/coding-basic-05/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-05/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-05/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
 
 <hr>
@@ -130,15 +130,15 @@ See below for resources associated with the basic-track coding workshops from SI
 <ul>
 <li>please create a folder named `06_intro-reg` on your computer
 <li>download these files within that folder: 
-<a href="/workshop_files/coding-basic-06/lm-lesson.Rmd" download>RMarkdown file</a>, 
-<a href="/workshop_files/coding-basic-06/06_intro-reg.Rproj" download>R Project file</a>, 
-<a href="/workshop_files/coding-basic-06/lm-challenge.Rmd" download>RMarkdown challenge file</a>
+<a href="/workshop_files/2021/coding-basic-06/lm-lesson.Rmd" download>RMarkdown file</a>, 
+<a href="/workshop_files/2021/coding-basic-06/06_intro-reg.Rproj" download>R Project file</a>, 
+<a href="/workshop_files/2021/coding-basic-06/lm-challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
 **After the workshop:**
 <ul>
-<li><a href="/workshop_files/coding-basic-06/lm-intro.pdf" download>Workshop slides</a>
-<li><a href="/workshop_files/coding-basic-06/lm-lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
-<li><a href="/workshop_files/coding-basic-06/lm-challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-06/lm-intro.pdf" download>Workshop slides</a>
+<li><a href="/workshop_files/2021/coding-basic-06/lm-lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-06/lm-challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
 
 <hr>
@@ -151,15 +151,15 @@ See below for resources associated with the basic-track coding workshops from SI
 <ul>
 <li>please create a folder named `07_reg-interactions` on your computer
 <li>download these files within that folder: 
-<a href="/workshop_files/coding-basic-07/lesson.Rmd" download>RMarkdown file</a>, 
-<a href="/workshop_files/coding-basic-07/07_reg-interactions.Rproj" download>R Project file</a>, 
-<a href="/workshop_files/coding-basic-07/challenge.Rmd" download>RMarkdown challenge file</a>
+<a href="/workshop_files/2021/coding-basic-07/lesson.Rmd" download>RMarkdown file</a>, 
+<a href="/workshop_files/2021/coding-basic-07/07_reg-interactions.Rproj" download>R Project file</a>, 
+<a href="/workshop_files/2021/coding-basic-07/challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
 **After the workshop:**
 <ul>
-<li><a href="/workshop_files/coding-basic-07/lm-intro-interactions.pdf" download>Workshop slides</a>
-<li><a href="/workshop_files/coding-basic-07/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
-<li><a href="/workshop_files/coding-basic-07/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-07/lm-intro-interactions.pdf" download>Workshop slides</a>
+<li><a href="/workshop_files/2021/coding-basic-07/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-07/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
 
 <hr>
@@ -172,15 +172,15 @@ See below for resources associated with the basic-track coding workshops from SI
 <ul>
 <li>please create a folder named `08_reg-plotting` on your computer
 <li>download these files within that folder: 
-<a href="/workshop_files/coding-basic-08/lesson.Rmd" download>RMarkdown file</a>, 
-<a href="/workshop_files/coding-basic-08/08_reg-plotting.Rproj" download>R Project file</a>, 
-<a href="/workshop_files/coding-basic-08/challenge.Rmd" download>RMarkdown challenge file</a>,
-<a href="/workshop_files/coding-basic-08/affect.csv" download>`affect` data file</a>
+<a href="/workshop_files/2021/coding-basic-08/lesson.Rmd" download>RMarkdown file</a>, 
+<a href="/workshop_files/2021/coding-basic-08/08_reg-plotting.Rproj" download>R Project file</a>, 
+<a href="/workshop_files/2021/coding-basic-08/challenge.Rmd" download>RMarkdown challenge file</a>,
+<a href="/workshop_files/2021/coding-basic-08/affect.csv" download>`affect` data file</a>
 </ul>
 **After the workshop:**
 <ul>
-<li><a href="/workshop_files/coding-basic-08/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
-<li><a href="/workshop_files/coding-basic-08/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-08/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-08/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
 
 <hr>
@@ -193,14 +193,14 @@ See below for resources associated with the basic-track coding workshops from SI
 <ul>
 <li>please create a folder named `09_adv-viz` on your computer
 <li>download these files within that folder: 
-<a href="/workshop_files/coding-basic-09/lesson.Rmd" download>RMarkdown file</a>, 
-<a href="/workshop_files/coding-basic-09/09_adv-viz.Rproj" download>R Project file</a>, 
-<a href="/workshop_files/coding-basic-09/challenge.Rmd" download>RMarkdown challenge file</a>
+<a href="/workshop_files/2021/coding-basic-09/lesson.Rmd" download>RMarkdown file</a>, 
+<a href="/workshop_files/2021/coding-basic-09/09_adv-viz.Rproj" download>R Project file</a>, 
+<a href="/workshop_files/2021/coding-basic-09/challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
 **After the workshop:**
 <ul>
-<li><a href="/workshop_files/coding-basic-09/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
-<li><a href="/workshop_files/coding-basic-09/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-09/lesson_key.Rmd" download>Lesson RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/2021/coding-basic-09/challenge_key.Rmd" download>RMarkdown challenge file (with answers)</a>
 </ul>
 
 <hr>
@@ -211,8 +211,8 @@ No recording will be posted for this session.
 <br><br>
 **Workshop materials:**
 <ul>
-<li><a href="/workshop_files/WiS/WiSTEM.pdf" download>Workshop slides</a>
-<li><a href="/workshop_files/WiS/FemaleScientists_Atlantic.pdf" download>The Atlantic: "For female scientists, there's no good time to have children"</a>
-<li><a href="/workshop_files/WiS/changingcareertrajectories.pdf" download>PNAS: "The changing career trajectories of new parents
+<li><a href="/workshop_files/2021/WiS/WiSTEM.pdf" download>Workshop slides</a>
+<li><a href="/workshop_files/2021/WiS/FemaleScientists_Atlantic.pdf" download>The Atlantic: "For female scientists, there's no good time to have children"</a>
+<li><a href="/workshop_files/2021/WiS/changingcareertrajectories.pdf" download>PNAS: "The changing career trajectories of new parents
 in STEM"</a>
 </ul>

@@ -21,7 +21,7 @@ See below for resources associated with the research skills workshop series from
 <br>
 **Workshop materials:**
 <ul>
-<li><a href="/workshop_files/research-skills/SummerExp-VGP.pdf" download>workshop slides</a>
+<li><a href="/workshop_files/2021/research-skills/SummerExp-VGP.pdf" download>workshop slides</a>
 </ul>
 
 <hr>
@@ -32,7 +32,7 @@ See below for resources associated with the research skills workshop series from
 <br>
 **Workshop materials:**
 <ul>
-<li><a href="/workshop_files/research-skills/LitSearch-AV.pdf" download>workshop slides</a>
+<li><a href="/workshop_files/2021/research-skills/LitSearch-AV.pdf" download>workshop slides</a>
 </ul>
 
 <hr>
@@ -43,10 +43,10 @@ See below for resources associated with the research skills workshop series from
 <br>
 **Workshop materials:**
 <ul>
-<li><a href="/workshop_files/research-skills/Prereg_OSF/PreReg_OSF_slides.pdf" download>Workshop slides</a>
-<li><a href="/workshop_files/research-skills/Prereg_OSF/readMe_preRegWorkshop.docx" download>Activity Readme</a>
-<li><a href="/workshop_files/research-skills/Prereg_OSF/modifedAffect.csv" download>Datafile</a>
-<li><a href="/workshop_files/research-skills/Prereg_OSF/OSF_Prereg_Template.docx" download>OSF Pre-registration template</a>
+<li><a href="/workshop_files/2021/research-skills/Prereg_OSF/PreReg_OSF_slides.pdf" download>Workshop slides</a>
+<li><a href="/workshop_files/2021/research-skills/Prereg_OSF/readMe_preRegWorkshop.docx" download>Activity Readme</a>
+<li><a href="/workshop_files/2021/research-skills/Prereg_OSF/modifedAffect.csv" download>Datafile</a>
+<li><a href="/workshop_files/2021/research-skills/Prereg_OSF/OSF_Prereg_Template.docx" download>OSF Pre-registration template</a>
 </ul>
 
 <hr>
@@ -58,13 +58,13 @@ See below for resources associated with the research skills workshop series from
 
 **Before the workshop:**
 <ul>
-<li> Please download <a href="/workshop_files/research-skills/Git_installation_instructions.docx" download>this file (Git installation instructions)</a>, and follow the instructions to install git
+<li> Please download <a href="/workshop_files/2021/research-skills/Git_installation_instructions.docx" download>this file (Git installation instructions)</a>, and follow the instructions to install git
 <li> Sign up for an account on <a href="http://github.com/">github.com</a>, if you don't have one already.
 </ul>
 
 **Final workshop materials:**
 <ul>
-<li><a href="/workshop_files/research-skills/git.pptx" download>Workshop slides</a>
+<li><a href="/workshop_files/2021/research-skills/git.pptx" download>Workshop slides</a>
 </ul>
 <br>
 
@@ -90,7 +90,7 @@ This week's session included updates from SIPPS participants and their research 
 Prior to this week's workshop, please review the following materials:
 <ul>
 <li>[A Bridge Between Communities The Detroit Community Academic Urban Research Center SD (video)](https://youtu.be/P64TPPZyhhQ){target="_blank"}
-<li>[The Development of a Community-Based Family Asthma Management Intervention for Puerto Rican Children (reading)](/workshop_files/research-skills/CommunityBasedAsthmaInterv.pdf){target="_blank"}
+<li>[The Development of a Community-Based Family Asthma Management Intervention for Puerto Rican Children (reading)](/workshop_files/2021/research-skills/CommunityBasedAsthmaInterv.pdf){target="_blank"}
 <li>[Community-Based Participatory Research: AMOS Health and Hope (video)](https://youtu.be/vPzz-E-61xc){target="_blank"}
 </ul>
 
@@ -102,7 +102,7 @@ Prior to this week's workshop, please review the following materials:
 <br>
 **Workshop materials:**
 <ul>
-<li><a href="/workshop_files/research-skills/PsychoPyPresentation.pdf" download>Workshop slides</a>
+<li><a href="/workshop_files/2021/research-skills/PsychoPyPresentation.pdf" download>Workshop slides</a>
 </ul>
 
 <hr>

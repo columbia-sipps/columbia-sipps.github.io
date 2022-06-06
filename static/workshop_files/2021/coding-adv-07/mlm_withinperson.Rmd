@@ -1,0 +1,212 @@
+---
+title: 'Multilevel Modeling: Within-Person Change'
+author: "Ana DiGiovanni"
+date: "7/20/2021"
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Modeling within-person change using diary data 
+
+>- In this assignment, we will use a dataset that contains daily reports of female's work stressors (fwkstrs) as well as daily reports of their relationship dissatisfaction (freldis). 
+>- The dataset also contains a variable for day (time) and an identifier (id). 
+>- Participants reported on these variables **every day** for 21 days (3 weeks).
+>- You can access the dataset by loading the `bmlm()` package and then calling the dataset "BLch9." Below, load the packages and dataset and then explore the first few rows of the data.  
+
+```{r, warning=FALSE, results='hide', message=FALSE}
+library(tidyverse)
+library(brms)
+library(bmlm)
+library(bayesplot)
+library(tidybayes)
+
+BLch9 <- BLch9 %>%
+  select(id, time, fwkstrs, freldis)
+
+head(BLch9)
+```
+
+## Data Structure 
+
+>- You are probably used to seeing **cross-sectional data.** Moreover, you are probably used to seeing data in **WIDE format,** where there is ONE SINGLE row for EACH participant, and multiple different columns representing anxiety at each of the time-points. 
+>- However, when we are working with multilevel data, we want to work with data in **LONG format,** where each row contains data from a SINGLE time-point and there are **MULTIPLE ROWS** for a **SINGLE person.** 
+>- The data here are in long-format which will help us run our model.
+
+# Between vs. Within-subject research questions 
+>- Cross-sectional research may ask a question like "Do people who experience more stressors tend to have more relationship dissatisfaction than people with less stressors?" 
+>- However, with repeated measures longitudinal data (like diary data), we can ask the question "On a day when a person reports experiencing MORE work stressors compared to **THEIR OWN average** amount of daily work stressors experienced, do they report concurrent increased relationship dissatisfaction on the SAME DAY?" 
+
+# Recode Time
+>- Before we ever run a model, we want our predictors to be "centered" which  gives us a meaningful zero point and helps us interpret the model 
+>- NOTE: We do NOT do this to the outcome variables (dependent variables)
+
+The first variable that we will center is time. We need to include time as a covariate in the model -- this will allow us to control for any effect time may have on relationship dissatisfaction. This will help us show that the relation between stressors and relationship dissatisfaction is not the result of time merely passing. Let's explore how time is currently coded 
+```{r}
+range(BLch9$time)
+```
+
+We see that time is coded 1 - 21 representing each of the diary days. In regression, we interpret our effects as the effect of x on y when our other predictors are held at 0. If we do not recode time, then 0 is not even a possible value of time (i.e., it is out of the range of 1 to 21), so this does not make any sense. We are going to recode time so that the middle diary day (day 11) is coded as the zero point (this is a recommendation for longitudinal data, when you do not expect a certain time-frame to be of importance to your theoretical question then you can made the middle timepoint 0). 
+
+```{r}
+BLch9$time_recode <- BLch9$time - 11
+```
+
+# Disagregating within from between 
+
+>- We are now ready for parsing what we call between-subject and within-subject effects from our IV of interest 
+>- In multilevel models, it is CRITICAL to separate the between subject score (participant's average score across all time points) and the within subject score (each person's individual time point scores).
+>- I will first show you the long way to do this through hard-coding. Then I will show you a wonderful shortcut. 
+
+First we want to center female work stress. We do this by subtracting the mean work stress across ALL participants at ALL timepoints. 
+```{r}
+BLch9$fwkstrs.c <- BLch9$fwkstrs - mean(BLch9$fwkstrs)
+```
+
+## Creating a between-subjects variable
+
+Then we create a "between"-subject mean score, where we get an average work stress score for each female by pooling across their centered work stress scores at all 21 time-points.
+```{r}
+BLch9 <- BLch9 %>%
+  #group by id
+	group_by(id) %>%
+  #btw-person workstress score in the format of new_variable = function(old_variable)
+	dplyr::mutate(., fwkstrs.center.btw = mean(fwkstrs.c)) %>%
+	ungroup() 
+```
+
+## Creating a within-subjects variable
+
+Now, we can create a variable that is a "within-subject" work stressors variable. This means we take each person's between-subject mean that we just created (their  mean of work stress across the 21 time-points), and subtract this from their daily (centered) work stress scores at each of the 21 time-points. 
+
+This gives us a person's deviation from their mean work stress score at each time-point, telling us whether their work stress score **ON A SPECIFIC DAY** is higher or lower than their average level of work stress -- this is the variable we are interested in in this research question and allows us to look at effects that occur on a day-by-day basis 
+
+```{r}
+BLch9 <- BLch9 %>%
+  group_by(id) %>%
+  #take the centered work stress variable we created in our first step, and subtract 
+  #each person's between-subject average/typical work stress score across the 21 days
+  dplyr::mutate(., fwkstrs.center.within = fwkstrs.c - fwkstrs.center.btw) %>%
+	#dplyr::mutate_if(is.numeric, round, digits = 2) %>%
+  ungroup() 
+```
+
+Let's view our data and see what it looks like now. How are the between and within-subject scores related to one another? What happens if you add those two scores together? 
+```{r}
+head(BLch9)
+```
+
+## A short-cut to parsing within from between  
+
+>- The isolate function  is part of the brms package and creates btw and within person scores FOR YOU that are centered. 
+>- The "by" function is the grouping variable, the value function specifies which variable you want to create btw and within person scores for, and which specifies that we want BOTH between and within person scores. 
+```{r}
+BLch9 <- isolate(BLch9, by = "id", value = "fwkstrs", which = "both")
+
+#Notice that this gives you the same exact output as "hard-coding" between versus within person effects. 
+BLch9
+```
+
+# Running Models
+
+Now it is time to actually run the model. We are going to be using Bayesian estimation.
+
+>- When talking about multilevel models, we can explore what are called fixed and random effects. 
+>- Fixed effects are the effects for the average person, whether that be a within or between-person variable. This tells us what happens for a person who is "typical." 
+>- Random effects tell us about the variability in those effects. That is, they quantify how much individuals vary on those average estimates, as we know that there is variation in average effects (not EVERYONE has the same experiences)
+>- We can estimate both random intercepts and random slopes in mlm. Random slopes are theoretically more interesting here and allow each participant to have a unique slope/relationship between work stressors and relationship dissatisfaction 
+>- We estimate our fixed effects just like we do any regression model, and estimate our random effects as such: (1 + fwkstrs.cw | id) where 1 represents a random intercept and fwkstrs.cw represents the random slope portion. The "| id"is our grouping variable. This means we want an intercept and slope for each person. 
+
+```{r, warning=FALSE, results='hide', message=FALSE}
+#Bayesian model
+model_bayes <- brm(freldis ~ fwkstrs_cw + time_recode + (1 + fwkstrs_cw | id), data = BLch9, chains = 2)
+
+#Frequentist model code
+#model_freq <- lmer(freldis ~ fwkstrs.cw + time_recode + (1 + fwkstrs.cw | id), data = BLch9)
+```
+Note: You get a warning about Bulk effective samples size and tail effective samples size being too low. For the purpose of this tutorial, we can ignore that warning. But in your own analyses, you don't want to ignore this. This means that the estimates are not that reliable. You can increase iterations by doing iter = 4,000 or more within the model (the base iterations = 2,000). There is no right amount of iterations. It is a guess and check game to see how many iterations make the model "converge." Note that I also did chains = 2 here to speed up the model, but chains = 4 is standard. 
+
+
+Let's see what the model output looks like 
+```{r}
+print(model_bayes, digits = 4)
+
+#You can also run this to get output rounded to 2 decimal points 
+#summary(model_bayes)
+```
+
+# Interpretation of fixed effects:
+The typical female has an average work stress of 4.64 on a 10 point scale on day 11 of the diary. For the average participant, on days when they experience **one more work stressor above their own average wrkstrs level,** they report an increase in relationship dissatisfaction of .16 units, and this is statistically significant (95% CI: .11, .21) as the credibility interval does not cross the 0 threshold.
+
+# Interpretation of random effects
+There is significant heterogeneity (variability) in the effect of daily work stress experienced on relationship dissatisfaction (estimate = .11sd units; 95% CI: .02, .18) -- 95% of the slopes of work stress and relationship dissatisfaction fall between the range of -.06 and .38 (.16 +/- (2* .11) = fixed effect +/- 2 times the random effect) meaning that for some people, they experience LESS relationship dissatisfaction on days when they experience more work stress relative to their own average, and for other people, they experience a stronger positive relationship between work stress and relationship dissatisfaction than the average participant. 
+
+There is also significant heterogeneity in the intercept, meaning that there is significant variability in individuals' average level of work stress at the onset of the study.
+
+**Note that re: Bolger et al 2019, there are some other criteria for deciding whether something is significantly heterogenous, but that is beyond the scope of this lesson** 
+
+# Visualizing Fixed Effects 
+
+Like we did in our time course workshop, we first want to plot the model predictions for the association between work stressors and relationship dissatisfaction for the average or typical person.
+```{r}
+# define a data frame of timepoints to make predictions for for the group average
+pred_frame = data.frame(fwkstrs_cw = 0:10, time_recode = 0)
+
+
+# get predictions using tidybayes! Not that the the outcome (reldis) is always 
+#in the .value column
+fixed_preds_m1 = tidybayes::add_fitted_draws(model_bayes, newdata = pred_frame, 
+                                             re_formula = NA)
+
+ggplot(fixed_preds_m1, aes(x = fwkstrs_cw, y= .value)) +
+  tidybayes::stat_lineribbon(alpha = .4) +
+  labs(x = 'Work Stressors', y = 'Relationship Dissatisfaction') +
+  xlim(0, 10) + 
+  ylim (0, 10) + 
+  scale_fill_brewer()
+```
+
+# Visualizing Fixed AND Random Effects 
+
+Now we want to add the random effects (intercepts and slopes) into the visual, so that we can see the 
+heterogeneity present in the association between work stressors and relationship dissatisfaction.
+```{r}
+#pull out the random effects
+ranefs <- ranef(model_bayes)  
+#make it into a dataframe
+ranefs <- data.frame(as.numeric(rownames(ranefs$id)),ranefs$id)
+
+ggplot(BLch9, aes(fwkstrs_cw, freldis)) +
+  #pulling in person specific intercepts and slopes
+      geom_abline(ranefs, 
+                  intercept = ranefs$Estimate.Intercept + 4.639356969, 
+                  slope = ranefs$Estimate.fwkstrs_cw + 0.158490516, 
+                  color="black", lwd = .5, alpha = .4) +
+  #pulling in fixed effects (average line)
+  geom_abline(ranefs, intercept = 4.639356969, slope =  0.158490516, 
+              color="red", lwd = 1.8, alpha = 1) +
+  xlim(-3, 3) + ylim(0, 10) +
+  theme(text=element_text(size=16)) 
+```
+
+## Another way to visualize fixed and random effects 
+
+We can also look at the heterogeneity in an easier/cleaner way by plotting a histogram. 
+```{r}
+#add the random effects of each person to the fixed effect to get person specific slopes 
+ranefs$ind_slopes <- ranefs$Estimate.fwkstrs_cw + 0.157782868
+
+ggplot(ranefs, aes(x = ind_slopes)) + geom_histogram(color = "blue", fill = "blue", 
+                                                              alpha = .4, bins = 40) +  
+  #fixed effect line
+  geom_vline(xintercept = 0.157782868, size = 1, color = "black", linetype="dashed") +
+  #create the 95% credibility interval (fixed effect +/- 1.96 * sd of random effect)
+  geom_vline(xintercept = 0.157782868 - 1.96*.12, size = .5, color = "red") +
+  geom_vline(xintercept = 0.157782868 + 1.96*.12, size = .5, color = "red") +
+  theme_bw() + theme(text = element_text(size=12)) 
+```
+
+Note that the population heterogeneity (i.e. what our model tells us and is depicted by the red lines) has a wider interval than our sample heterogeneity (what the actual 100 people's slopes were from our sample and is depicted by the blue bars). 

@@ -1,0 +1,187 @@
+---
+title: "SIPPS Coding Workshops (basic track)"
+subtitle: "Data Cleaning Challenge"
+author: "Manasi Jayakumar"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This challenge covers topics covered in the first **three workshops** of the basic coding track. 
+
+This challenge has been adapted from [Columbia University Psychology Department's Scientific Computing Workshops](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"} and some materials provided by Ana DiGiovanni and Anna Vannucci. 
+
+For each of the following questions, the answer should be expressed as the output of a command or a series of commands.
+
+# Programming fundamentals
+
+1. Show the file path to R's current working directory on your computer.
+
+```{r}
+
+```
+
+2. What is 75 cubed? 
+```{r}
+
+```
+
+3.	What is the square root of 600? 
+HINT: Look up the following on Google- " R square root function"
+
+```{r}
+
+```
+
+4.	a) Create two vectors with the following elements: "vector_1" with elements 4, 8, 2, 9 and "vector_2" with elements 1, 2, 2, 3. 
+b) Multiply vector_1 and vector_2 and store the result in variable y
+ 
+```{r}
+
+
+```
+
+Run this line of code
+```{r}
+fav_veggies <- c("carrot", "parsley","lettuce", "kale", "green pepper","cucumber") #these are my guinea pig's favorite veggies
+```
+  
+5. Output elements 3 through 5 of the vector fav_veggies
+```{r}
+
+
+```
+
+6. Is "parsley" one of my guinea pig's favorite veggies? Is "red pepper" one of my guinea pig's favorite veggies?
+HINT: Look up relational operators from Lesson 2
+```{r}
+
+
+```
+
+7. Create a variable "is_green" storing a logical vector of length 6, where the nth element is `TRUE` if the nth element of fav_veggies is green, and `FALSE` if it isn't green. For e.g. Carrot would be `FALSE` since it isn't green, but kale would be `TRUE`.
+
+```{r}
+
+
+```
+
+8. Output all of the green veggies in the fav_veggies vector to console. 
+HINT 1: you can index a vector with a logical vector, and it will only return the elements that correspond to a "TRUE" value.
+HINT 2: Try indexing the fav_veggies vector using is_green.
+
+```{r}
+
+```
+
+Run the following chunk of code 
+```{r}
+#I have two guinea pigs: tuco and zuko
+# these are the weights of my guinea pigs in lbs (pounds)
+tuco_wt <- 2.4
+zuko_wt <- 1.8
+
+# these are the ages of my guinea pigs (in yrs)
+tuco_age <- 1.5
+zuko_age <- 0.9
+```
+
+9. According to the vet, I can feed the guinea pig baby food if they are below the age of 1 and if they are greater than 1.5 lbs. Can I feed them baby food? Save the results in a variable as `TRUE` (can give baby food) or `FALSE` (cannot give baby food) for the two of them. HINT: Do this using logical and relational operators (not just looking at the numbers)! 
+
+```{r}
+# can I give tuco baby food?
+
+
+```
+
+```{r}
+# can I give zuko baby food? 
+
+```
+
+
+# Data frames and data cleaning
+
+## Read in data
+
+1. Read in the data from the csv file `Study2_Subjects.csv` and save it in a variable named `study2`. Remember to load any necessary packages first. 
+
+```{r}
+
+```
+
+2. View the first 5 rows of the dataframe and check the datatype for all the columns
+
+```{r}
+
+```
+
+3. How many columns do you have in the dataset? What are their names?
+```{r}
+
+```
+
+
+4. How many observations/subjects do you have in the dataset?
+```{r}
+
+```
+5. What is the mean age of participants in your dataset? 
+```{r}
+
+```
+6. What is the median score for depression symptoms in the personality questionnaire?
+HINT: Look at the readme file to see which column stores the depression symptoms score.
+```{r}
+
+```
+
+7. Check for  for missing values
+
+```{r}
+
+```
+
+
+8. We can actually fix this missing value, because we have this information in the README. Check the README and fix the missing value.
+```{r}
+
+```
+
+9. The columns Q1, Q2 and Q3 are not descriptive enough. Just looking at the columns we don't know what they refer to. Check the README file to get more info, and rename the columns in a more informative way. Remember to store it in a new variable (e.g. `study2_cleaned`)
+HINT: Use the `rename()` function
+
+
+```{r}
+
+```
+
+10. Moving forward, we don't really care about the age and the sex. We are more interested in the questionnaire scores and the condition. Select only the variables you care about. 
+
+HINT: use the function `select()` 
+HINT 2: Be sure to keep the Subject ID in the dataframe, because we need that for future analyses.
+
+```{r}
+
+```
+
+The use of `%>%` is especially important for stacking functions. So we could do step 9 and 10 together as one. Try this below
+```{r}
+
+```
+
+11. Now filter for those Subjects who are in condition B only. Don't save this into a variable, we only to look at the data for those in condition B.
+
+```{r}
+
+```
+
+12.Save this cleaned dataframe as `Study2_cleaned.csv`
+```{r}
+
+```

@@ -1,0 +1,96 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+We will be using data from the same study as from the lesson to practice cleaning multilevel data, transforming it into long format, and visualizing these data. As a reminder, we are not focusing on running models yet. These data include a variable for ID and gender, and then assess self-worth (SPPA_SWORTH), communication quality with mothers (MPACS), and generalized anxiety (SCARED_GAD). Self-worth, communication and GAD were assessed every 6-months at 6 different timepoints. The csv file is the same as the lesson mlm_datacleaning.csv and can be found here: https://columbia-sipps.github.io/workshops/coding_advanced/
+
+## Load in packages and data
+
+```{r}
+library(tidyverse)
+
+d <- read.csv(FILE PATH AND NAME.csv)
+```
+
+## Filter data based on gender and include those with values of 4 or 5. 
+
+Teens who identified as boys at T1 but then identified as girls or another gender at later timepoints were coded as 4, and teens who identified as girls at T1 but then identified as boys or another gender at a later timepoints were coded as 5. There will be a lot less adolescents we will be plotting here. 
+
+```{r}
+
+```
+
+## Select only the variables we will be plotting
+
+Being: id, gender, and all of the communication with mothers scores
+```{r}
+
+```
+
+## Recode gender 
+
+(either dummy code it or effect code it) 
+```{r}
+
+```
+
+
+## Rename your variables 
+
+Rename them so that they are easier to understand 
+```{r}
+
+```
+
+## Rescale communication
+
+Right now it is on a scale of 20 to 100. Put it on a scale of 0 to 10
+```{r}
+
+```
+
+## Transform our data from wide format to long format
+
+Hint: use the pivot longer function. Note, we want there to be one column for time, and another column for communication scores. There should be one row of data for each individual's communication score at each timepoint (e.g., 6 rows per person if no missing data)
+```{r}
+
+```
+
+## Filtering out people who have less than 4 time-points
+
+Create a variable that indexes the amount of timepoints each teen has, then filter to keep people who have 4+ tps
+```{r}
+
+```
+
+
+## Clean your data in the long format 
+
+Drop the rows with NA values (the observations where there is no communication score). Then recode time into a factor and rename the variables so that they are only numeric values that range from time 0 to time 5 instead of time 1 to time 6. 
+```{r}
+
+```
+
+## Plot the data 
+
+First create two panels next to one another, where one panel represents the raw data points of communication of all of the teens who transitioned from male to other gender and the other panel represents the raw data points of communication of all of the teens who transitioned from female to other gender. There should be a line per adolescent. 
+```{r}
+
+```
+
+## Create indiviudal panel plots 
+
+Plot all the individuals
+```{r}
+
+```
+
+
+
+
+
+
+
