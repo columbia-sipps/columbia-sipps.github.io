@@ -1,0 +1,122 @@
+---
+title: "SIPPS Coding Workshops (basic track)"
+subtitle: "Advanced Plotting (challenge)"
+author: "Monica Thieu, Ben Silver, Camille Gasser"
+date: "Updated `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Overview
+
+To practice some of the `ggplot2` customizations you learned today, we're going to use two new built-in data sets. The first is called `precip`, and contains data about the average amount of rainfall for various US cities. The second is a fun dataset called `datasauRus`; you'll see where the name comes from soon!
+
+## 0. Load the tidyverse package.
+
+```{r}
+
+```
+
+# Part 1: `precip`
+
+## 1. The data in `precip` is not yet in a dataframe. Instead, it's in a type of variable called a "named list". To easily convert this to a dataframe (which we'll name `rainfall`), we can use a `tidyverse` function called `enframe()`. We'll write the code below to show you how to use this function, since we haven't covered this in the workshop series.
+
+Use the `head()` function to take a peek at what your dataframe contains. Notice that we have two columns, one with the name of the city and one with the number of inches of rain that fell in that city.
+
+```{r}
+rainfall <- precip %>%
+  enframe() %>% # convert to dataframe
+  rename("city" = name, "inches_rain" = value) %>% # make the column names more interpretable
+  distinct(city, .keep_all = T) # fix an error in the data frame where one city shows up twice
+```
+# 2. Create a bar plot using this data (using `geom_col`), with city on the x-axis and inches of rainfall on the y axis. Give your plot an informative title and axis labels. 
+
+```{r}
+
+```
+
+# 3. Now rotate the x-axis labels so they're easier to read.
+
+```{r}
+
+```
+
+# 4. Reorder the bars on the x-axis so they show cities in the order of how much rainfall they received.
+
+```{r}
+
+```
+
+# 5. Change the fill of the bars according to how many inches of rain the city recieved.
+
+Hint: This can be done by adding a `fill = ` argument to the `aes()` function in `ggplot()`.
+
+```{r}
+
+```
+
+# 5b: BONUS: Change the color palette used in your plot by adding the function `scale_fill_viridis_c()` to your plot. 
+
+Note: In the workshop, we showed you how to use ColorBrewer to specify premade color palettes for categorical variables. R also contains some built-in palettes for continuous variables. For more info, see here: https://ggplot2-book.org/scale-colour.html#colour-continuous
+
+```{r}
+
+```
+
+# 6. Change the theme to one of your choice, and also remove the legend.
+
+```{r}
+
+```
+
+# Part 2
+
+Now, let's look at a somewhat unique dataset from the `datasauRus` package.
+
+## 1. First, install the `datasauRus` package using `install.packages()`. Once it's finished installing, load it in.
+
+Hint: If you are prompted to restart R after installing, and choose to do so, you will also need to **reload** the `tidyverse` package. 
+
+```{r}
+
+```
+
+## 2. From the `datasauRus` package, we're going to use a dataframe called `datasaurus_dozen_wide`. Begin by saving that dataframe into a new variable called `dino` (or a different name of your choosing).
+
+```{r}
+
+```
+
+## 3. Build a scatterplot using this dataset, plotting `dino_x` on the x-axis and `dino_y` on the y-axis. Then add a title AND subtitle of your choice.
+
+```{r}
+
+```
+
+## 4. Next, change both the color and shape of the points, and add the `bw` theme.
+
+Hint: Check out this image for a grid of possible shapes (and their names): https://user-images.githubusercontent.com/6339274/32844167-a9069000-ca5c-11e7-89ca-594d7ec2a7b2.png
+
+```{r}
+
+```
+
+## 5. Now, change the color of the text in your plot (both the titles + axis labels).
+
+Hint: Make sure you add the line of code that changes the font color **after** you add `theme_bw()`. Otherwise, the font settings in the `bw` theme will overwrite the changes you tried to make to the text.
+
+```{r}
+
+```
+
+## 6. Finally, add an annotation that says "I'm a T-Rex!" (or anything else!) somewhere on a plot. Make sure to pick (x,y) coordinates such that the text doesn't overlap with any of your datapoints.
+
+```{r}
+
+```

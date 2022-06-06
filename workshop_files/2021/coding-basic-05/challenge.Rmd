@@ -1,0 +1,65 @@
+---
+title: "SIPPS Coding Workshops (basic track)"
+subtitle: "Correlations and Basic Visuals Challenge!"
+author: "Camille Gasser & Manasi Jayakumar"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In this challenge, you'll get the opportunity to plot data from the `iris` dataset. This is a classic dataset that comes with R — you may even have seen it referenced before, since it's commonly used to illustrate basic data science concepts. `iris` contains measurements of petal and sepal lengths/widths for different species of iris flowers.
+
+1. Load tidyverse and your data. Make sure to save the `iris` dataset into a new variable (with a name of your choice).
+
+```{r}
+
+```
+
+2. Inspect your data and understand:
+a) the variables in your dataset and their data types
+b) number of rows and columns
+
+```{r}
+
+```
+
+3. Plot a histogram using `ggplot` functions to look at the distributions of **sepal lengths (Sepal.Length)** and **petal lengths (Petal.Length)**. Also make sure to give the plot a title, and label the x axis.
+
+HINT: you can use function `labs()` to give the plot a title, or label axis. 
+
+```{r}
+
+```
+
+4. **Choose 1** of the histograms you made above, and play around with the number of bins to create a visualization you think best represents the data. (There's no right answer to this!)
+
+Also change the fill and outline colors of the histogram, and pick a theme you like the look of (see here - https://ggplot2.tidyverse.org/reference/ggtheme.html - for the list of default ggplot themes).
+
+HINT: you can use the argument `bins` to adjust bin size
+
+```{r}
+
+```
+
+
+5. Next, make a bar plot showing the mean petal length (Petal.Length) for the different iris species in our dataset (stored in the Species column). Make sure you add axis labels (x and y), and make each of the different bars a different color.
+
+```{r}
+
+```
+
+6. Finally, compute the correlation between petal length and sepal length, describe the relationship in words, and visualize it using a scatterplot.
+
+BONUS: Instead of changing the color of the points to a single color of your choice, you can make ggplot pick different colors based on the flower species. To do this, add `color = Species` into your `aes()` function.
+
+```{r}
+
+```
+
+

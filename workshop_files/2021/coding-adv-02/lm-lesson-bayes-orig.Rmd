@@ -1,0 +1,389 @@
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Goals For Today
+
+> - Convince you that Bayesian modeling is helpful 
+> - Convince you that, whatever you have heard, Bayesian modeling isn't any harder than Frequentist modeling
+> - You'll feel **comfortable and confident doing Bayesian modeling** with regression
+
+We'll use exactly the same data as last week!
+
+# 2. Some general tips
+
+- not sure what a function does? look at the documentation by running `?function_name` in the console (or using google!)
+- the more comments in your code, the better! (don't assume you'll remember what you did several weeks from now)
+- mistakes and getting stuck is normal and expected! most of the coding process is getting *unstuck* when you're confused, so don't get discouraged if you hit a problem
+
+# 3. Setting up your R environment
+
+Note: sometimes these packages can take a little time & effort to install. If you are having trouble, please reach out to your intstructors or mentor right away for help getting them set up. Installation is often the hardest part for using R packages!
+```{r, warning=FALSE, results='hide', message=FALSE}
+# load some packages
+library(tidyverse) # contains a bunch of packages for working with data, plotting, etc.
+library(rstanarm)
+library(tidybayes)
+library(bayesplot)
+library(car)
+
+
+# if you need to install these packages, run the following lines of code:
+# install.packages('tidyverse')
+# install.packages('car')
+# install.packages('rstanarm')
+# install.packages('tidybayes')
+# install.packages('bayesplot')
+```
+
+# Prepping your data for analysis
+
+* Building on the class from last week, we'll continue using *Prestige* data, which is data from 1971 on different occupations in Canada. See more info [here](https://www.rdocumentation.org/packages/car/versions/2.1-6/topics/Prestige)
+
+**But please reach out to your instructors — or check out materials associated with the basic track coding workshops — if you need a refresher! We're happy to help.**
+
+```{r}
+# first, let's load in some data
+# we're going to use a potentially-familiar dataset from within the `car` package called Prestige
+# this contains information about various types of jobs (e.g., average income, education, etc.)
+
+df <- Prestige
+
+# for simplicity, we just want to look at blue collar and white collar jobs
+# we'll also get rid of 'census' since we're not using it
+df <- df %>%
+  dplyr::filter(type != 'prof') %>%
+  dplyr::select(-census)
+
+# the head() function shows the first few rows of the dataframe
+head(df)
+```
+
+
+Notice, we have all our variables of interest in separate columns here! In order to use the `lm()` (and related) functions, it's important that all of your variables of interest exist in separate columns. In our case, the Prestige dataset is already set up like this, so there's no need to make any adjustments. But it's not uncommon for datasets to require some restructuring in advance.
+
+## Variable coding & centering
+
+
+Coding of Xs (variables), including continuous and categorical Xs, matters for interpreting our results, so we probably want to check the coding and centering of our variables in advance. This is especially important for when we have interaction effects in our model. But even in models without interaction effects, how we code variables will affect our interpretation of the intercept. 
+
+
+### Continuous variables
+
+Typically, **continuous Xs will be mean-centered** (substract the sample mean from each observation)
+
+```{r}
+# scale education, women, and prestige
+df = df %>%
+  dplyr::mutate(education = as.vector(scale(education, center = TRUE, scale = TRUE)),
+         women = as.vector(scale(education, center = TRUE, scale = TRUE)),
+         prestige = as.vector(scale(education, center = TRUE, scale = TRUE)))
+
+
+head(df)
+```
+
+### Categorical variables
+
+> - There are ways of turning categorical variables into numbers (which you need to do in order to run a regression model), and many statistical packages will do this for you "under the hood." However, unless you recode your variables yourself, you might not know what different R packages/functions are actually doing, which may make it tricky to accurately interpret your results.
+
+> - For categorical variables, it's particularly important that **zero** is meaningful — as this will allow us to interpret the intercept of our model. (since the intercept = the value of our outcome variables when all predictors/moderators are set to 0)
+For simplicity, we will work with examples of categorical Xs involving two levels only (e.g., blue collar and white collar).
+
+
+#### Effect coding
+
+> - In effect coding, all of your levels/categories of X should sum up to 0.
+
+> - In a case where your categorical variable has two levels, a common choice is to pick the values -0.5 and 0.5, or -1 and 1. Neither of these options will change the overall results (i.e., the significance) of your model, but they will impact your interpretation of the slope. 
+
+```{r}
+# let's also effect code the job `type` variable
+# blue collar (bc) = -0.5, and white collar (wc) = 0.5
+
+df$type.e <- dplyr::recode(df$type, "bc" = -0.5, "wc" = 0.5)
+
+# note: the 'dplyr::' tells R which package to look in for the recode function
+# while this isn't always necessary to do before calling a function, it's good practice
+# it IS necessary to do, however, when multiple packages you've loaded have a function with the same name
+
+head(df)
+```
+
+# 4. Running a Bayesian regression is **basically** the same syntax as using `lm()`
+
+> - `lm()` code is equation based, so is the command `stan_glm()`, which uses Bayesian inference 'under the hood'
+> - Follows the basic equation y ~ x, where y is the *oucome* variable and x is the *predictor* variable
+
+
+# 5. Regression With One Continuous Variable
+
+> - For example, let's say we want to predict income as a function of prestige:
+
+> - The model syntax is almost exactly the same to run the Bayesian model using `rstanarm::stan_glm()`, everything inside the model call is the saame
+
+> - Note: the Bayesian model will produce a lot more output as it is sampling -- this is a good way to check how far along it is towards being finished runninh. By default, the model will run 4 'Chains' with 2000 Iterations each. So, if your model says `Chain 2: Iteraation 1800 / 2000` for example, you can know you're a little less than halfway through. 
+
+
+```{r,results='hide'}
+# frequentist model
+m1_freq <- lm(income ~ prestige, data = df)
+
+# bayesian model
+m1_bayes = rstanarm::stan_glm(income ~ prestige, data = df)
+```
+
+## Interpreting `rstanarm::stan_glm()` model outputs
+
+What is consistent across both models?
+
+> -The intercept (i.e. `(Intercept)`) Estimate describes the estimated value of the outcome variable when all predictors are set to 0. In this case, this means the estimated `income` when `prestige` is set to 0. Since prestige has been mean-centered, this would repressent the estimated income for a job of mean prestige. 
+
+> - The `prestige` Estimate term, or the 'beta estimate' for prestige, represents the estimated average difference in the outcome variable (`income`) associated with a 1-unit increase in `prestige`. So, in this case, if we increase `prestige` by 1 (1 standard deviation, since we've scaled it), `income` is expected to increase on average by this amount. 
+
+```{r}
+summary(m1_freq)
+```
+
+If we inspect the output from the Bayesian model, we can see that the first column of output for the Estimates, `mean`, gives almost exactly the same values. That is because the `Estimate` from the first model is roughly equivalent to the *mean posterior estimate* in the Bayesian model in many cases -- both are try to provide a single 'best guess' for the value of each parameter. 
+
+Now, with the Bayesian model, you might notice a few things:
+
+> - There are no t-values or p-values! Depending on your point of view, this could either be a great thing or an awful thing. Either way though, this will mean that we have to think about our model in other ways.
+> - Instead of t-values and p-values, our output by default from the `summary` command is giving us an 80% posterior interval -- that is, the model's best guess with 80% confidence about the true value of each parameter. We can see this 80% interval has a miniumu value labeled `10%` and a maximum value labeled `90%`. So, the middle 80% of the posterior values for each parameter lie in this interval. 
+
+```{r}
+summary(m1_bayes)
+```
+
+
+
+What if we want a 95% posterior interval though? We can set exactly what interval we want in our summary with the `probs` command:
+
+```{r}
+# we use .025 and .975 because the MIDDLE 95% falls between these two values
+summary(m1_bayes, probs = c(.025, .975))
+```
+
+# 6. Regression With One Categorical Variable
+
+### Effect Coded X (`type`)
+
+- What does the mean estimate for `(Intercept)` tell us?
+- What does the meaan estimate for `type.e` tell us?
+- What does the 90% posterior interval for `(Intercept)` tell us?
+- What does the 90% posterior interval  for `type.e` tell us?
+
+```{r, results='hide'}
+m2_freq <- lm(income ~ type.e, data = df)
+m2_bayes <- rstanarm::stan_glm(income ~ type.e, data = df)
+```
+
+As with the previous model, the summary outputs are very similar, just we get a posterior interval from the Bayesian model
+
+```{r}
+summary(m2_freq)
+```
+
+```{r}
+summary(m2_bayes)
+```
+
+
+# 7. Plotting fitted model predictions
+
+> - Often, it is hard to understand what our model is telling us until we visualize our model's predictions, especially with the raw data 
+
+> - Bayesian models give us special power and flexibility for visualizing our model predictions. For this, we'll use the `tidybayes` package!
+
+
+## Predictions with one continuous variaable
+
+With this step, we now ask our models to *predict* what the expected mean value of `income` should be for each level of `prestige`, as well as an uncertainty interval. This is *super* helpful for visualizing what our models are telling us. 
+
+```{r}
+# create a dataframe with a range of prestige values to make predictions for  -- in this casse going from the minimum to the maximum value with 20 total values
+continuous_predict_df = data.frame(prestige = seq(min(df$prestige), max(df$prestige), length.out = 20))
+
+# now, ask the models to PREDICT the estimated income value for each level of prestige, with a confidence interval
+m1_freq_predictions = data.frame(predict(m1_freq, newdata = continuous_predict_df, interval = 'confidence')) %>%
+  cbind(continuous_predict_df, .)
+
+# this looks similar, but a *little* different using the tidybayes package 
+m1_bayes_predictions = tidybayes::add_fitted_draws(m1_bayes, newdata = continuous_predict_df)
+```
+
+> - For the frequentist model, as we saw last week, we can get an estimate and an `upr` and `lwr` bound of a 95% confidence interval for each level of `prestige`
+```{r}
+head(m1_freq_predictions)
+```
+
+> - What we get for the Bayesian model is a little more detailed. We actually have 4000 different values for each level of `prestige` representing the 4000 posterior 'draws' (they are differentiated in the `.draw` column) for estimating mean income (the outcome variable, which is stored in the `.value` column) at each level of prestige. So, when we plot these, we'll find ways to *summarize* the posterior predictions in different ways
+
+> - While this output is slightly more complicated, it allows us to more easly view the posterior distribution in lots of different ways
+
+```{r}
+head(m1_bayes_predictions)
+```
+By using the `stat_lineribbon` function from tidybayes, we can generate a very similar graph to the type we made last week 
+
+```{r}
+ggplot(m1_bayes_predictions, aes(x = prestige, y = .value)) +
+  tidybayes::stat_lineribbon(.width = .95) 
+
+ggplot(m1_freq_predictions, aes(x = prestige, y = fit)) +
+  geom_line() +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), alpha = .5)
+```
+
+Or with a little more style - we can plot both the 80% and 95% posterior intervals! Note: a lot of researchers stick to 95% intervals because these have *somewhat arbitrarly* been traditional, but if you want to break out of the mold of the 95% this is a great way to do it!
+
+```{r}
+ggplot(m1_bayes_predictions, aes(x = prestige, y = .value)) +
+  tidybayes::stat_lineribbon(.width = c(.80, .95)) +
+  theme_bw() + 
+  labs(y = 'Model-estimated income', x = 'Prestige (Mean-Centered)') +
+  scale_fill_brewer(palette = "Blues")
+```
+
+Or with the raw data:
+
+```{r}
+ggplot(m1_bayes_predictions, aes(x = prestige, y = .value)) +
+  tidybayes::stat_lineribbon(.width = c(.80, .95)) +
+  theme_bw() + 
+  labs(y = 'Model-estimated income', x = 'Prestige (Mean-Centered)') +
+  scale_fill_brewer(palette = "Blues") +
+  geom_point(data = df, aes(x = prestige, y = income))
+```
+
+
+## Predictions with one categorical variable
+
+Now let's plot model predictions for the model with one categorical variable -- `income` as a function of `type.e` -- whether jobs were white-collar or blue-collar
+
+```{r}
+# these are the only values we need since there were just two categories
+categorical_predict_df = data.frame(type.e = c(-.5, .5))
+
+
+m2_freq_predictions = data.frame(predict(m2_freq, newdata = categorical_predict_df, interval = 'confidence')) %>%
+  cbind(categorical_predict_df, .)
+
+# this looks similar, but a *little* different using the tidybayes package 
+m2_bayes_predictions = tidybayes::add_fitted_draws(m2_bayes, newdata = categorical_predict_df)
+
+# recode back to informative labels
+m2_freq_predictions$type =  dplyr::recode(m2_freq_predictions$type.e, '-0.5' ='Blue Collar', '.5'= 'White Collar')
+m2_bayes_predictions$type =  dplyr::recode(m2_bayes_predictions$type.e, '-0.5' ='Blue Collar', '.5'= 'White Collar')
+```
+
+Now that we have the predictions from each model, we can plot them:
+
+```{r}
+ggplot(m2_freq_predictions, aes(x = type, y = fit)) +
+  geom_point() +
+  geom_errorbar(aes(ymin = lwr, ymax = upr), width = 0)
+
+```
+
+Again, we have more options with plotting the Bayesian model fits, namely:
+
+> - We can plot the *entire* posterior distributions here using `tidybayes::stat_halfeye()`, not just the 95% intervals
+> - In this case, these distributions are fairly normal looking and don't have much skew. BUT, if they were, we would know, and we could adjust our interpretations accordingly
+> - We can again use the `.width` option to get intervals of multiple widths -- below we'll try 80% and 95%
+
+```{r}
+ggplot(m2_bayes_predictions, aes(y = .value, x = type)) +
+  tidybayes::stat_halfeye(.width = c(.80, .95)) +
+  labs(y = 'Model-estimated income') 
+```
+
+
+# 8. Bayesian regression with an interaction!
+
+> - Just like last time, so far we have explored the relationship between income and prestige and income and type separately. In addition to being interested in main effects, we sometimes want to look at how two variables may interact with one another in their associations with an outcome.
+
+> - For example we might hypothesize that the asssociation between of prestige and income is stronger for white collar jobs but weaker for blue collar jobs. This is what we call a moderation, or an interaction (*although some reseaarchers prefer to stick with the term 'interaction' because it does not imply a specific causal mechanism, whereas 'moderation' does*)
+
+> - For this next regression, we want to test both the main effects of type and prestige on income (y ~ X1 + X2) and their interaction (y ~ X1 * X2)
+> - Note that running an interaction automatically gives us the main effects as well
+> - What do the intercept, prestige.c, type.e, and prestige.c:type.e now tell us? We will go through each term one by one.
+
+
+Run interaction model syntax
+
+```{r, results='hide'}
+# frequentist
+m3_freq <- lm(income ~ prestige * type.e, data = df)
+
+# bayesiaan
+m3_bayes <- rstanarm::stan_glm(income ~ prestige * type.e, data = df)
+```
+
+Inspect model summaries 
+```{r}
+summary(m3_freq)
+summary(m3_bayes)
+```
+
+Questions for model interpretation:
+
+- What does the mean estimate for `(Intercept)` tell us?
+- What does the mean estimate for `prestige` tell us?
+- What does the mean estimate for `type.e` tell us?
+- What does the mean estimate for `prestige:type.e` tell us?
+- What does the 90% posterior interval for `(Intercept)` tell us?
+- What does the 90% posterior interval for `prestige` tell us?
+- What does the 90% posterior interval for `type.e` tell us?
+- What does the 90% posterior intervalfor `prestige:type.e` tell us?
+
+
+## Setting up a prediction grid for the interaction model
+
+
+>- Here we can use the `expand.grid` command to set up a grid of all combinations of `prestige` and `type.e`
+
+```{r}
+interaction_prediction_df = expand.grid(prestige = seq(min(df$prestige), max(df$prestige), length.out = 20),
+                                        type.e = c(-.5, .5))
+
+# frequentist predictions
+m3_freq_predictions = data.frame(predict(m3_freq, newdata = interaction_prediction_df, interval = 'confidence')) %>%
+  cbind(interaction_prediction_df, .)
+
+# bayesian predictions
+m3_bayes_predictions = tidybayes::add_fitted_draws(m3_bayes, newdata = interaction_prediction_df)
+
+# recode back to informative labels
+m3_freq_predictions$type =  dplyr::recode(m3_freq_predictions$type.e, '-0.5' ='Blue Collar', '.5'= 'White Collar')
+m3_bayes_predictions$type =  dplyr::recode(m3_bayes_predictions$type.e, '-0.5' ='Blue Collar', '.5'= 'White Collar')
+```
+
+## Plot the interactions
+```{r}
+ggplot(m3_freq_predictions, aes(x = prestige, y = fit)) +
+  geom_line(aes(color = type)) +
+  geom_ribbon(aes(ymin  = lwr, ymax = upr, fill = type), alpha = .5)
+
+
+ggplot(m3_bayes_predictions, aes(x = prestige, y = .value)) +
+  tidybayes::stat_lineribbon(.width = .95, aes(fill = type)) 
+```
+
+Or with a little more glamour
+```{r}
+ggplot(m3_bayes_predictions, aes(x = prestige, y = .value)) +
+  tidybayes::stat_lineribbon(.width = c(.95, .80), aes(fill = type), alpha = .5) +
+  theme_bw() +
+  labs(x = 'Prestige (Mean-Centered)', y = 'Estimated Income')
+```
+
+> - What are your questions?

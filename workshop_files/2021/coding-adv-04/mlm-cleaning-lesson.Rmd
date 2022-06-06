@@ -1,0 +1,150 @@
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Goals For Today
+
+> - Gain an understanding of the different questions we can ask with repeated-measures data
+> - Learn how to transform data in wide format into long format & clean repeated-measures data
+> - Learn how to plot longitudinal data for visualizing purposes 
+
+# Load your packages and read in the data
+
+Remember, you will have to download the data and save it somewhere on your computer that makes sense, then change the path so that you can upload it. There is an id variable for each adolescent and an associated gender. Adolescents reported on their self-worth (SPPA_SWORTH) at 6 different time-points, each 6-months apart. Here, we are interested in looking at how self-worth changes over-time for adolescents, over a period of 4ish years. Ignore the MPACS variable for now .... you will use this in the challenge!
+
+```{r}
+library(tidyverse)
+
+d <- read.csv("/Users/anadigiovanni/Desktop/Mentoring:Teaching/SIPPS 2021/mlm-data-cleaning.csv")
+
+#explore the data (variables and data structure)
+head(d, 10)
+```
+
+Notice the structure of the data here. The data is in what we call "WIDE format," where there is ONE SINGLE row for EACH participant, and multiple different columns representing self-worth at each of the time-points. 
+
+# Filter our data and effect code gender 
+
+Only keep individuals who identified as boys (1) or girls (2) across all time-points. We also are going to select just the variables we want (ID, gender, and the self-worth variables)
+```{r}
+d <- d %>% 
+  filter(GENDER_ACROSSTIME_T1T2T3T4 == 1 | GENDER_ACROSSTIME_T1T2T3T4 == 2) %>%
+  select(ID, GENDER_ACROSSTIME_T1T2T3T4, contains("SWORTH"))
+```
+
+Effect code gender where boys (1) are -.5 and girls (2) are .5 
+```{r}
+d$GENDER_ACROSSTIME_T1T2T3T4 <- ifelse(d$GENDER_ACROSSTIME_T1T2T3T4 == 1, -.5, .5)
+```
+
+# Rename our variables! 
+
+Our variable names are messy -- what do they even mean!? Let's rename them, so anyone basically knows what they are if they open the long dataset. 
+```{r}
+d <- d %>% 
+# rename vectors
+  rename(
+    id = 1,                   
+    gender = 2,           
+    self_worth_1 = 3,   
+    self_worth_2 = 4,   
+    self_worth_3 = 5,   
+    self_worth_4 = 6,   
+    self_worth_5 = 7,   
+    self_worth_6 = 8
+    )
+```
+
+# Rescale our variables!
+
+> - Now we see that self-worth is on a 1 to 4 scale. Since we are only looking at plotting the time-course of self-worth (and focusing on one variable here), rescaling self-worth is not super necessary. However, I have been taught to put variables on a 0 to 10 scale so that a one unit increase can be thought of as a percentage increase. This is more important when you have many different variables that may have different scales (e.g., 1 to 4 and 1 to 100). 
+
+> - The equation I use to rescale variables is: 
+> - (max new - min new)/(max old - min old) * (variable - max old) + max new 
+
+Let's rescale this to be on a 0 to 10 scale. 
+```{r}
+d$self_worth_1 <- 10/3 * (d$self_worth_1 - 4) + 10 
+d$self_worth_2 <- 10/3 * (d$self_worth_2 - 4) + 10 
+d$self_worth_3 <- 10/3 * (d$self_worth_3 - 4) + 10 
+d$self_worth_4 <- 10/3 * (d$self_worth_4 - 4) + 10 
+d$self_worth_5 <- 10/3 * (d$self_worth_5 - 4) + 10 
+d$self_worth_6 <- 10/3 * (d$self_worth_6 - 4) + 10 
+```
+
+# Transforming our data from wide format to long format
+
+Now we get to the really important part. When we are working with multilevel data, we want to work with data in LONG format, where each row contains data from ONE participant at a SINGLE time-point. That means that, if there are no missing data (which there are), each individual will have 6 rows of data, each row representing their self-worth at a single time-point. You cannot do any multilevel modeling if the data are not in long format. You also need the data in this format in order to visualize the data!
+
+```{r}
+d <- d %>% 
+  tidyr :: pivot_longer(., cols = contains("self_worth"), names_to = "time", values_to = "sw")
+```
+
+**Note that for the above, if you have multiple variables you want to put into long format (e.g., you have 4 variables measured at each time-point and you want to model all of them), you actually have to apply this code to each of the variables separately, and then combine the individual datasets together .... it is annoying, but I don't know of a current workaround. We will get to this in a couple of weeks when we talk about modeling within-person processes.** 
+
+Let's look at what this long format dataset looks like: 
+```{r}
+d
+```
+
+## Cleaning up our long format data 
+
+Let's do some more cleaning of the dataset.We are first going to filter out all of the NAs from the dataset. Then we want to clean the time column, where we parse  the variable so it just has numbers and not variable names. We are also changing the time from t1 to t6 to instead be t0 to t5. This allows us to then interpret the intercept when we run our multilevel model as the mean of Y at the first time-point of the study. 
+```{r}
+d <- d %>%
+  #filter out rows without SW scores
+  filter(!is.na(sw)) %>%
+  #renaming the time variables to be numbers and making T1 be 0 and not 1         
+   dplyr::mutate(., time = recode_factor(time, "self_worth_1" = "0", "self_worth_2" = "1",
+                                         "self_worth_3" = "2", "self_worth_4" = "3", 
+                                         "self_worth_5" = "4", "self_worth_6" = "5")) %>%
+  dplyr::mutate_if(is.numeric, round, digits = 2)
+```
+
+## Filtering out people who have less than 4 time-points
+
+Then let's only keep people who have 4 or more observations **(we are ONLY doing this for the purpose of visualizing the data. For modeling we would want to keep everyone (even those with only one observation) because each person provides important data and we want to conserve all of that, but we are doing this here to help us reduce the burden of having over 1,000 teens to visualize)**
+```{r}
+d <- d %>%
+  group_by(id) %>%
+  dplyr::mutate(id_count = n()) %>%
+  filter(id_count >= 4)
+```
+
+# Visualizing data 
+
+## Plotting the self-worth for boys and girls 
+
+We aren't going to run any models today, but we want to see what these data look like visually first, so let's get into some plotting. First, lets plot sw over time for girls and boys separately, where each line represents an individuals sw over time. 
+
+```{r}
+ggplot(data = d, aes(x = time, y = sw)) +
+geom_line(aes(group = id, color = as.factor(gender)), alpha = .3, size = .3) +
+facet_wrap("gender") + # gender variable gives text labels to panels
+labs(x = "Time",
+y = "Self-Worth",
+title = "Adolescent Self-Worth Over Time")
+```
+
+Wow this looks busy! That is because we have SO many adolescents here, so it is really hard to plot everyone together and look at patterns that might occur. This type of plot is probably more helpful if you have less people (like 200 or less, rather than over 1,000 like we have here)
+
+## Individual Panel plots
+
+What we probably want to do in this case is to plot individual panel plots. This will show the time-course of self-worth for each adolescent. The code is essentially the same as it was above, except instead of using the facet_wrap command and facet wrapping by gender, we are going to facet wrap by ID. This allows us to create on panel plot for each individual ID. You can facet_wrap by any grouping variable that you may have in your data. 
+
+For the purpose of this lesson, we are JUST going to look at a few individuals' data, as there are over 1,000 teen's in this dataset. We are going to subset 10 IDs, so that we can quickly look at them here ... if you want to look at all IDs (as you normally would), you would have to save out the plot in a pdf. You won't be able to see all 1,000 participants within R. When you actually visualize your own data, I would plot ALL of the visuals and export it into a PDF using the code: ggsave(PLOTNAME, file = 'NAME.pdf', height = 40, width = 20)
+
+```{r}
+d_filter <- d %>% 
+  filter(id > 1 & id < 70)
+
+ggplot(data = d_filter, aes(x = time, y = sw)) +
+  geom_line(aes(group = id), color = "red") + geom_point(aes(group = id), size = .4) +
+  facet_wrap("id") + # Group variable gives text labels to panels
+  labs(x = "Time",
+       y = "Self-Worth",
+       title = "Adolescent Self-Worth Over Time")
+```
+

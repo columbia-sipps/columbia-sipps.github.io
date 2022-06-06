@@ -1,0 +1,326 @@
+---
+title: "R Tutorial: Modeling"
+author: Hannah & Camille (borrowing from the work of Katherine Zee, Anna Vannucci, and Ana DiGiovanni)
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Plan For Today
+
+- prepping your data for analysis
+- using the `lm()` package & interpreting the output
+- visualizing your results
+
+# Some general tips
+
+- not sure what a function does? look at the documentation by running `?function_name` in the console (or using google!)
+- the more comments in your code, the better! (don't assume you'll remember what you did several weeks from now)
+
+# Setting up your R environment
+
+```{r, echo = F}
+
+# load some packages
+library(tidyverse) # contains a bunch of packages for working with data, plotting, etc.
+library(car)
+# library(broom) - feel free to (down)load, but isn't necessary for this workshop
+# library(kableExtra) - feel free to (down)load, but isn't necessary for this workshop
+
+# if you need to install these packages, run the following lines of code:
+# install.packages('tidyverse')
+# install.packages('car')
+# install.packages('broom')
+# install.packages('kableExtra')
+
+```
+
+# Prepping your data for analysis
+
+In order to easily use the `lm()` package — and to more easily interpret your results — you'll need to make sure you wrangle your data into a useable format. Here we assume that you're already a little bit familiar with how to read in data from files (e.g., csv, excel), and that you've had some practice cleaning and/or reshaping it as needed.
+
+**But please reach out to your instructors — or check out materials associated with the basic track coding workshops — if you need a refresher! We're happy to help.**
+
+```{r}
+
+# first, let's load in some data
+# we're going to use a potentially-familiar dataset from within the `car` package called Prestige
+# this contains information about various types of jobs (e.g., average income, education, etc.)
+
+df <- Prestige
+
+# the head() function shows the first few rows of the dataframe
+head(df)
+
+# by default, it prints out 6 rows, but you can change that number using the n argument, e.g.,
+head(df, n = 3)
+
+# for simplicity, we just want to look at blue collar and white collar jobs
+df <- df %>%
+  filter(type != 'prof')
+head(df)
+
+```
+
+In order to use the `lm()` (and related) functions, it's important that all of your variables of interest exist in separate columns. In our case, the Prestige dataset is already set up like this, so there's no need to make any adjustments. But it's not uncommon for datasets to require some restructuring in advance.
+
+## Variable coding & centering
+
+Coding of Xs (variables), including continuous and categorical Xs, matters for interpreting our results, so we probably want to check the coding and centering of our variables in advance. This is especially important for when we have interaction effects in our model. But even in models without interaction effects, how we code variables will affect our interpretation of the intercept. 
+
+### Continuous variables
+
+Typically, **continuous Xs will be mean-centered** (substract the sample mean from each observation).
+
+```{r}
+
+# let's start by centering prestige
+# there are two ways we can quickly accomplish this
+
+# option 1: doing the math
+df$prestige.c <- df$prestige - mean(df$prestige)
+
+# option 2: using the scale function
+# (note: if you set scale = TRUE, you will effectively be z-scoring your variable)
+df$prestige.c <- scale(df$prestige, center = TRUE, scale = FALSE)
+
+# now the mean of this variable should be (very very close to) zero
+mean(df$prestige.c)
+
+# we are also going to make sure that in our dataframe, R treats this variable as a vector (which will be important later)
+df$prestige.c <- as.vector(df$prestige.c)
+
+head(df)
+
+```
+
+### Categorical variables
+
+There are ways of turning categorical variables into numbers (which you need to do in order to run a regression model), and many statistical packages will do this for you "under the hood." However, unless you recode your variables yourself, you might not know what different R packages/functions are actually doing, which may make it tricky to accurately interpret your results.
+
+For categorical variables, it's particularly important that **zero** is meaningful — as this will allow us to interpret the intercept of our model. (since the intercept = the value of our outcome variables when all predictors/moderators are set to 0)
+
+The most common types of coding for categorical variables are: *dummy coding* and *effect coding*. Neither is better or worse; your choice will depend on your preference (and/or how you want to be able to interpret your output).
+
+For simplicity, we will work with examples of categorical Xs involving two levels only (e.g., blue collar and white collar).
+
+#### Dummy coding
+
+In dummy coding (with two variables), you simply need to set one level of X as 0, and the other as 1. In this case, 0 will correspond to a specific level/category of X. 
+
+```{r}
+
+# let's dummy code the job `type` variable
+# blue collar (bc) = 0, and white collar (wc) = 1
+
+df$type.d <- dplyr::recode(df$type, "bc" = 0, "wc" = 1)
+
+head(df)
+
+```
+
+#### Effect coding
+
+In effect coding, all of your levels/categories of X should sum up to 0.
+
+In a case where your categorical variable has two levels, a common choice is to pick the values -0.5 and 0.5, or -1 and 1. Neither of these options will change the overall results (i.e., the significance) of your model, but they will impact your interpretation of the slope. 
+
+```{r}
+
+# let's also effect code the job `type` variable
+# blue collar (bc) = -0.5, and white collar (wc) = 0.5
+
+df$type.e <- dplyr::recode(df$type, "bc" = -0.5, "wc" = 0.5)
+
+# note: the 'dplyr::' tells R which package to look in for the recode function
+# while this isn't always necessary to do before calling a function, it's good practice
+# it IS necessary to do, however, when multiple packages you've loaded have a function with the same name
+
+head(df)
+
+```
+
+# Running a regression using `lm()`
+
+> - `lm()` code is equation based
+> - Follows the basic equation y ~ x, where y is the dependent variable and x is the independent variable
+
+## One Continuous Variable
+
+> - For example, let's say we want to predict income as a function of prestige:
+
+- What does the estimate for `Intercept` tell us?
+- What does the estimate for `prestige.c` tell us?
+
+```{r}
+
+# fit model
+# we want to make sure we're using the centered version of prestige
+m1 <- lm(income ~ prestige.c, data = df)
+
+summary(m1)
+
+```
+
+## One Categorical Variable
+
+### Dummy Coded X
+
+- What does the estimate for `Intercept` tell us?
+- What does the estimate for `type.d` tell us?
+
+```{r}
+
+# fit model
+# we want to make sure we're using the centered version of prestige
+
+m2 <- lm(income ~ type.d, data = df)
+
+summary(m2)
+
+```
+
+### Effect Coded X
+
+- Does the interpretation of the estimate for `Intercept` change?
+- What about `type.e`?
+
+```{r}
+
+# fit model
+m3 <- lm(income ~ type.e, data = df)
+
+summary(m3)
+summary(m2)
+
+```
+
+## Interactions
+
+> - So far we have explored the relationship between income and prestige and income and type separately. In addition to being interested in main effects, we sometimes want to look at how two variables may interact with one another to influence an outcome.
+
+> - For example we might hypothesize that the effect of prestige on income is stronger for white collar jobs but weaker for blue collar jobs. This is what we call a moderation, or an interaction.
+
+> - For this next regression, we want to test both the main effects of type and prestige on income (y ~ X1 + X2) and their interaction (y ~ X1 * X2)
+> - Note that running an interaction automatically gives us the main effects as well
+> - What do the intercept, prestige.c, type.e, and prestige.c:type.e now tell us? We will go through each term one by one.
+
+```{r}
+
+#2 main effects and an interaction
+m4 <- lm(income ~ prestige.c + type.e + prestige.c * type.e, data = df)
+summary(m4)
+
+# this gives us the same output
+m5 <- lm(income ~ prestige.c * type.e, data = df)
+summary(m5)
+
+```
+
+- Now when we interpret the intercept, we say that this is the income for a job with average prestige for both blue and white collar jobs -- that is, if we average across job type (and assume that there are an equal amount of blue and white collar jobs), the average income is is 5228.13 (when holding prestige at 0). 
+
+- There is a main effect of prestige -- for the average job, when there is a one unit increase in prestige, there is a 119.10 unit increase in income (meaning income is 5228.133 + 119.10 = 5347.23). 
+
+- There is a main effect of job type, such that white collar jobs have LOWER income than blue collar jobs for the average level of prestige. Since we coded it such that blue collar is -.5 and white collar .5, when we go from bc to wc, there is a decrease in income as seen by the negative intercept (income is is 5228.133 - 1033.81). 
+
+- There is an interaction between prestige and job type. This means that the relationship between prestige and income depends on job type (blue collar vs white collar). Here, prestige increases income moreso for blue collar jobs than white collar jobs.  
+
+# Plotting our model
+
+Let's plot what our effect coded interacrtion looks like. We need to first change the variables into (numeric) vectors for the following code to work.
+
+```{r}
+
+# you'll notice that we also did this "as.vector" step to the prestige.c variable earlier in the code
+# the point at which you do so typically doesn't matter, but it's often a good idea to do it **before**
+# you fit your model (to avoid any data type mismatch errors)
+
+df$prestige.c <- as.vector(df$prestige.c)
+df$type.e <- as.vector(df$type.e) 
+
+```
+
+Here we create a dataframe that has a sequence of values for the prestige variable, ranging from its minimum to maximum, going up by increments of .1, which is an arbitrary value. 
+
+```{r}
+
+# first make a dataframe for the "higher" level of our type variable (+ the full range of possible prestige values)
+
+dfhigh <- data.frame(
+  prestige.c = seq(min(df$prestige.c, na.rm = T), max(df$prestige.c, na.rm = T), .1),
+  type.e = .5) # you put whatever your categorical variable is here, and set it equal to one of the values/levels, 
+               # if you dummy coded, it would be = to 1 and the below code would be equal to 0.
+
+# then make the same thing for the "lower" level of our type variable (+ the full range of possible prestige valeus) 
+
+dflow <- data.frame(
+  prestige.c = seq(min(df$prestige.c, na.rm = T), max(df$prestige.c, na.rm = T), .1),
+  type.e = -.5)
+
+```
+
+We now use the above values to create two predicted regression lines, one for white collar jobs (called high in this case since it was coded as .5) and one for low collar jobs (called low in this case -- just because we coded it as -.5)
+
+```{r}
+
+# these lines of code take the values of prestige & type we set up in the previous code chunk, and feed them
+# into our fitted model (m5) w/ the predict() function in order to generate predicted values of our y variable (income)
+
+high <- cbind(dfhigh, predict(m5, dfhigh, interval = "confidence"))
+low <- cbind(dflow, predict(m5, dflow, interval = "confidence"))
+
+# note: look inside of these variables to get a better understanding of how they were built
+
+```
+
+We can now plot this, where we look at the effect of prestige on incomes for white collar and blue collar jobs
+
+```{r}
+
+## general ggplot reminders:
+# - alpha = adjusts the transperancy of a plot element
+# - both fill and color can adjust the color of a plotting element — the one you want to use will depend 
+#   on the type of plot you're drawing, e.g., color is used for lines/points, fill is used for error intervals
+#   (or in some cases both are relevant, e.g., in bar plots, color will determine the outline color, and fill the inside color)
+
+# (also see: https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)
+
+plot <- ggplot(high, aes(prestige.c, fit)) +
+  # geom_point(): use original data to plot datapoints
+  # note, you must use as.factor here to turn this into a variable with two levels,
+  # or else it will try to plot this as a continuous variable
+  geom_point(data = df, 
+             aes(prestige.c, income, color = as.factor(type.e)),
+             alpha = .4, size = 1, show.legend = T) +
+  
+  # geom_ribbon(): draw error interval around regression line (for type.e = 0.5)
+  geom_ribbon(data = high, aes(ymin = lwr, ymax = upr),
+              alpha = .3, fill = "orange") +
+  
+  # geom_line(): draw regression line (for type.e = 0.5)
+  geom_line(data = high, aes(prestige.c, fit),
+            size = 2, color = "orange", linetype = "dashed") +
+  
+  # geom_ribbon(): draw error interval around regression line (for type.e = -0.5)
+  geom_ribbon(data = low, aes(ymin = lwr, ymax = upr), alpha = .3, fill = "green") +
+  
+  # geom_line(): draw regression line (for type.e = 0.5)
+  geom_line(data = low, aes(prestige.c, fit), size = 2, color = "green") +
+  
+  # define the colors we want to use for each job type, and make sure they have readable labels
+  scale_color_manual(name = "Job Type", labels = c("BC", "WC"), values = c("green", "orange")) +
+  
+  # generate plot labels
+  labs(x = "Prestige", y = "Income", title = " ")
+
+# show plot
+plot
+
+```
+
+# Questions?
+
+
+
+
