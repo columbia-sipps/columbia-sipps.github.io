@@ -27,5 +27,6 @@ A few days before each session, please check this page to make sure you've downl
 **After the workshop:**
 <ul>
 <li><a href="/workshop_files/2022/coding-01/01_lessonKey.Rmd" download>RMarkdown file (with answers)</a>
+<ul><li>**Note:** If you have trouble knitting your Rmd file, find the code chunk where you load in a set of packages (using the `library()` function), and *remove* the text `eval = False`.</ul>
 <li><a href="/workshop_files/2022/coding-01/coding-intro.pdf" download>Introduction to coding slides</a>
 </ul>
