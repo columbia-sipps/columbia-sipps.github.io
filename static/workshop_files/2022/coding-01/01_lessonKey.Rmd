@@ -109,10 +109,12 @@ install.packages(pkgs = c("tidyverse",
 
 Then, once they're installed on your computer, you again have to tell R to _load_ the packages into your active R session. This allows you to quickly and easily call the functions in those packages. While you only have to install packages once, you have to load them in every R session that you want to use them. (Why they don't load automatically? I don't know! But if you'd like to configure R to load packages automatically every time you open R, see [these instructions](https://www.r-bloggers.com/load-packages-automatically-in-rstudio/).)
 
-```{r, eval = FALSE}
+```{r, eval = TRUE}
 # Use library() to load a package ONCE IT'S INSTALLED.
 # You can put the package name as a string
 library("car")
+library("psych")
+
 # OR unquoted, as a variable name. Some functions don't care whether you use quotes or not, but some do.
 library(tidyverse)
 ```
@@ -189,13 +191,13 @@ If you would like to use an absolute file path, simply type out your entire comp
 
 ```{r, eval = FALSE}
 getwd()
-read_csv("/Volumes/Google Drive/My Drive/Grad School/Outreach/SIPPS/instructor_materials/Coding_Lesson1/shakes.csv")
+read_csv("/Volumes/GoogleDrive/My Drive/grad-school/SIPPS/coding-basic/01_setup/shakes.csv")
 # replace everything except for shakes.csv with your own file path!
 ```
 If you would like to instead use a relative file path, then when pointing R to your file, you need only write out the path *relative* to this R file. If you've opened this R file from an R Project file, the path will be set automatically. You can also manually set it using the function `setwd()`.
 
 ```{r, eval = FALSE}
-setwd("/Volumes/Google Drive/My Drive/Grad School/Outreach/SIPPS/instructor_materials/Coding_Lesson1/")
+setwd("/Volumes/GoogleDrive/My Drive/grad-school/SIPPS/coding-basic/01_setup/")
 read_csv("shakes.csv")
 # replace everything except for shakes.csv with your own file path!
 ```
@@ -208,6 +210,7 @@ To load the file into your R environment, give it a name (e.g., `shakes`) and us
 
 ```{r loadfile, message=FALSE}
 shakes <- read_csv("shakes.csv")
+getwd()
 ```
 
 Once you have done so, you will see this object listed in the Environment tab in the upper right section of your RStudio window.

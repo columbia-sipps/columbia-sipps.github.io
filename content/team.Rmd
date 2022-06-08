@@ -310,8 +310,8 @@ Columbia University<br>
 <div align="center">PI: Dr. Niall Bolger</div>
 </div>
 <div class="col-sm-4">
-<h4 style="text-align:center">**[Higgins Lab](https://higginsweb.psych.columbia.edu/){target="_blank"}**</h4>
-<div align="center">PI: Dr. Tory Higgins</div>
+<h4 style="text-align:center">**[Shohamy Lab](https://shohamylab.zuckermaninstitute.columbia.edu/){target="_blank"}**</h4>
+<div align="center">PI: Dr. Daphna Shohamy</div>
 </div>
 </div>
 <br><br>
@@ -338,6 +338,21 @@ Columbia University<br>
 <div class="col-sm-4">
 <h4 style="text-align:center">**[Dynamic Perception and Memory (DPM) Lab](https://www.dpmlab.org/index.html){target="_blank"}**</h4>
 <div align="center">PI: Dr. Chris Baldassano</div>
+</div>
+<div class="col-sm-4">
+<h4 style="text-align:center">**[Social Cognitive and Neural Sciences Lab](https://www.freemanlab.org/){target="_blank"}**</h4>
+<div align="center">PI: Dr. Jon Freeman</div>
+</div>
+</div>
+<br><br>
+<div class="row align-items-center">
+<div class="col-sm-4">
+<h4 style="text-align:center">**[Living Lab](http://www.alfredospagna.com/the-living-lab/){target="_blank"}**</h4>
+<div align="center">PI: Dr. Alfredo Spagna</div>
+</div>
+<div class="col-sm-4">
+<h4 style="text-align:center">**[Translational Research on Affective Disorders and Suicide Lab](https://www.auerbachlab.com/){target="_blank"}**</h4>
+<div align="center">PI: Dr. Randy Auerbach</div>
 </div>
 </div>
 <hr>
