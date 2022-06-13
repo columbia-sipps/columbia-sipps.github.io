@@ -1,0 +1,774 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Welcome to the Programming Fundamentals workshop - the 2nd workshop in SIPPS 2022! 
+
+This tutorial has been adapted from [Columbia University Psychology Department's Scientific Computing Workshops](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"}
+
+
+# Links to Files and Video Recording
+
+The files for all tutorials can be downloaded from [SIPPS website](https://columbia-sipps.github.io/workshops/){target="_blank"}. The recordings from this session will also be posted on the same. 
+
+
+# Variables
+
++ a **variable** is how we store information in a way that the computer can operate on
++ it has a **value:** the info itself
++ and a **name:** the cue by which we call upon the info to the computer
+
+If you think about how variables like x and y are used in algebra, calculus, etc, that can be a useful way to conceptualize them.
+
+Variables can contain numbers. We *assign* a value to a name.
+
+```{r}
+# Let's store the number 20 under the variable name first.var 
+# Do this using the left-arrow operator. It's like 20 is going "into" the label first.var
+
+```
+
+
+```{r}
+# Let's do this again by storing 0.5 in second.var 
+
+```
+
+How do you see what's stored in second.var?
+
+```{r}
+#Just type second.var to see what's in it. 
+
+```
+
+Variables can also contain other stuff (literally almost anything) but we'll talk about this later!
+
+Variables live in the **environment**. The environment is your workbench in R: this is where all data are held, so that you can access and manipulate that data using R commands. It's sort of like R's working memory, where information is held for immediate use. You can see all the objects currently saved in your environment in the Environment pane.
+
+Information doesn't just exist in the environment--it can also be printed to **console.** Remember that the console is the place where you talk to R (type in commands), and R talks back to you (shows you the result of those commands).
+
+The console is a great place to check the contents of variables, and perform quick calculations. However, information printed to console is _not automatically saved to a variable,_ so if you know you will want some data for later you must assign it to a variable in your environment!
+
+Since variables are labels for pieces of information, a variable name can be used to refer to any piece of data where you would otherwise call that data directly. For example:
+
+```{r}
+# Add 20 and 10
+
+```
+```{r}
+# Now add first.var with 10. 
+
+# Since first.var contains the value 20, this outputs the SAME result to console as the above code chunk
+```
+
+Variables don't just have to contain pure numbers; you can assign the output of commands to variables.
+
+```{r}
+# store the addition of 10 to the first.var in third.var
+
+```
+
+You can overwrite the values of variables, simply by assigning some other value to the same name.
+
+```{r}
+# With the values of other variables
+
+# OR of the current value of the variable. Note that R will ALWAYS use the PREVIOUS value of a variable in all the calculations BEFORE re-assigning the final result to the variable name.
+
+# You can also delete variables from your environment
+
+```
+
+With regards to variables, you can make the name of a variable almost whatever you want, within reason. A variable name can legally contain:
+
+* letters (upper or lowercase, R is case sensitive!)
+* numbers
+* period (.) and underscore (_)
+
+R (and basically all programming languages) require variable names to START with a LETTER. (Try initializing a variable name starting with a number and see what happens.) Other allowed characters can be anywhere in the variable name except for first.
+
+Beyond this, here are some recommendations we strongly urge you to follow as well when naming variables:
+
+* Name variables informatively, not arbitrarily! The name of a variable should tell you something about what information it contains. `raw.data` is better than `d`.
+* Separate words in multi-word variable names using one of the following conventions (but be consistent!):
+    + underscore_separated_names
+    + period.separated.names
+    + camelCaseNames 
+* Name variables succinctly, but informatively. Abbreviations are okay if they are standard throughout your code. `max.val` is okay instead of `maximum.value`.
+* When in doubt, use lowercase letters.
+
+# Data types
+
+So what kind of data can be stored and manipulated in R? There are different "types" of data that programming languages know how to handle. Each is encoded in a slightly different way, and can have different things done to it.
+
+## Numeric data
+
+Numeric data encompasses any (real) number. Positive, negative, integer, decimal, all fine.
+
+```{r}
+# assign 280 to first.var
+
+```
+
+```{r}
+# store 41.5 in second.var
+
+```
+
+## Logical data
+
+Logical data are a special case of numbers, representing `TRUE` and `FALSE`.
+
+Note that this is case-sensitive: R requires `TRUE` and `FALSE` to be written in all caps!
+
+Logical data can be math-ed on as if it were numeric; `TRUE` is 1 and `FALSE` is 0. This is especially useful when multiplying--
+
+```{r}
+ # TRUE - Like multiplying by 1. the other number stays the same!
+```
+
+
+```{r}
+ # FALSE -  Like multiplying by 0. the other number becomes 0!
+```
+
+Logical data are used most often as informational flags. We'll see this later in other topics and tutorials.
+
+## Character data
+
+This is letter/word-based data. A piece of character data is called a **string.**
+
+R understands that this data is made up of text, and treats it in a special way. You might encounter this if you are storing free-response text data in R, or perhaps if you have a list of word-based stimuli stored in R as part of your task data.
+
+```{r}
+# store the word statistics in text.var 
+
+```
+
+```{r}
+# store a phrase of your choice in text.var.2
+
+```
+
+Here are just a couple of the functions that specifically operate on character data.
+
+You can coerce things to upper or lowercase with the right function:
+
+```{r}
+
+```
+
+You can also count the number of characters. Note that spaces count as characters!
+
+```{r}
+
+```
+
+Of note is that you CANNOT do arithmetic on strings.
+
+```{r}
+
+```
+
+The following will return an error if you try to run it:
+
+```{r, eval = FALSE}
+not.a.number + 1
+```
+
+So far, we've looked at the basics of how to work on a single data point at a time. But when we work in research, or in the sciences, we typically deal with larger data sets - with so many data points. We'll now take a look at a common structure of storing these larger data sets.
+
+
+# Data structures
+
+## Data frames
+
+This is the data structure where it happens! Imagine your usual rectangular Excel spreadsheet that you might have for your study data, where each column of the spreadsheet contains a meaningful category of information (e.g. subject ID, task condition, trial response), and each row contains one observation of information (one subject, or one trial within subject, etc). A dataframe is basically that.
+
+
+Let's load in a dataframe and see what it looks like. *You can also assign whole dataframes into variables*  This will help us access all the content of a dataframe so we can do data manipulation, plotting, and stats on it later. We'll see more of this moving forward.
+
+First,  let's load in the tidyverse package. This package (and others you installed in the first tutorial) contains the "functions" that you'll use more frequently.
+```{r}
+
+```
+
+Once you've loaded the tidyverse group of functions, you can now use the commands in R as usual. 
+
+Now, let's load shakes.csv into a variable called "shakes". 
+
+Remember, if you did not open this Markdown using the .Rproj file, then you'd have to set your working directory. Hint: You can do that using the setwd function. For e.g. in this code, rename directory1 and directory2 with your directory names: `setwd("/directory1/directory2/02_intro-programming")`
+
+```{r}
+# read in the shakes.csv using the read_csv function
+
+```
+
+Now take a look at the variable "shakes" in your environment by double-clicking on it.
+
+A **dataframe** is a special rectangular data structure in R that is *column-optimized.* A dataframe is essentially a series of vectors *of equal length* stuck together in a meaningful way. Each column contains all the observations of a particular meaningful grouping. Each row is the nth value across columns, containing one complete observation from all the columns. Each observation can be a subject, a trial, a group, whatever--any one meaningful something.
+
+
+### Dataframe columns have data types too
+
+It's not only single pieces of information that have a defined data type. Whole dataframe columns of values have data types as well. (This is a requirement of dataframe columns: that they are composed of a set of values that are all the same data type.)
+
+R will tell us a bit about the data types in our dataframe columns when we print the dataframe to console. Let's take a look:
+
+```{r}
+
+```
+
+Just below the name of each column, we see some abbreviations: `<chr>` and `<dbl>`. These are the data types of these columns. `<chr>` means that all values in that column are character, or text, data. `<dbl>` stands for "double", which is R-speak for numeric data with decimal-point precision.
+
+Just as you can do arithmetic on single numeric values, and text-manipulation operations on single character strings, you can do these operations on whole dataframe columns as well. We'll see this soon!
+
+Notice that dataframes can be read in from CSV files. These files can be opened in other programs like Microsoft Excel, where you can see that they look like any garden-variety spreadsheet.
+
+
+### Indexing into dataframes
+
+Sometimes, you might need to access just one column of a dataframe. For example, you just care about the number of words columns (n.words) in the shakes data set.
+
+We use a special operator to do this: the dollar sign `$`. `$` tells R when a variable name, in this case a column name, is a sub-variable of a larger variable, in this case a dataframe. In this way, we can tell R that `n.words` is not floating around on its own, but is a column in the dataframe `shakes`.
+
+```{r}
+# get `n.words` column in the shakes dataframe using $ 
+
+```
+
+You may also notice when typing in RStudio, that if you type `shakes$`, you'll suddenly see a little tab-complete selector pop up, listing out the names of all the columns in `shakes`. You can either type more to narrow down to the column you want, and then hit Tab to auto-complete the column name, or use the arrow keys to scroll up and down through the column names to select the one you want (and hit Tab to auto-complete in this case as well).
+
+```{r}
+#get the `title` column of the shakes dataframe this time (try using the auto completer pop-up)
+
+```
+
+
+Note that when you call the column in this way, the printed output doesn't look like it did when we printed the entire dataframe. When you call a dataframe column on its own using `$`, R temporarily treats it as separate from the dataframe that it came from.
+
+```{r}
+
+```
+
+A dataframe column on its own like this, separated from the rest of the dataframe, is a _vector._ Vectors can exist totally separate from dataframes, or they can be bound together as dataframe columns. A vector can have any number of values in it, but is always width 1 (which makes sense when you think of them as columns of data). 
+
+PS: Every column of a dataframe is a vector on its own, so you can extract and manipulate individual columns of a dataframe. But you can NOT manipulate individual rows of a dataframe in the same way. We will try this later and you'll see that an individual row of a dataframe behaves as a dataframe with only one row in it. Why might this be the case?
+
+
+## Vectors
+
+A vector is a sequence of pieces of information that are **all the same data type** (for the computer) and meaningfully related (for you). A vector is like one column of data with a particular length (depending on the number of elements in the vector).
+
+```{r}
+# construct a vector with 1, 2, 3, 4 and 5 as it's elements
+
+```
+
+
+```{r}
+# find the length of the vector
+
+```
+
+The individual pieces of data inside one vector are called **elements.**
+
+
+Fun stuff: notice that a single piece of data is in fact a vector with length 1.
+
+```{r}
+# find the length of first.var
+
+```
+
+Vectors, whether or not they're dataframe columns, can be any of the data types we just learned about.
+
+```{r}
+# create a vector of names of fruits called char.vector
+
+
+# find the length of the vector
+
+```
+
+
+```{r}
+# create another vector with 4 logical values
+
+```
+
+As you can see above, the function `c()` is the primary way to construct freestanding vectors. You list out all the pieces of data you want to put into the vector inside of `c()`, separated with commas.
+
+Buuuut R lets you do some special stuff to create certain useful numeric vectors. You can use the colon `:` between any two integers to create a vector of all the integers between the values on either side of the colon (inclusive).
+
+```{r}
+# a 2nd way to store elements 1,2,3,4,5 in the vector
+
+
+
+```
+
+Most of the time, you will not need to work with vectors outside of dataframes. If you do need to work with a vector on its own, you may need to grab individual elements within that vector.
+
+### Indexing into vectors
+
+When you need to access individual pieces of information inside of a vector, you'll do that by calling the vector and adding an additional "address" to specify which piece of data inside the vector you want. This address is called an **index.**
+
+To tell R that you are indexing into a vector, you put the index inside hard brackets [] after the name of your vector variable.
+
+You can index one piece of data, by putting one index number inside the hard brackets, to index the nth value of that vector. R starts indexing at 1; the first element in your vector is at index 1.
+
+You can only index into your vector using VALID indices; that is, indices that actually correspond to elements in the vector. Essentially, you can't index using a number that is larger than the length of your vector.
+
+```{r}
+# index the first element of char.vector
+
+```
+
+You can also index multiple pieces of data out of a vector. This returns another, shorter, vector! You do this by putting a valid numeric vector inside the brackets.
+Remember the colon `:` operator from above? It's handy to create vectors for indexing a sequence of values:
+
+```{r}
+# index the first 3 elements of char.vector
+
+```
+
+But you can also index using any valid numeric vector constructed using `c()`.
+
+```{r}
+# index the 1st and 4th element of char.vector
+
+```
+
+You can also index to _exclude_ elements from a vector, using negative numbers. This will return a vector _missing_ the values you negative-indexed.
+
+```{r}
+# exclude the 2nd element from char.vector
+
+```
+
+# Other data types
+
+These data types make more sense when presented as vectors/dataframe columns--you'll rarely need to deal with objects of these types that are length 1. Now that you know about vectors & dataframes, we'll take a look at the following data types:
+
+## Factor data
+
+Character data, as described above, is R's all-purpose data type for text-based data. But R knows that sometimes you might have a column composed of text to label your within-subject task conditions, between-subject groups, etc. **Factor data** is a data type built on top of character data that gives you special properties that are useful when a column/vector contains _grouping_ information.
+
+For example, we can consider the `genre` column from the `shakes` dataframe we loaded previously. This column contains categorical information about which of three genres each Shakespeare play belongs to, so this is a natural fit for the factor data type.
+
+```{r}
+# This column wasn't originally factor, so I'm coercing it to factor here.
+# There are a suite of R functions designed for pushing data from one type to another
+
+```
+
+Observe how this vector now has _levels;_ these are the different categories of the variable. Factor levels are ordered alphabetically by default; you can reorder the levels into a more meaningful order if you want.
+
+We won't worry too much more about factor data for now, but here are a couple of factor data's pros and cons relative to regular character data:
+
+* PROS: You get special properties that help when graphing, and when creating models for data
+* CONS: While factor data is composed of text, it doesn't behave like character data in every single case, and so you have to be very careful with factor data because sometimes you don't get the outputs you expect if you were to run the same operation on character data.
+
+## Non-data data
+
+You know what's the worst? Missing data! But it happens to the best of us. When you have a missing data point in an Excel spreadsheet, you might leave that cell blank. But in R, you need to put a placeholder in that spot. There's a special data type, `NA`, used as the missing data placeholder.
+
+```{r}
+#create a na.vector with some elements, one of which is NA
+
+```
+
+Depending on what you are doing with the data, the output of a function to `NA` will be different. 
+
+
+When you call vectorized (one-to-one) functions on a vector containing `NA`, the element in the output vector corresponding to the `NA` in the input vector will be `NA`.
+
+```{r}
+ # Here every element of na.vector gets 1 added to it, except the NA
+```
+
+When you call summarizing (many-to-one) functions on a vector containing `NA`, the summary value will be `NA`...
+
+```{r}
+ # here, your answer is NA, because R can find the mean/average of some numbers when one of them is NA
+```
+
+unless you specify in the function that you want the value to be calculated as if the `NA`s aren't there.
+
+```{r}
+# calculate mean of na.vector excluding the na
+
+```
+
+# Operations on data
+
+Ok, so far we've seen how we can store data (for e.g. in a variable). But the purpose of using programming is not just to store the data - it is to use the data, play around with it, ask questions and find answers. 
+
+There are different types of operations you can do on the data. 
+
+## Arithmetic operations
+
+We've already looked at addition in a few cases: '+'
+
+You can do your usual math on numeric data, like so:
+
+```{r}
+# add first.var and second.var
+
+```
+
+
+```{r}
+# now, subtract second.var from first.var
+
+```
+
+The basic arithmetic operators are specified as:
+
+* `+` addition
+* `-` subtraction
+* `*` multiplication
+* `/` division
+* `^` exponent
+* `()` parentheses
+
+R obeys PEMDAS!
+
+## Relational operations
+
+Most of the time, when you want to do things in R, you want to do them in _some conditions but not others._
+
+**Relational operators** are the first key to making this happen. These are essentially inequality operators like the ones you would encounter in algebra.
+
+The following is a **relational statement.** This is a command involving a relational operator that returns `TRUE` or `FALSE` based on whether the statement is true or false.
+
+```{r}
+# is 2 greater than 1
+
+```
+
+Here are a few more relational statements. Do you expect each one to return `TRUE` or `FALSE`, based on what's written?
+
+```{r}
+# is 2 lesser than 1
+
+```
+
+```{r}
+# is 99 the same as 99
+
+```
+
+```{r}
+# is 99 not equal to 100
+
+```
+
+Here are the relational operators:
+
+* `>` (greater than)
+* `<` (less than)
+* `>=` (greater than or equal to)
+* `<=` (less than or equal to)
+* `==` (is equal to--NOTE that it is _two_ equals signs, _one_ equals sign does something different)
+* `!=` (is not equal to)
+* `%in%` (is contained by; this is useful when you need to see whether the element on the left matches any of a vector of elements on the right)
+
+Here's a few examples of `%in%` in action, in case this is a little less intuitive than the others:
+
+```{r}
+# is 1 in 1:5
+
+```
+
+```{r}
+#create a char.vector for fruits
+
+
+# is apple in char.vector
+```
+
+```{r}
+# is orange in char.vector
+
+```
+
+Note that `%in%` takes a _vector_ on the right side, and looks for _full matches_ from the element on the left to the elements on the right. As we touched on in Part 1, it may be helpful to think of a vector as a single column of data.
+(In other words, it is looking for the first thing in the second thing)
+
+To match a piece of character data into a single, LONGER piece of character data on the right (e.g. matching one word into a sentence), you have to use other strategies we won't get into here.
+
+In most cases, you can use `==` and `!=` to compare character data too--if you want to see if one piece of character data is the same as another piece.
+
+```{r}
+# compare "word" with "word"
+
+```
+
+```{r}
+# save the word "statistics" in text.var
+
+```
+
+
+```{r}
+# compare text.var with the word "statistics" 
+
+```
+
+
+## Logical operations
+
+Relational statements will get you a long way. Sometimes, though, you need to know whether groups of conditions are true or false. You can combine the `TRUE`s and `FALSE`s of relational statements using Boolean logical operators.
+
+These are the core Boolean operators you'll need in most cases:
+
+* `!` (NOT operator; this returns the opposite of whatever follows it)
+* `&` (AND operator; this returns `TRUE` if both statements on either side are both true
+* `|` (Pipe, or shift-backslash--OR operator; this returns `TRUE` if _at least one_ of the statements on either side is true)
+
+Here are examples of the Boolean operators at work.
+
+The `!` NOT operator:
+
+```{r}
+!TRUE # What do you expect this to return?
+```
+
+The `&` AND operator:
+
+```{r}
+# See what this returns 
+```
+
+```{r}
+ # Versus this
+```
+
+The `|` OR operator:
+
+```{r}
+
+
+```
+
+```{r}
+
+```
+
+Relational operators also obey order of operations re: parentheses (). See below:
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+Other useful functions will also output `TRUE` or `FALSE`, so you can use these similarly to relational statements to generate logical output based on the content of some data.
+
+# Functions
+
+We've already used a variety of functions (`mean()`, `length()`, `read_csv()`, `toupper()`), so the behavior of functions should be somewhat familiar to you. **Functions take inputs, do stuff to them, and give you an output that's had the stuff done to it.**
+
+## Anatomy of a function
+
+Right now, we'll take a moment to go over the pieces of a function a little more formally so you know how to use them to their fullest extent.
+
+Below is an example (fake) function call. This function takes the inputs `input1` and `input2`, does the function `function()` to those inputs, and returns an output which can be stored in a variable. Here are the relevant pieces:
+
+`output <- function(argument1 = input1, argument2 = input2)`
+
+- `function()`: This is the function that will DO SOMETHING to your inputs.
+  Whenever you are referencing a function by name, you should always write it with the two parentheses () after the function name so people know you're referring to a function and not a variable.
+  The name of a function will tell you something about what a function does. You can/should look it up if you're not sure though!
+- `argument1`, `argument2`, etc: These are **arguments** to a function--this is the information that a function _expects_ and _is prepared to operate on_.
+  The name of an argument will tell you something what an argument represents and how it should be formatted. (More on this later)
+- `input1`, `input2`, etc: These are variables that you created that will actually get fed into your function. This is the information that will actually get operated on. These can be data that live in your environment, or these can be settings (like switches and knobs, if your function was an actual machine) that are turned to a specific value.
+- `output`: This is the variable that will hold your output information.
+  As you can see, we are _assigning_ the value that's output from `function()` to the variable `output` using the `<-` left-facing arrow operator. Just like before with printing variable values to console, if you run a function without assigning its output to a variable, the output will print to console (so you can read it) but it will not be stored anywhere (so you can't perform any further operations on that output).
+  
+You can find out more about a function by typing ?function_name() in the console or in a R code chunk.This will open up the details of the function in the Help pane on the right. The details will show you how to use the function, the input arguments, and the output etc. 
+
+```{r}
+# try getting help on a function called sum() 
+
+```
+
+You can also write your own function, but for the sake of time we won't go into it in today's tutorial. [Here](https://swcarpentry.github.io/r-novice-inflammation/02-func-R/){target="_blank"} is a link if you'd like to know more about how to write your own functions. 
+
+# Good practices 
+
+## File structure
+
+It is important to make sure you are saving your code and data in the right folder, typically the same folder. We also recommend that you start new projects with a .Rproj file.  
+
+### Starting an .Rproj file
+
+- Open up RStudio
+- Go to the File menu and click New project
+- Then either choose the same directory or a new working directory and follow the instructions on the next pages
+- You can then create a Rmarkdown file within that Project
+
+The next time you want to work on the same code, go to the folder in your directory/file explorer, and click on the .Rproj file to open it. 
+
+[Here](https://ssc.wisc.edu/sscc/pubs/R_intro/book/1-4-rstudio-projects.html){target="_blank"} are some more detailed instructions on how to create your own R projects.
+
+### Sample file structure
+
+Typically you will have one folder per project, e.g. let's says SIPPS_proj
+
+Within SIPPS_proj, you would create all your necessary folders. For example, you could have the following folders:
+
+- lit: where you save all the papers you're reading
+- notes: you could store all the meeting notes (with your mentor etc.) in this folder
+- analysis: here you could save your data file (e.g. a csv file) along with all your code files (.Rproj + all the other .Rmd files)
+
+### Use data file as input only
+
+This is again *very very important*. You never want to modify the original data file (for example, the 'shakes.csv'). So always make sure to save your data file into a variable. When you're done with your cleaning and/or analysis, you will save it out with a new name (for e.g. "shakes_cleaned.csv" ). We'll put this into practice in the future workshops.
+
+
+[Here](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/){target="_blank"} are some more details about best practices to store your data files and how to use projects. This may be a little advanced for now, but be sure to visit this when you're working on an independent project. 
+
+## Pseudocode
+
+This is **so important to do before you write a single line of code.**
+
+Before you try to write any code, you should talk through what you want to do in plain English before you actually try to code it. This is how you will actually figure out what you need your code to do, and then what functions you need to do the things you want.
+
+As an example, let's look into the shakes dataframe again. 
+
+First, let's take a look at it's data again. 
+```{r}
+
+```
+
+Let's say we are interested in the mean number of words written by Shakespear in his plays. So, we want to find the mean of the n.words column. Here are the steps we'd have to take to do this:
+
+1. First call the column n.words from the dataframe
+2. then find the mean for that column
+3. Show that on the console
+
+The next step in the pseudocode is to write the actual functions I'd be using. For example: 
+
+1. Get the column by typing `shakes$n.words` to get the n.words column
+2. To find mean, use mean() function on the `shakes$n.words`
+3. Print to the console without saving it in a variable
+
+Now put this into action in the code chunk below.
+```{r}
+# put the above psuedocode into action for finding the mean number of words written in Shakespear's plays
+
+
+```
+This is a very simple case of using pseudocode, but as we move into data cleaning and analysis, you will see how this can be really helpful. It can break complex analysis into simple steps where you just have to do one function at a time.
+
+If you go back and look through this tutorial, you'll also see that there are a lot of code chunks where I've written comments in the form of pseudocode.
+
+## Testing your code
+
+Be sure to test your code once you've written it. Test it at **every step** with some fake data that you can track. 
+
+For e.g. let's say you want to check that the function `mean()` is returning the right answer. In reality, you know this will because it is a built-in function in R. But for the sake of this tutorial, let's assume that you created this `mean()` function. 
+
+You can test the function by giving some fake data
+```{r}
+#create fake_data with all 1s, and find the mean of that
+
+```
+You know the mean of the fake_data should be 1 and you see that it does give you 1. 
+
+Similarly, let's test with another fake_data
+```{r}
+#create fake_data_2 with all 0s and find the mean of that
+
+```
+There are many more ways of testing code, but this is the minimum you should do **at every step**.
+
+## Getting assistance
+
+### The help docs
+
+In RStudio, you can use the "Help" tab in the lower right corner of your window to search for the help page for a function you're having trouble with. You can type the name of your problem function into the search bar and pull up the help page!
+
+You can also use the function `?` in console, in front of the function you're looking up, to pull up the same info in the "Help" tab. For example, to open the help page for the `mean()` function, I would run `?mean` in console.
+
+The help document for the function you're looking for should have a description of:
+
+* the function's arguments
+    + what type of data they expect
+    + what part of the function's behavior they control
+* what they intend the function to be used for
+* explanations of any equations used inside the function
+* examples of function calls that work, that you can copy and paste into console and run to inspect output
+
+### The internet
+
+Sometimes you'll run into issues that the help docs don't completely resolve, and that's okay. The internet is here to help, if you know how to ask it!
+
+#### How to Google for help
+
+Sometimes it can be unclear what keywords to enter to find a solution to your code issue. The following strategies can give you a handle:
+
+* Start your query with "r"--it's not perfect, since it's a single letter and not a full word like "python" or "matlab", but this helps to return results that are R-related
+* If you're looking for help with a function from a specific package, include the package name in your query
+* If a command you're trying to run fails, and returns an error message, enter the name of the function and _copy and paste the error message into the query_
+    + your query should look like "r [package name] [function name] [text of error message]"
+* If you aren't getting an explicit error message, but a command you're trying to run is not behaving as you expect, try "r [package name] [function name] won't [the task you're trying to do]"
+* If you have your pseudocode planned out, but don't know what functions to use to execute your pseudocode, try "r how to [your pseudocode here]"
+    + be sure to remove any variable names that are specific to your own data before you Google
+
+#### Stack Overflow and other Q&A sites
+
+Often, a successful Google search for help will yield links to posts on Stack Overflow, a Q&A site where people can post questions about code to solicit answers from other users, or from other Q&A sites (email records from old R help mailing lists, for example).
+
+When reading a Stack Overflow post, look for the following:
+
+* Read the question to determine how similar this asker's situation is to yours (and thus how likely the posted answers are to solve your problem)
+    + Good question posts will have example code that should run if you copy and paste it into console. If this code is there, you can run it to see if it looks like your own data situation
+* Check out the provided answers
+    + If there is a green check mark on the left of the "top" answer, the question asker has "accepted" the answer, or marked it as the most helpful answer. It has solved the asker's problem, and hopefully will solve yours too!
+    + Answers may have upvotes from other users (not the question asker). You can browse answers, including the "accepted" answer, to try multiple possible solutions and find the one that's best for your situation.
+    
+Other Q&A sites may or may not have as smooth of a setup as Stack Overflow, but if you are careful to inspect the question to see if it's relevant to your own problem, you should be able to assess whether the answer provided will help you.
+
+#### R user blogs
+
+Plenty of R users post little tutorials (like this one!) online to help other R users. I've encountered many of these blog posts while Googling for help, and found many of them useful! Sometimes these may be from larger sites like [r-bloggers.com](https://www.r-bloggers.com/) that post submissions from many users, or they may be from personal blogs maintained by one person.
+
+A good blog post will, like a good Stack Overflow post, have example code that you can copy/paste into your own console and run to follow along with the blog post. This way, you can see if the blog post indeed applies to your particular issue.
+
+### Asking someone else
+
+Sometimes, though, after careful Googling and combing through search results to test all suggested solutions, you still don't have a solution for your R issue. At this time, you can ask someone else for assistance.
+
+You can ask any number of folks, including people in your lab, people in your department, and/or people on the internet (e.g. posting to a help list). 
+
+#### How to ask
+
+When asking someone for help with your R issue, they'll be best equipped to help you if you provide them with the right info about your problem to give them an idea of what to suggest. Be sure to provide the following pieces of information to anyone you're asking for help from:
+
+* The nature of the dataset you're working with (what kinds of data you're trying to analyze, what data types they are, etc.)
+* Your pseudocode, so they know what exactly you're trying to accomplish
+* The code that isn't working
+    + If contacting someone through email/help list/etc, you can copy and paste the code that's not working
+    + Clarify any variable names in the code that are specific to your data
+    + If using functions from a specific package, say what those packages are
+    + If code fails with an error message, include the text of the error message
+* What you've tried already to solve this
+    + If you tried solutions in any Stack Overflow posts, R user blogs, etc, include links to those pages
+    + Copy and paste any solution code you tried if it still isn't working, explaining variable names and including error messages if applicable
+
+Including this info will make it much easier for someone else to identify the cause of the issue you're experiencing and suggest solutions for you. Help them help you!
+
