@@ -14,3 +14,12 @@ knitr::opts_chunk$set(echo = TRUE)
 On this page, you will find resources associated with the Research Skills workshop series.
 <br><br>
 Before each session, check this page for any resources you should download prior to the workshop. After each session in the series, the page will be updated with any additional materials that were referenced during the workshop.
+
+<hr>
+
+### Week 1: What is a good research question?
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/GoodResearchQuestion.pdf" download>Workshop slides</a>
+</ul>

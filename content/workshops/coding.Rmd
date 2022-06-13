@@ -30,3 +30,13 @@ A few days before each session, please check this page to make sure you've downl
 <ul><li>**Note:** If you have trouble knitting your Rmd file, find the code chunk where you load in a set of packages (using the `library()` function), and *remove* the text `eval = False`.</ul>
 <li><a href="/workshop_files/2022/coding-01/coding-intro.pdf" download>Introduction to coding slides</a>
 </ul>
+
+<hr>
+
+### Week 2: Programming fundamentals
+
+**Before the workshop:**
+<ul>
+<li>please create a folder named `02_intro-programming` on your computer
+<li>download these files within that folder: <a href="/workshop_files/2022/coding-02/shakes.csv" download>data file</a>, <a href="/workshop_files/2022/coding-02/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-02/02_intro-programming.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-02/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>

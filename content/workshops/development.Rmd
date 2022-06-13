@@ -14,3 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 On this page, you will find resources associated with the Professional Development/Journal Club workshop series.
 <br><br>
 Before each journal club session, check this page for details about which article that will be discussed. After each session in the series, the page will be updated with any additional materials that were referenced during the workshop.
+
+<hr>
+
+### Week 1: Panel with past SIPPS students
+<br>
+No additional workshop materials.
