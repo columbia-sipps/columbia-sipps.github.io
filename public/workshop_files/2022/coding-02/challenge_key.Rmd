@@ -1,0 +1,194 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This challenge covers topics covered in the first **two workshops** of the SIPPS 2022 coding workshops. 
+
+This challenge has been adapted from [Columbia University Psychology Department's Scientific Computing Workshops](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"} and some materials provided by Ana DiGiovanni and Anna Vannucci. 
+
+For each of the following questions, the answer should be expressed as the output of a command or a series of commands.
+
+# Variables and numeric data
+
+1. Make a variable x that is the sum of 2 plus 2
+```{r}
+x <- 2 + 2
+```
+
+
+2.	What is 89 cubed?
+```{r}
+89 ^ 3
+```
+
+
+3.	What is the square root of 8? 
+HINT: Look up the following on Google- " R square root function"
+```{r}
+sqrt(8)
+```
+
+4. Create a variable that represents degrees in Fahrenheit; set it to a number corresponding to a temperature of your choosing.
+```{r}
+# This can be whatever number you please, I chose 72
+deg.f <- 72
+```
+
+5. Look up the formula for Fahrenheit-to-Celsius conversion, create a new variable corresponding to degrees Celsius, and set its value to the F-to-C conversion of your existing degrees Fahrenheit variable.
+```{r}
+deg.c <- (deg.f - 32) * (5/9)
+```
+
+6. Time to check our math! Create a third variable and set its value to the C-to-F conversion of your newly created degrees Celsius variable.
+```{r}
+deg.f.from.c <- (9/5) * deg.c + 32
+```
+
+7. Output the current value of the first Fahrenheit variable to console.
+```{r}
+deg.f
+```
+
+8. Output the current value of the second Fahrenheit variable to console. Visually verify (just by looking at the numbers for now) that these two values are equal.
+```{r}
+deg.f.from.c
+```
+
+
+# Vectors and character data
+1.	Create two vectors with the following elements: "vector_1" with elements 4, 8, 2, 9 and "vector_2" with elements 2, 4, 1, 3. 
+```{r}
+vector_1 <- c(4,8,2,9)
+vector_2 <- c(2,4,1,3)
+```
+
+
+2. Divide vector 1 by vector 2 and store it in a new variable "y" 
+```{r}
+y <- vector_1/vector_2
+
+```
+
+
+3. Find the 3rd element of the variable "y"  (indexing the elements using [ ] )
+```{r}
+y[3]
+```
+
+4. Create a variable "fave_foods" that stores a character vector of length 5. Each element is one of your favorite foods  (e.g. 1st, 2nd, ..., 5th favorite food).
+```{r}
+fave_foods <- c("chocolate", "icecream", "jalapeno chips", "fries", "watermelon")
+```
+
+5. Output the 2nd through 4th elements of "fave_foods" vector to console.
+```{r}
+fave_foods[2:4]
+# Less optimal, but still valid
+fave_foods[c(2, 3, 4)]
+```
+
+6. Create a variable "is_savory" storing a logical vector of length 5, where the nth element is `TRUE` if your nth favorite food is savory, and `FALSE` if your nth favorite food is sweet. For e.g. if your first favorite food is savory, the first element of "is_savory" will be `TRUE`, otherwise it will be `FALSE`.
+```{r}
+is_savory <- c(FALSE, FALSE, TRUE, TRUE, FALSE)
+```
+
+7. Output all of the savory elements in your fave_foods vector to console. 
+HINT 1: you can index a vector with a logical vector, and it will only return the elements that correspond to a "TRUE" value
+HINT 2: Try indexing the fave_foods vector using is_savory
+
+```{r}
+fave_foods[is_savory]
+```
+# Relational and logical operators
+
+Run this line of code
+```{r}
+fav_veggies <- c("carrot", "parsley","lettuce", "kale", "green pepper") #these are my guinea pig's favorite veggies
+```
+
+1. Check if the "red pepper" is one of my guinea pig's favorite food 
+
+```{r}
+"red pepper" %in% fav_veggies
+```
+
+2. Check if "parsley" is one of my guinea pig's favorite food
+```{r}
+"parsley" %in% fav_veggies
+```
+
+3. Is the sum of 57 and 8 greater than the multiplication of 5 and 12? (p.s. don't do this by hand - write the code below)
+```{r}
+(66+10) > (5*12)
+```
+
+Run the following chunk of code 
+```{r}
+# these are the weights of my guinea pigs in lbs (pounds)
+tuco_wt <- 2.6
+zuko_wt <- 2.2
+
+# these are the ages of my guinea pigs (in yrs)
+tuco_age <- 1.5
+zuko_age <- 0.9
+```
+
+4. According to my vet, if a guinea is older than a year, and weighs more than 2 lbs, I can give him a particular medication X. Can I give tuco and zuko this medication X? Save the results in a variable as `TRUE` (can give medication) or `FALSE` (cannot give medication) for the two of them. Do this using logical and relational operators (not just looking at the numbers)! 
+
+```{r}
+# can you give tuco med?
+can_tuco_med <- tuco_age > 1 & tuco_wt > 2
+can_tuco_med
+```
+
+```{r}
+# can you give zuko med? 
+can_zuko_med <- zuko_age > 1 & zuko_wt > 2
+can_zuko_med
+```
+
+5. I go to another vet for a second opinion. According to this second vet, if a guinea pig is older than a year OR weights more than 2 lbs, I can give him the medication X. Can I give my guinea pigs the medication in this case?
+
+```{r}
+can_tuco_med2 <- tuco_age > 1 | tuco_wt > 2
+can_tuco_med2
+
+can_zuko_med2 <- zuko_age > 1 | zuko_wt > 2
+can_zuko_med2
+```
+
+# Dataframes
+
+1. Read in shakes.csv into a variable names "shakes". Remember this is the same dataframe we looked at in the workshop with details about plays written by Shakespeare.  
+HINT: You will have to load in the package `tidyverse` first.  
+```{r}
+library(tidyverse)
+shakes <- read_csv("shakes.csv")
+```
+
+2. Check what types of variables you have in this dataframe
+```{r}
+shakes
+```
+
+3. How many total plays did Shakespeare write?
+```{r}
+nrow(shakes)
+```
+
+4. What genres of plays did he write? How many different genres of plays did he write, according to this data?
+HINT: you can use the function unique() to find only unique instances of each genre. 
+```{r}
+# names of genres of plays
+unique(shakes$genre)
+
+# number of genres of plays
+length(unique(shakes$genre))
+```
+
+5. What is the median number of words in a Shakespeare play? 
+HINT: use the function median(), instead of the function mean() we used in the workshop.
+```{r}
+median(shakes$n.words)
+```
+
