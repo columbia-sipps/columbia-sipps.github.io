@@ -33,4 +33,5 @@ Workshop materials:
 <li><a href="/workshop_files/2022/prof-dev/QuALMRI_LitReviewOutline_Template.docx" download>QuALMRI literature review outline</a>
 <li><a href="/workshop_files/2022/prof-dev/Godden1975_ContextDependentMemory.pdf" download>Godden & Baddeley (1975)</a>
 <li><a href="/workshop_files/2022/prof-dev/Kirkham2002_VisualStatisticalLearning.pdf" download>Kirkham et al. (2002)</a>
+<li><a href="/workshop_files/2022/prof-dev/HowToRead_slides.pdf" download>Workshop slides</a>
 </ul>
