@@ -1,0 +1,478 @@
+---
+title: "SIPPS Coding Workshops"
+subtitle: "Data Cleaning"
+author: "Manasi Jayakumar"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Welcome to the data cleaning workshop - the 3rd workshop in the coding series! 
+
+This tutorial has been adapted from [Columbia University Psychology Department's Scientific Computing Workshops](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"}
+
+# Links to Files and Video Recording
+
+The files for all tutorials can be downloaded from [SIPPS website](https://columbia-sipps.github.io/workshops/){target="_blank"}. The recordings from this session will also be posted on the same. 
+
+# Goals of this lesson
+
+Students will learn:
+
+1. Ahat are functions? 
+2. How to program using the best practices possible. 
+3. How to use the `%>%` operator to use some basic functions of `tidyverse` and check for missing data.
+
+# Functions
+
+We've already used a variety of functions (`mean()`, `length()`, `read_csv()`, `toupper()`), so the behavior of functions should be somewhat familiar to you. **Functions take inputs, do stuff to them, and give you an output that's had the stuff done to it.**
+
+## Anatomy of a function
+
+Right now, we'll take a moment to go over the pieces of a function a little more formally so you know how to use them to their fullest extent.
+
+Below is an example (fake) function call. This function takes the inputs `input1` and `input2`, does the function `function()` to those inputs, and returns an output which can be stored in a variable. Here are the relevant pieces:
+
+`output <- function(argument1 = input1, argument2 = input2)`
+
+- `function()`: This is the function that will DO SOMETHING to your inputs.
+  Whenever you are referencing a function by name, you should always write it with the two parentheses () after the function name so people know you're referring to a function and not a variable.
+  The name of a function will tell you something about what a function does. You can/should look it up if you're not sure though!
+- `argument1`, `argument2`, etc: These are **arguments** to a function--this is the information that a function _expects_ and _is prepared to operate on_.
+  The name of an argument will tell you something about what an argument represents and how it should be formatted. (More on this later)
+- `input1`, `input2`, etc: These are variables that you created that will actually get fed into your function. This is the information that will actually get operated on. These can be data that live in your environment, or these can be settings (like switches and knobs, if your function was an actual machine) that are turned to a specific value.
+- `output`: This is the variable that will hold your output information.
+  As you can see, we are _assigning_ the value that's output from `function()` to the variable `output` using the `<-` left-facing arrow operator. Just like before with printing variable values to console, if you run a function without assigning its output to a variable, the output will print to console (so you can read it) but it will not be stored anywhere (so you can't perform any further operations on that output).
+  
+You can find out more about a function by typing ?function_name() in the console or in a R code chunk.This will open up the details of the function in the Help pane on the right. The details will show you how to use the function, the input arguments, and the output etc. 
+
+```{r}
+# try getting help on a function called sum() 
+?sum()
+```
+
+You can also write your own function, but for the sake of time we won't go into it in today's tutorial. [Here](https://swcarpentry.github.io/r-novice-inflammation/02-func-R/){target="_blank"} is a link if you'd like to know more about how to write your own functions. 
+
+# Good practices 
+
+## File structure
+
+It is important to make sure you are saving your code and data in the right folder, typically the same folder. We also recommend that you start new projects with a .Rproj file.  
+
+### Starting an .Rproj file
+
+- Open up RStudio
+- Go to the File menu and click New project
+- Then either choose the same directory or a new working directory and follow the instructions on the next pages
+- You can then create a Rmarkdown file within that Project
+
+The next time you want to work on the same code, go to the folder in your directory/file explorer, and click on the .Rproj file to open it. 
+
+[Here](https://ssc.wisc.edu/sscc/pubs/R_intro/book/1-4-rstudio-projects.html){target="_blank"} are some more detailed instructions on how to create your own R projects.
+
+### Sample file structure
+
+Typically you will have one folder per project, e.g. let's says SIPPS_proj
+
+Within SIPPS_proj, you would create all your necessary folders. For example, you could have the following folders:
+
+- lit: where you save all the papers you're reading
+- notes: you could store all the meeting notes (with your mentor etc.) in this folder
+- analysis: here you could save your data file (e.g. a csv file) along with all your code files (.Rproj + all the other .Rmd files)
+
+### Use data file as input only
+
+This is again *very very important*. You never want to modify the original data file (for example, the 'shakes.csv'). So always make sure to save your data file into a variable. When you're done with your cleaning and/or analysis, you will save it out with a new name (for e.g. "shakes_cleaned.csv" ). We'll put this into practice in the future workshops.
+
+
+[Here](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro/){target="_blank"} are some more details about best practices to store your data files and how to use projects. This may be a little advanced for now, but be sure to visit this when you're working on an independent project. 
+
+## Pseudocode
+
+This is **so important to do before you write a single line of code.**
+
+Before you try to write any code, you should talk through what you want to do in plain English before you actually try to code it. This is how you will actually figure out what you need your code to do, and then what functions you need to do the things you want.
+
+As an example, let's look into the Study1 data again. 
+
+First, let's take a look at it's data again. 
+```{r}
+library(tidyverse)
+study_data <- read_csv("Study1.csv")
+study_data
+```
+
+Let's say we are interested in the mean age of participants in our dataset. So, we want to find the mean of the age column. Here are the steps we'd have to take to do this:
+
+1. First call the column Age from the dataframe
+2. then find the mean for that column
+3. Show that on the console
+
+The next step in the pseudocode is to write the actual functions I'd be using. For example: 
+
+1. Get the column by typing `study_data$Age` to get the Age column
+2. To find mean, use mean() function on the `study_data$Age`
+3. Print to the console without saving it in a variable
+
+Now put this into action in the code chunk below.
+```{r}
+# put the above psuedocode into action for finding the mean number of words written in Shakespeare's plays
+
+
+```
+This is a very simple case of using pseudocode, but as we move into data cleaning and analysis, you will see how this can be really helpful. It can break complex analysis into simple steps where you just have to do one function at a time.
+
+If you go back and look through this tutorial, you'll also see that there are a lot of code chunks where I've written comments in the form of pseudocode.
+
+## Testing your code
+
+Be sure to test your code once you've written it. Test it at **every step** with some fake data that you can track. 
+
+For e.g. let's say you want to check that the function `mean()` is returning the right answer. In reality, you know this will because it is a built-in function in R. But for the sake of this tutorial, let's assume that you created this `mean()` function. 
+
+You can test the function by giving some fake data
+```{r}
+#create fake_data with all 1s, and find the mean of that
+
+```
+You know the mean of the fake_data should be 1 and you see that it does give you 1. 
+
+Similarly, let's test with another fake_data
+```{r}
+#create fake_data_2 with all 0s and find the mean of that
+
+```
+There are many more ways of testing code, but this is the minimum you should do **at every step**.
+
+```{r}
+rm(fake_data, fake_data_2, study_data) # removing everything that we've created so far, so we can start fresh for data cleaning
+```
+
+
+# Data Cleaning
+## Install Packages
+
+`tidyverse` is one package with many tools. Although you first encountered it in the Programming lessons, we will introduce this package further in this lesson, and will continue using `tidyverse` in the modules to come.
+
+## Getting your Data into R
+
+### Entering data directly
+
+In some cases, you may want to enter data directly into R. This is easy with a small number of cases.
+
+```{r}
+# Direct Data Entry
+dataframe <- tibble(name = c("Manasi", "Ben", "John", "Anna"),
+                    score = c(16, 25, 35, 30),
+                    year = c(3, 2, 2, 2))
+
+rm(dataframe)
+```
+
+However, it's easy to introduce errors this way, and with a lot of data it would get tedious.
+
+### Reading data into R
+
+Most of the time, you'll be reading data from an external file (.txt or .csv), or opening up an existing dataset in R. Once you find the location of your files, what you do next will depend on the file format.
+
+### What's your working directory and where is the file you want?
+
+Your working directory is the directory (and subdirectories) where the files you're working with are stored. Whenever possible, you should open the files you run in R from a .Rproj link; by doing so, the folder in which that file was located will automatically be your working directory.
+
+HINT: If you did not open it from the .Rproj file, then you can get your working directory with `getwd()` and set it with `setwd()`. We covered this in the first workshop, so be sure to check that if you need a refresher!
+
+### What kind of file do you have?
+```{r}
+## For .txt, .csv and tab-deliminated files
+## read.table()
+
+
+
+# Add arguments to help R figure out how your data is organized
+
+
+
+# header = TRUE means that there is a header.
+# stringsAsFactors = FALSE means that any column; almost always a good idea to read data in with stringsAsFactors = FALSE.
+```
+
+```{r}
+# For .csv files
+# read.csv, just like read.table but with better defaults for .csv
+
+
+
+# Note that this is different from the read_csv function we used last week. read_csv is a part of the tidyverse library, which we haven't loaded yet. read.csv is a part of core R, so you don't need any additional packags to use it. But read_csv works better than read.csv in a lot of cases, so I would personally recommend that.
+```
+
+```{r}
+# Other options include:
+# read.delim, for when you have a separator that's not standard
+
+## For getting data that's already in R-format
+
+
+#.rda stands for R data. Nice thing about rda data is that you can store multiple different variables (incl. different dataframes in one file)
+```
+
+```{r}
+## For getting data from another program:
+#install.packages("foreign")
+#library(foreign)
+#install.packages("foreign")
+
+#read.spss("<Path to file>")
+#read.dta("<Path to file>")
+
+```
+
+Remember, all of these commands can have arguments that will help R make sense of your data. To find out what arguments are possible, put a question mark in front of the name of the function (e.g. `?read.table`). For options not listed here, Google "<your data type> into R" and you should find instructions.
+
+## Inspecting your data
+
+You might also have noticed the row of three (or four) letter abbreviations under the column names.
+These describe the type of each variable:
+* int = integers
+* dbl = doubles, or real number
+* chr = character vectors, or strings
+* fctr = factors, which R uses to represent categorical variables with fixed possible values
+* dttm = date-times (a date + a time)
+* date = dates
+* lgl = logical, vectors that contain only TRUE or FALSE
+
+Now you have data, time to get some results! But wait! Are you sure this data is ok? Doing some basic steps to inspect your data now can save you lots of headaches later, and R makes it really easy.
+
+Start by checking that you have the expected number of rows and columns in your data frame. You can do this by looking at the Environment window, or by asking R.
+
+### How is your data frame structured?
+
+Before you start inspecting and cleaning your data, load in the package `tidyverse.`
+
+```{r}
+# load in package tidyverse
+
+```
+Next, let's look at the number of columns and the number of rows in our dataset. In a psychology dataset for example, each row would be a participant, and so, the number of subjects in our dataset is equal to the number of rows.
+
+```{r}
+# Number of rows and number of columns
+# Gives us the number of rows and columbia
+
+```
+
+Let's take at the names of the columns now. 
+
+```{r}
+# Names of columns
+
+```
+
+And now, let's look at the data itself in these different columns. 
+
+```{r}
+# look at the first few rows
+
+# second argument determines how many rows you want; 10 is for 10 rows of data
+
+```
+
+## Brief intro to `tidyverse`
+
+`tidyverse` is not one package, but instead it's multiple packages grouped together. They're all made by the same developers, so the functions play nicely together (share a common syntax). If you've done any R before, there are some you're probably familiar with, like `ggplot` and `dplyr`, and others that are more obscure. These are all very useful packages, but they do have some `tidyverse`-specific syntax that we'll be using. (Note: the following paragraphs are an almost verbatim verision of what's in our standalone `tidyverse` tutorial, written by Monica, which can be found on the Github page).
+
+Enter the pipe `%>%`! The pipe does one simple, but key, thing: **takes the object on the left-hand side of and feeds it into the first argument of the function on the right-hand side. Useful because you can put lots of commands into the pipe** This means that:
+
+* `a %>% func()` is equivalent to `func(a)`. Fine and good. func() could be like mean() or median() 
+* `a %>% func() %>% bar(arg = TRUE)` is equivalent to `bar(func(a), arg = TRUE)`. Now, nested function calls read left-to-right!Can string multiple pipes together - another way to nest functions.
+* Most common use case: `df_new <- df_old %>% func() %>% bar(arg = TRUE) %>% baz()` is equivalent to `df_new <- baz(bar(func(df_old), arg = TRUE))`. Now, you can chain a series of preprocessing commands to operate on a dataframe all at once, and easily read those commands as typed in your script. Makes things cleaner and easier to read. No more accidentally not running some key preprocessing command that causes later code to break!
+
+This operator can be used with any function that:
+* take as their first argument the object to be operated upon
+* return the same object (or an analog of said), but now operated upon
+
+Essentially all functions from the tidyverse are pipe-safe, but bear this in mind when trying to incorporate functions from base R or other packages into your tidy new world.
+
+## Rename a variable
+
+We'll demonstrate the `%>%` command for our first cleaning step. Look back at your data frame.  What is that fifth variable? What does that even mean? Luckily, this is your study and you know that it's a personality questionnaire measuring neuroticism. Let's fix that using `rename()` from the `dplyr` package (which is part of the `tidyverse`).
+
+
+Without piping you would do the following:
+```{r}
+
+```
+
+But with piping:
+```{r}
+
+```
+
+It might seem like the first version is simpler, but it won't be once you start stacking functions together. For example, let's rearrange our variables (using `select()`) while also renaming the variables called T1, T2, T3, and T4. Note that we keep adding `%>%` between each function.
+
+`%>%` is good for paring datasets down to something for a particular analysis. 
+
+## Rename a variable and select some of the columns
+
+```{r}
+
+
+#Pipe into rename function and rename a bunch of different columns.
+  
+# using everything() within select() means you don't have to type all the variables out.
+
+#select() columns; everything() means select everything. Things appear in dataframe in the order that we specify them in.
+
+#contains("") only selects variables that has that string inside them.
+
+```
+
+Other select() examples - starts_with(), ends_with(), and removing variables with -
+```{r}
+
+```
+
+## Filter some of the observations that meet a certain criteria
+
+Maybe, we want to just take a look at those who are in condition 1 only
+
+```{r}
+
+```
+
+You can also separately get those in condition 2 
+```{r}
+
+```
+
+`dplyr::filter()` will be covered in more detail in data cleaning part 2!
+
+## Check for missing data
+
+One problem you may have is missing data. Sometimes this is something you already know about, but you should check your data frame anyway to make sure nothing got missed in a data entry error. For small datasets, you can do this visually, but for larger ones you can ask R.
+
+```{r}
+# This command asks for rows that are not complete. 
+
+```
+
+```{r}
+
+
+```
+
+In this case, the missing value is the Age value in row 39. You know you have this info somewhere on a paper form, so you go dig it up and want to replace it.
+
+```{r}
+
+# Directly replace one missing value
+
+
+# mydata$Age - this is the specific column
+# Bracket indexing to select the specific ID value; look at the data where ID is only equal to 39.
+# Look for pieces of data in the age column where the ID is equal to 39. Then we save 30 into that cell.
+
+```
+
+## Saving your progress
+
+# Saving Your Work
+
+Once you've created a data cleaning script like this one, you'll have a record of all the edits you've made on the raw data, and you can recreate your cleaned data just by running the script again. However, it's often easier to save your cleaned data as its own file **(Remember: never overwrite the raw data)**, so when you come back to do analysis you don't have to bother with all the cleaning steps. 
+
+You can always save data frames as a .csv for easy sharing and viewing outside of R.
+
+```{r, eval = FALSE}
+# Write data to a .csv
+
+# this is kind of the opposite to the read_csv function!
+```
+
+However, you can also save in an R format that lets you save multiple variables/objects in the same file. For example, you might want to have a long and wide format, or one dataframe with all the data and one with just subject information. Saving as a .rda file allows you to save multiple objects at once for easy loading into R. You can also save the outputs of statistical models in these, along with their data.
+
+```{r, eval = FALSE}
+# Save a .rda. You can add as many objects as you want, separated by commas
+
+# you can then load in all of these objects by just saying load("Study1_clean.rda")
+```
+
+# Getting assistance
+
+## The help docs
+
+In RStudio, you can use the "Help" tab in the lower right corner of your window to search for the help page for a function you're having trouble with. You can type the name of your problem function into the search bar and pull up the help page!
+
+You can also use the function `?` in console, in front of the function you're looking up, to pull up the same info in the "Help" tab. For example, to open the help page for the `mean()` function, I would run `?mean` in console.
+
+The help document for the function you're looking for should have a description of:
+
+* the function's arguments
+    + what type of data they expect
+    + what part of the function's behavior they control
+* what they intend the function to be used for
+* explanations of any equations used inside the function
+* examples of function calls that work, that you can copy and paste into console and run to inspect output
+
+## The internet
+
+Sometimes you'll run into issues that the help docs don't completely resolve, and that's okay. The internet is here to help, if you know how to ask it!
+
+### How to Google for help
+
+Sometimes it can be unclear what keywords to enter to find a solution to your code issue. The following strategies can give you a handle:
+
+* Start your query with "r"--it's not perfect, since it's a single letter and not a full word like "python" or "matlab", but this helps to return results that are R-related
+* If you're looking for help with a function from a specific package, include the package name in your query
+* If a command you're trying to run fails, and returns an error message, enter the name of the function and _copy and paste the error message into the query_
+    + your query should look like "r [package name] [function name] [text of error message]"
+* If you aren't getting an explicit error message, but a command you're trying to run is not behaving as you expect, try "r [package name] [function name] won't [the task you're trying to do]"
+* If you have your pseudocode planned out, but don't know what functions to use to execute your pseudocode, try "r how to [your pseudocode here]"
+    + be sure to remove any variable names that are specific to your own data before you Google
+
+### Stack Overflow and other Q&A sites
+
+Often, a successful Google search for help will yield links to posts on Stack Overflow, a Q&A site where people can post questions about code to solicit answers from other users, or from other Q&A sites (email records from old R help mailing lists, for example).
+
+When reading a Stack Overflow post, look for the following:
+
+* Read the question to determine how similar this asker's situation is to yours (and thus how likely the posted answers are to solve your problem)
+    + Good question posts will have example code that should run if you copy and paste it into console. If this code is there, you can run it to see if it looks like your own data situation
+* Check out the provided answers
+    + If there is a green check mark on the left of the "top" answer, the question asker has "accepted" the answer, or marked it as the most helpful answer. It has solved the asker's problem, and hopefully will solve yours too!
+    + Answers may have upvotes from other users (not the question asker). You can browse answers, including the "accepted" answer, to try multiple possible solutions and find the one that's best for your situation.
+    
+Other Q&A sites may or may not have as smooth of a setup as Stack Overflow, but if you are careful to inspect the question to see if it's relevant to your own problem, you should be able to assess whether the answer provided will help you.
+
+### R user blogs
+
+Plenty of R users post little tutorials (like this one!) online to help other R users. I've encountered many of these blog posts while Googling for help, and found many of them useful! Sometimes these may be from larger sites like [r-bloggers.com](https://www.r-bloggers.com/) that post submissions from many users, or they may be from personal blogs maintained by one person.
+
+A good blog post will, like a good Stack Overflow post, have example code that you can copy/paste into your own console and run to follow along with the blog post. This way, you can see if the blog post indeed applies to your particular issue.
+
+## Asking someone else
+
+Sometimes, though, after careful Googling and combing through search results to test all suggested solutions, you still don't have a solution for your R issue. At this time, you can ask someone else for assistance.
+
+You can ask any number of folks, including people in your lab, people in your department, and/or people on the internet (e.g. posting to a help list). 
+
+### How to ask
+
+When asking someone for help with your R issue, they'll be best equipped to help you if you provide them with the right info about your problem to give them an idea of what to suggest. Be sure to provide the following pieces of information to anyone you're asking for help from:
+
+* The nature of the dataset you're working with (what kinds of data you're trying to analyze, what data types they are, etc.)
+* Your pseudocode, so they know what exactly you're trying to accomplish
+* The code that isn't working
+    + If contacting someone through email/help list/etc, you can copy and paste the code that's not working
+    + Clarify any variable names in the code that are specific to your data
+    + If using functions from a specific package, say what those packages are
+    + If code fails with an error message, include the text of the error message
+* What you've tried already to solve this
+    + If you tried solutions in any Stack Overflow posts, R user blogs, etc, include links to those pages
+    + Copy and paste any solution code you tried if it still isn't working, explaining variable names and including error messages if applicable
+
+Including this info will make it much easier for someone else to identify the cause of the issue you're experiencing and suggest solutions for you. Help them help you!
+

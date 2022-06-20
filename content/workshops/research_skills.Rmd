@@ -23,3 +23,12 @@ Before each session, check this page for any resources you should download prior
 <ul>
 <li><a href="/workshop_files/2022/research-skills/GoodResearchQuestion.pdf" download>Workshop slides</a>
 </ul>
+
+<hr>
+
+### Week 2: Literature search & Zotero
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/sipps_lit-review-and-zotero_hdz.pdf" download>Workshop slides</a>
+</ul>
