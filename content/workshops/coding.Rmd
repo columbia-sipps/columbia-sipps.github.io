@@ -47,6 +47,8 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/2022/coding-02/challenge_key.Rmd" download>Challenge file (with answers)</a>
 </ul>
 
+<hr>
+
 ### Week 3: Data cleaning, pt. 1
 
 **Before the workshop:**
