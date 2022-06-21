@@ -1,0 +1,120 @@
+---
+title: "SIPPS Coding Workshops"
+subtitle: "Data Cleaning Challenge"
+author: "Manasi Jayakumar"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This challenge has been adapted from [Columbia University Psychology Department's Scientific Computing Workshops](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"} and some materials provided by Ana DiGiovanni and Anna Vannucci. 
+
+For each of the following questions, the answer should be expressed as the output of a command or a series of commands.
+
+# Data frames and data cleaning
+
+## Read in data
+
+1. Read in the data from the csv file `Study2_Subjects.csv` and save it in a variable named `study2`. Remember to load any necessary packages first. 
+
+```{r}
+library(tidyverse)
+study2 <- read_csv("Study2_Subjects.csv")
+```
+
+2. View the first 5 rows of the dataframe and check the datatype for all the columns.
+
+```{r}
+# View the first 5 rows of the data frame
+head(study2, 5)
+```
+
+3. How many columns do you have in the dataset? What are their names?
+```{r}
+ncol(study2)
+names(study2)
+```
+
+4. How many observations/subjects do you have in the dataset?
+
+```{r}
+nrow(study2)
+```
+
+5. What is the mean age of participants in your dataset? 
+
+```{r}
+mean(study2$Age)
+```
+
+6. What is the median score for depression symptoms in the personality questionnaire?
+HINT: Look at the readme file to see which column stores the depression symptoms score.
+
+```{r}
+median(study2$Q2)
+```
+
+7. Check for missing values
+
+```{r}
+study2 %>%
+  filter(!complete.cases(.))
+```
+
+
+8. We can actually fix this missing value, because we have this information in the README. Check the README and fix the missing value.
+
+```{r}
+# According to the readme, Subject ID 9 was in Condition C, so we need to fill the missing value with the condition
+study2$Condition[study2$ID==9] <- "C"
+
+# now check that the missing value has been replaced
+study2 %>%
+  filter(!complete.cases(.))
+
+```
+
+9. The columns Q1, Q2 and Q3 are not descriptive enough. Just looking at the columns we don't know what they refer to. Check the README file to get more info, and rename the columns in a more informative way. Remember to store it in a new variable (e.g. `study2_cleaned`)
+HINT: Use the `rename()` function
+
+```{r}
+study2_cleaned <- study2 %>%
+  rename("Anxiety" = "Q1" , "Depression" = "Q2", "Stress" = "Q3")
+```
+
+10. Moving forward, we don't really care about the age and the sex. We are more interested in the questionnaire scores and the condition. Select only the variables you care about. 
+
+HINT: use the function `select()` 
+HINT 2: Be sure to keep the Subject ID in the dataframe, because we need that for future analyses.
+
+```{r}
+# I'm reading in the cleaned dataframe and storing it again in study2_cleaned
+study2_cleaned <- study2_cleaned %>%
+  select(-c("Age", "Sex"))
+```
+
+The use of `%>%` is especially important for stacking functions. So we could do step 9 and 10 together as one. Try this below.
+
+```{r}
+# study2_cleaned <- study2 %>%
+#   rename("Anxiety" = "Q1" , "Depression" = "Q2", "Stress" = "Q3") %>%
+#   select(-c("Age", "Sex"))
+```
+
+11. Now filter for those Subjects who are in condition B only. Don't save this into a variable, we only to look at the data for those in condition B.
+
+```{r}
+study2_cleaned %>%
+  filter(Condition == "B")
+```
+
+12.Save this cleaned dataframe as `Study2_cleaned.csv`
+
+```{r}
+write_csv(study2_cleaned,"study2_cleaned.csv")
+```

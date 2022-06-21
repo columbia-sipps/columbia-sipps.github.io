@@ -1,7 +1,6 @@
 ---
 title: "SIPPS Coding Workshops"
 subtitle: "Data Cleaning"
-author: "Manasi Jayakumar"
 output:
   html_document:
     toc: true
@@ -24,7 +23,7 @@ The files for all tutorials can be downloaded from [SIPPS website](https://colum
 
 Students will learn:
 
-1. Ahat are functions? 
+1. What are functions? 
 2. How to program using the best practices possible. 
 3. How to use the `%>%` operator to use some basic functions of `tidyverse` and check for missing data.
 
@@ -53,7 +52,7 @@ You can find out more about a function by typing ?function_name() in the console
 
 ```{r}
 # try getting help on a function called sum() 
-?sum()
+
 ```
 
 You can also write your own function, but for the sake of time we won't go into it in today's tutorial. [Here](https://swcarpentry.github.io/r-novice-inflammation/02-func-R/){target="_blank"} is a link if you'd like to know more about how to write your own functions. 
@@ -101,10 +100,13 @@ Before you try to write any code, you should talk through what you want to do in
 As an example, let's look into the Study1 data again. 
 
 First, let's take a look at it's data again. 
+
 ```{r}
+
 library(tidyverse)
-study_data <- read_csv("Study1.csv")
+study_data <- read.csv("Study1.csv")
 study_data
+
 ```
 
 Let's say we are interested in the mean age of participants in our dataset. So, we want to find the mean of the age column. Here are the steps we'd have to take to do this:
@@ -120,11 +122,12 @@ The next step in the pseudocode is to write the actual functions I'd be using. F
 3. Print to the console without saving it in a variable
 
 Now put this into action in the code chunk below.
-```{r}
-# put the above psuedocode into action for finding the mean number of words written in Shakespeare's plays
 
+```{r}
+# put the above psuedocode into action for finding the mean age in Study 1
 
 ```
+
 This is a very simple case of using pseudocode, but as we move into data cleaning and analysis, you will see how this can be really helpful. It can break complex analysis into simple steps where you just have to do one function at a time.
 
 If you go back and look through this tutorial, you'll also see that there are a lot of code chunks where I've written comments in the form of pseudocode.
@@ -135,22 +138,26 @@ Be sure to test your code once you've written it. Test it at **every step** with
 
 For e.g. let's say you want to check that the function `mean()` is returning the right answer. In reality, you know this will because it is a built-in function in R. But for the sake of this tutorial, let's assume that you created this `mean()` function. 
 
-You can test the function by giving some fake data
+You can test the function by providing some fake data:
+
 ```{r}
-#create fake_data with all 1s, and find the mean of that
+# create fake_data with all 1s, and find the mean of that
 
 ```
 You know the mean of the fake_data should be 1 and you see that it does give you 1. 
 
-Similarly, let's test with another fake_data
+Similarly, let's test with another set of fake_data:
+
 ```{r}
-#create fake_data_2 with all 0s and find the mean of that
+# create fake_data_2 with all 0s and find the mean of that
 
 ```
+
 There are many more ways of testing code, but this is the minimum you should do **at every step**.
 
 ```{r}
-rm(fake_data, fake_data_2, study_data) # removing everything that we've created so far, so we can start fresh for data cleaning
+# removing everything that we've created so far, so we can start fresh for data cleaning
+rm(fake_data, fake_data_2, study_data) 
 ```
 
 
@@ -187,18 +194,18 @@ Your working directory is the directory (and subdirectories) where the files you
 HINT: If you did not open it from the .Rproj file, then you can get your working directory with `getwd()` and set it with `setwd()`. We covered this in the first workshop, so be sure to check that if you need a refresher!
 
 ### What kind of file do you have?
+
 ```{r}
 ## For .txt, .csv and tab-deliminated files
 ## read.table()
 
 
-
 # Add arguments to help R figure out how your data is organized
-
 
 
 # header = TRUE means that there is a header.
 # stringsAsFactors = FALSE means that any column; almost always a good idea to read data in with stringsAsFactors = FALSE.
+
 ```
 
 ```{r}
@@ -206,13 +213,16 @@ HINT: If you did not open it from the .Rproj file, then you can get your working
 # read.csv, just like read.table but with better defaults for .csv
 
 
-
 # Note that this is different from the read_csv function we used last week. read_csv is a part of the tidyverse library, which we haven't loaded yet. read.csv is a part of core R, so you don't need any additional packags to use it. But read_csv works better than read.csv in a lot of cases, so I would personally recommend that.
+
+# Other options include:
+# read.delim, for when you have a separator that's not standard
+
 ```
 
 ```{r}
-# Other options include:
-# read.delim, for when you have a separator that's not standard
+# remove the dataframe so we can start from scratch
+rm(mydata)
 
 ## For getting data that's already in R-format
 
@@ -221,6 +231,7 @@ HINT: If you did not open it from the .Rproj file, then you can get your working
 ```
 
 ```{r}
+
 ## For getting data from another program:
 #install.packages("foreign")
 #library(foreign)
@@ -257,11 +268,12 @@ Before you start inspecting and cleaning your data, load in the package `tidyver
 # load in package tidyverse
 
 ```
+
 Next, let's look at the number of columns and the number of rows in our dataset. In a psychology dataset for example, each row would be a participant, and so, the number of subjects in our dataset is equal to the number of rows.
 
 ```{r}
 # Number of rows and number of columns
-# Gives us the number of rows and columbia
+# Gives us the number of rows and columns
 
 ```
 
@@ -275,9 +287,11 @@ Let's take at the names of the columns now.
 And now, let's look at the data itself in these different columns. 
 
 ```{r}
-# look at the first few rows
+# look at the first few rows (will show 6 by default)
+
 
 # second argument determines how many rows you want; 10 is for 10 rows of data
+
 
 ```
 
@@ -303,12 +317,15 @@ We'll demonstrate the `%>%` command for our first cleaning step. Look back at yo
 
 
 Without piping you would do the following:
+
 ```{r}
 
 ```
 
 But with piping:
+
 ```{r}
+# this time, we'll also update the variable mydata with our newly-modified dataframe
 
 ```
 
@@ -319,20 +336,26 @@ It might seem like the first version is simpler, but it won't be once you start 
 ## Rename a variable and select some of the columns
 
 ```{r}
+# reload the data to start fresh
+load("Study1.rda")
 
+# Pipe into rename function and rename a bunch of different columns.
 
-#Pipe into rename function and rename a bunch of different columns.
-  
 # using everything() within select() means you don't have to type all the variables out.
 
-#select() columns; everything() means select everything. Things appear in dataframe in the order that we specify them in.
+# select() columns; everything() means select everything. Things appear in dataframe in the order that we specify them in.
 
-#contains("") only selects variables that has that string inside them.
-
+# contains("") only selects variables that has that string inside them.
 ```
 
 Other select() examples - starts_with(), ends_with(), and removing variables with -
+
 ```{r}
+
+# select the variables: ID, Condition, Age, and anything that starts with "Day"
+# but do not select anything that ends with "4"
+
+# select all variables except Neuroticism
 
 ```
 
@@ -344,8 +367,11 @@ Maybe, we want to just take a look at those who are in condition 1 only
 
 ```
 
-You can also separately get those in condition 2 
+You can also separately get those in condition 0.
+
 ```{r}
+
+# and you can filter by multiple criteria at once
 
 ```
 
@@ -356,26 +382,23 @@ You can also separately get those in condition 2
 One problem you may have is missing data. Sometimes this is something you already know about, but you should check your data frame anyway to make sure nothing got missed in a data entry error. For small datasets, you can do this visually, but for larger ones you can ask R.
 
 ```{r}
-# This command asks for rows that are not complete. 
+# this command asks for rows that are not complete
 
 ```
 
 ```{r}
-
+# you can also check for NA values in individual columns
 
 ```
 
 In this case, the missing value is the Age value in row 39. You know you have this info somewhere on a paper form, so you go dig it up and want to replace it.
 
 ```{r}
-
 # Directly replace one missing value
-
 
 # mydata$Age - this is the specific column
 # Bracket indexing to select the specific ID value; look at the data where ID is only equal to 39.
 # Look for pieces of data in the age column where the ID is equal to 39. Then we save 30 into that cell.
-
 ```
 
 ## Saving your progress
