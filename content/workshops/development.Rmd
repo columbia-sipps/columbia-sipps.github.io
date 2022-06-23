@@ -35,3 +35,13 @@ Workshop materials:
 <li><a href="/workshop_files/2022/prof-dev/Kirkham2002_VisualStatisticalLearning.pdf" download>Kirkham et al. (2002)</a>
 <li><a href="/workshop_files/2022/prof-dev/HowToRead_slides.pdf" download>Workshop slides</a>
 </ul>
+
+<hr>
+
+### Week 3: Careers inside and outside of academia, part I
+<br>
+Workshop materials:
+
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/sipps_career-options_hdz.pdf" download>Workshop slides</a>
+</ul>

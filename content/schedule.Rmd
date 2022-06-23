@@ -89,10 +89,10 @@ In addition to these workshops, students are expected to work in tandem with the
 </thead>
 <tr><td>June 8</td><td><b>How to make the most of your summer</b><br><i>(panel with SIPPS 2021 students) </i></td></tr>
 <tr><td>June 15</td><td><b>How to read an academic paper</b><br></td></tr>
-<tr><td>June 22</td><td><b>Journal club</b><br></td></tr>
-<tr><td>June 29</td><td><b>Careers inside and outside of academia</b><br></td></tr>
+<tr><td>June 22</td><td><b>Careers inside and outside of academia, part I</b><br></td></tr>
+<tr><td>June 29</td><td><b>CVs & resumes</b><br></td></tr>
 <tr><td>July 6</td><td><b>Journal club</b><br></td></tr>
-<tr><td>July 13</td><td><b>CVs & resumes</b><br></td></tr>
+<tr><td>July 13</td><td><b>Careers inside and outside of academia, part II</b><br></td></tr>
 <tr><td>July 20</td><td><b>Journal club</b><br></td></tr>
 <tr><td>July 27</td><td><b>Science communication</b><br></td></tr>
 <tr><td>August 3</td><td><b>Community outreach</b><br></td></tr>
