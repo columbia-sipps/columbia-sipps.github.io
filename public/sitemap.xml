@@ -1,45 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://columbia-sipps.github.io/workshops/coding/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/workshops2021/coding_basic/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/workshops2021/coding_advanced/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/workshops/development/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/workshops2021/development/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/workshops/research_skills/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/workshops2021/research_skills/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/about/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/apply/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/categories/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/diversity/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/instructors/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/team/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/resources/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/schedule/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/pastsipps/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/tags/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/workshops/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://columbia-sipps.github.io/workshops2021/</loc>
   </url>
+  
 </urlset>

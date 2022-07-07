@@ -38,10 +38,31 @@ Workshop materials:
 
 <hr>
 
-### Week 3: Careers inside and outside of academia, part I
+### Week 3: Careers inside and outside of academia, pt. 1
 <br>
 Workshop materials:
 
 <ul>
 <li><a href="/workshop_files/2022/prof-dev/sipps_career-options_hdz.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 4: CVs & resumes
+<br>
+Workshop materials:
+
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/CVResume_outline_worksheet.docx" download>CV/Resume outline</a>
+<li><a href="/workshop_files/2022/prof-dev/week4_CVsResumes.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 5: Journal club
+<br>
+Before the workshop, please read the following paper:
+
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/Sahi_2020.pdf" download>Sahi et al. (2021). With a little help from my friends: selective social potentiation of emotion regulation</a>
 </ul>

@@ -62,3 +62,23 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/2022/coding-03/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
 <li><a href="/workshop_files/2022/coding-03/challenge_key.Rmd" download>Challenge file (with answers)</a>
 </ul>
+
+<hr>
+
+### Week 4: Data cleaning, pt. 2 (i.e., Data manipulation)
+
+**Before the workshop:**
+<ul>
+<li>please create a folder named `04_data-manipulation` on your computer
+<li>download these files within that folder: <a href="/workshop_files/2022/coding-04/Study1.csv" download>Study 1 data file</a>, <a href="/workshop_files/2022/coding-04/Study1_followup.csv" download>Study 1 followup data file</a>, <a href="/workshop_files/2022/coding-04/Study2_Subjects.csv" download>Study 2 subjects data file</a>, <a href="/workshop_files/2022/coding-04/Study2_Trials.csv" download>Study 2 trials data file</a>, <a href="/workshop_files/2022/coding-04/README_Study2.txt" download>Study 2 README</a>, <a href="/workshop_files/2022/coding-04/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-04/04_data-manipulation.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-04/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+
+**After the workshop:**
+<ul>
+<li><a href="/workshop_files/2022/coding-04/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/2022/coding-04/challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+
+<hr>
+
+### Week 5: No workshop (4th of July)

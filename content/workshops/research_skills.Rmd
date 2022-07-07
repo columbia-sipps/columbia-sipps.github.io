@@ -44,3 +44,22 @@ Before each session, check this page for any resources you should download prior
 <li>If you are using a Windows computer, please download [Git Bash](https://gitforwindows.org/){target="_blank"}. This will allow you to use commands that are native to macOS and Linux operating systems.
 </ul>
 
+**Other workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/week3_organizingResearchBash.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 4: Research ethics
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/week4_ResearchEthics.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 5: Research project progress update
+<br>
+No additional materials.
