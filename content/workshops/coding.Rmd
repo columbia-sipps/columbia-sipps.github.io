@@ -82,3 +82,13 @@ A few days before each session, please check this page to make sure you've downl
 <hr>
 
 ### Week 5: No workshop (4th of July)
+
+<hr>
+
+### Week 6: Correlations and basic visualizations
+
+**Before the workshop:**
+<ul>
+<li>please create a folder named `05_corr-viz` on your computer
+<li>download these files within that folder: <a href="/workshop_files/2022/coding-05/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-05/05_corr-viz.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-05/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
