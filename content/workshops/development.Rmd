@@ -19,7 +19,7 @@ Before each journal club session, check this page for details about which articl
 
 ### Week 1: Panel with past SIPPS students
 <br>
-No additional workshop materials.
+No additional materials.
 
 <hr>
 
@@ -66,3 +66,9 @@ Before the workshop, please read the following paper:
 <ul>
 <li><a href="/workshop_files/2022/prof-dev/Sahi_2020.pdf" download>Sahi et al. (2021). With a little help from my friends: selective social potentiation of emotion regulation</a>
 </ul>
+
+<hr>
+
+### Week 6: Careers inside and outside of academia, pt. 2
+<br>
+No additional materials.

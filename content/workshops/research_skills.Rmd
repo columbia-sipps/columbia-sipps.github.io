@@ -63,3 +63,12 @@ Before each session, check this page for any resources you should download prior
 ### Week 5: Research project progress update
 <br>
 No additional materials.
+
+<hr>
+
+### Week 6: Open science & OSF
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/SIPPS_OpenScience.pdf" download>Workshop slides</a>
+</ul>
