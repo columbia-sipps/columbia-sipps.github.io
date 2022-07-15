@@ -23,7 +23,8 @@
       
       <guid>https://columbia-sipps.github.io/workshops2021/coding_basic/</guid>
       <description>See below for resources associated with the basic-track coding workshops from SIPPS 2021. For other workshops from 2021, follow this link.
- Week 1: Setting up your R environment  View Recording  Before the workshop:   download these files: data file, RMarkdown file, R Project file  After the workshop:   RMarkdown key    Week 2: Programming fundamentals  View Recording  Before the workshop:   please create a folder named 02_intro-programming on your computer  download these files within that folder: data file (shakes.</description>
+For video recordings of these workshops, follow this link.
+ Week 1: Setting up your R environment Before the workshop:   download these files: data file, RMarkdown file, R Project file  After the workshop:   RMarkdown key    Week 2: Programming fundamentals Before the workshop:   please create a folder named 02_intro-programming on your computer  download these files within that folder: data file (shakes.</description>
     </item>
     
     <item>
@@ -33,7 +34,8 @@
       
       <guid>https://columbia-sipps.github.io/workshops2021/coding_advanced/</guid>
       <description>See below for resources associated with the advanced-track coding workshops from SIPPS 2021. For other workshops from 2021, follow this link.
- Week 1: Refresher of regression and moderation (frequentist)  View Recording  Before the workshop:   make sure you have both R and RStudio downloaded on your machine; if you don’t, check out this page for guidance  Workshop materials:   R packages used today: tidyverse (contains ggplot2, dplyr, and others); car  intro to regression slides  RMarkdown lesson file (with notes)  RMarkdown challenge file / answer key</description>
+For video recordings of these workshops, follow this link.
+ Week 1: Refresher of regression and moderation (frequentist) Before the workshop:   make sure you have both R and RStudio downloaded on your machine; if you don’t, check out this page for guidance  Workshop materials:   R packages used today: tidyverse (contains ggplot2, dplyr, and others); car  intro to regression slides  RMarkdown lesson file (with notes)  RMarkdown challenge file / answer key</description>
     </item>
     
     <item>
@@ -44,7 +46,7 @@
       <guid>https://columbia-sipps.github.io/workshops/development/</guid>
       <description>On this page, you will find resources associated with the Professional Development/Journal Club workshop series. Before each journal club session, check this page for details about which article that will be discussed. After each session in the series, the page will be updated with any additional materials that were referenced during the workshop.
  Week 1: Panel with past SIPPS students 
-No additional workshop materials.
+No additional materials.
   Week 2: How to read a scientific paper</description>
     </item>
     
@@ -54,7 +56,7 @@ No additional workshop materials.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/workshops2021/development/</guid>
-      <description>See below for resources associated with the professional development/journal club workshop track from SIPPS 2021. For other workshops from 2021, follow this link.  Week 1: What is a good research question?  View Recording  Workshop materials:   workshop slides  link to collaborative brainstorming Google Doc    Week 2: Careers inside and outside academia  View Recording  Workshop materials:   workshop slides    Week 3: Journal club  View Recording  Workshop materials:   This week’s reading: Variety Wins: Soccer-Playing Robots and Infant Walking (Ossmy et al.</description>
+      <description>See below for resources associated with the professional development/journal club workshop track from SIPPS 2021. For other workshops from 2021, follow this link. For video recordings of these workshops, follow this link.  Week 1: What is a good research question? Workshop materials:   workshop slides  link to collaborative brainstorming Google Doc    Week 2: Careers inside and outside academia Workshop materials:   workshop slides    Week 3: Journal club Workshop materials:   This week’s reading: Variety Wins: Soccer-Playing Robots and Infant Walking (Ossmy et al.</description>
     </item>
     
     <item>
@@ -73,8 +75,8 @@ No additional workshop materials.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://columbia-sipps.github.io/workshops2021/research_skills/</guid>
-      <description>See below for resources associated with the research skills workshop series from SIPPS 2021. For other workshops from 2021, follow this link.
- Week 1: How to make the most of your summer experience (Dr. Valerie Purdie-Greenaway)  View Recording  Workshop materials:   workshop slides    Week 2: Literature search &amp;amp; Zotero  View Recording  Workshop materials:   workshop slides    Week 3: Pre-registration &amp;amp; OSF  View Recording  Workshop materials:   Workshop slides  Activity Readme  Datafile  OSF Pre-registration template    Week 4: Git (Version control &amp;amp; script sharing)  View Recording</description>
+      <description>See below for resources associated with the research skills workshop series from SIPPS 2021. For other workshops from 2021, follow this link. Unfortunately, video recordings of these workshops are not currently available. We are doing our best to remedy this.
+ Week 1: How to make the most of your summer experience (Dr. Valerie Purdie-Greenaway) Workshop materials:   workshop slides    Week 2: Literature search &amp;amp; Zotero Workshop materials:   workshop slides    Week 3: Pre-registration &amp;amp; OSF Workshop materials:   Workshop slides  Activity Readme  Datafile  OSF Pre-registration template    Week 4: Git (Version control &amp;amp; script sharing) Before the workshop:   Please download this file (Git installation instructions), and follow the instructions to install git  Sign up for an account on github.</description>
     </item>
     
     <item>
