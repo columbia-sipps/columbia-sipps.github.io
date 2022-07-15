@@ -13,11 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 See below for resources associated with the advanced-track coding workshops from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021).
 
+For <font color="#D6494A">video recordings of these workshops</font>, follow [this link](https://drive.google.com/drive/folders/1G-9GuXuNjvS7h7skizsMvcHF--Q-ugLQ){target="_blank"}.
+
 <hr>
 
 ### Week 1: Refresher of regression and moderation (frequentist)
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/IP1_-EPWLHypgEt_krGjQVl5AvQzMh0YREqO460fACXVAYk-A2-t9ECSxK7eQNMl.PUsxRULkO2eFmvAH" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
@@ -38,8 +38,6 @@ See below for resources associated with the advanced-track coding workshops from
 
 ### Week 2: Refresher of regression and moderation (bayesian)
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/_tCCImF61Hm76nJJUeapi83JvSbXxC839T8W5tLw6Vd8dd16T3FoP14gSlQUVOAK.cTAe10RMrs4ZiESc" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>please download the following packages: `rstanarm`, `tidybayes`, `bayesplot` (plus those we used last week: `tidyverse`, `car`)
@@ -59,9 +57,6 @@ See below for resources associated with the advanced-track coding workshops from
 
 ### Week 3: Review: Data wrangling, regression (continued), Frequentist vs. Bayes
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/3e7KARJzQx8ODrypHmhehBdoK1vMzQNTNpWSMLXbN-Ewe_E0QkeJtgEoIRwrbOlp.HmgUI3uBZ8KhRtT6" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
-
 **After the workshop:**
 <ul>
 <li>Final workshop materials:
@@ -76,11 +71,7 @@ See below for resources associated with the advanced-track coding workshops from
 <hr>
 
 ### Week 4: Cleaning data for multi-level modeling
-
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/i2WtugWz4-PY0ohg6eg_cDQ6SkbPczOgjtqEW74nEv_CnosQHTYPFHCv1Y-vvpTC.8vhrEYP3OhV7Nbcd" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
-
 **Before the workshop:**
 <ul>
 <li>Please download the following workshop materials into one folder:
@@ -101,8 +92,6 @@ See below for resources associated with the advanced-track coding workshops from
 
 ### Week 5: Time-course/longitudinal data
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/khyYO6B3RXEx1IhrHvDouMLgNa8RTtUxpS5GfolWM0X1o86rcsYWmsd-dpPTGOAJ._8yXEfwM8EmBJfgg" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>Please download the following workshop materials into one folder:
@@ -121,8 +110,6 @@ See below for resources associated with the advanced-track coding workshops from
 <hr>
 
 ### Week 6: Multilevel modeling: experimental data
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/D3bG3g8LlhgkCSsWhKATCEuAZpZL3gVjbxWKaaf8v9gCZZ8KpSf53gzm_OOWuV4C.5mqGh6tlAPvIeRwM" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
@@ -143,8 +130,6 @@ See below for resources associated with the advanced-track coding workshops from
 
 ### Week 7: Multilevel modeling: within-person change
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/eWF6ZpbuDcdQUkfxxduSnf-45ApmxoJ_oTUKSegKRqfwnokmNhb_YDPKsekaUxtu.Kr8CefbLVSE7uKs4" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>Please download the following workshop materials into one folder:
@@ -163,8 +148,6 @@ See below for resources associated with the advanced-track coding workshops from
 
 ### Week 8: Advanced plotting
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/l6QXC-xsFqGCmiNUbap7sbaUz9zYmN2LUn28SUveDLE8gxEGZI-KOtAXDjf8b6Pw.LAq7ooHlR4SEm56X" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>No downloads necessary. Use [this link](https://monicathieu.shinyapps.io/cu-sipps-ggplot-aes/){target="_blank"} to complete the workshop. (Note that if you would like to save your progress, please enable cookies on your web browser.)
@@ -178,8 +161,6 @@ See below for resources associated with the advanced-track coding workshops from
 
 ### Week 9: Power
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/E_C_qLdxsxconehCTSn0vMHrhJP8RNqJPhOT97DfWVnKrREnIU5p6DLsrHwH_a2B.bGpE0d02x3zGzI0U" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>No downloads necessary. Use [this link](https://pbloom.shinyapps.io/power_demo/#section-overview){target="_blank"} to complete the workshop. (Note that if you would like to save your progress, please enable cookies on your web browser.)
@@ -189,8 +170,6 @@ See below for resources associated with the advanced-track coding workshops from
 
 ### Week 10: Women in Science (Faculty speaker: Dr. Dima Amso)
 <br>
-No recording will be posted for this session.
-<br><br>
 **Workshop materials:**
 <ul>
 <li><a href="/workshop_files/2021/WiS/WiSTEM.pdf" download>Workshop slides</a>

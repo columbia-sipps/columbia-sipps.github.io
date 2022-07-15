@@ -11,13 +11,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-See below for resources associated with the research skills workshop series from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021).
+See below for resources associated with the research skills workshop series from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021). <font color="#D6494A">Unfortunately, video recordings of these workshops are not currently available.</font> We are doing our best to remedy this.
 
 <hr>
 
 ### Week 1: How to make the most of your summer experience (Dr. Valerie Purdie-Greenaway)
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/7skt4Grewof6qv0WAy0IucdAjTF70dqtkSvOPNhoTDep7Z5uHnxdaxCb-QahT5eL.86kl_7PINQcwqkSJ" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Workshop materials:**
 <ul>
@@ -28,8 +26,6 @@ See below for resources associated with the research skills workshop series from
 
 ### Week 2: Literature search & Zotero
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/aTzEDzUtrgNRZxjCqkQrGeyrxN8XL1JeqgqpPCPNoEOkcawLyylfdljhI_pZrC-s.P4IjrQT7qkY_4odZ" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Workshop materials:**
 <ul>
 <li><a href="/workshop_files/2021/research-skills/LitSearch-AV.pdf" download>workshop slides</a>
@@ -38,8 +34,6 @@ See below for resources associated with the research skills workshop series from
 <hr>
 
 ### Week 3: Pre-registration & OSF
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/yIYyLaOThBrTVL5KojCFXBKhtFTiqTmCVZK5N3WMr_a74WLEgykgENiL0rMAzxTl.mPbhDbcZWc_Wjqx4" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Workshop materials:**
 <ul>
@@ -53,9 +47,6 @@ See below for resources associated with the research skills workshop series from
 
 ### Week 4: Git (Version control & script sharing)
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/play/ZsMlSXLV6-lGTA9fDx47ISVO8RYBSk_mRod_PCqP9-_aqLy7_ZOXPUTVjeKvqEYelsQWqrUkMzpmNAo.8tFYcKxGzZQoqCrD?_x_zm_rhtaid=599&_x_zm_rtaid=7YEOD9OySHa-fbj5JYIM0A.1625492249119.21bbfa79b54e8b2fcc59869b1cb49e19&autoplay=true&continueMode=true&startTime=1625170245000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
-
 **Before the workshop:**
 <ul>
 <li> Please download <a href="/workshop_files/2021/research-skills/Git_installation_instructions.docx" download>this file (Git installation instructions)</a>, and follow the instructions to install git
@@ -72,20 +63,17 @@ See below for resources associated with the research skills workshop series from
 
 ### Week 5: Research project progress update
 <br>
-This week's session included updates from SIPPS participants and their research projects. No materials or recordings will be posted.
+This week's session included updates from SIPPS participants and their research projects. No additional workshop materials.
 
 <hr>
 
 ### Week 6: Qualtrics
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/tcbdkfhDjHOaFpZW2I0mUdQ1SDmxHyagpOY9OpGYXTV4bmYiVy6s0051o8holjOo.rYvjZxhaoRn7DIOi" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
+No additional workshop materials.
 
 <hr>
 
 ### Week 7: Community-engaged research
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/-W06nK27gfbe6ka9wdNhFhAlHdVuxvBwwk1A_gd8Nq9DToPvnUX0n1pfZGm2gIP4.MmyV7_7-bodOPW80" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 Prior to this week's workshop, please review the following materials:
 <ul>
@@ -98,8 +86,6 @@ Prior to this week's workshop, please review the following materials:
 
 ### Week 8: PsychoPy
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/J-Jk88lveo_ZdrXNYNaRR0dnLu2dVclmh-ESkjpop5Dy_3upKO6Cw8pRllaQeHZv.U_U-3wHLXYWUOKGq" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Workshop materials:**
 <ul>
 <li><a href="/workshop_files/2021/research-skills/PsychoPyPresentation.pdf" download>Workshop slides</a>
@@ -109,12 +95,10 @@ Prior to this week's workshop, please review the following materials:
 
 ### Week 9: Practice presentations
 <br>
-This week's session included practice presentations from SIPPS participants and their research projects. No materials or recordings will be posted.
+This week's session included practice presentations from SIPPS participants and their research projects. No additional materials.
 
 <hr>
 
 ### Week 10: SIPPS mini-conference (day 2)
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/DfsIqBwwnqTrBcLBo6MgPzvwCvl1LCRT7vYrvjJBhlzfQWy_tyMUh1Vw7caFhsmn.H0RsRob9-cwR5jrn" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 During this session, SIPPS mentees who have completed independent research projects throughout the summer will present their work via posters and data blitzes.

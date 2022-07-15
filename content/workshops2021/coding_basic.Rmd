@@ -13,11 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 See below for resources associated with the basic-track coding workshops from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021).
 
+For <font color="#D6494A">video recordings of these workshops</font>, follow [this link](https://drive.google.com/drive/folders/1G-9GuXuNjvS7h7skizsMvcHF--Q-ugLQ){target="_blank"}.
+
 <hr>
 
 ### Week 1: Setting up your R environment
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/DK-fdd1h5WcTIu-CBu_JHj31M46aZArRZGUejlqo3ssjL8fZ-ezEAjaBta65cHuQ.8CQ4myXSjViniuYN?startTime=1623182507000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
@@ -32,8 +32,6 @@ See below for resources associated with the basic-track coding workshops from SI
 <hr>
 
 ### Week 2: Programming fundamentals
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/gcm3U1Vtyza9W3E3k7ApPW84_FJRsCtWrXK-qsg5UpU2vE53klqpRA0bmHFAaPpA.4vRMDAuVvq9ZxIrW?startTime=1623787255000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
@@ -50,8 +48,6 @@ See below for resources associated with the basic-track coding workshops from SI
 <hr>
 
 ### Week 3: Data cleaning - Part 1
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/ql2sYMcvOnH5GkrTue5ZNkBCaVoIZfBTVchjovMJHXwMzWmEhvEt0rSQfNBzChy-.S7V-MYQpFWVegtnL" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
@@ -77,8 +73,6 @@ See below for resources associated with the basic-track coding workshops from SI
 
 ### Week 4: Data cleaning - Part 2 (i.e., Data Manipulation)
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/kCsqybb90-Owiotr9M3W5hO1ay2kcOZvL7F6sGon9EGUi0DzcWe3QAva3D7jxOvS.USkUisXXabanWC8x?startTime=1624996597000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>please create a folder named `04_data-manipulation` on your computer
@@ -103,8 +97,6 @@ See below for resources associated with the basic-track coding workshops from SI
 
 ### Week 5: Correlations and basic plotting
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/b0KRaF4Xoi_oK80K_MBFXlDbPUVkIfvWwU4w_cGVyBXabJOVebqbGERGofie4Wee.rsF1U3-ibmTr3Hoi?startTime=1625601330000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>please create a folder named `05_corr-viz` on your computer
@@ -123,8 +115,6 @@ See below for resources associated with the basic-track coding workshops from SI
 <hr>
 
 ### Week 6: Intro to regression/linear models
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/WiszYKG2W8ryz9XakckFSXhU4o7KhebDo6ZNH2FUPEDHPqU5YUfF_o3Zyf-LVnTg.8usAG8BERltQ2oIq?startTime=1626206131000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
@@ -145,8 +135,6 @@ See below for resources associated with the basic-track coding workshops from SI
 
 ### Week 7: Interactions in linear models
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/vNqeMFol0ovn7SKy-fOs1uXkm_Xb-PRmx3y-rCG808TubNsVBYZ8E0l8qFdnW6Rw.buyn80VkLAAwcdxP" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>please create a folder named `07_reg-interactions` on your computer
@@ -165,8 +153,6 @@ See below for resources associated with the basic-track coding workshops from SI
 <hr>
 
 ### Week 8: Visualizing effects in linear models
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/f48LB2_o2aqegLb9jCXOYz4srInttMXlSPQwsbhnNkr2q-eccERWg-ccm8m7IsBr.xHA2ZBKu4bZoEIzl" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Before the workshop:**
 <ul>
@@ -187,8 +173,6 @@ See below for resources associated with the basic-track coding workshops from SI
 
 ### Week 9: Advanced plotting
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/g9NPzGiAO8x6t4GtzEv1Y9Dzu2exhy5uSIRW0g0fs_i8Hj85T_zBcxjk8U2Vq9FS.CJ3GQ66fHP_39R88?startTime=1628020645000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Before the workshop:**
 <ul>
 <li>please create a folder named `09_adv-viz` on your computer
@@ -207,8 +191,6 @@ See below for resources associated with the basic-track coding workshops from SI
 
 ### Week 10: Women in Science (Faculty speaker: Dr. Dima Amso)
 <br>
-No recording will be posted for this session.
-<br><br>
 **Workshop materials:**
 <ul>
 <li><a href="/workshop_files/2021/WiS/WiSTEM.pdf" download>Workshop slides</a>

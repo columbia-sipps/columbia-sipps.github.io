@@ -11,12 +11,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-See below for resources associated with the professional development/journal club workshop track from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021).
+See below for resources associated with the professional development/journal club workshop track from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021). For <font color="#D6494A">video recordings of these workshops</font>, follow [this link](https://drive.google.com/drive/folders/1G-9GuXuNjvS7h7skizsMvcHF--Q-ugLQ){target="_blank"}.
 <hr>
 
 ### Week 1: What is a good research question?
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/play/gumQ7Qndeg6zzUoXO-vXCXmMQyCaIou-5TxQkZcWdYkObEJra5Asw5qU-SbiVmdQyRHXZAPDE5sSWLlV.BlwvKVmjOxxSK1WW?_x_zm_rhtaid=956&_x_zm_rtaid=m0Fy0B3ORyCzdEtQHq9yTg.1623432286856.181fed33d69d86fd6199bf0824909b53&autoplay=true&continueMode=true&startTime=1623268902000" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Workshop materials:**
 <ul>
@@ -28,8 +26,6 @@ See below for resources associated with the professional development/journal clu
 
 ### Week 2: Careers inside and outside academia
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/3iaeCmjRkUBHITaSp-m0883h47dGeEszlHykuSo6R0T54oWjdj_ib1XUiYHMq_aL.JSKrRLVVlPVyCZ_I" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Workshop materials:**
 <ul>
 <li><a href="/workshop_files/2021/prof-dev/Ac_and_non-ac_careers.pptx" download>workshop slides</a>
@@ -38,8 +34,6 @@ See below for resources associated with the professional development/journal clu
 <hr>
 
 ### Week 3: Journal club
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/E1vzn-jAW0MHMMYBQIqt_h_UiFheSbbCT2nW0wh7kM3IpoqcQIdOsDtpu0KBJB4_.tmNBBDa__XkpYtDs" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Workshop materials:**
 <br>
@@ -52,14 +46,12 @@ See below for resources associated with the professional development/journal clu
 
 ### Week 4: Cultural issues within psychology
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/376owC7zOr7FjwfJdoa6cqX8D_brFF9haqgq3Hju4_5m4EJM6RN-TB5PisQ97LXh.XnLK7hFQpiqCTsb8" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
-
+No additional resources for this workshop.
 <hr>
 
 ### Week 5: Journal club
 <br>
-<b>Note:</b> The journal club was cancelled due to unforeseen circumstances and an informal live Q&A session was held instead. No recording will be posted.
+<b>Note:</b> The journal club was cancelled due to unforeseen circumstances and an informal live Q&A session was held instead.
 <br><br>
 **Planned workshop materials:**
 <br>
@@ -70,8 +62,6 @@ See below for resources associated with the professional development/journal clu
 <hr>
 
 ### Week 6: CVs & Resumes
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/play/X-lZTW9BYn17LKFgePc-b8g46A6BuUCYleG3s5Vke9AdXK07szNObMqZmcRBuqYLIXsFaEh-AT22WPJk.T8sLJBtUjdeCzsyZ?continueMode=true&_x_zm_rtaid=p0AT7QdfTL2LSvFUEFI6Dw.1626445844098.c26933b50d6986ddbc5182a2fdfb88c8&_x_zm_rhtaid=956" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Workshop materials:**
 <ul>
@@ -84,8 +74,6 @@ See below for resources associated with the professional development/journal clu
 
 ### Week 7: Journal club
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/8x5wmUgqvnzN-7VWptepEV-Jlys7hSJCZYB4WrcEcPqKGNZEoh4ptQEYkd1zQ9Uk.rQN9L6DXnomjuPat" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Workshop materials:**
 <br>
 <ul>
@@ -96,8 +84,6 @@ See below for resources associated with the professional development/journal clu
 <hr>
 
 ### Week 8: Science communication
-<br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/Lm9JQWJ4hQ6Q-OaLRqjPTrH-a5Jhb98IdmRisTWLBdh1hpLT3pOgO6oCn44yYXyP._lU1BJDX6UcOKcOb" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
 <br>
 **Workshop materials:**
 <br>
@@ -110,8 +96,6 @@ See below for resources associated with the professional development/journal clu
 
 ### Week 9: Research ethics
 <br>
-<div align="center"><a href="https://columbiauniversity.zoom.us/rec/share/Xzp-ZRIU_aDwnUC5WVV2_BDGetRmfURC7kDUBgVV5u_mWqwFFrqrs3cNh47biF04.KkpNmo_y6MVlpzxR" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
 **Workshop materials:**
 <br>
 <ul>
@@ -121,6 +105,4 @@ See below for resources associated with the professional development/journal clu
 
 ### Week 10: SIPPS mini-conference (day 1)
 <br>
-<div align="center"><a href="https://www.youtube.com/watch?v=dfS5Af1-8uI" target="_blank" style="padding-bottom:10px"><button><i class="fas fa-video"></i>&nbsp;&nbsp;&nbsp;View Recording</button></a></div>
-<br>
-During this session, SIPPS mentees who have completed independent research projects throughout the summer will present their work via posters and data blitzes.
+During this session, SIPPS mentees who have completed independent research projects throughout the summer presented their work via posters and data blitzes.

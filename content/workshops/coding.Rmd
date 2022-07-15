@@ -98,3 +98,14 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/2022/coding-05/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
 <li><a href="/workshop_files/2022/coding-05/challenge_key.Rmd" download>Challenge file (with answers)</a>
 </ul>
+
+<hr>
+
+### Week 7: Introduction to linear models
+
+**Before the workshop:**
+<ul>
+<li>please create a folder named `06_intro-reg` on your computer
+<li>download these files within that folder: <a href="/workshop_files/2022/coding-06/lm-lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-06/06_intro-reg.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-06/lm-challenge.Rmd" download>RMarkdown challenge file</a>
+<li><a href="/workshop_files/2022/coding-06/lm-intro.pdf" download>linear model overview</a>
+</ul>
