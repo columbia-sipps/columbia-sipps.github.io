@@ -115,3 +115,15 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/2022/coding-06/lm-lesson_key.Rmd" download>RMarkdown file (with answers)</a>
 <li><a href="/workshop_files/2022/coding-06/lm-challenge_key.Rmd" download>Challenge file (with answers)</a>
 </ul>
+
+<hr>
+
+### Week 8: Interactions in linear models 
+
+**Before the workshop:**
+<ul>
+<li>please create a folder named `07_reg-interactions` on your computer
+<li>download these files within that folder: <a href="/workshop_files/2022/coding-07/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-07/07_reg-interactions.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-07/challenge.Rmd" download>RMarkdown challenge file</a>
+<li><a href="/workshop_files/2022/coding-07/lm-intro-interactions.pdf" download>slides on linear models with interactions</a>
+</ul>
+
