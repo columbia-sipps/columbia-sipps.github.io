@@ -127,3 +127,10 @@ A few days before each session, please check this page to make sure you've downl
 <li><a href="/workshop_files/2022/coding-07/lm-intro-interactions.pdf" download>slides on linear models with interactions</a>
 </ul>
 
+**After the workshop:**
+<ul>
+<li><a href="/workshop_files/2022/coding-07/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li><a href="/workshop_files/2022/coding-07/challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+
+

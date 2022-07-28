@@ -72,3 +72,21 @@ No additional materials.
 <ul>
 <li><a href="/workshop_files/2022/research-skills/SIPPS_OpenScience.pdf" download>Workshop slides</a>
 </ul>
+
+<hr>
+
+### Week 7: Qualtrics
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/Qualtrics.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 8: PsychoPy
+<br>
+**Before the workshop:**
+<ul>
+<li>Please download (and unzip) this set of files: <a href="/workshop_files/2022/research-skills/psychopy_images.zip" download>psychopy_images.zip</a>
+</ul>

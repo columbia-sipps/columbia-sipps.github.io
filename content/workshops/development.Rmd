@@ -82,3 +82,11 @@ Before the workshop, please read the following paper:
 <ul>
 <li><a href="/workshop_files/2022/prof-dev/HippReplay_Schapiro_2018.pdf" download>Schapiro et al. (2018). Human hippocampal replay during rest prioritizes weakly learned information and predicts memory performance.</a>
 </ul>
+
+<hr>
+
+### Week 8: Science communication
+<br>
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/scicomm_slides.pdf" download>Workshop slides</a>
+</ul>
