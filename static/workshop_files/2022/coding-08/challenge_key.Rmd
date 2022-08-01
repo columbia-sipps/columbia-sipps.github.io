@@ -1,0 +1,166 @@
+---
+title: "SIPPS Coding Workshops (basic track)"
+subtitle: "Visualizing effects in linear models"
+author: "Camille Gasser & Hannah Tarder-Stoll"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+The questions and exercises below will all ask you to run linear models and plot linear models, both with and without interaction terms.
+
+Over the past weeks you practiced running regressions using the `Prestige` dataset. You will now practice plotting the outcome of these regressions.
+
+## 0. Load the tidyverse package and sjPlot. Also Load the car package and `Prestige` dataset. Filter out rows where job type is equal to "prof" and view the first 10 rows of the dataframe. 
+
+```{r, echo = F}
+
+# load some packages
+library(tidyverse)
+library(sjPlot)
+library(car)
+
+#load the prestige dataset
+df <- Prestige
+
+# filter out prof job types
+df <- df %>% 
+  filter(type != 'prof')
+
+head(df, 10)
+
+
+```
+## 1. We are going to run models in which `income` is predicted by `prestige` (continous) and `type` (blue collar or white collar). First, prep your variables for analysis.
+
+Hint: You should center any continuous variables, and either dummy or effect code any categorical variables.
+
+```{r}
+
+# center or continous variable
+df$prestige.c <- df$prestige - mean(df$prestige)
+
+#effect code our categorical variable (could also dummy code)
+df$type.e <- dplyr::recode(df$type, "bc" = -0.5, "wc" = 0.5)
+
+```
+
+## 2. Now, fit a linear model predicting `income` as a function of `prestige`. Print the model output and describe the intercept and main effect. Quickly visualize the model output using sjPlot. 
+
+```{r}
+
+m1 <- lm(income ~ prestige.c, data = df)
+summary(m1)
+
+sjPlot::plot_model(m1, type = "pred")
+
+```
+
+- The intercept tells us that for jobs with **average prestige** we can expect an income of ~5264.
+
+- The prestige slope tells us that with each additional unit of prestige we expect income to increase by ~117.In other words, greater prestige is associated with higher income.
+
+## 3. Create a dataframe spanning all the values of prestige, from minimum to maximum values. Then, use the `predict()` function to generate predicted income values and a confidence intervale for all the values of prestige. View the predictions.
+
+```{r}
+
+#create data frame 
+df_pred <- data.frame(prestige.c = seq(min(df$prestige.c), max(df$prestige.c), by = 0.1))
+
+predictions <- predict(m1, df_pred, interval = "confidence")
+head(predictions)
+
+```
+
+##4. Create a dataframe combining the predicted values (stored in `predictions`) with the range of prestige values (stored in `df_pred`).
+
+Hint: you can use `cbind()`
+
+```{r}
+
+df_pred_combined <- cbind(df_pred, predictions)
+head(df_pred_combined)
+
+```
+
+## 5. Plot the predicted values, confidence intervals, and the original data points on the same graph using ggplot().
+
+```{r}
+
+ggplot(data = df_pred_combined, aes(x = prestige.c, y = fit)) +
+  geom_line() +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), alpha = 0.2) +
+  labs(x = 'prestige (mean-centered)', y = 'income') +
+  geom_point(data = df, aes(x = prestige.c, y = income), alpha = 0.5)
+
+```
+
+## 6. Now, fit a linear model predicting `income` as a function of `prestige` and `type`. Print the model output and describe the intercept, main effects, and interaction. Quickly visualize the model output using sjPlot.
+
+
+```{r}
+
+m2 <- lm(income ~ prestige.c*type.e, data = df)
+summary(m2)
+
+sjPlot::plot_model(m2, type = "pred", terms = c("prestige.c", "type.e"))
+
+```
+- The intercept tells us that for jobs with **average prestige**, averaging across **both job types**, we can expect an income of ~5228
+- The prestige slope tells us that with each additional unit of prestige (averaging across both job types) we expect income to increase by ~119.
+- The type slope tells us that as we move from blue collar to white collar jobs we can expect income to decrease by ~1034.
+- The interaction term tells us that as we move from blue collar to white collar jobs, the slope of prestige on income (i.e., the degree to which income increases with prestige) becomes ~84 units **lower**. In other words, prestige **has a weaker positive effect** on income for white collar vs. blue collar jobs.
+
+## 7. Create two dataframes spanning all the values of prestige, from minimum to maximum values, for blue and white collar jobs respectively. Then, use the `predict()` function to generate predicted income values and a confidence intervals for all the values of prestige for both dataframes. Finally, combine the predicted values with the range of prestige values for blue and white collar jobs.
+
+```{r}
+
+# create the initial dataframes
+df_pred_bc <- data.frame(prestige.c = seq(min(df$prestige.c), max(df$prestige.c), by = 0.1),
+                          type.e = -0.5)
+
+df_pred_wc <- data.frame(prestige.c = seq(min(df$prestige.c), max(df$prestige.c), by = 0.1),
+                          type.e = 0.5)
+
+# use the predict function
+predictions_bc <- predict(m2, df_pred_bc, interval = "confidence")
+predictions_wc <- predict(m2, df_pred_wc, interval = "confidence")
+
+# combine our predictions with the values used to generate them
+df_pred_bc_comb <- cbind(df_pred_bc, predictions_bc)
+df_pred_wc_comb <- cbind(df_pred_wc, predictions_wc)
+
+```
+
+## 8. Plot the predicted values, confidence intervals, and the original data points for the interaction model on the same graph using ggplot(). 
+
+Hint: you will need 2 geom_line() and geom_ribbon() calls, one for blue collar and one for white collar. Remember to specify which data frame you're referencing!
+
+```{r}
+
+ggplot(data = df, aes(x = prestige.c, y = income, color = as.factor(type.e), fill = as.factor(type.e))) +
+  # start with the data points
+  geom_point(alpha = 0.5) +
+  # regression line + confidence interval for documentary line
+  geom_line(data = df_pred_bc_comb, aes(x = prestige.c, y = fit)) +
+  geom_ribbon(data = df_pred_bc_comb, aes(y = fit, ymin = lwr, ymax = upr), alpha = 0.2) +
+  # regression line + confidence interval for comedy line
+  geom_line(data = df_pred_wc_comb, aes(x = prestige.c, y = fit)) +
+  geom_ribbon(data = df_pred_wc_comb, aes(y = fit, ymin = lwr, ymax = upr), alpha = 0.2) +
+  labs(x = "prestige", y = "income") +
+  # these next two lines make the plot legend more readable
+  scale_fill_discrete(name = "job type", labels = c("blue collar", "white collar")) +
+  guides(color = FALSE) 
+
+```
+
+## Bonus
+### 1. What does the regression line tell us? What do the individual data points tell us? Why do we want to plot both?
+### 2. If you plotted your interaction using the effect coded variable, try using the dummy coded variable and v.v. 
