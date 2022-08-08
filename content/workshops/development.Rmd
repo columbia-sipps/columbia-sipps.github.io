@@ -90,3 +90,13 @@ Before the workshop, please read the following paper:
 <ul>
 <li><a href="/workshop_files/2022/prof-dev/scicomm_slides.pdf" download>Workshop slides</a>
 </ul>
+
+<hr>
+
+### Week 9: Community outreach
+<br>
+Please preview these two materials:
+<ul>
+<li>[A Bridge Between Communities The Detroit Community Academic Urban Research Center](https://www.youtube.com/watch?v=P64TPPZyhhQ){target="_blank"} (video)
+<li>[The Development of a Community-Based Family Asthma Management Intervention for Puerto Rican Children](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3113604/pdf/nihms-300391.pdf){target="_blank"} (article)
+</ul>
