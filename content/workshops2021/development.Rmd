@@ -11,7 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-See below for resources associated with the professional development/journal club workshop track from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021). For <font color="#D6494A">video recordings of these workshops</font>, follow [this link](https://drive.google.com/drive/folders/1G-9GuXuNjvS7h7skizsMvcHF--Q-ugLQ){target="_blank"}.
+See below for resources associated with the professional development/journal club workshop track from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021).
+
+For <font color="#D6494A">video recordings of these workshops</font>, follow [this link](https://drive.google.com/drive/folders/1G-9GuXuNjvS7h7skizsMvcHF--Q-ugLQ){target="_blank"}.
 <hr>
 
 ### Week 1: What is a good research question?

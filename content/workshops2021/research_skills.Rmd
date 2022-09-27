@@ -11,7 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-See below for resources associated with the research skills workshop series from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021). <font color="#D6494A">Unfortunately, video recordings of these workshops are not currently available.</font> We are doing our best to remedy this.
+See below for resources associated with the research skills workshop series from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021).
+
+For <font color="#D6494A">video recordings of these workshops</font>, follow [this link](https://drive.google.com/drive/folders/1G-9GuXuNjvS7h7skizsMvcHF--Q-ugLQ){target="_blank"}.
 
 <hr>
 
