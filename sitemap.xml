@@ -4,6 +4,8 @@
   <url>
     <loc>https://columbia-sipps.github.io/workshops/coding/</loc>
   </url><url>
+    <loc>https://columbia-sipps.github.io/workshops2022/coding/</loc>
+  </url><url>
     <loc>https://columbia-sipps.github.io/workshops2021/coding_basic/</loc>
   </url><url>
     <loc>https://columbia-sipps.github.io/workshops2021/coding_advanced/</loc>
@@ -12,9 +14,13 @@
   </url><url>
     <loc>https://columbia-sipps.github.io/workshops2021/development/</loc>
   </url><url>
+    <loc>https://columbia-sipps.github.io/workshops2022/development/</loc>
+  </url><url>
     <loc>https://columbia-sipps.github.io/workshops/research_skills/</loc>
   </url><url>
     <loc>https://columbia-sipps.github.io/workshops2021/research_skills/</loc>
+  </url><url>
+    <loc>https://columbia-sipps.github.io/workshops2022/research_skills/</loc>
   </url><url>
     <loc>https://columbia-sipps.github.io/about/</loc>
   </url><url>
@@ -41,5 +47,7 @@
     <loc>https://columbia-sipps.github.io/workshops/</loc>
   </url><url>
     <loc>https://columbia-sipps.github.io/workshops2021/</loc>
+  </url><url>
+    <loc>https://columbia-sipps.github.io/workshops2022/</loc>
   </url>
 </urlset>
