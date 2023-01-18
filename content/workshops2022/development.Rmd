@@ -1,0 +1,100 @@
+---
+title: "Professional Development / Journal Club (2022)"
+description: Learn about academic research and related scientific careers, as well as how to digest and think critically about contemporary journal articles.
+weight: 3
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+See below for resources associated with the professional development & journal club workshops from SIPPS 2022. For materials from other years and/or workshop series, follow [this link](/workshops).
+
+<hr>
+
+### Week 1: Panel with past SIPPS students
+<br>
+No additional materials.
+
+<hr>
+
+### Week 2: How to read a scientific paper
+<br>
+Workshop materials:
+
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/LitReivewTable_Template.xlsx" download>Literature review spreadsheet template</a>
+<li><a href="/workshop_files/2022/prof-dev/QuALMRI_Handout_1490.pdf" download>QuALMRI overview</a>
+<li><a href="/workshop_files/2022/prof-dev/QuALMRI_LitReviewOutline_Template.docx" download>QuALMRI literature review outline</a>
+<li><a href="/workshop_files/2022/prof-dev/Godden1975_ContextDependentMemory.pdf" download>Godden & Baddeley (1975)</a>
+<li><a href="/workshop_files/2022/prof-dev/Kirkham2002_VisualStatisticalLearning.pdf" download>Kirkham et al. (2002)</a>
+<li><a href="/workshop_files/2022/prof-dev/HowToRead_slides.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 3: Careers inside and outside of academia, pt. 1
+<br>
+Workshop materials:
+
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/sipps_career-options_hdz.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 4: CVs & resumes
+<br>
+Workshop materials:
+
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/CVResume_outline_worksheet.docx" download>CV/Resume outline</a>
+<li><a href="/workshop_files/2022/prof-dev/week4_CVsResumes.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 5: Journal club
+<br>
+Before the workshop, please read the following paper:
+
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/Sahi_2020.pdf" download>Sahi et al. (2021). With a little help from my friends: selective social potentiation of emotion regulation</a>
+</ul>
+
+<hr>
+
+### Week 6: Careers inside and outside of academia, pt. 2
+<br>
+No additional materials.
+
+<hr>
+
+### Week 7: Journal club
+<br>
+Before the workshop, please read the following paper:
+
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/HippReplay_Schapiro_2018.pdf" download>Schapiro et al. (2018). Human hippocampal replay during rest prioritizes weakly learned information and predicts memory performance.</a>
+</ul>
+
+<hr>
+
+### Week 8: Science communication
+<br>
+<ul>
+<li><a href="/workshop_files/2022/prof-dev/scicomm_slides.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 9: Community outreach
+<br>
+Please preview these two materials:
+<ul>
+<li>[A Bridge Between Communities The Detroit Community Academic Urban Research Center](https://www.youtube.com/watch?v=P64TPPZyhhQ){target="_blank"} (video)
+<li>[The Development of a Community-Based Family Asthma Management Intervention for Puerto Rican Children](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3113604/pdf/nihms-300391.pdf){target="_blank"} (article)
+</ul>

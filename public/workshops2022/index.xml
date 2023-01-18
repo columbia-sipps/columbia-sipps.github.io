@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workshops (2022) on SIPPS</title>
+    <link>https://columbia-sipps.github.io/workshops2022/</link>
+    <description>Recent content in Workshops (2022) on SIPPS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://columbia-sipps.github.io/workshops2022/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding (2022)</title>
+      <link>https://columbia-sipps.github.io/workshops2022/coding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://columbia-sipps.github.io/workshops2022/coding/</guid>
+      <description>See below for resources associated with the coding workshops from SIPPS 2022. For materials from other years and/or workshop series, follow this link.
+ Week 1: Setting up your R environment Before the workshop:   download these files: data file, RMarkdown file, R Project file  After the workshop:   RMarkdown file (with answers)   Note: If you have trouble knitting your Rmd file, find the code chunk where you load in a set of packages (using the library() function), and remove the text eval = False.</description>
+    </item>
+    
+    <item>
+      <title>Professional Development / Journal Club (2022)</title>
+      <link>https://columbia-sipps.github.io/workshops2022/development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://columbia-sipps.github.io/workshops2022/development/</guid>
+      <description>See below for resources associated with the professional development &amp;amp; journal club workshops from SIPPS 2022. For materials from other years and/or workshop series, follow this link.
+ Week 1: Panel with past SIPPS students 
+No additional materials.
+  Week 2: How to read a scientific paper 
+Workshop materials:
+  Literature review spreadsheet template  QuALMRI overview  QuALMRI literature review outline  Godden &amp;amp; Baddeley (1975)  Kirkham et al.</description>
+    </item>
+    
+    <item>
+      <title>Research Skills (2022)</title>
+      <link>https://columbia-sipps.github.io/workshops2022/research_skills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://columbia-sipps.github.io/workshops2022/research_skills/</guid>
+      <description>See below for resources associated with the research skills workshops from SIPPS 2022. For materials from other years and/or workshop series, follow this link.
+ Week 1: What is a good research question? Workshop materials:   Workshop slides    Week 2: Literature search &amp;amp; Zotero Workshop materials:   Workshop slides    Week 3: Organizing your research Before the workshop:   Please download (and unzip) this set of files: learnShell.</description>
+    </item>
+    
+  </channel>
+</rss>

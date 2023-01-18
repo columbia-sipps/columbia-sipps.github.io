@@ -9,12 +9,29 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-As part of the **SIPPS program**, you will participate in three different workshop series intended to provide you with the conceptual background & hands-on research skills needed to formulate, execute, and describe your projects. For SIPPS 2022, all workshops will take place in person on Columbia University's Morningside campus.
+As part of the **SIPPS program**, you will participate in three different workshop series intended to provide you with the conceptual background & hands-on research skills needed to formulate, execute, and describe your projects.
 
-Visit the links below to access materials associated with each workshop session. If you missed a workshop and need to access the recording, please contact us at [sippscupsych@gmail.com](mailto:sippscupsych@gmail.com){target="_blank"}.
+<br>
+<hr>
+<br>
 
-<p>
+<div class="row align-items-center">
+<div class="col-md-6">
+<div align="center">
+**<font color="#D6494A">Workshop materials for SIPPS 2023 will be posted throughout the summer at the links below.</font>**
+<br><br>
+**For workshop materials from previous years of SIPPS, please follow the links to the *right.***
+</div>
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-2" style="padding: 15px; background-color: #f8f8f8">
+<h4 style="text-align:center">**[SIPPS 2021](/workshops2021)**</h4>
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-2" style="padding: 15px; background-color: #f8f8f8">
+<h4 style="text-align:center">**[SIPPS 2022](/workshops2022)**</h4>
+</div>
+</div>
 
-<div align="center">[*For video recordings and resources from SIPPS 2021 virtual workshops, click here.*](/workshops2021)</div>
-
+<br>
 <hr>

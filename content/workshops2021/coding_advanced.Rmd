@@ -1,5 +1,5 @@
 ---
-title: "Coding (advanced) - 2021"
+title: "Coding: Advanced (2021)"
 description: Data analysis workshops for those more familiar with coding principles and/or the R language.
 weight: 2
 output:
@@ -11,9 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-See below for resources associated with the advanced-track coding workshops from SIPPS 2021. For other workshops from 2021, follow [this link](/workshops2021).
-
-For <font color="#D6494A">video recordings of these workshops</font>, follow [this link](https://drive.google.com/drive/folders/1G-9GuXuNjvS7h7skizsMvcHF--Q-ugLQ){target="_blank"}.
+See below for resources associated with the advanced-track coding workshops from SIPPS 2021. For materials from other years and/or workshop series, follow [this link](/workshops).
 
 <hr>
 

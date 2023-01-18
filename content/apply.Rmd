@@ -9,11 +9,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<div align="center"><h3>Applications for SIPPS 2022 are now closed.</h3></div>
-
+<div align="center">
+<h3>Application information for SIPPS 2023 is coming soon.</h3>
 <br>
-
-<h4>Have any questions about next year's program?</h4>
-<ul>
-<li>Our plans for SIPPS 2023 might not be finalized until next year, but please feel free to reach out to [sippscupsych@gmail.com](mailto:sippscupsych@gmail.com){target="_blank"} with any questions.
-</ul>
+In the meantime, feel free to reach out to [sippscupsych@gmail.com](mailto:sippscupsych@gmail.com){target="_blank"} with any questions.
+</div>

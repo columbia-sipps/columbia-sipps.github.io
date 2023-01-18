@@ -1,0 +1,90 @@
+---
+title: "Research Skills (2022)"
+description: Acquire valuable skills for conducting psychological research, from conducting literature reviews to developing your research question(s) to sharing your results with peers.
+weight: 3
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+See below for resources associated with the research skills workshops from SIPPS 2022. For materials from other years and/or workshop series, follow [this link](/workshops).
+
+<hr>
+
+### Week 1: What is a good research question?
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/GoodResearchQuestion.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 2: Literature search & Zotero
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/sipps_lit-review-and-zotero_hdz.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 3: Organizing your research
+<br>
+**Before the workshop:**
+<ul>
+<li>Please download (and unzip) this set of files: <a href="/workshop_files/2022/research-skills/learnShell.zip" download>learnShell.zip</a>
+<li>If you do not have a code editor installed yet (or don't know what a code editor is), please download one. A few popular options are [Sublime Text](https://www.sublimetext.com/){target="_blank"} and [Atom](https://atom.io/){target="_blank"}.
+<li>If you are using a Windows computer, please download [Git Bash](https://gitforwindows.org/){target="_blank"}. This will allow you to use commands that are native to macOS and Linux operating systems.
+</ul>
+
+**Other workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/week3_organizingResearchBash.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 4: Research ethics
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/week4_ResearchEthics.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 5: Research project progress update
+<br>
+No additional materials.
+
+<hr>
+
+### Week 6: Open science & OSF
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/SIPPS_OpenScience.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 7: Qualtrics
+<br>
+**Workshop materials:**
+<ul>
+<li><a href="/workshop_files/2022/research-skills/Qualtrics.pdf" download>Workshop slides</a>
+</ul>
+
+<hr>
+
+### Week 8: PsychoPy
+<br>
+**Before the workshop:**
+<ul>
+<li>Please download (and unzip) this set of files: <a href="/workshop_files/2022/research-skills/psychopy_images.zip" download>psychopy_images.zip</a>
+</ul>

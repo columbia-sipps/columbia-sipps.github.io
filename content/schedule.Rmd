@@ -1,5 +1,5 @@
 ---
-title: "Schedule"
+title: "Schedule (2022)"
 output:
   blogdown::html_page:
     toc: false
@@ -9,9 +9,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<font color="#D6494A">**SIPPS 2022 workshops will take place *in-person* on Columbia University's Morningside campus.**</font> The exact location will be shared via email with those admitted to the SIPPS program.
+<font color="#D6494A">**The following schedule reflects workshop times and dates for SIPPS 2022. Information about SIPPS 2023 will be announced later this year.**</font>
 
-<br>
+<hr>
 
 SIPPS hosts three parallel workshop series, each with one session per week. See below for a detailed overview of all workshop topics and dates, and see the [workshops](/workshops) page for materials associated with each session.
 

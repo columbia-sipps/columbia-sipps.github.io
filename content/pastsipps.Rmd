@@ -11,6 +11,55 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <div align="center">Check out the presentations made by previous SIPPS participants during our end-of-summer conference!</div>
 <br>
+
+<hr>
+
+<h2><div align="center">SIPPS 2022</div></h2>
+
+<hr>
+
+#### [Suppression of competing information during memory-guided attention](/presentations/sipps2022/poster_SheltonBrister.pdf){target="_blank"}
+**Shelton Brister**<br>
+<i>Mentor: Serra Favila</i>
+
+<br>
+
+#### [The impact of emotional valence on memory](/presentations/sipps2022/poster_SooYeonChoi.pdf){target="_blank"}
+**SooYeon Choi**<br>
+<i>Mentors: Camille Gasser, John Thorp, & Wangjing Yu</i>
+
+<br>
+
+#### [How do beliefs about social regulation predict the quality and quantity of our social network?](/presentations/sipps2022/poster_DevonDavey.pdf){target="_blank"}
+**Devon Davey**<br>
+<i>Mentor: Jo He</i>
+
+<br>
+
+#### [Intentional or accidental? How understanding the distinction impacts children’s moral judgements](/presentations/sipps2022/poster_SimrynMolina.pdf){target="_blank"}
+**Simryn Molina**<br>
+<i>Mentor: Sophie Charles</i>
+
+<br>
+
+#### [ A flexible neuroscience and technology-driven framework for discipline-based Education Research: Self-Assessment as a learning predictor](/presentations/sipps2022/poster_CarmenSherlock.pdf){target="_blank"}
+**Carmen Sherlock**<br>
+<i>Mentor: Alfredo Spagna</i>
+
+<br>
+
+#### [Reward processing in suicidal adolescents: An event-related potential study](/presentations/sipps2022/poster_MarettaSonn.pdf){target="_blank"}
+**Maretta Sonn**<br>
+<i>Mentor: Randy Auerbach</i>
+
+<br>
+
+#### [Shifting forms of memory in spatial navigation](/presentations/sipps2022/poster_AnnieXu.pdf){target="_blank"}
+**Annie Xu**<br>
+<i>Mentor: Jonathan Nicholas</i>
+
+<br>
+
 <hr>
 
 <h2><div align="center">SIPPS 2021</div></h2>

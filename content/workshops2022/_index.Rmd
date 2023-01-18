@@ -1,0 +1,17 @@
+---
+title: "Workshops (2022)"
+output:
+  blogdown::html_page:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+As part of the **SIPPS program**, you will participate in three different workshop series intended to provide you with the conceptual background & hands-on research skills needed to formulate, execute, and describe your projects. Visit the links below to access materials associated with workshops from SIPPS 2022. 
+<p>
+
+<div align="center">[*For materials associated with other years of SIPPS, click here.*](/workshops)</div>
+
+<hr>

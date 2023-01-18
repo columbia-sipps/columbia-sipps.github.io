@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Coding (2022)</title>
+        
+            <link rel="icon" href="https://columbia-sipps.github.io/favicon.png">
+        
+        <style>
+
+    html body {
+        font-family: 'Inter', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: #63AAB5;
+        --border-width:  8px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://columbia-sipps.github.io/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.83.1" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Coding (2022)</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                                <li><a href="/apply/">Apply</a></li>
+                            
+                                <li><a href="/schedule/">Schedule</a></li>
+                            
+                                <li><a href="/workshops/">Workshops</a></li>
+                            
+                                <li><a href="/team/">Meet the Team</a></li>
+                            
+                                <li><a href="/resources/">Resources</a></li>
+                            
+                                <li><a href="/pastsipps/">SIPPS Mini-Conference</a></li>
+                            
+                                <li><a href="/instructors/">[instructor materials]</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/columbia-sipps/"><i class="fab fa-github"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h1><img src="/images/logo2.png" width="60"><p><p>Coding (2022)</h1>
+        
+
+    </div>
+    <hr>
+    <div align="start" class="content">
+
+
+<p>See below for resources associated with the coding workshops from SIPPS 2022. For materials from other years and/or workshop series, follow <a href="/workshops">this link</a>.</p>
+<hr>
+<div id="week-1-setting-up-your-r-environment" class="section level3">
+<h3>Week 1: Setting up your R environment</h3>
+<br>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+download these files: <a href="/workshop_files/2022/coding-01/shakes.csv" download>data file</a>, <a href="/workshop_files/2022/coding-01/01_lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-01/01_setup.Rproj" download>R Project file</a>
+</ul>
+<strong>After the workshop:</strong>
+<ul>
+<li>
+<a href="/workshop_files/2022/coding-01/01_lessonKey.Rmd" download>RMarkdown file (with answers)</a>
+<ul>
+<li>
+<strong>Note:</strong> If you have trouble knitting your Rmd file, find the code chunk where you load in a set of packages (using the <code>library()</code> function), and <em>remove</em> the text <code>eval = False</code>.
+</ul>
+<li>
+<a href="/workshop_files/2022/coding-01/coding-intro.pdf" download>Introduction to coding slides</a>
+</ul>
+<hr>
+</div>
+<div id="week-2-programming-fundamentals" class="section level3">
+<h3>Week 2: Programming fundamentals</h3>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+please create a folder named <code>02_intro-programming</code> on your computer
+<li>
+download these files within that folder: <a href="/workshop_files/2022/coding-02/shakes.csv" download>data file</a>, <a href="/workshop_files/2022/coding-02/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-02/02_intro-programming.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-02/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+<strong>After the workshop:</strong>
+<ul>
+<li>
+<a href="/workshop_files/2022/coding-02/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li>
+<a href="/workshop_files/2022/coding-02/challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+<hr>
+</div>
+<div id="week-3-data-cleaning-pt.-1" class="section level3">
+<h3>Week 3: Data cleaning, pt. 1</h3>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+please create a folder named <code>03_data-cleaning</code> on your computer
+<li>
+download these files within that folder: <a href="/workshop_files/2022/coding-03/Study1.csv" download>Study 1 data file (csv)</a>, <a href="/workshop_files/2022/coding-03/Study1.rda" download>Study 1 data file (rda)</a>, <a href="/workshop_files/2022/coding-03/Study2_Subjects.csv" download>Study 2 data file</a>, <a href="/workshop_files/2022/coding-03/README_Study2.txt" download>Study 2 README</a>, <a href="/workshop_files/2022/coding-03/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-03/03_data-cleaning.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-03/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+<strong>After the workshop:</strong>
+<ul>
+<li>
+<a href="/workshop_files/2022/coding-03/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li>
+<a href="/workshop_files/2022/coding-03/challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+<hr>
+</div>
+<div id="week-4-data-cleaning-pt.-2-i.e.-data-manipulation" class="section level3">
+<h3>Week 4: Data cleaning, pt. 2 (i.e., Data manipulation)</h3>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+please create a folder named <code>04_data-manipulation</code> on your computer
+<li>
+download these files within that folder: <a href="/workshop_files/2022/coding-04/Study1.csv" download>Study 1 data file</a>, <a href="/workshop_files/2022/coding-04/Study1_Followup.csv" download>Study 1 followup data file</a>, <a href="/workshop_files/2022/coding-04/Study2_Subjects.csv" download>Study 2 subjects data file</a>, <a href="/workshop_files/2022/coding-04/Study2_Trials.csv" download>Study 2 trials data file</a>, <a href="/workshop_files/2022/coding-04/README_Study2.txt" download>Study 2 README</a>, <a href="/workshop_files/2022/coding-04/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-04/04_data-manipulation.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-04/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+<strong>After the workshop:</strong>
+<ul>
+<li>
+<a href="/workshop_files/2022/coding-04/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li>
+<a href="/workshop_files/2022/coding-04/challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+<hr>
+</div>
+<div id="week-5-no-workshop-4th-of-july" class="section level3">
+<h3>Week 5: No workshop (4th of July)</h3>
+<hr>
+</div>
+<div id="week-6-correlations-and-basic-visualizations" class="section level3">
+<h3>Week 6: Correlations and basic visualizations</h3>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+please create a folder named <code>05_corr-viz</code> on your computer
+<li>
+download these files within that folder: <a href="/workshop_files/2022/coding-05/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-05/05_corr-viz.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-05/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+<strong>After the workshop:</strong>
+<ul>
+<li>
+<a href="/workshop_files/2022/coding-05/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li>
+<a href="/workshop_files/2022/coding-05/challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+<hr>
+</div>
+<div id="week-7-introduction-to-linear-models" class="section level3">
+<h3>Week 7: Introduction to linear models</h3>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+please create a folder named <code>06_intro-reg</code> on your computer
+<li>
+download these files within that folder: <a href="/workshop_files/2022/coding-06/lm-lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-06/06_intro-reg.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-06/lm-challenge.Rmd" download>RMarkdown challenge file</a>
+<li>
+<a href="/workshop_files/2022/coding-06/lm-intro.pdf" download>linear model overview</a>
+</ul>
+<strong>After the workshop:</strong>
+<ul>
+<li>
+<a href="/workshop_files/2022/coding-06/lm-lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li>
+<a href="/workshop_files/2022/coding-06/lm-challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+<hr>
+</div>
+<div id="week-8-interactions-in-linear-models" class="section level3">
+<h3>Week 8: Interactions in linear models</h3>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+please create a folder named <code>07_reg-interactions</code> on your computer
+<li>
+download these files within that folder: <a href="/workshop_files/2022/coding-07/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-07/07_reg-interactions.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-07/challenge.Rmd" download>RMarkdown challenge file</a>
+<li>
+<a href="/workshop_files/2022/coding-07/lm-intro-interactions.pdf" download>slides on linear models with interactions</a>
+</ul>
+<strong>After the workshop:</strong>
+<ul>
+<li>
+<a href="/workshop_files/2022/coding-07/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li>
+<a href="/workshop_files/2022/coding-07/challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+<hr>
+</div>
+<div id="week-9-visualizing-effects-in-linear-models" class="section level3">
+<h3>Week 9: Visualizing effects in linear models</h3>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+please create a folder named <code>08_reg-plotting</code> on your computer
+<li>
+download these files within that folder: <a href="/workshop_files/2022/coding-08/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-08/08_reg-plotting.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-08/challenge.Rmd" download>RMarkdown challenge file</a>, <a href="/workshop_files/2022/coding-08/affect.csv" download>data file (“affect.csv”)</a>
+</ul>
+<strong>After the workshop:</strong>
+<ul>
+<li>
+<a href="/workshop_files/2022/coding-08/lesson_key.Rmd" download>RMarkdown file (with answers)</a>
+<li>
+<a href="/workshop_files/2022/coding-08/challenge_key.Rmd" download>Challenge file (with answers)</a>
+</ul>
+<hr>
+</div>
+<div id="week-10-advanced-plotting" class="section level3">
+<h3>Week 10: Advanced plotting</h3>
+<strong>Before the workshop:</strong>
+<ul>
+<li>
+please create a folder named <code>09_adv-viz</code> on your computer
+<li>
+download these files within that folder: <a href="/workshop_files/2022/coding-09/lesson.Rmd" download>RMarkdown file</a>, <a href="/workshop_files/2022/coding-09/09_adv-viz.Rproj" download>R Project file</a>, <a href="/workshop_files/2022/coding-09/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+</div>
+</div>
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© 2021-2023 Columbia Psychology. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+
