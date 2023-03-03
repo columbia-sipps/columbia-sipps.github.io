@@ -98,8 +98,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 
-#### [General self-worth and drug use: 1995 German youth in sports](/presentations/sipps2021/poster_ElenaGadekar.pdf){target="_blank"}
-**Emmanuella Rozenfeld**<br>
+#### [General self-worth and drug use: 1995 German youth in sports](/presentations/sipps2021/poster_EmanuellaRozenfeld_fixed.pdf){target="_blank"}
+**Emanuella Rozenfeld**<br>
 <i>Mentor: Margaux Wienk</i>
 
 <br>
