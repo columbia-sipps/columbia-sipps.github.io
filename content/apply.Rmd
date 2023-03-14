@@ -9,7 +9,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<div align="center"><h3>SIPPS 2023 Applications will open mid-March! Check back soon!</h3>
+<div align="center"><h3>SIPPS 2023 applications are now open!</h3>
+<br>
+<h4>Follow [this link](https://forms.gle/pCCfusnVwtArzPFy9){target="_blank"} to apply. **Deadline:** <font color="#D6494A">April 14, 2023</font></h4>
 <br>
 
 <iframe src="/resources/SIPPS2023Flyer.pdf" width="80%" height="250px"></iframe></div>
@@ -24,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <li>This program intended for students with limited-to-no psychological research experience. There are no coursework or previous research requirements.
 <br><br>
 <li>SIPPS is <font color="#D6494A">**only open to current Columbia University undergraduate students.**</font>
-<ul><li>This includes all Columbia schools (e.g., Columbia College, General Studies, Barnard College) 
+<ul><li>This includes all Columbia schools (e.g., Columbia College, General Studies, Barnard College). 
 <li>This does *not* include students who are graduating in spring 2023.</ul>
 <br>
 <li>SIPPS 2023 will take place <font color="#D6494A">**virtually**</font>.
@@ -40,7 +42,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <div align="left"><h4>Questions or concerns?</h4></div>
 
 <p style="margin-left: 35px;">
-Until the application period closes, we will be holding **weekly, informal info sessions (via zoom)** where you can drop in and ask any questions you have about SIPPS (e.g., the application process, program content, other personal concerns, etc.).</p>
+While the application period is open, we will be holding **weekly, informal info sessions (via zoom)** where you can drop in and ask any questions you have about SIPPS (e.g., the application process, program content, other personal concerns, etc.).</p>
 
 <p style="margin-left: 35px;">These info sessions will take place from <u>3-4pm on Fridays throughout March</u> (3/17, 3/24, & 3/31) at [this zoom link](https://columbiauniversity.zoom.us/j/93329350605?pwd=anlDbkJkU1BXcjFDNHBIcWVER3k5QT09){target="_blank"}.</p>
 
