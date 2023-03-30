@@ -44,7 +44,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <p style="margin-left: 35px;">
 While the application period is open, we will be holding **weekly, informal info sessions (via zoom)** where you can drop in and ask any questions you have about SIPPS (e.g., the application process, program content, other personal concerns, etc.).</p>
 
-<p style="margin-left: 35px;">These info sessions will take place from <u>3-4pm on Fridays throughout March</u> (3/17, 3/24, & 3/31) at [this zoom link](https://columbiauniversity.zoom.us/j/93329350605?pwd=anlDbkJkU1BXcjFDNHBIcWVER3k5QT09){target="_blank"}.</p>
+<p style="margin-left: 35px;">These info sessions will take place from <u>3-4pm on Fridays throughout the application period</u> (3/17, 3/24, 3/31, 4/7, & 4/15) at [this zoom link](https://columbiauniversity.zoom.us/j/93329350605?pwd=anlDbkJkU1BXcjFDNHBIcWVER3k5QT09){target="_blank"}.</p>
 
 <p style="margin-left: 35px;">Also feel free to reach out to [sippscupsych@gmail.com](mailto:sippscupsych@gmail.com){target="_blank"} at any time with your questions</p>
 </div>
