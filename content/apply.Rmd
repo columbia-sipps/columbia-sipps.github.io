@@ -9,7 +9,14 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<div align="center"><h3>SIPPS 2023 applications are now <font color="#D6494A">**closed**</font>!</h3></div>
+<div align="center"><h3>SIPPS 2023 applications are now <font color="#D6494A">**closed**</font>!</h3>
+
+<br>
+<h4><font color="#D6494A">Decisions were sent out during the first few weeks of May.</font>
+<br>
+However, we've been notified that some of our emails are being mistakenly marked as spam. If you have not received a decision email, please check your spam folder, and reach out to sippscupsych@gmail.com if nothing is there. 
+
+</div>
 <br>
 
 <div style="padding: 15px; background-color: #f8f8f8">
