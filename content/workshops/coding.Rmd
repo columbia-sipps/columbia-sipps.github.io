@@ -11,4 +11,32 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**<font color="#D6494A">Workshop materials for SIPPS 2023 will be posted as the workshop series unfolds this upcoming summer.</font> For workshop materials from previous years of SIPPS, please follow [this link](/workshops).** 
+See below for resources associated with the coding workshops from SIPPS 2023. For materials from other years and/or workshop series, follow [this link](/workshops).
+
+<hr>
+
+### Week 1: Setting up your R environment
+<br>
+
+#### Before the workshop:
+<p>
+Before the workshop, please install R and RStudio on your computer. We have compiled this assortment of videos (not made by SIPPS instructors) that go over how to install these programs in Mac & PC, as well as introduce you to the RStudio environment.
+<p>
+
+Installation:
+<ul>
+<li>[Installing R & RStudio (Mac)](https://www.youtube.com/watch?v=LanBozXJjOk){target="_blank"}
+<li>[Installing R & RStudio (PC)](https://www.youtube.com/watch?v=TFGYlKvQEQ4){target="_blank"}
+<li>**Note:** Make sure to install the *latest* versions of R & RStudio, even if they don't match exactly what you see in the videos.
+</ul>
+
+<p>
+Intro to RStudio:
+<ul>
+<li>[Introduction to RStudio](https://www.youtube.com/watch?v=glzNmxU1eU8){target="_blank"} (original video from the [Columbia Psychology Scientific Computing](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"} workshop series)
+<li>[Tour of the RStudio Interface](https://www.youtube.com/watch?v=XdgfhqNtje4){target="_blank"}
+<li>**Note:** You don't necessarily need to watch both of these videos, just enough to familiarize yourself with the basics of what RStudio looks like and how to use it.
+</ul>
+
+<br><br>
+<hr>

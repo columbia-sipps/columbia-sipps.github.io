@@ -65,7 +65,7 @@ In addition to these workshops, students are expected to work in tandem with the
 <th scope="col">Session</th>
 </tr>
 </thead>
-<tr><td>June 12</td><td><b>How to make the most of your summer</b><br><i>(panel with SIPPS 2021 students) </i></td></tr>
+<tr><td>June 12</td><td><b>How to make the most of your summer</b><br><i>(panel with previous SIPPS students) </i></td></tr>
 <tr><td>July 19</td><td><b>No workshop (Juneteenth)</b><br></td></tr>
 <tr><td>June 26</td><td><b>How to read an academic paper</b><br></td></tr>
 <tr><td>July 3</td><td><b>No workshop (Fourth of July)</b><br></td></tr>
@@ -120,7 +120,7 @@ In addition to these workshops, students are expected to work in tandem with the
 <tr><td>July 13</td><td><b>Open science & OSF</b><br></td></tr>
 <tr><td>July 20</td><td><b>Qualtrics</b><br></td></tr>
 <tr><td>July 27</td><td><b>PsychoPy</b><br></td></tr>
-<tr><td>August 3</td><td><b>PsychoPy</b><br></td></tr>
+<tr><td>August 3</td><td><b>Science communication</b><br></td></tr>
 <tr><td>August 10</td><td><b><i><font color="#D6494A">Practice presentations for Mini-Conference</font></i></b><br></td></tr>
 <tr><td>August 17</td><td><b><i><font color="#D6494A">SIPPS 2023 Mini-Conference</font></i></b><br></td></tr>
 </table>

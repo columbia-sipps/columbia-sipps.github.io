@@ -11,4 +11,16 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**<font color="#D6494A">Workshop materials for SIPPS 2023 will be posted as the workshop series unfolds this upcoming summer.</font> For workshop materials from previous years of SIPPS, please follow [this link](/workshops).** 
+See below for resources associated with the research skills workshops from SIPPS 2023. For materials from other years and/or workshop series, follow [this link](/workshops).
+
+<hr>
+
+### Week 1: How to make the most of your summer
+<br>
+No additional materials for this workshop.
+<p>
+<ul>
+<li>**Note for workshop-only track students:** Some of the questions asked/answered here may be mostly relevant for those who are also completing a mentored research experience this summer, although there will likely be discussion about the workshops as well. With this said, if you'd like to skip this first workshop, feel free.
+</ul>
+<br><br>
+<hr>
