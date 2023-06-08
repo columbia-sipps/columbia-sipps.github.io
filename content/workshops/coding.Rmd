@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-See below for resources associated with the coding workshops from SIPPS 2023. For materials from other years and/or workshop series, follow [this link](/workshops).
+See below for resources associated with the coding workshops from SIPPS 2023. For materials from other years and/or workshop series, follow [this link](/workshops). 
 
 <hr>
 
