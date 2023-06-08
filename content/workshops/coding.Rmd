@@ -33,7 +33,7 @@ Installation:
 <p>
 Intro to RStudio:
 <ul>
-<li>[Introduction to RStudio](https://www.youtube.com/watch?v=glzNmxU1eU8){target="_blank"} (original video from the [Columbia Psychology Scientific Computing](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"} workshop series)
+<li>[Introduction to RStudio](https://www.youtube.com/watch?v=glzNmxU1eU8){target="_blank"} (original video pulled from the [Columbia Psychology Scientific Computing](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"} workshop series)
 <li>[Tour of the RStudio Interface](https://www.youtube.com/watch?v=XdgfhqNtje4){target="_blank"}
 <li>**Note:** You don't necessarily need to watch both of these videos, just enough to familiarize yourself with the basics of what RStudio looks like and how to use it.
 </ul>
