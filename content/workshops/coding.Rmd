@@ -47,6 +47,13 @@ Create create a folder named `01_setup` on your computer and download these file
 <li><a href="/workshop_files/2023/coding-01/01_lesson.Rmd" download>RMarkdown lesson file</a> 
 <li><a href="/workshop_files/2023/coding-01/01_setup.Rproj" download>R Project file</a> 
 </ul>
+<br>
+
+#### After the workshop:
+<p>
+Review <a href="/workshop_files/2023/coding-01/01_lessonKey.pdf" download>these slides</a> from the workshop. (We covered through slide 38, but feel free to review beyond that.)
+<p>
+Note that for this workshop, we only expect that you: (1) have successfully downloaded R & RStudio, (2) have some basic understanding of the different panels/panes of RStudio, how to open files, etc., and (3) know how to install and load packages (including `tidyverse`, `car`, `psych`, and `lme4`). We will get into the details of how to start actually writing R code next week.
 <br><br>
 <hr>
 
@@ -57,11 +64,11 @@ Create create a folder named `01_setup` on your computer and download these file
 <p>
 Watch the pre-workshop video, and review the accompanying materials:
 <ul>
-<li>[Programming Fundamentals pre-workshop video](https://www.youtube.com/watch?v=LanBozXJjOk){target="_blank"}
+<li>[Programming Fundamentals pre-workshop video](https://www.youtube.com/watch?v=iTLnZEOSYhE){target="_blank"}
 <li>Create create a folder named `02_intro-programming` on your computer and download these files <u>within that folder</u>:
 <ul>
 <li><a href="/workshop_files/2023/coding-02/shakes.csv" download>data file</a>
-<li><a href="/workshop_files/2023/coding-02/lesson.Rmd" download>RMarkdown lesson file</a> (<a href="/workshop_files/2023/coding-02/lesson_key.Rmd" download>lesson with code already filled in</a>) 
+<li><a href="/workshop_files/2023/coding-02/lesson.Rmd" download>RMarkdown lesson file</a>
 <li><a href="/workshop_files/2023/coding-02/02_intro-programming.Rproj" download>R Project file</a>
 </ul>
 </ul>
@@ -69,6 +76,6 @@ Watch the pre-workshop video, and review the accompanying materials:
 
 #### During the workshop:
 <p>
-Download <a href="/workshop_files/2023/coding-02/challenge.Rmd" download>this file</a> for the synchronous workshop session & place it in the same folder.
+Download <a href="/workshop_files/2023/coding-02/challenge.Rmd" download>this file</a> for the synchronous workshop session & place it in the same `02_intro-programming` folder.
 
 <hr>
