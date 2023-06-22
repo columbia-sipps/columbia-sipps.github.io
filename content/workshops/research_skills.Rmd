@@ -44,7 +44,13 @@ Download this <a href="/workshop_files/2023/research-skills/SIPPS_ResearchQ_Work
 ### Week 3: Issues of diversity and bias in psychological and neuroscience research
 <br>
 
-No pre-workshop workshop video this week. Readings for the synchronous workshop session will be posted soon.
+#### Before the workshop:
+<p>
+<ul>
+<li>First, <a href="/workshop_files/2023/research-skills/Hruschka_Diversity.pdf" download>read this paper</a> from Hruschka et al. (2018).
+<li>Then, <a href="/workshop_files/2023/research-skills/Clark_RetractedPaper.pdf" download>read this paper</a> from Clark et al. (2020). <font color="#D6494A">Note that this paper has since been retracted and is *not* an example of good research.</font>
+</ul>
+<br><br>
 
 
 <hr>
