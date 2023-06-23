@@ -32,9 +32,21 @@ No workshop this week due to Juneteenth.
 <br><br>
 <hr>
 
-### Week 3: How to read an academic paper.
+### Week 3: How to read an academic paper
 <br>
-Materials will be posted soon.
+
+#### Before the workshop:
+<p>
+<ul>
+<li>[Watch this pre-workshop video](https://youtu.be/XKrSwonwLL0){target="_blank"}. Accompanying slides can be downloaded <a href="/workshop_files/2023/prof-dev/ResearchPaper_slides.pdf" download>here</a>.
+<li>Download these materials:
+<ul>
+<li><a href="/workshop_files/2023/prof-dev/LitReview_Table.xlsx" download>Lit review table</a>
+<li><a href="/workshop_files/2023/prof-dev/LitReviewOutline-QuALMRI_Handout.pdf" download>QuALMRI Handout</a>
+<li><a href="/workshop_files/2023/prof-dev/LitReviewOutline-QuALMRI_Template.docx" download>QuALMRI Template</a>
+</ul
+</ul>
+<br><br>
 
 <br><br>
 <hr>
