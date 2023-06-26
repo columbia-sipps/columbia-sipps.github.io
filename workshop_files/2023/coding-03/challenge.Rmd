@@ -1,0 +1,166 @@
+---
+title: "SIPPS Coding Workshops"
+subtitle: "Data Cleaning Challenge"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This challenge has been adapted from [Columbia University Psychology Department's Scientific Computing Workshops](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/){target="_blank"} and some materials provided by Ana DiGiovanni and Anna Vannucci. 
+
+For each of the following questions, the answer should be expressed as the output of a command or a series of commands.
+
+# Data frames and data cleaning
+
+## Read in data
+
+1. Read in the data from the csv file `superheroes.csv` and save it in a variable with a name of your choice (e.g., `superhero_df`). Remember to load any necessary packages (`tidyverse`) first. 
+
+This dataframe contains a compilation of information about different superheroes, e.g., their name, gender, origin, and so on. More information can be found by looking at the file `README_superheroes.txt`, or on this webpage: https://domo-support.domo.com/s/article/360043931814?language=en_US (scroll down to the "Superhero Characteristics and Powers" section).
+
+```{r}
+
+
+```
+
+2. View the first 5 rows of the dataframe and check the datatype for all the columns.
+
+```{r}
+
+
+```
+
+3. How many columns do you have in the dataset? What are their names?
+
+```{r}
+
+
+```
+
+4. How many observations (i.e., superheroes) do you have in the dataset?
+
+```{r}
+
+
+```
+
+5. What is the mean height of superheroes in your dataset?
+
+```{r}
+
+
+```
+
+6. What are the maximum and minimum heights of superheroes? (HINT: use the `max` and `min` functions).
+
+```{r}
+
+
+```
+
+7. Now hold on, what does it mean for a superhero to have a negative height? If we look back at the dataset, you'll see that several superheroes here have heights and weights of -99. If you look at the file "README_superheroes.txt", we see notes that values of -99 for these columns indicate that this information is unknown.
+
+Let's replace all heights and weights of -99 with the value `NA`, to indicate that they're missing.
+
+HINT: Use indexing to find all the rows where height (or weight) is -99.
+
+```{r}
+
+
+```
+
+8. Now get the mean height and weight of these superheroes again, after accounting for this missing data.
+
+```{r}
+
+
+```
+
+9. The ninth column of this dataframe, `Alignment`, contains information about whether each superhero is considered good, bad, or neutral. Find rows in this dataframe where the `Alignment` information is missing. How many characters are missing this info?
+
+HINT: To get rows where just the `Alignment` column value is missing or not, you can use `complete.cases()` function with the column name `Alignment` as its argument.
+
+```{r}
+
+
+```
+
+10. One of this superheroes without this information is "Trickster", a sometimes-enemy of the Flash. Let's say we have good reason to believe that character's alignment is "bad". Update the dataframe with this information.
+
+```{r}
+
+
+# check that this worked with the following line of code:
+superhero_df[superhero_df$Name == 'Trickster',]
+
+```
+
+11. The columns `Color1`, `Color2` and `Color3` are not descriptive enough. Just looking at the columns we don't know what they refer to, but we can check the file "README_superheroes.txt" to find out.
+
+Replace these three Color columns with more informative names. **Store this updated dataframe in a new variable (e.g., `superhero_clean`).**
+
+HINT: Use the `rename()` function to do so.
+
+```{r}
+
+
+```
+
+12. Moving forward, we don't really care about the gender or the comic publisher of these characters. Select only the variables you care about.
+
+HINT: use the function `select()`.
+
+```{r}
+
+
+```
+
+The use of `%>%` is especially important for stacking functions. So we could do step 11 and 12 together as one. Try this below.
+
+```{r}
+
+
+```
+
+13. Now filter for those superheroes who belong to the Human race only. **Don't save this into a variable, we only want to look at the data for human characters.**
+
+```{r}
+
+  
+```
+
+14. Save your cleaned dataframe as `superheroes_cleaned.csv`.
+
+```{r}
+
+
+```
+
+
+BONUS CHALLENGE: Want more of a challenge? Try any/all of the following steps. Note: Not all of the specific code needed to solve these problems has been covered already, so you may need to seek out additional resources (e.g., RStudio's "help" tab, the internet, your peers, the instructor).
+
+- How many distinct races of superheroes/supervillains are there? (Hint: use the `unique()` function.)
+
+```{r}
+
+
+```
+
+- Find all the characters whose names contain the word "Captain". (Hint: use the `filter()` and the `grepl()` functions. `grepl` allows you to look for strings that contain a specific substring/pattern within them.)
+
+```{r}
+
+
+```
+
+- Which characters are taller on average: those with good alignments or bad alignments?
+
+```{r}
+
+
+```
