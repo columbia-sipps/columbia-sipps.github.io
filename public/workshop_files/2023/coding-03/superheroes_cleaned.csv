@@ -1,0 +1,735 @@
+"","Name","EyeColor","Race","HairColor","Height","SkinColor","Alignment","Weight"
+"1","A-Bomb","yellow","Human","No Hair",203,NA,"good",441
+"2","Abe Sapien","blue","Icthyo Sapien","No Hair",191,"blue","good",65
+"3","Abin Sur","blue","Ungaran","No Hair",185,"red","good",90
+"4","Abomination","green","Human / Radiation","No Hair",203,NA,"bad",441
+"5","Abraxas","blue","Cosmic Entity","Black",NA,NA,"bad",NA
+"6","Absorbing Man","blue","Human","No Hair",193,NA,"bad",122
+"7","Adam Monroe","blue",NA,"Blond",NA,NA,"good",NA
+"8","Adam Strange","blue","Human","Blond",185,NA,"good",88
+"9","Agent 13","blue",NA,"Blond",173,NA,"good",61
+"10","Agent Bob","brown","Human","Brown",178,NA,"good",81
+"11","Agent Zero",NA,NA,NA,191,NA,"good",104
+"12","Air-Walker","blue",NA,"White",188,NA,"bad",108
+"13","Ajax","brown","Cyborg","Black",193,NA,"bad",90
+"14","Alan Scott","blue",NA,"Blond",180,NA,"good",90
+"15","Alex Mercer",NA,"Human",NA,NA,NA,"bad",NA
+"16","Alex Woolsly",NA,NA,NA,NA,NA,"good",NA
+"17","Alfred Pennyworth","blue","Human","Black",178,NA,"good",72
+"18","Alien",NA,"Xenomorph XX121","No Hair",244,"black","bad",169
+"19","Allan Quatermain",NA,NA,NA,NA,NA,"good",NA
+"20","Amazo","red","Android",NA,257,NA,"bad",173
+"21","Ammo","brown","Human","Black",188,NA,"bad",101
+"22","Ando Masahashi",NA,NA,NA,NA,NA,"good",NA
+"23","Angel","blue",NA,"Blond",183,NA,"good",68
+"24","Angel",NA,"Vampire",NA,NA,NA,"good",NA
+"25","Angel Dust","yellow","Mutant","Black",165,NA,"good",57
+"26","Angel Salvadore","brown",NA,"Black",163,NA,"good",54
+"27","Angela",NA,NA,NA,NA,NA,"bad",NA
+"28","Animal Man","blue","Human","Blond",183,NA,"good",83
+"29","Annihilus","green",NA,"No Hair",180,NA,"bad",90
+"30","Ant-Man","blue","Human","Blond",211,NA,"good",122
+"31","Ant-Man II","blue","Human","Blond",183,NA,"good",86
+"32","Anti-Monitor","yellow","God / Eternal","No Hair",61,NA,"bad",NA
+"33","Anti-Spawn",NA,NA,NA,NA,NA,"bad",NA
+"34","Anti-Venom","blue","Symbiote","Blond",229,NA,NA,358
+"35","Apocalypse","red","Mutant","Black",213,"grey","bad",135
+"36","Aquababy","blue",NA,"Blond",NA,NA,"good",NA
+"37","Aqualad","blue","Atlantean","Black",178,NA,"good",106
+"38","Aquaman","blue","Atlantean","Blond",185,NA,"good",146
+"39","Arachne","blue","Human","Blond",175,NA,"good",63
+"40","Archangel","blue","Mutant","Blond",183,"blue","good",68
+"41","Arclight","violet",NA,"Purple",173,NA,"bad",57
+"42","Ardina","white","Alien","Orange",193,"gold","good",98
+"43","Ares","brown",NA,"Brown",185,NA,"good",270
+"44","Ariel","purple",NA,"Pink",165,NA,"good",59
+"45","Armor","black",NA,"Black",163,NA,"good",50
+"46","Arsenal",NA,"Human",NA,NA,NA,"good",NA
+"47","Astro Boy","brown",NA,"Black",NA,NA,"good",NA
+"48","Atlas","brown","Mutant","Red",183,NA,"good",101
+"49","Atlas","blue","God / Eternal","Brown",198,NA,"bad",126
+"50","Atom","blue",NA,"Red",178,NA,"good",68
+"51","Atom",NA,NA,NA,NA,NA,"good",NA
+"52","Atom Girl","black",NA,"Black",168,NA,"good",54
+"53","Atom II","brown","Human","Auburn",183,NA,"good",81
+"54","Atom III",NA,NA,"Red",NA,NA,"good",NA
+"55","Atom IV","brown",NA,"Black",NA,NA,"good",72
+"56","Aurora","blue","Mutant","Black",180,NA,"good",63
+"57","Azazel","yellow","Neyaphem","Black",183,"red","bad",67
+"58","Azrael","brown","Human","Black",NA,NA,"good",NA
+"59","Aztar",NA,NA,NA,NA,NA,"good",NA
+"60","Bane",NA,"Human",NA,203,NA,"bad",180
+"61","Banshee","green","Human","Strawberry Blond",183,NA,"good",77
+"62","Bantam","brown",NA,"Black",165,NA,"good",54
+"63","Batgirl",NA,NA,NA,NA,NA,"good",NA
+"64","Batgirl","green","Human","Red",170,NA,"good",57
+"65","Batgirl III",NA,NA,NA,NA,NA,"good",NA
+"66","Batgirl IV","green","Human","Black",165,NA,"good",52
+"67","Batgirl V",NA,NA,NA,NA,NA,"good",NA
+"68","Batgirl VI","blue",NA,"Blond",168,NA,"good",61
+"69","Batman","blue","Human","black",188,NA,"good",95
+"70","Batman","blue","Human","Black",178,NA,"good",77
+"71","Batman II","blue","Human","Black",178,NA,"good",79
+"72","Battlestar","brown",NA,"Black",198,NA,"good",133
+"73","Batwoman V","green","Human","Red",178,NA,"good",NA
+"74","Beak","black",NA,"White",175,NA,"good",63
+"75","Beast","blue","Mutant","Blue",180,"blue","good",181
+"76","Beast Boy","green","Human","Green",173,"green","good",68
+"77","Beetle",NA,NA,NA,NA,NA,"bad",NA
+"78","Ben 10",NA,NA,NA,NA,NA,"good",NA
+"79","Beta Ray Bill",NA,NA,"No Hair",201,NA,"good",216
+"80","Beyonder",NA,"God / Eternal",NA,NA,NA,"good",NA
+"81","Big Barda","blue","New God","Black",188,NA,"bad",135
+"82","Big Daddy",NA,NA,NA,NA,NA,"good",NA
+"83","Big Man","blue",NA,"Brown",165,NA,"bad",71
+"84","Bill Harken",NA,"Alpha",NA,NA,NA,"good",NA
+"85","Billy Kincaid",NA,NA,NA,NA,NA,"bad",NA
+"86","Binary","blue",NA,"Blond",180,NA,"good",54
+"87","Bionic Woman","blue","Cyborg","Black",NA,NA,"good",NA
+"88","Bird-Brain",NA,NA,NA,NA,NA,"good",NA
+"89","Bird-Man",NA,"Human",NA,NA,NA,"bad",NA
+"90","Bird-Man II",NA,"Human",NA,NA,NA,"bad",NA
+"91","Birdman",NA,"God / Eternal",NA,NA,NA,"good",NA
+"92","Bishop","brown","Mutant","No Hair",198,NA,"good",124
+"93","Bizarro","black","Bizarro","Black",191,"white","neutral",155
+"94","Black Abbott","red",NA,"Black",NA,NA,"bad",NA
+"95","Black Adam","brown",NA,"Black",191,NA,"bad",113
+"96","Black Bolt","blue","Inhuman","Black",188,NA,"good",95
+"97","Black Canary","blue","Human","Blond",165,NA,"good",58
+"98","Black Canary","blue","Metahuman","Blond",170,NA,"good",59
+"99","Black Cat","green","Human","Blond",178,NA,"good",54
+"100","Black Flash",NA,"God / Eternal",NA,NA,NA,"neutral",NA
+"101","Black Goliath",NA,NA,NA,NA,NA,"good",NA
+"102","Black Knight III","brown","Human","Brown",183,NA,"good",86
+"103","Black Lightning","brown",NA,"No Hair",185,NA,"good",90
+"104","Black Mamba","green",NA,"Black",170,NA,"bad",52
+"105","Black Manta","black","Human","No Hair",188,NA,"bad",92
+"106","Black Panther","brown","Human","Black",183,NA,"good",90
+"107","Black Widow","green","Human","Auburn",170,NA,"good",59
+"108","Black Widow II","blue",NA,"Blond",170,NA,"good",61
+"109","Blackout","red","Demon","White",191,"white","bad",104
+"110","Blackwing","blue",NA,"Black",185,NA,"bad",86
+"111","Blackwulf","red","Alien","White",188,NA,NA,88
+"112","Blade","brown","Vampire","Black",188,NA,"good",97
+"113","Blaquesmith","black",NA,"No Hair",NA,NA,"good",NA
+"114","Bling!",NA,NA,NA,168,NA,"good",68
+"115","Blink","green","Mutant","Magenta",165,"pink","good",56
+"116","Blizzard",NA,NA,NA,NA,NA,"bad",NA
+"117","Blizzard",NA,NA,"Brown",NA,NA,"bad",NA
+"118","Blizzard II","brown",NA,"Brown",175,NA,"bad",77
+"119","Blob","brown",NA,"Brown",178,NA,"bad",230
+"120","Bloodaxe","blue","Human","Brown",218,NA,"bad",495
+"121","Bloodhawk","black","Mutant","No Hair",NA,NA,"good",NA
+"122","Bloodwraith","white",NA,"No Hair",30.5,NA,"bad",NA
+"123","Blue Beetle","blue",NA,"Brown",NA,NA,"good",NA
+"124","Blue Beetle",NA,NA,NA,NA,NA,"good",NA
+"125","Blue Beetle II","blue",NA,"Brown",183,NA,"good",86
+"126","Blue Beetle III","brown","Human","Black",NA,NA,"good",NA
+"127","Boba Fett","brown","Human / Clone","Black",183,NA,"bad",NA
+"128","Bolt",NA,NA,NA,NA,NA,"good",NA
+"129","Bomb Queen",NA,NA,NA,NA,NA,"bad",NA
+"130","Boom-Boom","blue","Mutant","Blond",165,NA,"good",55
+"131","Boomer",NA,NA,NA,NA,NA,"good",NA
+"132","Booster Gold","blue","Human","Blond",196,NA,"good",97
+"133","Box",NA,NA,NA,NA,NA,"good",NA
+"134","Box III","blue",NA,"Blond",193,NA,"good",110
+"135","Box IV","brown",NA,"Brown / Black",NA,NA,"good",NA
+"136","Brainiac","green","Android","No Hair",198,"green","bad",135
+"137","Brainiac 5","green",NA,"Blond",170,NA,"good",61
+"138","Brother Voodoo","brown","Human","Brown / White",183,NA,"good",99
+"139","Brundlefly",NA,"Mutant",NA,193,NA,NA,NA
+"140","Buffy","green","Human","Blond",157,NA,"good",52
+"141","Bullseye","blue","Human","blond",183,NA,"bad",90
+"142","Bumblebee","brown","Human","Black",170,NA,"good",59
+"143","Bumbleboy",NA,NA,NA,NA,NA,"good",NA
+"144","Bushido",NA,"Human",NA,NA,NA,"good",NA
+"145","Cable","blue","Mutant","White",203,NA,"good",158
+"146","Callisto","blue",NA,"Black",175,NA,"bad",74
+"147","Cameron Hicks",NA,"Alpha",NA,NA,NA,"good",NA
+"148","Cannonball","blue",NA,"Blond",183,NA,"good",81
+"149","Captain America","blue","Human","blond",188,NA,"good",108
+"150","Captain Atom","blue","Human / Radiation","Silver",193,"silver","good",90
+"151","Captain Britain","blue","Human","Blond",198,NA,"good",116
+"152","Captain Cold","brown","Human","Brown",NA,NA,"neutral",NA
+"153","Captain Epic","blue",NA,"Brown",188,NA,"good",NA
+"154","Captain Hindsight",NA,"Human","Black",NA,NA,"good",NA
+"155","Captain Mar-vell","blue",NA,"Blond",188,NA,"good",108
+"156","Captain Marvel","blue","Human-Kree","Blond",180,NA,"good",74
+"157","Captain Marvel","blue","Human","Black",193,NA,"good",101
+"158","Captain Marvel II","blue","Human","Black",175,NA,"good",74
+"159","Captain Midnight",NA,"Human",NA,NA,NA,"good",NA
+"160","Captain Planet","red","God / Eternal","Green",NA,NA,"good",NA
+"161","Captain Universe",NA,"God / Eternal",NA,NA,NA,"good",NA
+"162","Carnage","green","Symbiote","Red",185,NA,"bad",86
+"163","Cat","blue",NA,"Blond",173,NA,"good",61
+"164","Cat II",NA,NA,NA,NA,NA,"good",NA
+"165","Catwoman","green","Human","Black",175,NA,"good",61
+"166","Cecilia Reyes","brown",NA,"Brown",170,NA,"good",62
+"167","Century","white","Alien","White",201,"grey","good",97
+"168","Cerebra",NA,"Mutant",NA,NA,NA,"good",NA
+"169","Chamber","brown","Mutant","Brown",175,NA,"good",63
+"170","Chameleon",NA,NA,NA,NA,NA,"bad",NA
+"171","Changeling","brown",NA,"Black",180,NA,"bad",81
+"172","Cheetah","green","Human","Blond",163,NA,"bad",50
+"173","Cheetah II","green","Human","Brown",170,NA,"bad",55
+"174","Cheetah III","brown","Human","Brown",175,NA,"bad",54
+"175","Chromos","brown",NA,"Red / Grey",185,NA,"bad",86
+"176","Chuck Norris",NA,NA,NA,178,NA,"good",NA
+"177","Citizen Steel","green","Human","Red",183,NA,"good",170
+"178","Claire Bennet","blue",NA,"Blond",NA,NA,"good",NA
+"179","Clea",NA,NA,"White",NA,NA,"good",NA
+"180","Cloak","brown",NA,"black",226,NA,"good",70
+"181","Clock King","blue","Human","Black",178,NA,"bad",78
+"182","Cogliostro",NA,NA,NA,NA,NA,"bad",NA
+"183","Colin Wagner","grey",NA,"Brown",NA,NA,"good",NA
+"184","Colossal Boy",NA,NA,NA,NA,NA,"good",NA
+"185","Colossus","silver","Mutant","Black",226,NA,"good",225
+"186","Copycat","red","Mutant","White",183,"blue","neutral",67
+"187","Corsair","brown",NA,"Brown",191,NA,"good",79
+"188","Cottonmouth","brown","Human","Black",183,NA,"bad",99
+"189","Crimson Crusader","blue",NA,"Strawberry Blond",NA,NA,"good",NA
+"190","Crimson Dynamo","brown",NA,"No Hair",180,NA,"good",104
+"191","Crystal","green","Inhuman","Red",168,NA,"good",50
+"192","Curse",NA,NA,NA,NA,NA,"bad",NA
+"193","Cy-Gor",NA,NA,NA,NA,NA,"bad",NA
+"194","Cyborg","brown","Cyborg","Black",198,NA,"good",173
+"195","Cyborg Superman","blue","Cyborg","Black",NA,NA,"bad",NA
+"196","Cyclops","brown","Mutant","Brown",191,NA,"good",88
+"197","Cypher","blue",NA,"Blond",175,NA,"good",68
+"198","Dagger","blue",NA,"Blond",165,NA,"good",52
+"199","Danny Cooper","brown",NA,"Blond",NA,NA,"good",NA
+"200","Daphne Powell",NA,NA,NA,NA,NA,"good",NA
+"201","Daredevil","blue","Human","Red",183,NA,"good",90
+"202","Darkhawk","brown","Human","Brown",185,NA,"good",81
+"203","Darkman",NA,NA,NA,NA,NA,"good",NA
+"204","Darkseid","red","New God","No Hair",267,"grey","bad",817
+"205","Darkside",NA,NA,NA,NA,NA,"bad",NA
+"206","Darkstar","brown","Mutant","Blond",168,NA,"good",56
+"207","Darth Maul","yellow / red","Dathomirian Zabrak",NA,170,"red / black","bad",NA
+"208","Darth Vader","yellow","Cyborg","No Hair",198,NA,"bad",135
+"209","Dash","blue","Human","Blond",122,NA,"good",27
+"210","Data","yellow","Android","Brown",NA,NA,"good",NA
+"211","Dazzler","blue","Mutant","Blond",173,NA,"good",52
+"212","Deadman","blue","Human","Black",183,NA,"good",90
+"213","Deadpool","brown","Mutant","No Hair",188,NA,"neutral",95
+"214","Deadshot","brown","Human","Brown",185,NA,"bad",91
+"215","Deathlok","brown","Cyborg","Grey",193,NA,"good",178
+"216","Deathstroke","blue","Human","White",193,NA,"neutral",101
+"217","Demogoblin","red","Demon","No Hair",185,NA,"bad",95
+"218","Destroyer",NA,NA,NA,188,NA,"bad",383
+"219","Diamondback","brown","Human","Black",193,NA,"bad",90
+"220","DL Hawkins",NA,NA,NA,NA,NA,"good",NA
+"221","Doc Samson","blue","Human / Radiation","Green",198,NA,"good",171
+"222","Doctor Doom","brown","Human","Brown",201,NA,"bad",187
+"223","Doctor Doom II","brown",NA,"Brown",201,NA,"bad",132
+"224","Doctor Fate","blue","Human","Blond",188,NA,"good",89
+"225","Doctor Octopus","brown","Human","Brown",175,NA,"bad",110
+"226","Doctor Strange","grey","Human","Black",188,NA,"good",81
+"227","Domino","blue","Human","Black",173,"white","good",54
+"228","Donatello","green","Mutant","No Hair",NA,"green","good",NA
+"229","Donna Troy","blue","Amazon","Black",175,NA,"good",63
+"230","Doomsday","red","Alien","White",244,NA,"bad",412
+"231","Doppelganger","white",NA,"No Hair",196,NA,"bad",104
+"232","Dormammu","yellow",NA,"No Hair",185,NA,"bad",NA
+"233","Dr Manhattan","white","Human / Cosmic","No Hair",NA,"blue","good",NA
+"234","Drax the Destroyer","red","Human / Altered","No Hair",193,"green","good",306
+"235","Ego",NA,NA,NA,NA,NA,"bad",NA
+"236","Elastigirl","brown","Human","Brown",168,NA,"good",56
+"237","Electro","blue","Human","Auburn",180,NA,"bad",74
+"238","Elektra","blue","Human","Black",175,NA,"good",59
+"239","Elle Bishop","blue",NA,"Blond",NA,NA,"bad",NA
+"240","Elongated Man","blue",NA,"Red",185,NA,"good",80
+"241","Emma Frost","blue",NA,"Blond",178,NA,"good",65
+"242","Enchantress","blue","Human","Blond",168,NA,"good",57
+"243","Energy",NA,NA,NA,NA,NA,"good",NA
+"244","ERG-1",NA,NA,NA,NA,NA,"good",NA
+"245","Ethan Hunt","brown","Human","Brown",168,NA,"good",NA
+"246","Etrigan","red","Demon","No Hair",193,"yellow","neutral",203
+"247","Evil Deadpool","white","Mutant","Red",188,NA,"bad",95
+"248","Evilhawk","red","Alien","Black",191,"green","bad",106
+"249","Exodus","blue","Mutant","Black",183,"red","bad",88
+"250","Fabian Cortez","blue",NA,"Brown",196,NA,"bad",96
+"251","Falcon","brown","Human","Black",188,NA,"good",108
+"252","Fallen One II","black",NA,"Blue",NA,NA,"bad",NA
+"253","Faora",NA,"Kryptonian",NA,NA,NA,"bad",NA
+"254","Feral","yellow (without irises)",NA,"Orange / White",175,NA,"good",50
+"255","Fighting Spirit",NA,NA,"Red",NA,NA,"good",NA
+"256","Fin Fang Foom","red","Kakarantharaian","No Hair",975,"green","good",18
+"257","Firebird","brown",NA,"Black",165,NA,"good",56
+"258","Firelord","white",NA,"Yellow",193,NA,"good",99
+"259","Firestar","green","Mutant","Red",173,NA,"good",56
+"260","Firestorm","brown",NA,"Black",NA,NA,"good",NA
+"261","Firestorm","blue","Human","Auburn",188,NA,"good",91
+"262","Fixer","red",NA,"No Hair",NA,NA,"bad",NA
+"263","Flash","blue","Human","Brown / White",180,NA,"good",81
+"264","Flash Gordon",NA,NA,NA,NA,NA,"good",NA
+"265","Flash II","blue","Human","Blond",183,NA,"good",88
+"266","Flash III",NA,"Human",NA,183,NA,"good",86
+"267","Flash IV","yellow","Human","Auburn",157,NA,"good",52
+"268","Forge","brown",NA,"Black",183,NA,"good",81
+"269","Franklin Richards","blue","Mutant","Blond",142,NA,"good",45
+"270","Franklin Storm","blue",NA,"Grey",188,NA,"good",92
+"271","Frenzy","brown",NA,"Black",211,NA,"bad",104
+"272","Frigga","blue",NA,"White",180,NA,"good",167
+"273","Galactus","black","Cosmic Entity","Black",876,NA,"neutral",16
+"274","Gambit","red","Mutant","Brown",185,NA,"good",81
+"275","Gamora","yellow","Zen-Whoberian","Black",183,"green","good",77
+"276","Garbage Man",NA,"Mutant",NA,NA,NA,"good",NA
+"277","Gary Bell",NA,"Alpha",NA,NA,NA,"good",NA
+"278","General Zod","black","Kryptonian","Black",NA,NA,"bad",NA
+"279","Genesis","blue",NA,"Blond",185,NA,"good",86
+"280","Ghost Rider","red","Demon","No Hair",188,NA,"good",99
+"281","Ghost Rider II",NA,NA,NA,NA,NA,"good",NA
+"282","Giant-Man",NA,"Human",NA,NA,NA,"good",NA
+"283","Giant-Man II",NA,NA,NA,NA,NA,"good",NA
+"284","Giganta","green",NA,"Red",62.5,NA,"bad",630
+"285","Gladiator","blue","Strontian","Blue",198,"purple","neutral",268
+"286","Goblin Queen","green",NA,"Red",168,NA,"bad",50
+"287","Godzilla",NA,"Kaiju",NA,108,"grey","bad",NA
+"288","Gog",NA,NA,NA,NA,NA,"bad",NA
+"289","Goku",NA,"Saiyan",NA,175,NA,"good",62
+"290","Goliath",NA,NA,NA,NA,NA,"good",NA
+"291","Goliath",NA,"Human",NA,NA,NA,"good",NA
+"292","Goliath",NA,"Human",NA,NA,NA,"good",NA
+"293","Goliath IV","brown",NA,"Black",183,NA,"good",90
+"294","Gorilla Grodd","yellow","Gorilla","Black",198,NA,"bad",270
+"295","Granny Goodness","blue",NA,"White",178,NA,"bad",115
+"296","Gravity","blue","Human","Brown",178,NA,"good",79
+"297","Greedo","purple","Rodian",NA,170,"green","bad",NA
+"298","Green Arrow","green","Human","Blond",188,NA,"good",88
+"299","Green Goblin","blue","Human","Auburn",180,NA,"bad",83
+"300","Green Goblin II","blue",NA,"Auburn",178,NA,"bad",77
+"301","Green Goblin III",NA,NA,NA,183,NA,"good",88
+"302","Green Goblin IV","green",NA,"Brown",178,NA,"good",79
+"303","Groot","yellow","Flora Colossus",NA,701,NA,"good",4
+"304","Guardian","brown","Human","Black",NA,NA,"good",NA
+"305","Guy Gardner","blue","Human-Vuldarian","Red",188,NA,"good",95
+"306","Hal Jordan","brown","Human","Brown",188,NA,"good",90
+"307","Han Solo","brown","Human","Brown",183,NA,"good",79
+"308","Hancock","brown","Human","Black",188,NA,"good",NA
+"309","Harley Quinn","blue","Human","Blond",170,NA,"bad",63
+"310","Harry Potter","green","Human","Black",NA,NA,"good",NA
+"311","Havok","blue","Mutant","Blond",183,NA,"good",79
+"312","Hawk","red",NA,"Brown",185,NA,"good",89
+"313","Hawkeye","blue","Human","Blond",191,NA,"good",104
+"314","Hawkeye II","blue","Human","Black",165,NA,"good",57
+"315","Hawkgirl","green",NA,"Red",175,NA,"good",61
+"316","Hawkman","blue",NA,"Brown",185,NA,"good",88
+"317","Hawkwoman","green",NA,"Red",175,NA,"good",54
+"318","Hawkwoman II",NA,NA,NA,NA,NA,"good",NA
+"319","Hawkwoman III","blue",NA,"Red",170,NA,"good",65
+"320","Heat Wave","blue","Human","No Hair",180,NA,"bad",81
+"321","Hela","green","Asgardian","Black",213,NA,"bad",225
+"322","Hellboy","gold","Demon","Black",259,NA,"good",158
+"323","Hellcat","blue","Human","Red",173,NA,"good",61
+"324","Hellstorm","red",NA,"Red",185,NA,"good",81
+"325","Hercules","blue","Demi-God","Brown",196,NA,"good",146
+"326","Hiro Nakamura",NA,NA,NA,NA,NA,"good",NA
+"327","Hit-Girl",NA,"Human",NA,NA,NA,"good",NA
+"328","Hobgoblin","blue",NA,"Grey",180,NA,"bad",83
+"329","Hollow","blue",NA,"Red",170,NA,"good",NA
+"330","Hope Summers","green",NA,"Red",168,NA,"good",48
+"331","Howard the Duck","brown",NA,"Yellow",79,NA,"good",18
+"332","Hulk","green","Human / Radiation","Green",244,"green","good",630
+"333","Human Torch","blue","Human / Radiation","Blond",178,NA,"good",77
+"334","Huntress","blue",NA,"Black",180,NA,"good",59
+"335","Husk","blue","Mutant","Blond",170,NA,"good",58
+"336","Hybrid","brown","Symbiote","Black",175,NA,"good",77
+"337","Hydro-Man","brown",NA,"Brown",188,NA,"bad",119
+"338","Hyperion","blue","Eternal","Red",183,NA,"good",207
+"339","Iceman","brown","Mutant","Brown",173,NA,"good",65
+"340","Impulse","yellow","Human","Auburn",170,NA,"good",65
+"341","Indiana Jones",NA,"Human",NA,183,NA,"good",79
+"342","Indigo",NA,"Alien","Purple",NA,NA,"neutral",NA
+"343","Ink","blue","Mutant","No Hair",180,NA,"good",81
+"344","Invisible Woman","blue","Human / Radiation","Blond",168,NA,"good",54
+"345","Iron Fist","blue","Human","Blond",180,NA,"good",79
+"346","Iron Man","blue","Human","Black",198,NA,"good",191
+"347","Iron Monger","blue",NA,"No Hair",NA,NA,"bad",2
+"348","Isis",NA,NA,NA,NA,NA,"good",NA
+"349","Jack Bauer",NA,NA,NA,NA,NA,"good",NA
+"350","Jack of Hearts","blue / white","Human","Brown",155,NA,"good",79
+"351","Jack-Jack","blue","Human","Brown",71,NA,"good",14
+"352","James Bond","blue","Human","Blond",183,NA,"good",NA
+"353","James T. Kirk","hazel","Human","Brown",178,NA,"good",77
+"354","Jar Jar Binks","yellow","Gungan",NA,193,"orange / white","good",NA
+"355","Jason Bourne",NA,"Human",NA,NA,NA,"good",NA
+"356","Jean Grey","green","Mutant","Red",168,NA,"good",52
+"357","Jean-Luc Picard",NA,"Human",NA,NA,NA,"good",NA
+"358","Jennifer Kale","blue",NA,"Blond",168,NA,"good",55
+"359","Jesse Quick",NA,"Human",NA,NA,NA,"good",NA
+"360","Jessica Cruz","green","Human","Brown",NA,NA,"good",NA
+"361","Jessica Jones","brown","Human","Brown",170,NA,"good",56
+"362","Jessica Sanders",NA,NA,NA,NA,NA,"good",NA
+"363","Jigsaw","blue",NA,"Black",188,NA,"bad",113
+"364","Jim Powell",NA,NA,NA,NA,NA,"good",NA
+"365","JJ Powell",NA,NA,NA,NA,NA,"good",NA
+"366","Johann Krauss",NA,NA,NA,NA,NA,"good",NA
+"367","John Constantine","blue","Human","Blond",183,NA,"good",NA
+"368","John Stewart","green","Human","Black",185,NA,"good",90
+"369","John Wraith","brown",NA,"Black",183,NA,"good",88
+"370","Joker","green","Human","Green",196,"white","bad",86
+"371","Jolt","blue",NA,"Black",165,NA,"good",49
+"372","Jubilee","red","Mutant","Black",165,NA,"good",52
+"373","Judge Dredd",NA,"Human",NA,188,NA,"good",NA
+"374","Juggernaut","blue","Human","Red",287,NA,"neutral",855
+"375","Junkpile",NA,"Mutant",NA,NA,NA,"bad",NA
+"376","Justice","hazel","Human","Brown",178,NA,"good",81
+"377","Jyn Erso","green","Human","Brown",NA,NA,"good",NA
+"378","K-2SO","white","Android","No Hair",213,"gray","good",NA
+"379","Kang","brown",NA,"Brown",191,NA,"bad",104
+"380","Karate Kid","brown","Human","Brown",173,NA,"good",72
+"381","Kathryn Janeway",NA,"Human",NA,NA,NA,"good",NA
+"382","Katniss Everdeen",NA,"Human",NA,NA,NA,"good",NA
+"383","Kevin 11",NA,"Human","Black",NA,NA,"good",NA
+"384","Kick-Ass","blue","Human","Blond",NA,NA,"good",NA
+"385","Kid Flash","green","Human","Red",NA,NA,"good",NA
+"386","Kid Flash II",NA,NA,NA,NA,NA,"good",NA
+"387","Killer Croc","red","Metahuman","No Hair",244,"green","bad",356
+"388","Killer Frost","blue","Human","Blond",NA,"blue","bad",NA
+"389","Kilowog","red","Bolovaxian","No Hair",234,"pink","good",324
+"390","King Kong","yellow","Animal","Black",30.5,NA,"good",NA
+"391","King Shark","black","Animal","No Hair",NA,NA,"bad",NA
+"392","Kingpin","blue","Human","No Hair",201,NA,"bad",203
+"393","Klaw","red","Human","No Hair",188,"red","bad",97
+"394","Kool-Aid Man","black",NA,"No Hair",NA,"red","good",NA
+"395","Kraven II","brown","Human","Black",191,NA,"bad",99
+"396","Kraven the Hunter","brown","Human","Black",183,NA,"bad",106
+"397","Krypto","blue","Kryptonian","White",64,NA,"good",18
+"398","Kyle Rayner","green","Human","Black",180,NA,"good",79
+"399","Kylo Ren",NA,"Human",NA,NA,NA,"bad",NA
+"400","Lady Bullseye",NA,NA,"Black",NA,NA,"bad",NA
+"401","Lady Deathstrike","brown","Cyborg","Black",175,NA,"bad",58
+"402","Leader","green",NA,"No Hair",178,NA,"bad",63
+"403","Leech",NA,NA,NA,NA,NA,"good",NA
+"404","Legion","green / blue","Mutant","Black",175,NA,"good",59
+"405","Leonardo","blue","Mutant","No Hair",NA,"green","good",NA
+"406","Lex Luthor","green","Human","No Hair",188,NA,"bad",95
+"407","Light Lass","blue",NA,"Red",165,NA,"good",54
+"408","Lightning Lad","blue",NA,"Red",155,NA,"good",65
+"409","Lightning Lord","blue",NA,"Red",191,NA,"bad",95
+"410","Living Brain","yellow",NA,NA,198,NA,"bad",360
+"411","Living Tribunal","blue","Cosmic Entity","No Hair",NA,"gold","neutral",NA
+"412","Liz Sherman",NA,NA,NA,NA,NA,"good",NA
+"413","Lizard","red","Human","No Hair",203,NA,"bad",230
+"414","Lobo","red","Czarnian","Black",229,"blue-white","neutral",288
+"415","Loki","green","Asgardian","Black",193,NA,"bad",236
+"416","Longshot","blue","Human","Blond",188,NA,"good",36
+"417","Luke Cage","brown","Human","Black",198,NA,"good",191
+"418","Luke Campbell",NA,NA,NA,NA,NA,"bad",NA
+"419","Luke Skywalker","blue","Human","Blond",168,NA,"good",77
+"420","Luna",NA,"Human",NA,NA,NA,"good",NA
+"421","Lyja","green",NA,"Green",NA,NA,"good",NA
+"422","Mach-IV","brown",NA,"Brown",180,NA,"bad",79
+"423","Machine Man","red",NA,"Black",183,NA,"good",383
+"424","Magneto","grey","Mutant","White",188,NA,"bad",86
+"425","Magog","blue",NA,"Blond",NA,NA,"good",NA
+"426","Magus","black",NA,NA,183,NA,"bad",NA
+"427","Man of Miracles","blue","God / Eternal","Silver",NA,NA,NA,NA
+"428","Man-Bat","brown","Human","Brown",NA,NA,"neutral",NA
+"429","Man-Thing","red",NA,"No Hair",213,"green","good",225
+"430","Man-Wolf","brown",NA,"Auburn",188,NA,"good",90
+"431","Mandarin","blue","Human","White",188,NA,"bad",97
+"432","Mantis","green","Human-Kree","Black",168,"green","good",52
+"433","Martian Manhunter","red","Martian","No Hair",201,"green","good",135
+"434","Marvel Girl","green",NA,"Red",170,NA,"good",56
+"435","Master Brood","blue",NA,"Black",183,NA,"good",81
+"436","Master Chief","brown","Human / Altered","Brown",213,NA,"good",NA
+"437","Match","black",NA,"Black",NA,NA,"bad",NA
+"438","Matt Parkman",NA,NA,NA,NA,NA,"good",NA
+"439","Maverick","blue",NA,"Black",193,NA,"good",110
+"440","Maxima","brown",NA,"Red",180,NA,"bad",72
+"441","Maya Herrera",NA,NA,NA,NA,NA,"good",NA
+"442","Medusa","green","Inhuman","Red",180,NA,"good",59
+"443","Meltdown","blue",NA,"Blond",165,NA,"good",54
+"444","Mephisto","white",NA,"Black",198,NA,"bad",140
+"445","Mera","blue","Atlantean","Red",175,NA,"good",72
+"446","Metallo","green","Android","Brown",196,NA,"bad",90
+"447","Metamorpho","black",NA,"No Hair",185,NA,"good",90
+"448","Meteorite",NA,NA,NA,NA,NA,"good",NA
+"449","Metron","blue",NA,"Black",185,NA,"good",86
+"450","Micah Sanders","brown",NA,"Black",NA,NA,"good",NA
+"451","Michelangelo","blue","Mutant",NA,NA,"green","good",NA
+"452","Micro Lad","grey",NA,"Brown",183,NA,"good",77
+"453","Mimic","brown",NA,"Brown",188,NA,"good",101
+"454","Minna Murray",NA,NA,NA,NA,NA,"good",NA
+"455","Misfit","blue",NA,"Red",NA,NA,"good",NA
+"456","Miss Martian","red",NA,"Red",178,NA,"good",61
+"457","Mister Fantastic","brown","Human / Radiation","Brown",185,NA,"good",81
+"458","Mister Freeze",NA,"Human",NA,183,NA,"bad",86
+"459","Mister Knife","blue","Spartoi","Brown",NA,NA,"bad",NA
+"460","Mister Mxyzptlk",NA,"God / Eternal",NA,NA,NA,"bad",NA
+"461","Mister Sinister","red","Human / Altered","Black",196,NA,"bad",128
+"462","Mister Zsasz","blue","Human","Blond",NA,NA,"bad",NA
+"463","Mockingbird","blue","Human","Blond",175,NA,"good",61
+"464","MODOK","white","Cyborg","Brownn",366,NA,"bad",338
+"465","Mogo",NA,"Planet",NA,NA,NA,"good",NA
+"466","Mohinder Suresh",NA,NA,NA,NA,NA,"good",NA
+"467","Moloch",NA,NA,NA,NA,NA,"bad",NA
+"468","Molten Man","gold",NA,"Gold",196,NA,"bad",248
+"469","Monarch","blue",NA,"White",193,NA,"good",90
+"470","Monica Dawson",NA,NA,NA,NA,NA,"good",NA
+"471","Moon Knight","brown","Human","Brown",188,NA,"good",101
+"472","Moonstone","blue",NA,"Blond",180,NA,"bad",59
+"473","Morlun","white / red",NA,"Black",188,NA,"bad",79
+"474","Morph","white",NA,"No Hair",178,NA,"good",79
+"475","Moses Magnum","brown",NA,"Black",175,NA,"bad",72
+"476","Mr Immortal","blue","Mutant","Blond",188,NA,"good",70
+"477","Mr Incredible","blue","Human","Blond",201,NA,"good",158
+"478","Ms Marvel II","blue",NA,"Red",173,NA,"good",61
+"479","Multiple Man","blue",NA,"Brown",180,NA,"good",70
+"480","Mysterio","brown","Human","No Hair",180,NA,"bad",79
+"481","Mystique","yellow (without irises)","Mutant","Red / Orange",178,"blue","bad",54
+"482","Namor",NA,NA,NA,NA,NA,"good",NA
+"483","Namor","grey","Atlantean","Black",188,NA,"good",125
+"484","Namora","blue",NA,"Blond",180,NA,"good",85
+"485","Namorita","blue",NA,"Blond",168,NA,"good",101
+"486","Naruto Uzumaki",NA,"Human",NA,168,NA,"good",54
+"487","Nathan Petrelli","brown",NA,NA,NA,NA,"good",NA
+"488","Nebula","blue","Luphomoid","No Hair",185,"blue","bad",83
+"489","Negasonic Teenage Warhead","black","Mutant","Black",NA,NA,"good",NA
+"490","Nick Fury","brown","Human","Brown / White",185,NA,"good",99
+"491","Nightcrawler","yellow",NA,"Indigo",175,NA,"good",88
+"492","Nightwing","blue","Human","Black",178,NA,"good",79
+"493","Niki Sanders","blue",NA,"Blond",NA,NA,"good",NA
+"494","Nina Theroux",NA,"Alpha",NA,NA,NA,"good",NA
+"495","Nite Owl II",NA,NA,NA,NA,NA,"good",NA
+"496","Northstar","blue",NA,"Black",180,NA,"good",83
+"497","Nova","brown","Human","Brown",185,NA,"good",86
+"498","Nova","white","Human / Cosmic","Red",163,"gold","good",59
+"499","Odin","blue","God / Eternal","White",206,NA,"good",293
+"500","Offspring",NA,NA,NA,NA,NA,"good",NA
+"501","Omega Red","red",NA,"Blond",211,NA,"bad",191
+"502","Omniscient","brown",NA,"Black",180,NA,"good",65
+"503","One Punch Man",NA,"Human","No Hair",175,NA,"good",69
+"504","One-Above-All",NA,"Cosmic Entity",NA,NA,NA,"neutral",NA
+"505","Onslaught","red","Mutant","No Hair",305,NA,"bad",405
+"506","Oracle","blue","Human","Red",178,NA,"good",59
+"507","Osiris","brown",NA,"Brown",NA,NA,"good",NA
+"508","Overtkill",NA,NA,NA,NA,NA,"bad",NA
+"509","Ozymandias","blue","Human","Blond",NA,NA,"bad",NA
+"510","Parademon",NA,"Parademon",NA,NA,NA,"bad",NA
+"511","Paul Blart",NA,"Human",NA,170,NA,"good",117
+"512","Penance",NA,NA,NA,NA,NA,"good",NA
+"513","Penance I",NA,NA,NA,NA,NA,"good",NA
+"514","Penance II","blue",NA,"Blond",183,NA,"good",89
+"515","Penguin","blue","Human","Black",157,NA,"bad",79
+"516","Peter Petrelli",NA,NA,NA,NA,NA,"good",NA
+"517","Phantom",NA,NA,NA,NA,NA,"good",NA
+"518","Phantom Girl","blue",NA,"Black",168,NA,"good",54
+"519","Phoenix","green","Mutant","Red",168,NA,"good",52
+"520","Plantman","green","Mutant","Grey",183,NA,"bad",87
+"521","Plastic Lad",NA,NA,NA,NA,NA,"good",NA
+"522","Plastic Man","blue","Human","Black",185,NA,"good",80
+"523","Plastique","blue",NA,"Red",168,NA,"bad",55
+"524","Poison Ivy","green","Human","Red",168,"green","bad",50
+"525","Polaris","green","Mutant","Green",170,NA,"good",52
+"526","Power Girl","blue","Kryptonian","blond",180,NA,"good",81
+"527","Power Man",NA,"Mutant",NA,NA,NA,"good",NA
+"528","Predator",NA,"Yautja",NA,213,NA,"bad",234
+"529","Professor X","blue","Mutant","No Hair",183,NA,"good",86
+"530","Professor Zoom","blue","Human","Strawberry Blond",180,NA,"bad",81
+"531","Proto-Goblin","green",NA,"Blond",NA,NA,"bad",NA
+"532","Psylocke","blue","Mutant","Purple",180,NA,"good",70
+"533","Punisher","blue","Human","Black",183,NA,"good",90
+"534","Purple Man","purple","Human","Purple",180,"purple","bad",74
+"535","Pyro","blue",NA,"Blond",178,NA,"bad",68
+"536","Q",NA,"God / Eternal",NA,NA,NA,NA,NA
+"537","Quantum",NA,NA,NA,NA,NA,"good",NA
+"538","Question","blue","Human","Blond",188,NA,"good",83
+"539","Quicksilver","blue","Mutant","Silver",183,NA,"good",79
+"540","Quill","brown",NA,"Brown",163,NA,"good",56
+"541","Ra's Al Ghul","green","Human","Grey",193,NA,"bad",97
+"542","Rachel Pirzad",NA,"Alpha",NA,NA,NA,"good",NA
+"543","Rambo","brown","Human","Black",178,NA,"good",83
+"544","Raphael",NA,"Mutant","No Hair",NA,"green","good",NA
+"545","Raven","indigo","Human","Black",165,NA,"neutral",50
+"546","Ray","green","Human","Red",178,NA,"good",70
+"547","Razor-Fist II","blue",NA,"No Hair",191,NA,"bad",117
+"548","Red Arrow","green","Human","Red",180,NA,"good",83
+"549","Red Hood","blue","Human","Black",183,NA,"neutral",81
+"550","Red Hulk","yellow","Human / Radiation","Black",213,"red","neutral",630
+"551","Red Mist",NA,NA,NA,NA,NA,"bad",NA
+"552","Red Robin","blue","Human","Black",165,NA,"good",56
+"553","Red Skull","blue",NA,"No Hair",188,NA,"bad",108
+"554","Red Tornado","green","Android","No Hair",185,NA,"good",146
+"555","Redeemer II",NA,NA,NA,NA,NA,"bad",NA
+"556","Redeemer III",NA,NA,NA,NA,NA,"bad",NA
+"557","Renata Soliz",NA,NA,NA,NA,NA,"good",NA
+"558","Rey","hazel","Human","Brown",297,NA,"good",NA
+"559","Rhino","brown","Human / Radiation","Brown",196,NA,"bad",320
+"560","Rick Flag","blue",NA,"Brown",185,NA,"bad",85
+"561","Riddler",NA,NA,NA,NA,NA,"bad",NA
+"562","Rip Hunter","blue","Human","Blond",NA,NA,"good",NA
+"563","Ripcord","green",NA,"Black",180,NA,"good",72
+"564","Robin","blue","Human","Black",178,NA,"good",79
+"565","Robin II","blue","Human","Red",183,NA,"good",101
+"566","Robin III","blue","Human","Black",165,NA,"good",56
+"567","Robin V","blue","Human","Black",137,NA,"good",38
+"568","Robin VI","green","Human","Red",NA,NA,"neutral",NA
+"569","Rocket Raccoon","brown","Animal","Brown",122,NA,"good",25
+"570","Rogue","green",NA,"Brown / White",173,NA,"good",54
+"571","Ronin","blue","Human","Blond",191,NA,"good",104
+"572","Rorschach","blue","Human","Red",168,NA,"good",63
+"573","Sabretooth","amber","Mutant","Blond",198,NA,"bad",171
+"574","Sage","blue",NA,"Black",170,NA,"good",61
+"575","Sandman","brown","Human","Brown",185,NA,"neutral",203
+"576","Sasquatch","red",NA,"Orange",305,NA,"good",900
+"577","Sauron",NA,"Maiar",NA,279,NA,"bad",NA
+"578","Savage Dragon",NA,NA,NA,NA,NA,"good",NA
+"579","Scarecrow","blue","Human","Brown",183,NA,"bad",63
+"580","Scarlet Spider","blue","Human","Blond",178,NA,"good",74
+"581","Scarlet Spider II","brown","Clone","Brown",193,NA,"good",113
+"582","Scarlet Witch","blue","Mutant","Brown",170,NA,"bad",59
+"583","Scorpia","green",NA,"Red",NA,NA,"bad",NA
+"584","Scorpion","brown","Human","Brown",211,NA,"bad",310
+"585","Sebastian Shaw",NA,"Mutant",NA,NA,NA,"bad",NA
+"586","Sentry","blue","Mutant","Blond",188,NA,"neutral",87
+"587","Shadow King","red",NA,NA,185,NA,"good",149
+"588","Shadow Lass","black","Talokite","Black",173,"blue","good",54
+"589","Shadowcat","hazel","Mutant","Brown",168,NA,"good",50
+"590","Shang-Chi","brown","Human","Black",178,NA,"good",79
+"591","Shatterstar","brown",NA,"Red",191,NA,"good",88
+"592","She-Hulk","green","Human","Green",201,NA,"good",315
+"593","She-Thing","blue","Human / Radiation","No Hair",183,NA,"good",153
+"594","Shocker","brown","Human","Brown",175,NA,"bad",79
+"595","Shriek","yellow / blue",NA,"Black",173,NA,"good",52
+"596","Shrinking Violet",NA,NA,NA,NA,NA,"good",NA
+"597","Sif","blue","Asgardian","Black",188,NA,"good",191
+"598","Silk","brown","Human","Black",NA,NA,"good",NA
+"599","Silk Spectre",NA,NA,NA,NA,NA,"good",NA
+"600","Silk Spectre II",NA,NA,NA,NA,NA,"good",NA
+"601","Silver Surfer","white","Alien","No Hair",193,"silver","good",101
+"602","Silverclaw","brown",NA,"Black",157,NA,"good",50
+"603","Simon Baz","bown","Human","Black",NA,NA,"good",NA
+"604","Sinestro","black","Korugaran","Black",201,"red","neutral",92
+"605","Siren","blue","Atlantean","Purple",175,NA,"bad",72
+"606","Siren II","black",NA,NA,NA,NA,"bad",NA
+"607","Siryn","blue",NA,"Strawberry Blond",168,NA,"bad",52
+"608","Skaar","green",NA,"Black",198,NA,"good",180
+"609","Snake-Eyes",NA,"Animal",NA,NA,NA,"bad",NA
+"610","Snowbird","white",NA,"Blond",178,NA,"good",49
+"611","Sobek","white",NA,"No Hair",NA,NA,"good",NA
+"612","Solomon Grundy","black","Zombie","White",279,NA,"bad",437
+"613","Songbird","green",NA,"Red / White",165,NA,"good",65
+"614","Space Ghost",NA,"Human",NA,188,NA,"good",113
+"615","Spawn","brown","Demon","Black",211,NA,"good",405
+"616","Spectre","white","God / Eternal","No Hair",NA,"white","good",NA
+"617","Speedball",NA,NA,NA,NA,NA,"good",NA
+"618","Speedy",NA,"Human",NA,NA,NA,"good",NA
+"619","Speedy","green","Human","Brown",NA,NA,"good",NA
+"620","Spider-Carnage",NA,"Symbiote",NA,NA,NA,"bad",NA
+"621","Spider-Girl","blue","Human","Brown",170,NA,"good",54
+"622","Spider-Gwen","blue","Human","Blond",165,NA,"good",56
+"623","Spider-Man","hazel","Human","Brown",178,NA,"good",74
+"624","Spider-Man","red","Human","Brown",178,NA,"good",77
+"625","Spider-Man","brown","Human","Black",157,NA,"good",56
+"626","Spider-Woman","green","Human","Black",178,NA,"good",59
+"627","Spider-Woman II",NA,NA,NA,NA,NA,"good",NA
+"628","Spider-Woman III","brown",NA,"Brown",173,NA,"good",55
+"629","Spider-Woman IV","red",NA,"White",178,NA,"bad",58
+"630","Spock","brown","Human-Vulcan","Black",185,NA,"good",81
+"631","Spyke","brown","Mutant","Blond",183,NA,"good",83
+"632","Stacy X",NA,NA,NA,NA,NA,"good",NA
+"633","Star-Lord","blue","Human-Spartoi","Blond",188,NA,"good",79
+"634","Stardust",NA,NA,NA,NA,NA,"good",NA
+"635","Starfire","green","Tamaranean","Auburn",193,"orange","good",71
+"636","Stargirl","blue","Human","Blond",165,NA,"good",62
+"637","Static","brown","Mutant","Black",170,NA,"good",63
+"638","Steel","brown",NA,"No Hair",201,NA,"good",131
+"639","Stephanie Powell",NA,NA,"Blond",NA,NA,"good",NA
+"640","Steppenwolf","red","New God","Black",183,"white","bad",91
+"641","Storm","blue","Mutant","White",180,NA,"good",57
+"642","Stormtrooper",NA,"Human",NA,183,NA,"bad",NA
+"643","Sunspot","brown","Mutant","black",173,NA,"good",77
+"644","Superboy","blue",NA,"Black",170,NA,"good",68
+"645","Superboy-Prime","blue","Kryptonian","Black / Blue",180,NA,"bad",77
+"646","Supergirl","blue","Kryptonian","Blond",165,NA,"good",54
+"647","Superman","blue","Kryptonian","Black",191,NA,"good",101
+"648","Swamp Thing","red","God / Eternal","No Hair",NA,"green","bad",NA
+"649","Swarm","yellow","Mutant","No Hair",196,"yellow","bad",47
+"650","Sylar",NA,NA,NA,NA,NA,"bad",NA
+"651","Synch","brown",NA,"Black",180,NA,"good",74
+"652","T-1000",NA,"Android",NA,183,"silver","bad",146
+"653","T-800","red","Cyborg",NA,NA,NA,"bad",176
+"654","T-850","red","Cyborg",NA,NA,NA,"bad",198
+"655","T-X",NA,"Cyborg",NA,NA,"silver","bad",149
+"656","Taskmaster","brown","Human","Brown",188,NA,"bad",99
+"657","Tempest","brown",NA,"Black",163,NA,"good",54
+"658","Thanos","red","Eternal","No Hair",201,"purple","bad",443
+"659","The Cape",NA,NA,NA,NA,NA,"good",NA
+"660","The Comedian","brown","Human","Black",188,NA,"neutral",101
+"661","Thing","blue","Human / Radiation","No Hair",183,NA,"good",225
+"662","Thor","blue","Asgardian","Blond",198,NA,"good",288
+"663","Thor Girl","blue","Asgardian","Blond",175,NA,"good",143
+"664","Thunderbird","brown",NA,"Black",185,NA,"good",101
+"665","Thunderbird II",NA,NA,NA,NA,NA,"good",NA
+"666","Thunderbird III","brown",NA,"Black",175,NA,"good",74
+"667","Thunderstrike","blue",NA,"Blond",198,NA,"good",288
+"668","Thundra","green",NA,"Red",218,NA,"good",158
+"669","Tiger Shark","grey","Human","No Hair",185,"grey","bad",203
+"670","Tigra","green",NA,"Auburn",178,NA,"good",81
+"671","Tinkerer","brown",NA,"White",163,NA,"bad",54
+"672","Titan",NA,NA,NA,NA,NA,"good",NA
+"673","Toad","black","Mutant","Brown",175,"green","neutral",76
+"674","Toxin","blue","Symbiote","Brown",188,NA,"good",97
+"675","Toxin","black","Symbiote","Blond",191,NA,"good",117
+"676","Tracy Strauss",NA,NA,NA,NA,NA,"good",NA
+"677","Trickster","blue","Human","Blond",183,NA,"bad",81
+"678","Trigon","yellow","God / Eternal","Black",NA,"red","bad",NA
+"679","Triplicate Girl","purple",NA,"Brown",168,NA,"good",59
+"680","Triton","green","Inhuman","No Hair",188,"green","good",86
+"681","Two-Face",NA,NA,NA,183,NA,"bad",82
+"682","Ultragirl","blue",NA,"Blond",168,NA,"good",105
+"683","Ultron","red","Android",NA,206,"silver","bad",331
+"684","Utgard-Loki","blue","Frost Giant","White",15.2,NA,"bad",58
+"685","Vagabond","blue",NA,"Strawberry Blond",168,NA,"good",54
+"686","Valerie Hart","hazel",NA,"Black",175,NA,"good",56
+"687","Valkyrie","blue",NA,"Blond",191,NA,"good",214
+"688","Vanisher","green",NA,"No Hair",165,NA,"bad",79
+"689","Vegeta",NA,"Saiyan","Black",168,NA,"bad",73
+"690","Venom","blue","Symbiote","Strawberry Blond",191,NA,"bad",117
+"691","Venom II","brown",NA,"Black",175,NA,"bad",50
+"692","Venom III","brown","Symbiote","Brown",229,NA,"bad",334
+"693","Venompool",NA,"Symbiote",NA,226,NA,NA,NA
+"694","Vertigo II","blue",NA,"Silver",168,NA,"good",52
+"695","Vibe","brown","Human","Black",178,NA,"good",71
+"696","Vindicator","green","Human","Red",165,NA,"good",54
+"697","Vindicator",NA,NA,NA,NA,NA,"good",NA
+"698","Violator",NA,NA,NA,NA,NA,"bad",NA
+"699","Violet Parr","violet","Human","Black",137,NA,"good",41
+"700","Vision","gold","Android","No Hair",191,"red","good",135
+"701","Vision II","red",NA,"No Hair",191,NA,"good",135
+"702","Vixen","amber","Human","Black",175,NA,"good",63
+"703","Vulcan","black",NA,"Black",NA,NA,"good",NA
+"704","Vulture","brown","Human","No Hair",180,NA,"bad",79
+"705","Walrus","blue","Human","Black",183,NA,"bad",162
+"706","War Machine","brown","Human","Brown",185,NA,"good",95
+"707","Warbird","blue",NA,"Blond",180,NA,"good",54
+"708","Warlock","red",NA,"Blond",188,NA,"good",108
+"709","Warp","brown",NA,"Black",173,NA,"bad",67
+"710","Warpath","brown","Mutant","Black",218,NA,"good",158
+"711","Wasp","blue","Human","Auburn",163,NA,"good",50
+"712","Watcher",NA,NA,NA,NA,NA,"good",NA
+"713","Weapon XI",NA,NA,NA,NA,NA,"bad",NA
+"714","White Canary","brown","Human","Black",NA,NA,"bad",NA
+"715","White Queen","blue",NA,"Blond",178,NA,"good",65
+"716","Wildfire",NA,NA,NA,NA,NA,"good",NA
+"717","Winter Soldier","brown","Human","Brown",175,NA,"good",117
+"718","Wiz Kid","brown",NA,"Black",140,NA,"good",39
+"719","Wolfsbane","green",NA,"Auburn",366,NA,"good",473
+"720","Wolverine","blue","Mutant","Black",160,NA,"good",135
+"721","Wonder Girl","blue","Demi-God","Blond",165,NA,"good",51
+"722","Wonder Man","red",NA,"Black",188,NA,"good",171
+"723","Wonder Woman","blue","Amazon","Black",183,NA,"good",74
+"724","Wondra",NA,NA,NA,NA,NA,"good",NA
+"725","Wyatt Wingfoot","brown",NA,"Black",196,NA,"good",117
+"726","X-23","green","Mutant / Clone","Black",155,NA,"good",50
+"727","X-Man","blue",NA,"Brown",175,NA,"good",61
+"728","Yellow Claw","blue",NA,"No Hair",188,NA,"bad",95
+"729","Yellowjacket","blue","Human","Blond",183,NA,"good",83
+"730","Yellowjacket II","blue","Human","Strawberry Blond",165,NA,"good",52
+"731","Ymir","white","Frost Giant","No Hair",304.8,"white","good",NA
+"732","Yoda","brown","Yoda's species","White",66,"green","good",17
+"733","Zatanna","blue","Human","Black",170,NA,"good",57
+"734","Zoom","red",NA,"Brown",185,NA,"bad",81

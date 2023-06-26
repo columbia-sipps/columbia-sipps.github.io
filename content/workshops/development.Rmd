@@ -46,7 +46,11 @@ No workshop this week due to Juneteenth.
 <li><a href="/workshop_files/2023/prof-dev/LitReviewOutline-QuALMRI_Template.docx" download>QuALMRI Template</a>
 </ul
 </ul>
-<br><br>
+<br>
 
-<br><br>
+#### Synchronous workshop materials:
+<p>
+<ul>
+<li><a href="/workshop_files/2023/prof-dev/Godden1975_ContextDependentMemory.pdf" download>Godden & Baddeley (1975). Context-dependent memory in two natural environments</a>
+<li><a href="/workshop_files/2023/prof-dev/ChapmanColbyLi_2014.pdf" download>Colby et al. (2014). Carrots By Default: Are Healthy Defaults a Blessing or a Curse?</a>
 <hr>
