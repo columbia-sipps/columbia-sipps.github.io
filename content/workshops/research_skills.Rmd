@@ -54,3 +54,10 @@ Download this <a href="/workshop_files/2023/research-skills/SIPPS_ResearchQ_Work
 
 
 <hr>
+
+### Week 4: Open Science & OSF
+<br>
+
+#### Before the workshop:
+<p>
+[Watch this pre-workshop video](https://youtu.be/4L4sM6tBmi4){target="_blank"}. Accompanying slides can be downloaded <a href="/workshop_files/2023/research-skills/RS_OpenScience.pdf" download>here</a>.

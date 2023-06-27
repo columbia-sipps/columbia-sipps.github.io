@@ -53,4 +53,13 @@ No workshop this week due to Juneteenth.
 <ul>
 <li><a href="/workshop_files/2023/prof-dev/Godden1975_ContextDependentMemory.pdf" download>Godden & Baddeley (1975). Context-dependent memory in two natural environments</a>
 <li><a href="/workshop_files/2023/prof-dev/ChapmanColbyLi_2014.pdf" download>Colby et al. (2014). Carrots By Default: Are Healthy Defaults a Blessing or a Curse?</a>
+
+<br><br>
+<hr>
+
+### Week 4: No workshop session!
+<br>
+No workshop this week due to the Fourth of July.
+
+<br><br>
 <hr>

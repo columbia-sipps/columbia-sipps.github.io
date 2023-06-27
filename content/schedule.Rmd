@@ -116,8 +116,8 @@ In addition to these workshops, students are expected to work in tandem with the
 <tr><td>June 15</td><td><b>What is a good research question?</b><br></td></tr>
 <tr><td>June 22</td><td><b>Literature search & Zotero</b><br></td></tr>
 <tr><td>June 28</td><td><b>Issues of diversity and bias in psychological and neuroscience research</b><br></td></tr>
-<tr><td>July 6</td><td><b>Research ethics</b><br></td></tr>
-<tr><td>July 13</td><td><b>Open science & OSF</b><br></td></tr>
+<tr><td>July 6</td><td><b>Open science & OSF</b><br></td></tr>
+<tr><td>July 13</td><td><b>Research ethics</b><br></td></tr>
 <tr><td>July 20</td><td><b>Qualtrics</b><br></td></tr>
 <tr><td>July 27</td><td><b>PsychoPy</b><br></td></tr>
 <tr><td>August 3</td><td><b>Science communication</b><br></td></tr>
