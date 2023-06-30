@@ -33,7 +33,8 @@ superhero_df <- read.csv(file = 'superheroes.csv', stringsAsFactors = FALSE)
 
 ```{r}
 
-head(superhero_df)
+head(superhero_df, 5)
+str(superhero_df)
 
 ```
 

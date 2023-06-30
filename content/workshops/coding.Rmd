@@ -113,6 +113,11 @@ Download the following files for the synchronous workshop session and place them
 <li><a href="/workshop_files/2023/coding-03/challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
 <br>
+
+#### After the workshop:
+<p>
+Review the <a href="/workshop_files/2023/coding-03/challenge_key.Rmd" download>answer key</a> for challenge completed during the workshop. (We *strongly* recommend trying to work out answers yourself and/or talk to the instructor before consulting this answer key.)
+<br><br>
 <hr>
 
 ### Week 4: No workshop session!
