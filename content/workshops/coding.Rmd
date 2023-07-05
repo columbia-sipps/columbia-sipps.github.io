@@ -126,3 +126,22 @@ No workshop this week due to the Fourth of July.
 
 <br><br>
 <hr>
+
+### Week 5: Data manipulation
+<br>
+
+#### Before the workshop:
+<p>
+Watch the pre-workshop video, and review the accompanying materials:
+<ul>
+<li>[Data manipulation pre-workshop video](https://youtu.be/VJDlwFjsKcI){target="_blank"}
+<li>Create create a folder named `05_data-manipulation` on your computer and download these files <u>within that folder</u>:
+<ul>
+<li><a href="/workshop_files/2023/coding-05/Study1.csv" download>data file 1 (csv)</a>
+<li><a href="/workshop_files/2023/coding-05/Study1_Followup.csv" download>data file 2 (csv)</a>
+<li><a href="/workshop_files/2023/coding-05/lesson.Rmd" download>RMarkdown lesson file</a>
+<li><a href="/workshop_files/2023/coding-05/05_data-manipulation.Rproj" download>R Project file</a>
+<li>Note: In the pre-workshop video, the name of the project folder and R project file used start with `04` instead of `05`. Either numbering scheme is okay, just make sure your R project file has the same name as the folder you create to store these materials.
+</ul>
+</ul>
+<br>

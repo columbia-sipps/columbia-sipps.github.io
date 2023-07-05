@@ -61,3 +61,13 @@ Download this <a href="/workshop_files/2023/research-skills/SIPPS_ResearchQ_Work
 #### Before the workshop:
 <p>
 [Watch this pre-workshop video](https://youtu.be/4L4sM6tBmi4){target="_blank"}. Accompanying slides can be downloaded <a href="/workshop_files/2023/research-skills/RS_OpenScience.pdf" download>here</a>.
+
+<br><br>
+<hr>
+
+### Week 5: Research ethics
+<br>
+
+#### Before the workshop:
+<p>
+[Watch this pre-workshop video](https://youtu.be/b1WcZ6G9Uls){target="_blank"}. Accompanying slides can be downloaded <a href="/workshop_files/2023/research-skills/ResearchEthics_slides.pdf" download>here</a>.
