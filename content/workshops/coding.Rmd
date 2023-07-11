@@ -145,3 +145,36 @@ Watch the pre-workshop video, and review the accompanying materials:
 </ul>
 </ul>
 <br>
+
+#### During the workshop:
+<p>
+Download the following files for the synchronous workshop session and place them in the same `05_data-manipulation` folder.
+<ul>
+<li><a href="/workshop_files/2023/coding-05/Study2_Subjects.csv" download>data file 1 (csv)</a>
+<li><a href="/workshop_files/2023/coding-05/Study2_Trials.csv" download>data file 2 (csv)</a>
+<li><a href="/workshop_files/2023/coding-05/README_Study2.txt" download>data file README (txt)</a>
+<li><a href="/workshop_files/2023/coding-05/challenge.Rmd" download>RMarkdown challenge file</a>
+</ul>
+
+
+<br>
+<hr>
+
+### Week 6: Correlations & basic visuals
+<br>
+
+#### Before the workshop:
+<p>
+Watch the pre-workshop video, and review the accompanying materials:
+<ul>
+<li>[Correlations & basic visuals pre-workshop video](https://youtu.be/WzLu_gYCiVk){target="_blank"}
+<li>Create create a folder named `06_corr-viz` on your computer and download these files <u>within that folder</u>:
+<ul>
+<li><a href="/workshop_files/2023/coding-06/spotify_data.csv" download>data file (csv)</a>
+<li><a href="/workshop_files/2023/coding-06/lesson.Rmd" download>RMarkdown lesson file</a>
+<li><a href="/workshop_files/2023/coding-06/06_corr-viz.Rproj" download>R Project file</a>
+</ul>
+</ul>
+<br><br>
+<hr>
+

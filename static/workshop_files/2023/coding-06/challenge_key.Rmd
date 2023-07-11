@@ -1,0 +1,227 @@
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In this challenge, you'll be exploring a dataset that contains information about earthquakes that took place between 1/1/2001 and 1/1/2023. See here for more information: https://www.kaggle.com/datasets/warcoder/earthquake-dataset
+
+1. Load tidyverse and your data from the `earthquake_data.csv` file. Make sure to save the dataset into a new variable (with a name of your choice).
+
+```{r}
+
+library(tidyverse)
+
+earthquakes <- read.csv(file = 'earthquake_data.csv', stringsAsFactors = FALSE)
+head(earthquakes)
+
+```
+
+2. Inspect your data and understand:
+a) the variables in your dataset and their data types
+b) number of rows and columns
+
+```{r}
+
+names(earthquakes)
+nrow(earthquakes)
+ncol(earthquakes)
+
+```
+
+3. Plot a histogram using `ggplot` functions to look at the distributions of earthquake magnitudes (`magnitude`) and the depth of the earthquake's origin (`depth`). Also make sure to give each plot a title, and label the x axis.
+
+
+```{r}
+
+ggplot(data = earthquakes, aes(x = magnitude)) +
+  geom_histogram() +
+  labs(x = 'earthquake magnitude')
+
+ggplot(data = earthquakes, aes(x = depth)) +
+  geom_histogram() +
+  labs(x = 'earthquake depth')
+
+```
+
+4. **Choose 1** of the histograms you made above, and play around with the number of bins to create a visualization you think best represents the data. There's no right answer, but this can include:
+
+- changing the number of bins
+- changing the fill & outline color of the bars
+- changing the theme
+
+```{r}
+
+ggplot(data = earthquakes, aes(x = magnitude)) +
+  geom_histogram(fill = 'sienna2', color = 'sienna4', bins = 30) +
+  labs(x = 'earthquake magnitude', title = 'histogram of earthquake magnitudes (1/2001 - 1/2023)') +
+  theme_light()
+
+```
+
+
+5. Next, we're going to make a bar plot showing the mean reported intensity of each earthquake (`mmi`) for the different earthquake alert levels (e.g., "green", "yellow", "red"; stored in the `alert` column).
+
+However, there's a cleaning step we need to do first. Not all rows in this dataframe have alert level data! So to start, let's get rid of all the rows that are missing this piece of information. Earthquakes without information about their alert level will have an empty string (i.e., "") in this column.
+
+Make sure to save this new dataframe in a new variable (e.g., `earthquakes_alert`)!
+
+```{r}
+
+earthquakes_alert <- earthquakes %>%
+  filter(alert != "")
+
+head(earthquakes_alert)
+
+```
+
+Now we can make our bar plot. Make sure you add axis labels (x and y), and make each of the different bars a different color. Also feel free to choose a theme and/or change the width of the bars.
+
+```{r}
+
+ggplot(data = earthquakes_alert, aes(x = alert, y = cdi, fill = alert)) +
+  geom_bar(stat = "summary", width = 0.8) +
+  labs(x = 'alert level', y = 'reported intensity (CDI)', title = 'earthquake reported intensity by alert level') +
+  theme_bw()
+
+```
+
+6. In the plot you made, you might notice a few things that aren't perfect:
+
+- By default, the bars on the x-axis are arranged in alphabetical order, which doesn't map on to the natural ordering of the alert levels (green -> yellow -> orange -> red).
+- The default color palette used by ggplot doesn't align with the alert level color, which is kind of confusing.
+
+First, to change the order that ggplot uses to plot, you can run the following piece of code before your plot:
+
+`earthquakes_alert$alert <- factor(earthquakes_alert$alert, levels = c('green', 'yellow', 'orange', 'red'))`
+
+Here we're updating the `alert` column using the `factor()` function. This function takes the original column as its first argument, and the new ordering of the levels (i.e., categories) of that column as its second argument (`levels`).
+
+```{r}
+
+earthquakes_alert$alert <- factor(earthquakes_alert$alert, levels = c('green', 'yellow', 'orange', 'red'))
+
+ggplot(data = earthquakes_alert, aes(x = alert, y = cdi, fill = alert)) +
+  geom_bar(stat = "summary", width = 0.8) +
+  labs(x = 'alert level', y = 'reported intensity (CDI)', title = 'earthquake reported intensity by alert level') +
+  theme_bw()
+
+```
+
+7. Better! But the actual colors used here are still kind of confusing. To customize the colors we're using, we can add the function `scale_fill_manual()` to our plot. This function takes an argument called `values`, which should contain a list of color names that map onto the levels of your variable.
+
+Hint: You should be adding something like `+ scale_fill_manual(values = c(...))` to your plot.
+
+Feel free to look at this page for more color options: http://sape.inf.usi.ch/sites/default/files/ggplot2-colour-names.png), or use custom hex codes (https://htmlcolorcodes.com/).
+
+```{r}
+
+ggplot(data = earthquakes_alert, aes(x = alert, y = cdi, fill = alert)) +
+  geom_bar(stat = "summary", width = 0.8) +
+  labs(x = 'alert level', y = 'reported intensity (CDI)', title = 'earthquake reported intensity by alert level') +
+  scale_fill_manual(values = c('lightgreen', 'gold', 'orange2', 'tomato2')) +
+  theme_bw()
+
+```
+
+8. Let's make one more barplot, this time looking at the average reported intensity for earthquakes (your y variable) based on which continent it occurred in (your x variable). *Make sure to filter the dataframe first to only include rows that contain this information.*
+
+Add the following customizations:
+
+- change the bar colors based on `continent`
+- change the theme
+- change the axis labels (if needed) and add a title
+
+Also feel free to change the order of continents on the x-axis using the `factor()` function.
+
+```{r}
+
+earthquakes_continent <- earthquakes %>%
+  filter(continent != "")
+
+earthquakes_continent$continent <- factor(earthquakes_continent$continent,
+                                          levels = c('North America', 'South America', 'Africa', 'Europe', 'Asia', 'Oceania'))
+
+ggplot(data = earthquakes_continent, aes(x = continent, y = cdi, fill = continent)) +
+  geom_bar(stat = 'summary', width = 0.8) +
+  labs(x = 'continent', y = 'reported intensity (CDI)', title = 'earthquake reported intensity by continent') +
+  theme_classic() +
+  theme(legend.position = 'none')
+
+```
+
+9. Finally, compute the correlation between earthquake magnitude and reported intensity (CDI). Describe the relationship in words, and visualize it using a scatterplot. This scatterplot should also use the `geom_smooth()` function to add a regression line.
+
+Customize your scatterplot in any/all of the following ways:
+
+- change the title/axis labels
+- change the color of the points
+- change the transparency of the points
+- change the size of the points
+- change the appearance of the regression line
+    - note: within `geom_smooth()`: the `color` argument changes the color of the line,
+      the `fill` argument changes the fill of the shaded error bar surrounding the line,
+      and the `alpha` argument changes the transparency of the shaded error bar
+
+```{r}
+
+# compute the correlation
+cor.test(earthquakes$magnitude, earthquakes$cdi)
+
+ggplot(data = earthquakes, aes(x = magnitude, y = cdi)) +
+  geom_point(alpha = 0.2, size = 2, color = 'tomato2') +
+  geom_smooth(method = 'lm', color = 'grey20', fill = 'grey80', alpha = 0.2) +
+  labs(x = 'magnitude', y = 'reported intensity (CDI)', title = 'earthquake reported intensity by alert level') +
+  theme_bw()
+
+```
+
+**BONUS CHALLENGE:** Want more of a challenge? Try any/all of the following steps. Feel free to seek out additional resources (e.g., RStudio's "help" tab, the internet, your peers, the instructor).
+
+10. In the previous scatterplot, you might notice that the points form a gridlike pattern, which makes it hard to see all the individual points. This is because both CDI and magnitude values are not completely continuous, in that magnitude is always rounded to the nearest tenth and CDI is always a whole number.
+
+Try using the `geom_jitter` function instead of `geom_point`, which will jitter the points in space so we can see them all better. Use the help panel (`?geom_jitter`) to learn how to customize the amount of jitter applied to the points (using the `width` and `height` arguments). Ideally we want enough jitter to see all of the points, but not so much that the datapoints are moved too far from their actual values.
+
+```{r}
+
+ggplot(data = earthquakes, aes(x = magnitude, y = cdi)) +
+  geom_jitter(width = 0.05, height = 0.1, alpha = 0.2, size = 2.5, color = 'tomato2') +
+  geom_smooth(method = 'lm', color = 'grey20', fill = 'grey80', alpha = 0.5) +
+  labs(x = 'magnitude', y = 'reported intensity (CDI)', title = 'earthquake reported intensity by alert level') +
+  theme_bw()
+
+```
+
+11. In the barplot you made looking at earthquake intensity by continent, add a scatterplot on top of the bar plot using `geom_jitter()`. Change the height and width of the jitter to something you think looks good.
+
+```{r}
+
+ggplot(data = earthquakes_continent, aes(x = continent, y = cdi, fill = continent)) +
+  geom_bar(stat = 'summary', width = 0.8) +
+  geom_jitter(width = 0.2, height = 0.1, alpha = 0.3, size = 2.5) +
+  labs(x = 'continent', y = 'reported intensity (CDI)', title = 'earthquake reported intensity by continent') +
+  theme_classic() +
+  theme(legend.position = 'none')
+
+```
+
+12. Install and load the `datasauRus` package. This package contains a dataframe called `datasaurus_dozen`. Filter this dataframe to contain only points with a value of "dino" in the `dataset` column. Then make a scatterplot from this filtered dataframe. Customize this plot however you'd like!
+
+Can you figure out how to change the shape of the points? (Hint: http://www.sthda.com/english/wiki/ggplot2-point-shapes)
+
+```{r}
+
+# install.packages('datasauRus')
+library(datasauRus)
+
+dino_data <- datasaurus_dozen %>%
+  filter(dataset == 'dino')
+
+ggplot(data = dino_data, aes(x = x, y = y)) +
+  geom_point(fill = 'lightgreen', color = 'darkgreen', shape = 23, size = 3) +
+  theme_void() +
+  labs(title = 'hey look, a ggplot dinosaur!')
+
+```
+
+
+

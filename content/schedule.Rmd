@@ -70,7 +70,7 @@ In addition to these workshops, students are expected to work in tandem with the
 <tr><td>June 26</td><td><b>How to read an academic paper</b><br></td></tr>
 <tr><td>July 3</td><td><b>No workshop (Fourth of July)</b><br></td></tr>
 <tr><td>July 10</td><td><b>Journal club</b><br></td></tr>
-<tr><td>June 17</td><td><b>Career panel: grad school</b><br></td></tr>
+<tr><td>June 17</td><td><b>Career panel</b><br></td></tr>
 <tr><td>July 24</td><td><b>Journal club</b><br></td></tr>
 <tr><td>July 31</td><td><b>Grad student data blitz</b><br></td></tr>
 <tr><td>August 7</td><td><b>Journal club</b><br></td></tr>

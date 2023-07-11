@@ -1,0 +1,318 @@
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Welcome to the correlations and basic visuals workshop! 
+
+# Links to Files and Video Recording
+
+The files for all tutorials can be downloaded from [SIPPS website](https://columbia-sipps.github.io/workshops/){target="_blank"}. The recordings from this session will also be posted on the same site. 
+
+# Goals of this lesson
+
+Students will learn:
+
+1. Intro to the ggplot package and how to use it 
+2. How to construct some common plots to inspect data: namely, histograms, bar plots, and scatter plots
+3. How to compute (and visualize) the correlation between two variables
+
+# Inspecting a dataset 
+
+So far, we've seen how to clean, rename and filter data in a way that prepares it for further analyses (such as modeling). But one important step before we move into that is learning how to visualize your data. Plots are critical for helping you look at the data, allowing you to visually inspect for any outliers or errors, assess the shape of your data distributions, and evaluate whether the data looks "clean" or if it needs any additional cleaning or transformations. 
+
+First, let's load in some data. This time we're going to look at characteristics of top songs on Spotify between 2000-2019.
+
+See here for more information: https://www.kaggle.com/datasets/paradisejoy/top-hits-spotify-from-20002019 
+
+```{r}
+
+
+```
+
+As you can see when looking at the data, in addition to some basic information about each song (e.g., artist, year, duration), we have information about several qualities of music that Spotify keeps track of (e.g., energy, "speechiness").
+
+Let's get the names of all the columns, as well as the number of columns and rows (i.e., songs).
+
+```{r}
+
+# we can also get the names of columns, number of columns and number of rows
+
+
+```
+
+Let's say the first thing we want to look at his how long popular songs tend to be. The column we need for this is `duration_ms`, which contains each song's duration in milliseconds. To make this a bit easier to comprehend, let's start by converting the duration to seconds.
+
+```{r}
+
+# add a new column for duration in seconds
+
+
+```
+
+Now, the simplest way to visualize a single continuous variable like this is by looking at its distribution. We can do that by plotting a **histogram**. 
+
+```{r}
+
+
+```
+
+Okay, what do you notice looking at this plot? 
+
+We can see that it ranges from 100 to approx 500. We can see that most songs are somewhere between 200-250 seconds (roughly between 3-4 minutes), but that there are some songs that are quite a bit longer or shorter.
+
+We can also confirm the exact range of these values using the `range()` function.
+
+```{r}
+
+
+```
+
+The other thing you might notice is that this plot isn't all that pretty. How can we fix that?
+
+Let's start by changing the colors of our plot, and also changing the number of bins we're using.
+
+```{r}
+
+
+```
+
+Oops! This only has 2 breaks, which means there are only 2 bins. That's probably not the best way to look at this. So let's try different values of breaks.
+
+```{r}
+
+
+```
+
+That's better. Now let's add a title to the plot, and change what the x axis is called so it's more descriptive.
+
+```{r}
+
+
+```
+
+One thing you might have noticed here is that each time we wanted to change one aspect of the visualization, we had to basically rewrite the same function, adding a lot more arguments. If you really wanted to customize all the aspects of a plot, you might be able to imagine how complicated this could get. Your function would get really long with a ton of arguments. 
+
+# Enter the `ggplot2` package of `tidyverse`
+
+The first few code chunks will return results that look exactly like the plots above, but with ggplot, you can do A LOT more visually. This is what I ALWAYS use. Base R functions can be good when you are trying to get a quick and dirty visual of your data, but if you are looking to create visuals that are suitable for a paper, presentation, portfolio, etc., you want to use ggplot.
+
+Some basic properties of `ggplot2`:
+
+* you'll always use the `ggplot()` command first to start building your plot
+
+* plots can be saved into variables with `a <- ggplot()`
+
+* the general format of this function is `ggplot(data, aes(x = [x axis variable], y = [y axis variable])` 
+    * x and y variables are always specified in this `aes()` subfunction
+    * some types of plots may require additional `aes()` arguments, may only need an x variable, etc.
+
+First things first,  let's load the package `tidyverse`
+
+```{r}
+
+# we could also load in just the ggplot2 package using library(ggplot2)
+# however, it typically makes sense to load the entire tidyverse since we'll also be cleaning and analyzing our data
+
+```
+
+Now run this line of code:
+
+```{r}
+
+
+```
+  
+  What do you notice? 
+  
+  * first, axes are set up the way we'd expect, and seem to have sensible values
+  * however, why is nothing on this graph yet? we haven't put any graphic actually on the axes yet!
+
+**We need to tell the `ggplot()` call what kind of graphic to put on the axis!**
+
+  * a lot of the time, the syntax we'll use to add elements to our plot is `geom_[something]`
+
+## Histograms
+
+So let's try building a histogram with `geom_histogram()`: 
+
+```{r}
+
+
+```
+
+We can easily change multiple aesthetics of the plot by adding more arguments to our geom_histogram function.
+
+Note that when using ggplot, the `fill` argument usually controls the color *inside* a plotting element, whereas `color` controls the border around it. For some plotting elements, like the bars in a histogram, you can modify both of these properties. In other cases, you may only be able to modify one or the other.
+
+
+```{r}
+
+
+```
+
+You can also add titles and axis labels just like we did above — but in a manner that's easier to read. Specifically, you can use the function `labs()` to give the plot a title, label your axes, and more. 
+
+```{r}
+
+
+```
+
+You can use the `bins` argument to change the number of bins (like breaks above). Try different values of bins and see how it changes your plot!
+
+```{r}
+
+
+```
+
+## ggplot themes
+
+As we've mentioned, ggplot allows a great deal of flexibility in terms of modifying the style and appearance of your plots. One obvious adjustment you might want to make to your plots is changing the colors, which we've already introduced.
+
+However, beyond the basic, nameable colors (e.g., "red", "blue"), you can tell ggplot to use a huge number of built-in colors (see this page: http://sape.inf.usi.ch/sites/default/files/ggplot2-colour-names.png), or even enter a custom hex code (e.g., #FFFFFF = white).
+
+```{r}
+
+
+```
+
+ggplot also includes many built-in **themes**, which change elements such as your plot's grid lines, borders, and so on. (You can also create and save your own custom themes, for even more flexibility!)
+
+```{r}
+
+# to easily see how themes work, let's start by saving our current plot into a variable (called myplot)
+
+# now you can see the plot by calling the name of this variable
+
+# let's try some themes!
+
+
+```
+
+Check out this link for more comprehensive info about all the themes ggplot has to offer: https://ggplot2.tidyverse.org/reference/ggtheme.html
+
+You can also create your own custom theme, or download packages created by other R users that contain additional themes. The customization options are limitless!
+
+# Bar plots
+
+Now that we've learned a little more about plot customization, let's see what other kinds of visualizations we can make! Histograms are generally great for visualizing distributions of individual variables, but they're not great for telling us about the relationship between two (or more) variables.
+
+For this kind of purpose, one of the most commonly-used types of plots is something you've probably seen before: a bar plot. Bar plots are great for looking at how values of one outcome variable differ as a function of a variable that can be split into discrete categories.
+
+To make this explicit, let's say we want to look at the average "danceability" of a song as a function of whether it's considered "explicit" according to Spotify.
+
+```{r}
+
+# we again need to start with the ggplot() function, but this time we'll use geom_bar() to build on top of it
+# notice how we need to specify a y variable in the aes() function, since bar plots need both an x and y
+
+
+```
+
+Interesting! From our plot it looks like songs that are explicit in some way tend to be a bit more danceable. Let's add a bit more customization to make the plot look better:
+
+```{r}
+
+# adding the "width" argument to geom_bar() makes the bars a bit thinner
+# adding "fill = explicit" to our aes() function makes ggplot change the color of the bars based on that variable
+
+  
+```
+
+Bar plots can also help us visualize how an outcome variable (y) differs based on two different categorical variables. Let's say we want to see how song danceability differs not only based on whether a song is explicit or not, but also based on which decade (2000s or 2010s) the song came from.
+
+All we need to do in our plot is choose one of these variables to go on our x-axis, and the other to be depicted in the *fill* of each bar.
+
+```{r}
+
+# first let's make this new decade variable
+
+
+# in the above code:
+# - the mutate() function can be used for adding new columns to a dataframe or changing existing ones
+# - the ifelse() function here is saying that IF the value of the "year" column is less than 2010, the value
+#   of the new "decade" column should be "2000s"; if not, it should be "2010s"
+
+
+# we need the position = position_dodge() argument to make sure that our 2 bar types aren't stacked on top of each other
+
+```
+
+You can also make bar plots of variables with many more than two levels. For one last example, let's make a bar plot where we look at the average song danceability again, but this time as a function of which year it was released.
+
+```{r}
+
+  
+```
+
+Looks like popular songs have gotten a little more danceable on average over the past few years!
+
+# Scatterplots
+
+Scatterplots are very useful for looking at the relationship between two **continuous** variables. Let's say we're interested in how the "energy" of a song (another song characteristic calculated by Spotify) relates to its tempo (i.e., how fast it is).
+
+To build a scatterplot, we can use the `geom_point()` function.
+
+```{r}
+
+
+
+```
+
+Unsurprisingly, we can do a lot of customization to this plot, if we want! Let's do a few things:
+
+- add better labels
+- make the points a different color
+- make the points a smaller size
+- make the points slightly transparent (via the "alpha" argument)
+- change the theme
+
+```{r}
+
+
+# NOTE: the order that you add things (with the + sign) to a ggplot object typically doesn't matter!
+# the only time it *does* matter is if you're building successive plot elements on top of each other
+# for example, if you want to overlay individual data points on top of a bar plot, you want to
+# add the geom_point() function *after* the geom_bar() function
+
+```
+
+## Quantifying our scatterplot with correlations
+
+From the plot above, we can *kind of* see that our two variables might have a meaningful relationship to each other: songs that have higher energy tend to have slightly faster tempos. But how do we actually quantify this effect? This is where **correlations** come in as a useful statistical tool.
+
+Correlations, generally speaking, measure how strongly two (continuous) variables co-vary with each other. Positive correlations indicate that as one variable increases, so does the other. Negative correlations indicate that as one variable increases, the other decreases. All correlation values (also called r values) exist in a range between -1 and 1, with 0 indicating *no* reliable relationship between one variable and the other.
+
+Computing correlations in R, thankfully, is very easy using the `cor.test()` function.
+
+```{r}
+
+
+# you can also compute the correlation value alone, without assessing significance, with the cor() function
+
+```
+
+We can see from the p-value here that this correlation is highly significant (p < 0.001), with a correlation (r) value of 0.15. This reaffirms what we saw in our scatterplot: as song energy goes up, so does tempo.
+
+## Visualizing the line of best fit
+
+When plotting correlations, many researchers will include a "line of best fit", which just refers to the straight line that best characterizes the relationship between your two variables, given your data. This line is technically calculated by running a linear regression analysis (not a correlation — although with only two variables, the two analyses are highly related to each other).
+
+You'll cover linear regression in more depth during a later workshop, but lucky for us, ggplot has a built in function that creates this line very easily!
+
+```{r}
+
+
+
+```
+
+# More about ggplot
+
+In a single workshop, we can only scratch the surface of what can be done with ggplot! There are many many more kinds of plots and customization options to explore, which you can choose based on your visualization needs. Always feel free to get in touch with your mentor(s) + instructor(s) if you have questions about what plots are best suited for your data, or if you have any other questions.
+
+In the meantime, here are some initial resources to check out:
+
+- ggplot cheat sheet: https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf
+- ggplot gallery: https://www.r-graph-gallery.com/ggplot2-package.html
+- more visualization examples: http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html
+
