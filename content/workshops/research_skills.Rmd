@@ -92,3 +92,12 @@ Download this <a href="/workshop_files/2023/research-skills/SIPPS_qualtrics.docx
 <br><br>
 <hr>
 
+### Week 7: PsychoPy
+<br>
+
+#### Before the workshop:
+<p>
+[Watch this pre-workshop video](https://youtu.be/z-8gTIpowaQ){target="_blank"} and download <a href="/workshop_files/2023/research-skills/psychopy_images.zip" download>this file</a>. This latter file is a ZIP file containing several images and an Excel sheet, so please unzip it after downloading to access the contents.
+
+<br>
+

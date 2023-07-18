@@ -192,3 +192,22 @@ Download the following files for the synchronous workshop session and place them
 <br>
 <hr>
 
+### Week 7: Introduction to linear regression
+<br>
+
+#### Before the workshop:
+<p>
+Watch the following two pre-workshop videos, and review the accompanying materials:
+<ul>
+<li>Video 1: [Overview of linear regression](https://youtu.be/_uR9RcC2t5U){target="_blank"}
+<li>Video 2: [Linear regression R tutorial](https://youtu.be/M5ejllMuNKw){target="_blank"}
+<li>Create create a folder named `07_intro-reg` on your computer and download these files <u>within that folder</u>:
+<ul>
+<li><a href="/workshop_files/2023/coding-07/lm-lesson.Rmd" download>RMarkdown lesson file</a>
+<li><a href="/workshop_files/2023/coding-07/07_intro-reg.Rproj" download>R Project file</a>
+<li><a href="/workshop_files/2023/coding-07/IntroLinReg_slides.pdf" download>workshop video slides</a>
+<li>Note: In the pre-workshop video, the name of the project folder and R project file used start with `06` instead of `07`. Either numbering scheme is okay, just make sure your R project file has the same name as the folder you create to store these materials.
+</ul>
+</ul>
+<br>
+
