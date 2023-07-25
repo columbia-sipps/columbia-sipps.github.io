@@ -1,0 +1,140 @@
+---
+title: "SIPPS Coding Workshops"
+subtitle: "Introduction to Linear Models - Challenge"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+The questions and exercises below all include examples using the `mtcars` dataset from the `car` package. This dataset contains information about various cars, e.g., horsepower, engine type, etc. 
+
+In this exercise, you will run models in which a car's average miles per gallon (mpg) is predicted by its weight (wt) and/or the type of transmission (am), i.e., automatic vs. manual.
+
+## 0. Load the car package (install if necessary) and `mtcars` dataset. Create a new dataframe with the `mtcars` data  (Also load the tidyverse package.)
+
+Then, view the first 10 rows of the `mtcars` dataset.
+
+```{r}
+
+library(tidyverse)
+library(car)
+
+df <- mtcars
+head(df, n = 10)
+
+```
+
+## 1. First we need to prep our variables. Start by centering the weight variable (wt).
+
+Bonus: Double check that your code worked by looking at the mean of this new centered variable.
+
+```{r}
+
+df$wt.c <- scale(df$wt, center = TRUE, scale = FALSE)
+
+mean(df$wt.c)
+
+```
+
+## 2. Now, let's take a look at the transmission type (`am`) variable. We went over two ways of coding categorical variables: dummy coding & effect coding. Which one does the dataframe use by default?
+
+Hint: You can get more information about the variables in the `mtcars` dataset by running ?mtcars.
+
+Dummy coding is used by default.
+
+Now, make a new column where you recode `am` in a *different* way. 
+
+```{r}
+
+# dataframe uses dummy coding, where automatic = 0 and manual = 1
+
+df$am.e <- dplyr::recode(df$am, "0" = -0.5, "1" = 0.5)
+
+head(df)
+
+```
+
+
+# 3. Now, fit a linear model predicting average miles per gallon as a function of weight. Print the model output and describe the intercept and main effects. 
+
+```{r}
+#model with the continous
+m1<-lm(mpg ~ wt.c, data = df)
+summary(m1)
+
+```
+
+Intercept: For cars of average weight, for cars with automatic transmisison, the mpg is 20.0906. 
+
+Wt.c: As weight increases by one unit, for cars with automatic transmisssion, mpg decreases by 5.34. This is a significant difference. 
+
+
+
+# 4. Now, fit a linear model predicting average miles per gallon as a function of transmission type (use the dummy coded version). Print the model output and describe the intercept and main effects. 
+
+```{r}
+#model with the dummy coded variable
+m2<-lm(mpg ~ am, data = df)
+summary(m2)
+
+```
+
+Intercept: For cars with automatic transmisison, the mpg is 17.147. 
+
+am: When moving from automatic to manual transmission, mpg increases by 7.245. This is a significant effect. 
+
+
+#5. Now, fit a linear model predicting average miles per gallon as a function of transmission type using the effect coded version. Print the model output and describe the intercept and main effects.
+
+```{r}
+#model with the effect coded variable
+m2<-lm(mpg ~ am.e, data = df)
+summary(m2)
+
+```
+
+Intercept: When averaging across transmission type, cars average mpg is 20.7698. 
+
+am.e: When moving from automatic to manual transmission, mpg increases by 7.245. This is a significant effect. 
+
+#6. Compare the output of the dummy coded and the effect coded models. Which terms are the same and which are different? Why? How does this change the interpretation of the model? Does the significance change?
+
+The main effect of am on mpg is the same, while the intercept is different. 
+
+The intercept is different because they hold the am variable at 0, and the value of 0 changes depending on whether the am variable has been dummy or effect coded. 
+
+The intercept in the effect coded version is interpreted as the value of mpg when averaging across both automatic and transmission (because the average of -.5 and .5 is 0). In the dummy coded version, the intercept is the value of mpg for automatic transmission only (because automatic is 0 and manual is 1).
+
+The main effect of am is the same in the dummy and the effect coded versions because it is the difference in mpg between automatic and manual transmission, which is the same regardless of if the variable was dummy or effect coded (since the difference between transmission types is always a 1 unit difference, whether that be -.5 to .5 or 0 to 1). 
+
+There is no difference in significance, only the interpretation of the estimates. 
+
+#Bonus
+Run a model predicting mpg as a function of am (either dummy or effect coded), controlling for wt. Print the model output and interpret the estimates.
+
+```{r}
+#effect coded version
+m3 <- lm(mpg ~ am.e + wt.c, data = df)
+summary(m3)
+
+#dummy coded version
+m4 <- lm(mpg ~ am + wt.c, data = df)
+summary(m4)
+```
+
+#effect coded version interpretation 
+Intercept: When averaging across transmission type, and for cars of average weight, the average mpg is 20.09
+
+Main effect of transmission type (am): When moving from automatic to manual transmission, when holding weight constant, mpg decreases by .02, and this is NOT significant 
+
+Main effect of wt: A one unit increase in weight is associated with a 5.35 unit decrease in mpg when holding transmission type constant. 
+
+#dummy coded version interpretation 
+Intercept: For cars with automatic transmission of average weight, the average mpg is 20.10.
+
+Main effect of transmission type (am): When moving from automatic to manual transmission, when holding weight constant, mpg decreases by .02, and this is NOT significant 
+
+Main effect of wt: A one unit increase in weight is associated with a 5.35 unit decrease in mpg when holding transmission type constant.
