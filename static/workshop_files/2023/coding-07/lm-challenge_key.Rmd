@@ -48,6 +48,7 @@ Dummy coding is used by default.
 Now, make a new column where you recode `am` in a *different* way. 
 
 ```{r}
+?mtcars
 
 # dataframe uses dummy coding, where automatic = 0 and manual = 1
 
@@ -67,9 +68,9 @@ summary(m1)
 
 ```
 
-Intercept: For cars of average weight, for cars with automatic transmisison, the mpg is 20.0906. 
+Intercept: For cars of average weight, the mpg is 20.0906. 
 
-Wt.c: As weight increases by one unit, for cars with automatic transmisssion, mpg decreases by 5.34. This is a significant difference. 
+Wt.c: As weight increases by one unit, mpg decreases by 5.34. This is a significant difference. 
 
 
 

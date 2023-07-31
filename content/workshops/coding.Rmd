@@ -225,6 +225,12 @@ Download the following files for the synchronous workshop session and place them
 </ul>
 
 <br>
+
+#### After the workshop:
+<p>
+Review the <a href="/workshop_files/2023/coding-07/lm-challenge_key.Rmd" download>answer key</a> for challenge completed during the workshop. (We *strongly* recommend trying to work out answers yourself and/or talk to the instructor before consulting this answer key.)
+
+<br><br>
 <hr>
 
 ### Week 8: Interactions in linear models
@@ -243,4 +249,5 @@ Watch the pre-workshop video, and review the accompanying materials:
 </ul>
 </ul>
 <br>
+
 

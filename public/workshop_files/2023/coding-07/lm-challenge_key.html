@@ -425,7 +425,9 @@ default?</h2>
 <p>Dummy coding is used by default.</p>
 <p>Now, make a new column where you recode <code>am</code> in a
 <em>different</em> way.</p>
-<pre class="r"><code># dataframe uses dummy coding, where automatic = 0 and manual = 1
+<pre class="r"><code>?mtcars
+
+# dataframe uses dummy coding, where automatic = 0 and manual = 1
 
 df$am.e &lt;- dplyr::recode(df$am, &quot;0&quot; = -0.5, &quot;1&quot; = 0.5)
 
@@ -470,11 +472,9 @@ summary(m1)</code></pre>
 ## Residual standard error: 3.046 on 30 degrees of freedom
 ## Multiple R-squared:  0.7528, Adjusted R-squared:  0.7446 
 ## F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
-<p>Intercept: For cars of average weight, for cars with automatic
-transmisison, the mpg is 20.0906.</p>
-<p>Wt.c: As weight increases by one unit, for cars with automatic
-transmisssion, mpg decreases by 5.34. This is a significant
-difference.</p>
+<p>Intercept: For cars of average weight, the mpg is 20.0906.</p>
+<p>Wt.c: As weight increases by one unit, mpg decreases by 5.34. This is
+a significant difference.</p>
 </div>
 <div id="now-fit-a-linear-model-predicting-average-miles-per-gallon-as-a-function-of-transmission-type-use-the-dummy-coded-version.-print-the-model-output-and-describe-the-intercept-and-main-effects." class="section level1">
 <h1>4. Now, fit a linear model predicting average miles per gallon as a
