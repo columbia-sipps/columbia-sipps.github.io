@@ -1,0 +1,136 @@
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+The questions and exercises below will all ask you to run linear models with interaction terms.
+
+## 0. Load the car package and `Moore` dataset. Create a new dataframe with the `Moore` data  (Also load the tidyverse package.)
+
+For more information about what this dataset contains, run `?Moore`. In brief, this dataset contains results from an experiment which assessed how an individual's likelihood to conform to their partner's behavior depends on that partner's social status.
+
+After loading this dataset (and saving it into a new variable), view the first 10 rows of the dataframe.
+
+```{r}
+
+library(tidyverse)
+library(car)
+
+df <- Moore
+head(Moore, 10)
+
+```
+
+## 1. Using this dataset, we want to run a model in which `conformity` (the # of trials in which the participant conformed in the experiment) is predicted by `partner.status` (high or low) and `fscore` (the participant's own authoritarianism score). First, prep your variables for analysis.
+
+You should center any continuous variables. Please dummy the categorical variables.
+
+```{r}
+
+df$fscore.c <- df$fscore - mean(df$fscore)
+df$partner.status.d <- dplyr::recode(df$partner.status, "low" = 0, "high" = 1) # using dummy coding
+
+```
+
+
+#2. First, fit a linear model predicting `conformity` as a function of `partner.status` and `fscore` WITHOUT an interaction. Print the model output and describe the intercept, main effects, and interaction.
+
+```{r}
+
+m1 <- lm(conformity ~ fscore.c + partner.status.d, data = df)
+summary(m1)
+
+```
+Intercept: For a participant with average authoritarianism (fscore) and with a low-status partner, we expect them to conform on about 10 trials.
+
+fscore.c: When holding partner status constant, each additional unit of fscore (authoritarianism) is associated with a decrease of about .01 units in conformity (i.e., in the number of trials they conform during).
+
+partner.status.d: When holding f.score/authoritarianism constant, high status partners conform on about 4.27 more trials as compared to low status partners. 
+
+# 3. Now, fit a linear model predicting `conformity` as a function of `partner.status`, `fscore`, and **their interaction**. Print the model output and describe the intercept, main effects, and interaction.
+
+```{r}
+
+m2 <- lm(conformity ~ fscore.c * partner.status.d, data = df)
+summary(m2)
+
+```
+
+Intercept: For a participant with average authoritarianism (fscore) and with a low-status partner, we expect them to conform on about 10 trials.
+
+fscore.c: For participants with low status partners, we expect each additional unit of fscore (authoritarianism) to be associated with an increase of 0.11 in conformity (i.e., in the number of trials they conform during).
+
+partner.status.d: For participants with an average level of f.score/authoritarianism, we expect them to conform during an additional 4.28 trials when paired with high vs. low status partners.
+
+Interaction: The effect of f.score/authoritarianism on conformity is 0.26 units weaker when partners are paired with high vs. low status partners.
+
+**Bonus:** How do the interpretations of your model output change when effect coding status instead of dummy coding it?
+
+# 4. Now let's instead run a model in which `confirmity` is predicted by `partner.status` and `fcategory` levels of `low` and `high` (i.e. Authoritarianism scores labeled as low and high). 
+
+## First make sure to prep all your variables. 
+
+Hint 1: filter only those levels of fcategory you need (i.e., get rid of the "medium" level of `fcategory`)
+Hint 2: be sure to dummy/effect code and center any of your predictor variables
+
+```{r}
+df <- df %>%
+  filter(fcategory %in% c("low", "high"))
+
+df$fcategory.d <- dplyr::recode(df$fcategory, "low" = 0, "high" = 1) # using dummy coding
+```
+
+## Now, fit a linear model predicting `conformity` as a function of `partner.status`, `fcategory`, and **their interaction**. Print the model output and describe the intercept, main effects, and interaction.
+
+```{r}
+m3 <- lm(conformity ~ fcategory.d* partner.status.d, data = df)
+summary(m3)
+```
+
+Intercept: For a participant with **a low authoritarianism score**  and with a **low-status partner**, we expect them to conform on about 9 trials.
+
+fcategory.d: For participants with **low status partners** (when partner status is at 0), we expect an increase from **low** to **high** on authoritarianism (fcategory) to be associated with an increase of 3.73 in conformity (i.e., the number of trials they conform during).
+
+partner.status.d: For participants with **low authoritarianism (fcategory = 0)**, we expect them to conform during an additional 8.5 trials when paired with high vs. low status partners.
+
+Interaction: The effect of going from **low** to **high** on authoritarianism on conformity is ~9.3 trials weaker when partners are paired with **high** vs. **low** status partners.
+
+# 5. Next, let's load in a dataset of professors' incomes. Here we will be running a linear model where the `salary` of professors is predicted by the number years since their phd (`yrs.since.phd`) and the their number of years of service (`yrs.service`).
+
+Run the following code chunk.
+```{r}
+salaries <- Salaries
+```
+
+## a) First, inspect the dataset and look at the variables. 
+```{r}
+salaries %>% View()
+head(salaries, 10)
+```
+
+## b) Next prep your variables
+
+HINT: you need to mean center your continuous predictor variables (`yrs.since.phd` and `yrs.service`).
+
+```{r}
+salaries$yrs.since.phd.c <- salaries$yrs.since.phd - mean(salaries$yrs.since.phd)
+salaries$yrs.service.c <- salaries$yrs.service - mean(salaries$yrs.service)
+```
+
+## c) Now, fit a linear model predicting `salary` as a function of `yrs.since.phd`, `yrs.service`, and **their interaction**. Print the model output and describe the intercept, main effects, and interaction.
+
+```{r}
+m4 <- lm(salary ~ yrs.since.phd.c * yrs.service.c, data = salaries)
+summary(m4)
+```
+
+Interpreting the model summary:
+
+Intercept: The intercept tells us that for professors with an **average # of years since phd** and **an average # of years of service**, we can expect an salary of 123533.470.
+
+yrs.since.phd: The yrs.since.phd slope tells us that with each additional year since phd **for professors with average years of service**, we expect salary to increase by ~1056.
+
+yrs.service: The yrs.service slope tells us that as with each additional year of increase in service, **for professors with an average # of years since phd**, we expect salary to increase by ~250.
+
+Interaction: The interaction term tells us that with each increase in a professor's years of service, the slope of years since phd on salary (i.e., the degree to which salary increases with years since phd) is ~64 units **lower**. In other words, the number of years since a professor obtained their phd **has a weaker effect** on salary as that professor's years of service increases!
