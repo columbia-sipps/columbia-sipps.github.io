@@ -257,4 +257,9 @@ Download the following files for the synchronous workshop session and place them
 <li><a href="/workshop_files/2023/coding-08/challenge.Rmd" download>RMarkdown challenge file</a>
 </ul>
 
+<br><br>
+<hr>
+
+### Week 9: Visualizing effects in linear models
 <br>
+Pre-workshop video and materials coming soon.

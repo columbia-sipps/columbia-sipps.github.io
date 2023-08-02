@@ -73,7 +73,7 @@ In addition to these workshops, students are expected to work in tandem with the
 <tr><td>June 17</td><td><b>Career panel</b><br></td></tr>
 <tr><td>July 24</td><td><b>Journal club</b><br></td></tr>
 <tr><td>July 31</td><td><b>Grad student data blitz</b><br></td></tr>
-<tr><td>August 7</td><td><b>Journal club</b><br></td></tr>
+<tr><td>August 7</td><td><b>No workshop</b><br></td></tr>
 <tr><td>August 14</td><td><b>CVs & Resumes</b><br></td></tr>
 </table>
 </div>
