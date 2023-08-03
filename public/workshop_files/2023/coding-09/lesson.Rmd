@@ -1,0 +1,290 @@
+---
+title: "Coding Workshop"
+subtitle: "Visualizing effects in linear models"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+At this point, you know how to run and interpret various kinds of linear models using R. However,correctly interpreting the results of models like these can be tricky and takes some practice. Learning how to visualize your model results is one of the best ways to understand the effects of your models. During this lesson, we'll review how to run a few new models, and walk you through the steps of correctly plotting them.
+
+# Setting up your R environment
+
+```{r, echo = F}
+
+# load some packages
+library(tidyverse)
+library(psych)
+
+# and install one new one
+# install.packages("sjPlot")
+library(sjPlot)
+
+# note: if R asks you to restart after installing the new package, make sure you load ALL libraries again
+
+```
+
+# Loading in your data
+
+This week, we're going to use another built-in dataset from the `psych` package, called `affect` (run `?affect` in your console to get a brief overview of what this consists of). This dataset contains results of two studies that investigated the relationship between personality traits and emotional responses to various types of movies.
+
+For these exercises, let's consider only two of the movie conditions included in this study: one in which participants viewed a documentary about the liberation of the Bergen-Belsen concentration camp (`Film = 1`), and one in which they viewed the comedy Parenthood (`Film = 4`).
+
+Let's start by loading in the data and filtering it so we only keep these two movie conditions.
+
+```{r}
+
+# load in the dataset
+# df <- affect
+
+# if the above line doesn't work, download the "affect.csv" file from the SIPPS website
+# make sure you save this file in the same directory/folder as your R project file (+ this script)!
+# then run this next line:
+df <- read.csv("affect.csv")
+
+# filter to keep only cases where participants watched either a documentary or a comedy
+df <- df %>%
+  filter(Film == 1 | Film == 4)
+
+```
+
+# Visualizing a linear model with one predictor 
+
+Before we look at the effect of watching different types of movies on affect/emotion, let's see how one of the personality measures we have (trait anxiety, or `traitanx` in the dataframe), relates to the amount of negative affect people experienced after the movie (`NA2` in the dataframe), in general.
+
+In this case, `traitanx` is a continuous variable, so we'll want to center it before we run our model.
+
+```{r}
+
+# center traitanx (two ways)
+df$traitanx.c <- df$traitanx - mean(df$traitanx)
+
+df <- df %>% mutate(traitanx.c = traitanx - mean(traitanx))
+
+# run model
+m1 <- lm(NA2 ~ traitanx.c, data = df)
+summary(m1)
+
+```
+
+Let's interpret this:
+
+- The **intercept** tells us that for individuals with an average amount of trait-level anxiety, we would predict a negative affect score of 5.2.
+
+- The **traitanx.c** slope tells us that for each additional unit of trait anxiety, we would expect an increase of 0.11 units of negative affect. In other words, greater anxiety is associated with greater negative affect.
+
+## Refresher: what is a regression line?
+
+Before we show you how to visualize this, let's take a step back and remember what a linear model/regression analysis is doing. We are finding the **equation of the line** that best minimizes the error between that regression line and our actual data. We can then *use this equation* to predict the values of new data points that aren't in our original set of observations.
+
+If we turn the model output above into the equation of a line, we'd get: `NA2 = 5.21 + 0.11(traitanx.c)`
+
+To visualize this line, we can use a function from the `sjPlot` package, which was built to produce quick visualizations of linear models.
+
+```{r}
+
+sjPlot::plot_model(m1, type = "pred")
+
+```
+
+So what is this line actually showing? It's showing **the predicted values of NA2** for a **range of possible traitanx.c values*. These values were simply obtained by plugging each `traitanx.c` value into the equation written above.
+
+Next, we will learn how to plot regression lines using `ggplot` and the `predict` function, which provides more flexibility when creating your visualizations.
+
+## Introducing the `predict()` function
+
+In order to use your model to generate these predictions, you can use a built-in function called, unsurprisingly, `predict()`. `predict()` takes as its input:
+
+  1. your model object (`m1`)
+  2. a dataframe containing the value of each X variable that you want to use to predict the resulting Y variable 
+
+```{r}
+
+# let's predict the NA2 score for a person who scored -10 on trait anxiety (centered)
+df_pred <- data.frame(traitanx.c = -10)
+head(df_pred)
+
+# compare this value with the regression line on the plot above
+predict(m1, df_pred)
+
+```
+
+In the example above, we only predicted negative affect scores for one possible value of traitanx.c. But the `predict()` function can be used to generate many predictions simultaneously:
+
+```{r}
+
+# let's predict the NA2 score for a range of trait anxiety scores between -10 and 10
+df_pred <- data.frame(traitanx.c = seq(-10, 10, by = 1))
+
+# generate multiple predictions at once
+predict(m1, df_pred)
+
+```
+
+## Using `predict()` to build a regression line
+
+We can use this function to generate a regression line like the one shown automatically by the `plot_model` function. To do this, we want to generate predicted `NA2` values for the full range of values of `traitanx.c` that are present in our dataset. We'll use the same code above, but this time will specify that we want values to span all the way from the **minimum** and **maximum** values of `traitanx.c` we observed. We're also going to generate predictions at a finer scale of `traitanx.c`, which will ensure our regression line looks smoother later on.
+
+```{r}
+
+df_pred <- data.frame(traitanx.c = seq(min(df$traitanx.c), max(df$traitanx.c), by = 0.1))
+predictions <- predict(m1, df_pred)
+head(predictions)
+
+```
+
+We can also easily use the `predict()` function to generate a **confidence interval** around our regression line.
+
+```{r}
+
+predictions <- predict(m1, df_pred, interval = "confidence")
+head(predictions)
+
+# now you'll see three columns in your prediction: 
+# fit = your predicted NA2 score
+# lwr = the lower bound of the 95% confidence interval of that prediction
+# upr = the upper bound of the 95% confidence interval of that prediction
+
+```
+
+Before we can put this on a plot using ``ggplot``, we need to do one more thing: combine our predicted values (stored in `predictions`) with the range of `traitanx.c` values we used to generate those predictions. To do this, we can use the `cbind()` function, which quickly combines multiple columns of data into the same dataframe.
+
+```{r}
+
+df_pred_combined <- cbind(df_pred, predictions)
+head(df_pred_combined)
+
+```
+
+Now, at long last, we can plot!
+
+```{r}
+
+ggplot(data = df_pred_combined, aes(x = traitanx.c, y = fit)) +
+  geom_line() +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), alpha = 0.2) +
+  labs(x = 'trait anxiety (mean-centered)', y = 'negative affect')
+
+```
+
+At this point, we've generated essentially the same plot as what was produced by `sjPlot`. But one of the nice things about building this ourselves is that we can easily modify it further. Most importantly, it's a good idea to always plot the original data you obtained alongside this regression line, to provide visual evidence of how well the line actually fits.
+
+```{r}
+
+# we'll use geom_point() to show the original data
+# however, this time we also need to tell the geom_point() function to use our original dataframe (df), NOT
+# the new one we created to hold our predictions (df_pred_combined)
+
+ggplot(data = df_pred_combined, aes(x = traitanx.c, y = fit)) +
+  geom_line() +
+  geom_ribbon(aes(ymin = lwr, ymax = upr), alpha = 0.2) +
+  labs(x = 'trait anxiety (mean-centered)', y = 'negative affect') +
+  geom_point(data = df, aes(x = traitanx.c, y = NA2), alpha = 0.5)
+
+```
+
+Now, we have a good depiction of the results of this model: trait anxiety has a positive relationship with negative affect, in that greater levels of anxiety are associated with higher reports of negative affect. However, we can also see from the spread of our data points that there is a lot of variability in this effect, even though it is statistically significant.
+
+# Visualizing a linear model with a two predictors (and an interaction)
+
+Now, we'll walk through similar steps for a slightly more complicated model. This time, we're again going to predict `NA2` scores, but now we're also going to consider which type of movie participants saw beforehand: a comedy, or a somber documentary.
+
+Before we run this next model, we're going to effect code our `Film` variable (which tracks the type of movie participants watched). Specifically, we'll use a value of -0.5 for the documentary, and 0.5 for the comedy.  
+
+```{r}
+
+# in df$Film, 1 = documentary and 4 = comedy
+df$Film.e <- dplyr::recode(df$Film, "1" = -0.5, "4" = 0.5)
+
+# now let's run our model
+m2 <- lm(NA2 ~ Film.e * traitanx.c, data = df)
+summary(m2)
+
+```
+
+Interpeting the model:
+
+- Our intercept says that for participants with average levels of anxiety, averaging across both types of films, we'd expect a negative affect score of about 5.23
+
+- Our `Film.e` slope says that participants who watched the comedy (`Film.e = 0.5`) will have negative affect scores that are 6.79 points **lower** than those who watched the documentary (`Film.e = -0.5`). In other words, people who watched the documentary tended to feel more negatively than those who watched the comedy.
+
+- Our `traitanx.c` slope says that with each additional unit of trait anxiety, we can expect participants to score 0.09 points higher in negative affect. 
+
+- Our interaction term tells us that the degree to which negative affect increases as a function of trait anxiety (i.e., the slope of anxiety on affect) is 0.026 units greater when participants watched a comedy versus a documentary. In other words, the relationship between trait anxiety and negative affect was slightly stronger when participants watched a comedy. However, note here that **the interaction between these variables is NOT significant**. This allows us to conclude that the relationship between anxiety and negative affect does NOT significantly depend on the type of movie participants saw.
+
+## Visualizing the model using `sjPlot`
+
+We can use the `plot_model` function from `sjPlot` again here. This time, we just need to specify both of the predictors (Xs) we're interested in visualizing.
+
+```{r}
+
+# by specifying traitanx.c before Film.e, we say that we want to show traitanx.c on the x axis
+plot_model(m2, type = "pred", terms = c("traitanx.c", "Film.e"))
+
+```
+
+This plot illustrates what we learned last week about models with continuous by categorical interactions. These models are essentially estimating multiple different slopes of our continuous variable (`traitanx.c`) on our outcome variable (`NA2`) —  one for each level of our categorical variable (`Film.e`).
+
+This plot also nicely shows us what the model output conveys:
+- In general, greater anxiety is associated with greater negative affect: both lines have a positive slope.
+- In general, people feel more negative after watching the documentary (`Film.e = -0.5`) vs. the comedy (`Film.e = 0.5`): the red line is higher than the blue line.
+- There is no clear interaction between the variables: the slopes of the two lines are very similar.
+
+## Visualizing the model using `predict()`
+
+Now, let's build this plot ourselves. We'll start by creating a new dataframe with possible values of our predictor variables in order to generate predictions of our outcome variable, as before. This time, however, **we need to generate two dataframes**: one that we'll use to build our regression line for the documentary condition, and one for the comedy condition.
+
+```{r}
+
+# create the initial dataframes
+df_pred_doc <- data.frame(traitanx.c = seq(min(df$traitanx.c), max(df$traitanx.c), by = 0.1),
+                          Film.e = -0.5)
+
+df_pred_com <- data.frame(traitanx.c = seq(min(df$traitanx.c), max(df$traitanx.c), by = 0.1),
+                          Film.e = 0.5)
+
+# use the predict function
+predictions_doc <- predict(m2, df_pred_doc, interval = "confidence")
+predictions_com <- predict(m2, df_pred_com, interval = "confidence")
+
+# combine our predictions with the values used to generate them
+df_pred_doc_comb <- cbind(df_pred_doc, predictions_doc)
+df_pred_com_comb <- cbind(df_pred_com, predictions_com)
+
+```
+
+Now it's time to build our plot! This time, let's start with the original data points — this is a little easier to do when you have to create multiple regression lines.
+
+```{r}
+
+# this time, since we're starting with our original dataframe, we don't need to specify
+# any details about where the data comes from in our geom_point() function
+ggplot(data = df, aes(x = traitanx.c, y = NA2)) +
+  geom_point()
+
+```
+
+Now, let's add our regression lines. This time, as we plot each line, we need to specify which dataframe we're referencing in our `geom_line()` and `geom_ribbon()` functions.
+
+```{r}
+
+ggplot(data = df, aes(x = traitanx.c, y = NA2, color = as.factor(Film.e), fill = as.factor(Film.e))) +
+  # start with the data points
+  geom_point(alpha = 0.5) +
+  # regression line + confidence interval for documentary line
+  geom_line(data = df_pred_doc_comb, aes(x = traitanx.c, y = fit)) +
+  geom_ribbon(data = df_pred_doc_comb, aes(y = fit, ymin = lwr, ymax = upr), alpha = 0.2) +
+  # regression line + confidence interval for comedy line
+  geom_line(data = df_pred_com_comb, aes(x = traitanx.c, y = fit)) +
+  geom_ribbon(data = df_pred_com_comb, aes(y = fit, ymin = lwr, ymax = upr), alpha = 0.2) +
+  labs(x = "trait anxiety", y = "negative affect") +
+  # these next two lines make the plot legend more readable
+  scale_fill_discrete(name = "film type", labels = c("documentary", "comedy")) +
+  guides(color = "none") 
+
+```
