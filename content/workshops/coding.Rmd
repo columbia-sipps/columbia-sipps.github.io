@@ -262,6 +262,7 @@ Download the following files for the synchronous workshop session and place them
 
 ### Week 9: Visualizing effects in linear models
 <br>
+
 #### Before the workshop:
 <p>
 Watch the pre-workshop video, and review the accompanying materials:
