@@ -116,7 +116,7 @@ No pre-workshop video or materials. Slides will be provided after the workshop.
 <br><br>
 <hr>
 
-### Week 9: Mini-conference office hours / Q&A
+### Week 9: Mini-Conference office hours / Q&A
 <br>
 
 During this session, we will be available to help with presentations for the end-of-summer SIPPS mini-conference. Any questions are welcome, about any stage of the research/presentation process (e.g., coding, stats, presentation formatting, etc).
@@ -124,4 +124,12 @@ During this session, we will be available to help with presentations for the end
 <ul>
 <li>For workshop-only students, there’s no need to attend this workshop session, but you’re welcome to join if you’d like! As long as there’s time, we’ll be happy to address other SIPPS-/research-related questions that don’t specifically pertain to final presentations.
 </ul>
+
+<br>
+<hr>
+
+### Week 10: SIPPS Mini-Conference
+<br>
+
+During this session, we will hear from some of this summer's SIPPS participants about their research projects. 
 
