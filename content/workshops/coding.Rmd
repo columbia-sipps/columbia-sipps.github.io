@@ -307,3 +307,14 @@ Watch the pre-workshop video, and review the accompanying materials:
 </ul>
 </ul>
 <br>
+
+#### During the workshop:
+<p>
+Download the following files for the synchronous workshop session and place them in the same `10_adv-plotting` folder.
+<ul>
+<li><a href="/workshop_files/2023/coding-10/challenge.Rmd" download>RMarkdown challenge file</a>
+<li><a href="/workshop_files/2023/coding-10/pokemon.csv" download>data file (csv)</a>
+</ul>
+
+<br><br>
+<hr>

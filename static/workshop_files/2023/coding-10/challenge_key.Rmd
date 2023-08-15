@@ -1,0 +1,193 @@
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Overview
+
+To practice some of the `ggplot2` customizations you've learned, we're going to use two data sets. The first is a built-in dataset called `precip`, which contains data about the average amount of rainfall for various US cities. The second is an external dataset containing information about different Pokemon (from the popular video franchise).
+
+## 0. Load the tidyverse package.
+
+```{r}
+library(tidyverse)
+```
+
+# Part 1: `precip`
+
+## 1. The data in `precip` is not yet in a dataframe. Instead, it's in a type of variable called a 'named list'. To easily convert this to a dataframe (which we'll name `rainfall`), we can use a `tidyverse` function called `enframe()`. We'll write the code below to show you how to use this function, since we haven't covered this in the workshop series.
+
+Use the `head()` function to take a peek at what your dataframe contains. Notice that we have two columns, one with the name of the city and one with the number of inches of rain that fell in that city.
+
+```{r}
+rainfall <- precip %>%
+  enframe() %>% # convert to dataframe
+  rename('city' = name, 'inches_rain' = value) %>% # make the column names more interpretable
+  distinct(city, .keep_all = T) # fix an error in the data frame where one city shows up twice
+
+head(rainfall)
+```
+# 2. Create a bar plot using this data (using `geom_col`), with city on the x-axis and inches of rainfall on the y axis. Give your plot an informative title and axis labels. 
+
+```{r}
+ggplot(data = rainfall, aes(x = city, y = inches_rain)) +
+  geom_col() +
+  labs(x = 'city', y = 'rainfall (in)', title = 'Average precipitation in US cities')
+```
+
+# 3. Now rotate the x-axis labels so they're easier to read.
+
+```{r}
+ggplot(data = rainfall, aes(x = city, y = inches_rain)) +
+  geom_col() +
+  labs(x = 'city', y = 'rainfall (in)', title = 'Average precipitation in US cities') +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+```
+
+# 4. Reorder the bars on the x-axis so they show cities in the order of how much rainfall they received.
+
+```{r}
+ggplot(data = rainfall, aes(x = fct_reorder(city, inches_rain), y = inches_rain)) +
+  geom_col() +
+  labs(x = 'city', y = 'rainfall (in)', title = 'Average precipitation in US cities') +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+```
+
+# 5. Change the fill of the bars according to how many inches of rain the city recieved.
+
+Hint: This can be done by adding a `fill = ` argument to the `aes()` function in `ggplot()`.
+
+```{r}
+ggplot(data = rainfall, aes(x = fct_reorder(city, inches_rain), y = inches_rain, fill = inches_rain)) +
+  geom_col() +
+  labs(x = 'city', y = 'rainfall (in)', title = 'Average precipitation in US cities') +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+```
+
+# 5b: BONUS: Change the color palette used in your plot by adding the function `scale_fill_viridis_c()` to your plot. 
+
+Note: In the workshop, we showed you how to use ColorBrewer to specify premade color palettes for categorical variables. R also contains some built-in palettes for continuous variables. For more info, see here: https://ggplot2-book.org/scale-colour.html#colour-continuous
+
+```{r}
+ggplot(data = rainfall, aes(x = fct_reorder(city, inches_rain), y = inches_rain, fill = inches_rain)) +
+  geom_col() +
+  labs(x = 'city', y = 'rainfall (in)', title = 'Average precipitation in US cities') +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  scale_fill_viridis_c()
+```
+
+# 6. Compute the average rainfall across all the cities in the dataframe. Add a dashed horizontal line to the plot at this value and label it with text of your choice (e.g., 'average rainfall across cities').
+
+```{r}
+avg_rainfall <- mean(rainfall$inches_rain)
+
+ggplot(data = rainfall, aes(x = fct_reorder(city, inches_rain), y = inches_rain, fill = inches_rain)) +
+  geom_col() +
+  geom_hline(yintercept = avg_rainfall, linetype = 'dashed', color = 'black') +
+  annotate(geom = 'text', x = 2, y = avg_rainfall + 2,
+           hjust = 'left', vjust = 'bottom', label = 'average rainfall across cities') +
+  labs(x = 'city', y = 'rainfall (in)', title = 'Average precipitation in US cities') +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+```
+
+# 7. Change the theme to one of your choice, and also remove the legend.
+
+```{r}
+ggplot(data = rainfall, aes(x = fct_reorder(city, inches_rain), y = inches_rain, fill = inches_rain)) +
+  geom_col() +
+  geom_hline(yintercept = avg_rainfall, linetype = 'dashed', color = 'black') +
+  annotate(geom = 'text', x = 2, y = avg_rainfall + 2,
+           hjust = 'left', vjust = 'bottom', label = 'average rainfall across cities') +
+  labs(x = 'city', y = 'rainfall (in)', title = 'Average precipitation in US cities') +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  theme_classic() +
+  theme(legend.position = 'none')
+```
+
+# Part 2
+
+Now, let's look at a new dataset that contains information about different Pokemon. See this page for more info about this dataset: https://www.kaggle.com/datasets/abcsds/pokemon
+
+## 1. First, load in the `pokemon.csv` file and save it as a new dataframe. Print the first few rows so you can see what this dataset contains.
+
+```{r}
+pokemon <- read.csv('pokemon.csv', stringsAsFactors = FALSE)
+head(pokemon)
+```
+
+## 2. Make a boxplot that depicts the speed stat of pokemon (in the `Speed` column) as a function of their primary type (in the `Type1` column). Make each type a different color, and add a title to the plot and change the axes labels if you'd like to.
+
+```{r}
+ggplot(pokemon, aes(x = Type1, y = Speed, fill = Type1)) +
+  geom_boxplot() +
+  labs(x = 'primary type', y = 'speed stat', title = 'speed of different pokemon types')
+```
+
+## 3. Let's make a few more aesthetic adjustments. Remove the plot legend, and rotate the x-axis labels so they're a little easier to read. Finally, use a different font of your choosing for the plot text.
+
+Note: Not all fonts will work with ggplot, but try some of the ones that come by default on your computer. For modern Mac computers, this list includes fonts like 'Avenir', 'Times', and 'Courier'.
+
+```{r}
+ggplot(pokemon, aes(x = Type1, y = Speed, fill = Type1)) +
+  geom_boxplot() +
+  labs(x = 'primary type', y = 'speed stat', title = 'speed of different pokemon types') +
+  theme(legend.position = 'none', text = element_text(family = 'Avenir')) +
+  scale_x_discrete(guide = guide_axis(angle = 45))
+```
+
+## 3b. BONUS: The `facet_wrap()` function is a really useful ggplot tool that allows you to easily subdivide your data into different subplots, or facets, that correspond to different levels of a categorical variable. Using this function, recreate the previous plot above (i.e., a boxplot showing the speed stats of different pokemon types), but create different facets for each pokemon `Generation`. Make it such that your new facetted plot has 3 columns and 2 rows. Optionally, add a subtitle to your plot to help clarify that each subplot corresponds to a different generation.
+
+Hint: See this page (http://www.sthda.com/english/wiki/ggplot2-facet-split-a-plot-into-a-matrix-of-panels) for help with this function.
+
+```{r}
+ggplot(pokemon, aes(x = Type1, y = Speed, fill = Type1)) +
+  geom_boxplot() +
+  labs(x = 'primary type', y = 'speed stat', title = 'speed of different pokemon types',
+       subtitle = 'for each pokemon generation') +
+  theme(legend.position = 'none', text = element_text(family = 'Avenir')) +
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
+  facet_wrap(~ Generation, nrow = 2)
+```
+
+## 4. Next, let's look closer at all the pokemon that are considered "legendary". Filter the dataframe (using the `Legendary` column) to just include these pokemon. How many legendary pokemon are there?
+
+```{r}
+legendary <- filter(pokemon, Legendary == TRUE)
+nrow(legendary)
+```
+
+## 5. Now, create a scatter plot showing the `Attack` stat of the legendary pokemon on the x axis and the `Defense` stat on the y axis. Color the points according to the primary type (`Type1`).
+
+```{r}
+ggplot(data = legendary, aes(x = Attack, y = Defense, color = Type1)) +
+  geom_point()
+```
+
+## 6. Increase the size of the points on the plot (as much as you want), and change their shape. Also add a title to your plot, and change the theme.
+
+Note: A list of different point shapes can be found here: http://www.sthda.com/english/wiki/ggplot2-point-shapes
+
+```{r}
+ggplot(data = legendary, aes(x = Attack, y = Defense, color = Type1)) +
+  geom_point(shape = 18, size = 4) +
+  labs(title = 'attack & defense stats of legendary pokemon') +
+  theme_bw()
+```
+
+## 7. Figure out which two legendary pokemon have the highest `Attack` and `Defense` stats. Add text annotations to the plot depicting the names of these two pokemon next to their corresponding datapoint. You might needed to play around with the text alignment/coordinates to find a good spot for these annotations.
+
+Note: If you want more of a challenge, you can figure out which pokemon these are using code. Alternatively, you can click the name of your dataframe in the Environment tab, which will open it in a new tab and allow you to sort the rows by different columns.
+
+```{r}
+max_attack <- legendary[which.max(legendary$Attack),]
+max_defense <- legendary[which.max(legendary$Defense),]
+
+ggplot(data = legendary, aes(x = Attack, y = Defense, color = Type1)) +
+  geom_point(shape = 18, size = 4) +
+  annotate(geom = 'text', x = max_attack$Attack - 2, y = max_attack$Defense - 2,
+           hjust = 'right', vjust = 'bottom', label = max_attack$Name) +
+  annotate(geom = 'text', x = max_defense$Attack - 2, y = max_defense$Defense - 2,
+           hjust = 'right', vjust = 'bottom', label = max_defense$Name) +
+  labs(title = 'attack & defense stats of legendary pokemon') +
+  theme_bw()
+```
